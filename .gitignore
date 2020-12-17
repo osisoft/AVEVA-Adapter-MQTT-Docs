@@ -1,0 +1,11 @@
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site/
+pdf/
+_site_pdf/
+/.html
+/.vs
+docfx_pdf.json
