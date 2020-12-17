@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sparkplug B data source discovery </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sparkplug B data source discovery ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../V1/index.html" width="46">
+                <img id="logo" src="../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SparkplugBDataSourceDiscovery">
+<h1 id="sparkplug-b-data-source-discovery">Sparkplug B data source discovery</h1>
+
+<p>A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional <strong>query</strong> parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.</p>
+<h2 id="sparkplug-b-query-string">Sparkplug B query string</h2>
+<p>The string of the <strong>query</strong> parameter must be contain string items in the following form: <code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/[&lt;Device_Id&gt;]</code></p>
+<table>
+<thead>
+<tr>
+<th>String item</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Group_Id</strong></td>
+<td>Optional</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edge_Node_Id</strong></td>
+<td>Optional</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Device_Id</strong></td>
+<td>Optional</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-rules">Query rules</h3>
+<p>The following rules apply for specifying the query string:</p>
+<ul>
+<li>Multiple queries are separated by a semicolon (<code>;</code>)</li>
+<li>A query cannot be terminated by a trailing slash (<code>/</code>)</li>
+<li>A query cannot start with a leading slash (<code>/</code>) or <code>$</code></li>
+<li>Topics are case sensitive</li>
+</ul>
+<p><strong>Note:</strong> The data source might contain tens of thousands of metrics. Use the <code>#</code> judiciously and narrow down the query string to something specific or break down the query into different discoveries.</p>
+<h4 id="wildcards">Wildcards</h4>
+<p>Wildcards are allowed in the query.</p>
+<ul>
+<li>A single-level wildcard replaces one topic level and is indicated by <code>+</code>.</li>
+<li>A multi-level wildcard covers many topic levels and is indicated by <code>#</code>.</li>
+<li>Wildcards can be combined.</li>
+<li><code>#</code> must not be used more than once and only at the end of the topic.</li>
+<li>No query, an empty string, or <code>null</code> as the query parameter is equivalent to <code>#</code>.</li>
+<li>Partial queries are terminated by a multi-level wildcard.</li>
+</ul>
+<h2 id="discovery-query-example">Discovery query example</h2>
+<p>The query parameter of the MQTT Sparkplug B component must be specified in the following form:
+<code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/&lt;[Device_Id]&gt;</code>.</p>
+<h3 id="sparkplug-b-data-source-discovery-initiation">Sparkplug B data source discovery initiation</h3>
+<pre><code class="lang-json">{
+&quot;id&quot; : &quot;40&quot;,
+&quot;query&quot; : &quot;group1/edge2&quot;
+}
+</code></pre><h3 id="sparkplug-b-data-source-discovery-results">Sparkplug B data source discovery results</h3>
+<pre><code class="lang-json">[
+    {
+        &quot;id&quot;: &quot;40&quot;,
+        &quot;query&quot;: &quot;group1/edge2&quot;,
+        &quot;startTime&quot;: &quot;2020-09-30T19:34:01.8180401+02:00&quot;,
+        &quot;endTime&quot;: &quot;2020-09-30T19:34:01.8368776+02:00&quot;,
+        &quot;progress&quot;: 0,
+        &quot;itemsFound&quot;: 0,
+        &quot;newItems&quot;: 0,
+        &quot;newAssets&quot;: 0,
+        &quot;resultUri&quot;: null,
+        &quot;autoSelect&quot;: false,
+        &quot;status&quot;: &quot;Active&quot;,
+        &quot;errors&quot;: null
+    }
+]
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/master/V1/Configuration/sparkplug-b-data-source discovery.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2020 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

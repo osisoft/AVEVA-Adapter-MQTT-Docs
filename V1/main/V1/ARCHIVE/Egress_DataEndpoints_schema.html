@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Egress endpoint configuration schema </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Egress endpoint configuration schema ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
+                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Egress_DataEndpoints_schema">
+<h1 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h1>
+
+<pre><code class="lang-json">[{
+        &quot;endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
+        &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
+        &quot;Password&quot;: &quot;&lt;password&gt;&quot;
+    },
+    {
+        &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
+        &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
+        &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
+    }
+]
+</code></pre><table>
+<thead>
+<tr>
+<th>Abstract</th>
+<th>Extensible</th>
+<th>Status</th>
+<th>Identifiable</th>
+<th>Custom Properties</th>
+<th>Additional Properties</th>
+<th>Defined In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can be instantiated</td>
+<td>Yes</td>
+<td>Experimental</td>
+<td>No</td>
+<td>Forbidden</td>
+<td>Forbidden</td>
+<td><a href="Egress_DataEndpoints_schema.json">Egress_DataEndpoints_schema.json</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="egressendpointconfiguration-properties">EgressEndpointConfiguration Properties</h1>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Nullable</th>
+<th>Defined by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#clientid">ClientId</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#clientsecret">ClientSecret</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#endpoint">Endpoint</a></td>
+<td><code>string</code></td>
+<td><strong>Required</strong></td>
+<td>No</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#id">Id</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#password">Password</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#tokenendpoint">TokenEndpoint</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#username">UserName</a></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+<tr>
+<td><a href="#validateendpointcertificate">ValidateEndpointCertificate</a></td>
+<td><code>boolean</code></td>
+<td>Optional</td>
+<td>No</td>
+<td>EgressEndpointConfiguration (this schema)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clientid">ClientId</h2>
+<p><code>ClientId</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="clientid-type">ClientId Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="clientsecret">ClientSecret</h2>
+<p><code>ClientSecret</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="clientsecret-type">ClientSecret Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="endpoint">Endpoint</h2>
+<p><code>Endpoint</code></p>
+<ul>
+<li>is <strong>required</strong></li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="endpoint-type">Endpoint Type</h3>
+<p><code>string</code></p>
+<ul>
+<li>minimum length: 1 characters</li>
+</ul>
+<h2 id="id">Id</h2>
+<p><code>Id</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="id-type">Id Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="password">Password</h2>
+<p><code>Password</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="password-type">Password Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="tokenendpoint">TokenEndpoint</h2>
+<p><code>TokenEndpoint</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="tokenendpoint-type">TokenEndpoint Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="username">UserName</h2>
+<p><code>UserName</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="username-type">UserName Type</h3>
+<p><code>string</code>, nullable</p>
+<h2 id="validateendpointcertificate">ValidateEndpointCertificate</h2>
+<p><code>ValidateEndpointCertificate</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>boolean</code></li>
+<li>defined in this schema</li>
+</ul>
+<h3 id="validateendpointcertificate-type">ValidateEndpointCertificate Type</h3>
+<p><code>boolean</code></p>
+<p><strong>All</strong> of the following <em>requirements</em> need to be fulfilled.</p>
+<h4 id="requirement-1">Requirement 1</h4>
+<p><code>object</code> with following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClientId</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ClientSecret</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>Endpoint</code></td>
+<td>string</td>
+<td><strong>Required</strong></td>
+</tr>
+<tr>
+<td><code>Id</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>Password</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>TokenEndpoint</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>UserName</code></td>
+<td>string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ValidateEndpointCertificate</code></td>
+<td>boolean</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clientid-1">ClientId</h4>
+<p><code>ClientId</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="clientid-type-1">ClientId Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="clientsecret-1">ClientSecret</h4>
+<p><code>ClientSecret</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="clientsecret-type-1">ClientSecret Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="endpoint-1">Endpoint</h4>
+<p><code>Endpoint</code></p>
+<ul>
+<li>is <strong>required</strong></li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="endpoint-type-1">Endpoint Type</h5>
+<p><code>string</code></p>
+<ul>
+<li>minimum length: 1 characters</li>
+</ul>
+<h4 id="id-1">Id</h4>
+<p><code>Id</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="id-type-1">Id Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="password-1">Password</h4>
+<p><code>Password</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="password-type-1">Password Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="tokenendpoint-1">TokenEndpoint</h4>
+<p><code>TokenEndpoint</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="tokenendpoint-type-1">TokenEndpoint Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="username-1">UserName</h4>
+<p><code>UserName</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>string</code></li>
+</ul>
+<h5 id="username-type-1">UserName Type</h5>
+<p><code>string</code>, nullable</p>
+<h4 id="validateendpointcertificate-1">ValidateEndpointCertificate</h4>
+<p><code>ValidateEndpointCertificate</code></p>
+<ul>
+<li>is optional</li>
+<li>type: <code>boolean</code></li>
+</ul>
+<h5 id="validateendpointcertificate-type-1">ValidateEndpointCertificate Type</h5>
+<p><code>boolean</code></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/ARCHIVE/Egress_DataEndpoints_schema.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2020 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

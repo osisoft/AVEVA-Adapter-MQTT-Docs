@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>System and adapter configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="System and adapter configuration ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
+                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SystemAndAdapterConfiguration">
+<h1 id="system-and-adapter-configuration">System and adapter configuration</h1>
+
+<p>You can configure the system component and adapter component together using a single file.</p>
+<h2 id="change-system-and-adapter-configuration">Change system and adapter configuration</h2>
+<p>Change the system and adapter configuration by importing the JSON file using a REST client:</p>
+<ol>
+<li><p>Using any text editor, create a file that contains the System and adapter configuration in the JSON format.</p>
+<ul>
+<li>For content structure, see <a href="#example">Example</a>.</li>
+</ul>
+</li>
+<li><p>Save the file. For example,  <code>ConfigureSystemAndAdapter.json</code>.</p>
+</li>
+<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration Tools</a> capable of making HTTP requests and run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration</code></p>
+<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureSystemAndAdapter.json&quot; -H &quot;Content-Type: application/json&quot; -X  PUT &quot;http://localhost:5590/api/v1/configuration&quot;
+</code></pre><p> <strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>
+<p> If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.</p>
+</li>
+</ol>
+<h2 id="example">Example</h2>
+<p><strong>Note</strong>: The following is an example configuration; it does not necessarily represent the configuration of the adapter that you are currently using. The data source and data selection configurations are different for every adapter.</p>
+<details>
+    <summary>Sample OPC UA adapter configuration</summary>
+    <pre>
+{
+    "OpcUa1": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
+        },
+        "DataSource": {
+            "EndpointUrl": "opc.tcp://OPCUAServerEndpoint/OPCUA/Server",
+            "UseSecureConnection": false,
+            "StreamPrefix": "OPC_Prefix_",
+            "UserName": null,
+            "Password": null,
+            "RootNodeIds": null,
+            "IncomingTimestamp": "Source",
+            "applyPrefixToStreamId": true
+        },
+        "DataSelection": [
+            {
+                "Selected": true,
+                "Name": "Sawtooth",
+                "NodeId": "ns=3;s=Sawtooth",
+                "StreamId": "SawtoothStream"
+            }
+        ]
+    },
+    "System": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
+        },
+        "HealthEndpoints": [
+        ],
+    "Diagnostics": {
+            "enableDiagnostics": true
+    },
+        "Components": [
+            {
+                "componentId": "Egress",
+                "componentType": "OmfEgress"
+            },
+            {
+                "componentId": "OpcUa1",
+                "componentType": "OpcUa"
+            }
+        ],
+    "Buffering": {
+            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/OpcUa/Buffers",
+            "MaxBufferSizeMB": -1,
+            "EnableBuffering": true
+        }
+     },
+    "OmfEgress": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
+        },
+        "DataEndpoints": [
+            {
+                "id": "WebAPI EndPoint",
+                "endpoint": "https://PIWEBAPIServer/piwebapi/omf",
+                "userName": "USERNAME",
+                "password": "PASSWORD"
+            },
+            {
+                "id": "OCS Endpoint",
+                "endpoint": "https://OCSEndpoint/omf",
+                "clientId": "CLIENTID",
+                "clientSecret": "CLIENTSECRET"
+            },
+            {
+                "Id": "EDS",
+                "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf"
+                "UserName": "eds",
+                "Password": "eds"
+            }
+        ]
+    }
+}
+   </port_number></pre>
+</details>
+
+<h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/</td>
+<td>PUT</td>
+<td>Replaces the configuration for the entire adapter</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Configuration/system-and-adapter-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2020 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
