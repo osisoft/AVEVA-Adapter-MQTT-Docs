@@ -1,0 +1,4 @@
+- name: PI Adapter for MQTT principles of operation
+  href: pi-adapter-for-mqtt-principles-of-operation.md
+- name: PI Adapter for MQTT supported features
+  href: pi-adapter-for-mqtt-supported-features.md
