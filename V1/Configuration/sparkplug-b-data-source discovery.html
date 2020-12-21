@@ -80,7 +80,7 @@
 
 <p>A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional <strong>query</strong> parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.</p>
 <h2 id="sparkplug-b-query-string">Sparkplug B query string</h2>
-<p>The string of the <strong>query</strong> parameter must be contain string items in the following form: <code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/[&lt;Device_Id&gt;]</code></p>
+<p>The string of the <strong>query</strong> parameter must be contain string items in the following form: <br><code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/[&lt;Device_Id&gt;]</code><br><br></p>
 <table>
 <thead>
 <tr>
@@ -93,27 +93,28 @@
 <tr>
 <td><strong>Group_Id</strong></td>
 <td>Optional</td>
-<td></td>
+<td>This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients.</td>
 </tr>
 <tr>
 <td><strong>Edge_Node_Id</strong></td>
 <td>Optional</td>
-<td></td>
+<td>This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.<br><strong>Group_Id</strong> combined with <strong>Edge_Node_Id</strong> must be unique from any other <strong>Group_Id</strong>/<strong>Edge_Node_Id</strong> assigned in the MQTT infrastructure.</td>
 </tr>
 <tr>
 <td><strong>Device_Id</strong></td>
 <td>Optional</td>
-<td></td>
+<td>This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically).</td>
 </tr>
 </tbody>
 </table>
 <h3 id="query-rules">Query rules</h3>
 <p>The following rules apply for specifying the query string:</p>
 <ul>
-<li>Multiple queries are separated by a semicolon (<code>;</code>)</li>
-<li>A query cannot be terminated by a trailing slash (<code>/</code>)</li>
-<li>A query cannot start with a leading slash (<code>/</code>) or <code>$</code></li>
-<li>Topics are case sensitive</li>
+<li>Multiple queries are separated by a semicolon (<code>;</code>).</li>
+<li>Partial queries are terminated by a multi-level wildcard.</li>
+<li>A query cannot be terminated by a trailing slash (<code>/</code>).</li>
+<li>A query cannot start with a leading slash (<code>/</code>) or <code>$</code>.</li>
+<li>Topics are case sensitive.</li>
 </ul>
 <p><strong>Note:</strong> The data source might contain tens of thousands of metrics. Use the <code>#</code> judiciously and narrow down the query string to something specific or break down the query into different discoveries.</p>
 <h4 id="wildcards">Wildcards</h4>
@@ -124,7 +125,6 @@
 <li>Wildcards can be combined.</li>
 <li><code>#</code> must not be used more than once and only at the end of the topic.</li>
 <li>No query, an empty string, or <code>null</code> as the query parameter is equivalent to <code>#</code>.</li>
-<li>Partial queries are terminated by a multi-level wildcard.</li>
 </ul>
 <h2 id="discovery-query-example">Discovery query example</h2>
 <p>The query parameter of the MQTT Sparkplug B component must be specified in the following form:
@@ -139,15 +139,14 @@
     {
         &quot;id&quot;: &quot;40&quot;,
         &quot;query&quot;: &quot;group1/edge2&quot;,
-        &quot;startTime&quot;: &quot;2020-09-30T19:34:01.8180401+02:00&quot;,
-        &quot;endTime&quot;: &quot;2020-09-30T19:34:01.8368776+02:00&quot;,
-        &quot;progress&quot;: 0,
-        &quot;itemsFound&quot;: 0,
-        &quot;newItems&quot;: 0,
-        &quot;newAssets&quot;: 0,
-        &quot;resultUri&quot;: null,
+        &quot;startTime&quot;: &quot;2020-12-14T14:19:01.4383791-08:00&quot;,
+        &quot;endTime&quot;: &quot;2020-12-14T14:19:31.8549164-08:00&quot;,
+        &quot;progress&quot;: 729,
+        &quot;itemsFound&quot;: 729,
+        &quot;newItems&quot;: 729,
+        &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result&quot;,
         &quot;autoSelect&quot;: false,
-        &quot;status&quot;: &quot;Active&quot;,
+        &quot;status&quot;: &quot;Complete&quot;,
         &quot;errors&quot;: null
     }
 ]

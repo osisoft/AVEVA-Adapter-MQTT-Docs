@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/sparkplug-b-data-source discovery.html",
-          "hash": "iRbD7Ml2MZBwEQjCGyd/dg=="
+          "hash": "wzRzXEPpjGuWMLhY+0Du1A=="
         }
       },
       "is_incremental": false,
@@ -163,15 +163,26 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "V1/images/pi-adapter-for-mqtt-architecture-diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/pi-adapter-for-mqtt-architecture-diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
-        "InvalidFileLink"
+        "DuplicateUids"
       ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "LeQPiWjj63lba8btmyqI8g=="
+          "hash": "CLcodKSABGdtTDq/z/NOeg=="
         }
       },
       "is_incremental": false,
@@ -1697,7 +1708,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1712,15 +1722,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "pi-adapter-for-mqtt-overview.md",
       "output": {
         ".html": {
           "relative_path": "pi-adapter-for-mqtt-overview.html",
-          "hash": "PSrPkAWHVPkG2jbYHiredg=="
+          "hash": "DpfgWxYMdA96VQ+mHH/Rzw=="
         }
       },
       "is_incremental": false,
