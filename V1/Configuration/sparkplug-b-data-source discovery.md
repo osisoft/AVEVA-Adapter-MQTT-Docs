@@ -8,7 +8,7 @@ A discovery against the data source of an MQTT Sparkplug B adapter allows you to
 
 ## Sparkplug B query string
 
-The string of the **query** parameter must be contain string items in the following form: <br>`<Group_Id>/<Edge_Node_Id>/[<Device_Id>]`<br><br>
+The string of the **query** parameter must contain string items in the following form: <br>`<Group_Id>/<Edge_Node_Id>/[<Device_Id>]`<br><br>
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
