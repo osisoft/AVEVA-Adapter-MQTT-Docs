@@ -258,7 +258,7 @@ references:
   href: V1/main/V1.4/Configuration/schedules-configuration.html
 - uid: SparkplugBDataSourceDiscovery
   name: Sparkplug B data source discovery
-  href: V1/Configuration/sparkplug-b-data-source%20discovery.html
+  href: V1/Configuration/Discovery/sparkplug-b-data-source%20discovery.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
   href: V1/main/V1/Administration/start-and-stop-an-adapter.html
@@ -325,8 +325,8 @@ references:
 - uid: TechnicalSupportAndFeedback1-4
   name: Technical support and feedback
   href: V1/main/V1.4/technical-support-and-feedback.html
-- uid: TroubleshootTheAdapter
-  name: Troubleshoot the adapter
+- uid: Troubleshooting
+  name: Troubleshooting
   href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
 - uid: TroubleshootTheAdapter1-3
   name: Troubleshoot the adapter
