@@ -10,19 +10,17 @@ This adapter's operations focus on data collection and stream creation.
 
 For the MQTT adapter to start data collection, configure the following:
 
-- Data source: Provide the data source from which the adapter should collect data.
-- Data selection: Select MQTT items to which the adapter should subscribe for data.
+- Data source: Provide the data source from which the adapter should collect data.<br> For more details, see the data source topics [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
+- Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the data selection topics [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
-
-For more details, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
 
 ## Connection
 
-The adapter communicates with the MQTT devices through <!--Insert content here-->
+The MQTT adapter uses the IMqttClient interface to communicate with the MQTT server. Both the adapter and the MQTT server support Transport Layer Security (TLS), which means that in case an insecure connection is used, the adapter prints a warning.
 
 ## Data collection
 
-The adapter collects data from the <!-- Insert content here --> For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
+The adapter collects time-series data from the MQTT server using Topics. The adapter supports data from generic MQTT devices producing Json payload and devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
 
 ### Data types
 
