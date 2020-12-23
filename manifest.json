@@ -26,11 +26,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configuration/Discovery/sparkplug-b-data-source discovery.md",
+      "source_relative_path": "V1/Configuration/Discovery/sparkplug-b-data-source-discovery.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Configuration/Discovery/sparkplug-b-data-source discovery.html",
-          "hash": "76+0zXxN+krKkebyhkUtcw=="
+          "relative_path": "V1/Configuration/Discovery/sparkplug-b-data-source-discovery.html",
+          "hash": "P/vsm3hCDRq5+wXI4jTalg=="
         }
       },
       "is_incremental": false,
@@ -1685,7 +1685,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "i8VRUqbLthzVP2snlOUfYA=="
+          "hash": "hrpEWtpbo3lQqqVWx4CV9g=="
         }
       },
       "is_incremental": false,
