@@ -5,11 +5,17 @@
   topicHref: ../main/V1.3/Configuration/system-components-configuration.md
 - name: PI Adapter for MQTT data source configuration 
   href: pi-adapter-for-mqtt-data-source-configuration.md
+- name: PI Adapter for MQTT Sparkplug B data source configuration 
+  href: pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.md
+- name: PI Adapter for MQTT client settings configuration
+  href: pi-adapter-for-mqtt-client-settings-configuration.md
 - name: Discovery configuration
   href: Discovery/toc.yml
   topicHref: ../main/V1.3/Configuration/discovery-configuration.md
 - name: PI Adapter for MQTT data selection configuration
   href: pi-adapter-for-mqtt-data-selection-configuration.md
+- name: PI Adapter for MQTT Sparkplug B data selection configuration
+  href: pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.md
 - name: Data filters configuration
   href: ../main/V1.3/Configuration/data-filters-configuration.md
 - name: Egress endpoints configuration
