@@ -56,10 +56,17 @@ Certain metadata are sent with each stream created. The following metadata are c
 - **ComponentId**: Specifies the data source, for example, _MQTT1_
 - **ComponentType**: Specifies the type of adapter, for example, _MQTT_
 
-Metadata specific to the MQTT adapter are:
+Metadata specific to the MQTT generic component are:
 
 - **Topic**: Specifies the MQTT topic string
 - **ValueField**: Specifies the JsonPath expression to take from a property
+
+Metadata specific to the MQTT Sparkplug B component are:
+
+- **Namespace**: Specifies the Topic namespace.
+- **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients
+- **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure
+- **Device_Id**: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node
 
 **Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the MQTT adapter, the following metadata is sent for the individual level:
 
