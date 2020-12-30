@@ -16,7 +16,7 @@ For the MQTT adapter to start data collection, configure the following:
 
 ## Connection
 
-The MQTT adapter uses the IMqttClient interface to communicate with the MQTT server. Both the adapter and the MQTT server support Transport Layer Security (TLS), which means that in case an insecure connection is used, the adapter prints a warning.
+The adapter uses either the Transmission Control Protocol (TCP) or WebSocket protocol (WS) to speak to an MQTT server. For more information on how to configure which protocol should be used, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
 
 ## Data collection
 
@@ -59,7 +59,7 @@ Certain metadata are sent with each stream created. The following metadata are c
 Metadata specific to the MQTT generic component are:
 
 - **Topic**: Specifies the MQTT topic string
-- **ValueField**: Specifies the JsonPath expression to take from a property
+- **ValueField**: Specifies the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server
 
 Metadata specific to the MQTT Sparkplug B component are:
 
