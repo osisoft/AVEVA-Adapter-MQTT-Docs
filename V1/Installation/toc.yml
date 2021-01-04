@@ -1,8 +1,8 @@
 - name: System requirements
   href: system-requirements.md
 - name: Install the adapter
-  href: ../main/V1/Installation/install-the-adapter.md
+  href: ../main/V1.3/Installation/install-the-adapter.md
 - name: Install PI Adapter for MQTT using Docker
   href: install-pi-adapter-for-mqtt-using-docker.md
 - name: Uninstall the adapter
-  href: ../main/V1/Installation/uninstall-the-adapter.md
+  href: ../main/V1.3/Installation/uninstall-the-adapter.md
