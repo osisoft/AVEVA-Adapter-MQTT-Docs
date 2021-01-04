@@ -82,21 +82,20 @@
 <h2 id="adapter-configuration">Adapter configuration</h2>
 <p>For the MQTT adapter to start data collection, configure the following:</p>
 <ul>
-<li>Data source: Provide the data source from which the adapter should collect data.</li>
-<li>Data selection: Select MQTT items to which the adapter should subscribe for data.</li>
+<li>Data source: Provide the data source from which the adapter should collect data.<br> For more details, see the data source topics <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</li>
+<li>Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the data selection topics <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a> and <a href="xref:PIAdapterForMQTTSparkplugB">PI Adapter for MQTT Sparkplug B data selection configuration</a>.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more details, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
-<p>The adapter communicates with the MQTT devices through <!--Insert content here--></p>
+<p>The adapter uses either the Transmission Control Protocol (TCP) or WebSocket protocol (WS) to speak to an MQTT server. For more information on how to configure which protocol should be used, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The adapter collects data from the <!-- Insert content here --> For more information see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a>.</p>
+<p>The adapter collects time-series data from the MQTT server using Topics. The adapter supports data from generic MQTT devices producing Json payload and devices adhering to the Sparkplug B specification. For more information see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a> and <a href="xref:PIAdapterForMQTTSparkplugB">PI Adapter for MQTT Sparkplug B data selection configuration</a>.</p>
 <h3 id="data-types">Data types</h3>
 <p>The following table lists MQTT variable types that the adapter collects data from and types of streams that will be created.</p>
 <table>
 <thead>
 <tr>
-<th>OPC UA data type</th>
+<th>MQTT data type</th>
 <th>Stream data type</th>
 </tr>
 </thead>
@@ -182,6 +181,24 @@
 <ul>
 <li><strong>ComponentId</strong>: Specifies the data source, for example, <em>MQTT1</em></li>
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>MQTT</em></li>
+</ul>
+<p>Metadata specific to the MQTT generic component are:</p>
+<ul>
+<li><strong>Topic</strong>: Specifies the MQTT topic string</li>
+<li><strong>ValueField</strong>: Specifies the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server</li>
+</ul>
+<p>Metadata specific to the MQTT Sparkplug B component are:</p>
+<ul>
+<li><strong>Namespace</strong>: Specifies the Topic namespace.</li>
+<li><strong>Group_Id</strong>: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients</li>
+<li><strong>Edge_Node_Id</strong>: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure</li>
+<li><strong>Device_Id</strong>: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node</li>
+</ul>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
+<ul>
+<li><code>None</code>: No metadata</li>
+<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
+<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField</li>
 </ul>
 <p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
 <pre><code class="lang-code">&lt;AdapterComponentID&gt;.&lt;Topic&gt;.&lt;ValueField&gt;

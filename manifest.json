@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "/YehcmiSOghuVsoKZH0YrA=="
+          "hash": "oIauO4tNfu0qw6MC7coDFA=="
         }
       },
       "is_incremental": false,
@@ -139,12 +139,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.md",
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html",
-          "hash": "66WpW5pTnua9imqUj5WnCQ=="
+          "hash": "MRbPsJeVvMl2mgcmTqvBbQ=="
         }
       },
       "is_incremental": false,

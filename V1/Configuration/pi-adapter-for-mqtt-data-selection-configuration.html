@@ -155,7 +155,7 @@
 <td><strong>TimeField</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The JsonPath expression used to extract the data value from a property that will be used as a timestamp. A valid JsonPath expression starts with <code>$</code>. <br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with <code>$</code>. <br><br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<sup>1</sup><br><br>Allowed value: any valid JsonPath expression</td>
 </tr>
 <tr>
 <td><strong>DataType</strong></td>
@@ -167,7 +167,7 @@
 <td><strong>TimeFormat</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be parsed using <code>TryParse()</code><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom datetime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
+<td>The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom datetime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
@@ -177,6 +177,7 @@
 </tr>
 </tbody>
 </table>
+<p><sup>1</sup> If you do not specify <strong>TimeField</strong> and <strong>TimeFormat</strong>, the adapter automatically sets the latter to <code>Adapter</code>, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify <strong>TimeFormat</strong> only, with a value other than <code>Adapter</code>, the validation fails and the adapter throws an error.</p>
 <h2 id="runtime-changes">Runtime changes</h2>
 <p>PI Adapter for MQTT handles runtime changes for data selection configuration as follows:</p>
 <p>When you create a new data selection item with a new <strong>Topic</strong> property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.</p>
