@@ -29,7 +29,8 @@
     ],
     "resource": [
       {
-        "files": ["V1/images/**", "V1/main/V1/images/**"]
+        "files": ["V1/images/**", "V1/main/V1/images/**", "V1/main/V1.3/images/**", "V1/main/V1.4/images/**" ]
+        
       }
     ],
     "overwrite": [
