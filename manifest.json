@@ -225,9 +225,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Administration/delete-an-adapter-component.md",
       "output": {
@@ -420,15 +417,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Diagnostics/adapter-diagnostics.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Diagnostics/adapter-diagnostics.html",
-          "hash": "ar1Xycx1uAuw8CPHyJnHww=="
+          "hash": "V0SJd8sbHBV/ygZJS0GrRQ=="
         }
       },
       "is_incremental": false,
@@ -495,9 +489,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/adapter-health.md",
       "output": {
@@ -522,9 +513,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/health-and-diagnostics.md",
       "output": {
@@ -609,6 +597,105 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/Diagnostics.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/Diagnostics.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/Metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/Metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/adapter-health-af-hierarchy.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/adapter-health-af-hierarchy.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/atlas_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/atlas_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/configuration-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/configuration-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/health-data.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/health-data.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/logs-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/logs-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/removed-configurations.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/removed-configurations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/removed-logs.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/removed-logs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/technical-support-and-feedback.md",
       "output": {
@@ -633,9 +720,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Administration/delete-an-adapter-component.md",
       "output": {
@@ -864,15 +948,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Diagnostics/adapter-diagnostics.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Diagnostics/adapter-diagnostics.html",
-          "hash": "9Dwr1qKFbjKJ1o/OdQ8B4g=="
+          "hash": "GFrGuOkGBE2acbjVIlNalQ=="
         }
       },
       "is_incremental": false,
@@ -939,9 +1020,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Health/adapter-health.md",
       "output": {
@@ -966,9 +1044,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Health/health-and-diagnostics.md",
       "output": {
@@ -1071,6 +1146,105 @@
         ".html": {
           "relative_path": "V1/main/V1.4/Troubleshooting/troubleshoot-the-adapter.html",
           "hash": "0T44ZNgh/BXFXAGQLR/PTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/Diagnostics.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/Diagnostics.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/Metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/Metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/adapter-health-af-hierarchy.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/adapter-health-af-hierarchy.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/atlas_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/atlas_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/configuration-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/configuration-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/health-data.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/health-data.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/logs-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/logs-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/removed-configurations.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/removed-configurations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/removed-logs.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/removed-logs.png"
         }
       },
       "is_incremental": false,
