@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html",
-          "hash": "LgZNCq/3OtJ9sS5VbuEgDA=="
+          "hash": "zFY9x/hHv9FtRbs0M/TUDg=="
         }
       },
       "is_incremental": false,
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "mfAzlxZFr3G4lcEx5CGLZg=="
+          "hash": "0jfiuv7/gZo5TSSMTzgB4g=="
         }
       },
       "is_incremental": false,
@@ -177,6 +177,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -242,7 +245,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Administration/retrieve-product-version-information.html",
-          "hash": "my0qDXsbdBs7bU5Y/ZGdFQ=="
+          "hash": "ugObL7axymBhKs123O31sQ=="
         }
       },
       "is_incremental": false,
@@ -737,7 +740,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Administration/retrieve-product-version-information.html",
-          "hash": "uMulvTlzFy3A1ANwRVkaUQ=="
+          "hash": "ilnGKBPCO85nA5kVmb6AoQ=="
         }
       },
       "is_incremental": false,
@@ -1331,7 +1334,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/retrieve-product-version-information.html",
-          "hash": "gj0N3du+E805WWrq3zhSVg=="
+          "hash": "fV3hWzHgFzzOrQ/HHbPf2g=="
         }
       },
       "is_incremental": false,
@@ -1870,7 +1873,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",

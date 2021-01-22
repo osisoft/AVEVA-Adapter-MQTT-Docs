@@ -137,7 +137,7 @@
 <td><strong>Topic</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The MQTT topic string.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The MQTT topic string in the following format: <code>{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}</code><br><br>The following rules apply to the MQTT topic string:<br>1. <code>{namespace}</code> must be <code>spBv1.0</code> (case-sensitive)<br>2. <code>{groupId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>3. <code>{messageType}</code> must be either <code>DDATA</code> or <code>NDATA</code> (uppercase) <br><strong>Note:</strong> When <code>NDATA</code> is specified, <code>{deviceId}</code> must not be specified <br>4. <code>edgeNodeId</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>5. <code>{deviceId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br><br><strong>Examples</strong>:<br><code>spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004</code><br><code>spBv1.0/DemoCenters/NDATA/EPIC-DC004</code></td>
 </tr>
 <tr>
 <td><strong>PropertyName</strong></td>
