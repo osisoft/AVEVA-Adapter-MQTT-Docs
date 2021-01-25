@@ -238,6 +238,9 @@ references:
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
+- uid: ReleaseNotes
+  name: Release notes
+  href: V1/Release-notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/retrieve-product-version-information.html
