@@ -5,10 +5,13 @@ uid: ReleaseNotes
 # Release notes
 
 PI Adapter for MQTT 1.0
+Adapter framework 1.3
 
 ## Overview
 
-This represents the initial release for PI Adapter for MQTT. This product collects time series data from MQTT servers which service nodes/devices adhering to the SparkplugB specification as well as those producing generic JSON payload and sends it to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services. PI Adapter for MQTT can also collect health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, and various Windows and Linux-based operating systems as well as containerization.
+This is the initial release of PI Adapter for MQTT. The product collects time-series data from MQTT servers its service nodes/devices adhering to the SparkplugB specification, but also generic JSON payload. PI Adapter for MQTT sends the data to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services.
+
+PI Adapter for MQTT is capable of collecting health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, various Windows and Linux-based operating systems, and containerization.
 
 For more information see [PI Adapter for MQTT overview](xref:PIAdapterForMQTTOverview).
 
@@ -36,7 +39,7 @@ Because the PI System often serves as a barrier protecting control system networ
 
 ### Vulnerability communication
 
-The practice of publicly disclosing internally discovered vulnerabilities is consistent with the Common Industrial Control System Vulnerability Disclosure Framework developed by the Industrial Control Systems Joint Working Group (ICSJWG). Despite the increased risk posed by greater transparency, OSIsoft is sharing this information to help you make an informed decision about when to upgrade to ensure your PI System has the best available protection.
+The practice of publicly disclosing internally discovered vulnerabilities is consistent with the [Common Industrial Control System Vulnerability Disclosure Framework](https://ics-cert.us-cert.gov/sites/default/files/ICSJWG-Archive/ICSJWG_Vulnerability_Disclosure_Framework_Final_1.pdf) developed by the [Industrial Control Systems Joint Working Group (ICSJWG)](https://ics-cert.us-cert.gov/Industrial-Control-Systems-Joint-Working-Group-ICSJWG). Despite the increased risk posed by greater transparency, OSIsoft is sharing this information to help you make an informed decision about when to upgrade to ensure your PI System has the best available protection.
 
 For more information, refer to [OSIsoft’s Ethical Disclosure Policy (https://www.osisoft.com/ethical-disclosure-policy)](https://www.osisoft.com/ethical-disclosure-policy).
 
@@ -44,15 +47,21 @@ To report a security vulnerability, refer to [OSIsoft's Report a Security Vulner
 
 ### Vulnerability scoring
 
-OSIsoft has selected the Common Vulnerability Scoring System (CVSS) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the National Vulnerability Database (NVD) calculator maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses Critical, High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion related errors of CVSS scoring.  As noted in the CVSS specification, Base score range from 0 for the lowest severity to 10 for the highest severity.
+OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/v2/guide) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the [National Vulnerability Database (NVD) calculator](https://nvd.nist.gov/cvss.cfm?calculator&amp;version=2)  maintained by the National Institute of Standards and Technology (NIST). OSIsoft uses Critical, High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion related errors of CVSS scoring. As noted in the CVSS specification, Base score range from 0 for the lowest severity to 10 for the highest severity.
 
 ### Overview of new vulnerabilities found or fixed
 
-No additional security vulnerabilities are applicable to this release. Subcomponents of this release contain known vulnerabilities which are not exploitable in PI Adapter for MQTT. This table lists the known vulnerabilities along with their mitigation in this product.
+No additional security vulnerabilities are applicable to this release. Sub-components of this release contain known vulnerabilities which are not exploitable in PI Adapter for MQTT. 
+
+The following table lists the known vulnerabilities and with their mitigation in this product.
 
  Component | Version | CVE or Reference | CVSS | Mitigation
  --------- | ------- | -----------------| ------ | ----------
  json.Net | 12.0.3 | https://alephsecurity.com/vulns/aleph-2018004 | 6.8 | No code paths result in json parsing and subsequent serialization resulting in DoS vulnerability.
+
+## Documentation overview
+
+**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments.
 
 ## Technical support and resources
 
