@@ -4,7 +4,7 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for MQTT 1.0
+PI Adapter for MQTT 1.0 <br>
 Adapter framework 1.3
 
 ## Overview
@@ -57,7 +57,7 @@ The following table lists the known vulnerabilities and with their mitigation in
 
  Component | Version | CVE or Reference | CVSS | Mitigation
  --------- | ------- | -----------------| ------ | ----------
- json.Net | 12.0.3 | https://alephsecurity.com/vulns/aleph-2018004 | 6.8 | No code paths result in json parsing and subsequent serialization resulting in DoS vulnerability.
+ json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.8 | No code paths result in json parsing and subsequent serialization resulting in DoS vulnerability.
 
 ## Documentation overview
 
