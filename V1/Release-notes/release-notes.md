@@ -5,7 +5,7 @@ uid: ReleaseNotes
 # Release notes
 
 PI Adapter for MQTT 1.0
-Adapter framework 1.4
+Adapter framework 1.3
 
 ## Overview
 
