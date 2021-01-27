@@ -23,8 +23,9 @@ The adapter uses either the Transmission Control Protocol (TCP) or WebSocket pro
 The adapter collects time-series data from the MQTT server using Topics. The adapter supports data from generic MQTT devices producing Json payload and devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
 
 ### Data types
-// Comments from Bo
-// The data types section only lists the supported data types for generic MQTT adapter, but not MQTT Sparkplug B. There are some overlaps regarding supported data types, but there are also adapter-specific data types supported by each component. 
+<!--
+Comments from Bo: The data types section only lists the supported data types for generic MQTT adapter, but not MQTT Sparkplug B. There are some overlaps regarding supported data types, but there are also adapter-specific data types supported by each component. 
+-->
 The following table lists MQTT variable types that the adapter collects data from and types of streams that will be created.
 
 | MQTT data type | Stream data type |
