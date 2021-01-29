@@ -159,7 +159,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "cxd4kgQrlH8rqKxH0RPTpg=="
+          "hash": "aM4uuuAzW90eCmUTvadZIw=="
         }
       },
       "is_incremental": false,
@@ -177,9 +177,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -413,7 +410,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/system-components-configuration.html",
-          "hash": "6vBq8n6/+vEYa/PM/3UZlQ=="
+          "hash": "50YNWPK8Dt+DXyMMHWdKJg=="
         }
       },
       "is_incremental": false,
@@ -1873,6 +1870,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
