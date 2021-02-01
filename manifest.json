@@ -177,6 +177,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -297,6 +300,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.html",
+          "hash": "u9u8uii8AYxcK9WgZO/zvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/data-filters-configuration.md",
       "output": {
@@ -315,6 +333,18 @@
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
           "hash": "aqT6a6kfwCXN/5+IF19W2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
+          "hash": "YQXfcfL0a4oIIQ/ARvY/sg=="
         }
       },
       "is_incremental": false,
@@ -653,6 +683,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/forward-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/forward-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "V1/main/V1.3/images/health-data.PNG",
       "output": {
         "resource": {
@@ -690,6 +731,28 @@
       "output": {
         "resource": {
           "relative_path": "V1/main/V1.3/images/removed-logs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/reverse-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/reverse-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.3/images/windows-network-proxy-environment-variable.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.3/images/windows-network-proxy-environment-variable.png"
         }
       },
       "is_incremental": false,
@@ -817,6 +880,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.html",
+          "hash": "S1xS99DyhFSbfIhm+xl3ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/data-filters-configuration.md",
       "output": {
         ".html": {
@@ -840,6 +915,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
+          "hash": "Ycmy5OXk9ukDUS1FFLRYpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
       "output": {
@@ -857,7 +947,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/toc.html",
-          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
+          "hash": "uMY4ymzQL4+/TZGMvhBV1g=="
         }
       },
       "is_incremental": false,
@@ -1208,6 +1298,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/forward-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/forward-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "V1/main/V1.4/images/health-data.PNG",
       "output": {
         "resource": {
@@ -1245,6 +1346,28 @@
       "output": {
         "resource": {
           "relative_path": "V1/main/V1.4/images/removed-logs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/reverse-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/reverse-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1.4/images/windows-network-proxy-environment-variable.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1.4/images/windows-network-proxy-environment-variable.png"
         }
       },
       "is_incremental": false,
@@ -1862,7 +1985,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "0lTbhgfY4uqo8pCQgTMfZg=="
+          "hash": "Lb9GKxUjpkVwh8ezn2CfEQ=="
         }
       },
       "is_incremental": false,
@@ -1870,7 +1993,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1923,7 +2045,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 119,
+          "total_file_count": 123,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

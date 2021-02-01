@@ -58,6 +58,12 @@ references:
 - uid: ConfigurationTools1-4
   name: Configuration tools
   href: V1/main/V1.4/Configuration/configuration-tools.html
+- uid: ConfigureANetworkProxy1-3
+  name: Configure a network proxy
+  href: V1/main/V1.3/Configuration/configure-a-network-proxy.html
+- uid: ConfigureANetworkProxy1-4
+  name: Configure a network proxy
+  href: V1/main/V1.4/Configuration/configure-a-network-proxy.html
 - uid: DataFiltersConfiguration
   name: Data filters configuration
   href: V1/main/V1/Configuration/data-filters-configuration.html
