@@ -33,6 +33,11 @@ Comments from Bo:
 The data types section only lists the supported data types for generic MQTT adapter, but not MQTT Sparkplug B. There are some overlaps regarding supported data types, but there are also adapter-specific data types supported by each component. 
 Thyag can provide information about the supported data types for Sparkplug B component. With that being said, the structure of this section may need to be adjusted to have two sub-section for two components.
 -->
+<!--
+Thyag
+For SpB the data types are defined in https://www.eclipse.org/tahu/spec/Sparkplug%20Topic%20Namespace%20and%20State%20ManagementV2.2-with%20appendix%20B%20format%20-%20Eclipse.pdf Sec. 15.2.1. Metric Datatypes
+We might consider having a separate table as suggested by Bo.
+-->
 The following table lists MQTT variable types that the adapter collects data from and types of streams that will be created.
 
 | MQTT data type | Stream data type |
