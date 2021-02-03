@@ -98,7 +98,7 @@ The following are examples of valid MQTT Sparkplug B data source configurations:
     "MQTTVersion" : "3.1.1",
     "ValidateServerCertificate" : true,
     "StreamIdPrefix" : null,
-    "DefaultStreamIdPattern" : "{PointId}"
+    "DefaultStreamIdPattern" : "{Topic}.{MetricName}"
 }
 ```
 
