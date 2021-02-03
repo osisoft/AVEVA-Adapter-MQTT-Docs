@@ -53,7 +53,7 @@ OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://ww
 
 No additional security vulnerabilities are applicable to this release. Sub-components of this release contain known vulnerabilities which are not exploitable in PI Adapter for MQTT. 
 
-The following table lists the known vulnerabilities and with their mitigation in this product.
+The following table lists the known vulnerabilities and their mitigation in this product.
 
  Component | Version | CVE or Reference | CVSS | Mitigation
  --------- | ------- | -----------------| ------ | ----------
