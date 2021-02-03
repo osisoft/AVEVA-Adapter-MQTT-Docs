@@ -25,7 +25,8 @@ Comments from Bo:
 We may want to explicitly emphysize that the genric MQTT adapter only supports JSON payload. 
 The statement below may not be that obvious and may not bring enough attention to the user.
 -->
-The adapter collects time-series data from the MQTT server using Topics. The adapter supports data from generic MQTT devices producing Json payload and devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
+<!--TU: Rewrote section-->
+The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing Json payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
 
 ### Data types
 <!--
@@ -55,6 +56,12 @@ The following table lists MQTT variable types that the adapter collects data fro
 | Double           | Float64          |
 | DateTime         | DateTime         |
 | String           | String           |
+
+<!-- TU: Starting a new section--->
+
+#### MQTT Sparkplug B data types
+
+The following table lists MQTT Sparkplug B variable types that the adapter collects data from and types of streams that will be created.
 
 ## Stream creation
 
