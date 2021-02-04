@@ -32,8 +32,6 @@ Complete the following steps to configure an MQTT Sparkplug B data source:
 
 4. Configure data selection. For more information, see [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMqttSparkplugBDataSelectionConfiguration1-2).
 
-    **Note:** You can decide to have a default data selection file generated automatically or you can create the data selection file yourself.
-
 ## MQTT Sparkplug B data source schema
 
 The full schema definition for the MQTT Sparkplug B data source configuration is in the `MQTTSparkplugB_DataSource_schema.json` file located in one of the following folders:
