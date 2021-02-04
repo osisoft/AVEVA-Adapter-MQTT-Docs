@@ -50,18 +50,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configuration/pi-adapter-for-mqtt-client-settings-configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configuration/pi-adapter-for-mqtt-client-settings-configuration.html",
-          "hash": "fnXf2upYfRoK0nWcgDXTog=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Configuration/pi-adapter-for-mqtt-data-selection-configuration.md",
       "output": {
         ".html": {
@@ -93,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html",
-          "hash": "zFY9x/hHv9FtRbs0M/TUDg=="
+          "hash": "Bk5XRdXLDFvSJgwe00he8g=="
         }
       },
       "is_incremental": false,
@@ -108,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "0jfiuv7/gZo5TSSMTzgB4g=="
+          "hash": "dZKRjF1G8Oi4U2BTrGMQEw=="
         }
       },
       "is_incremental": false,
@@ -1985,7 +1973,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "Lb9GKxUjpkVwh8ezn2CfEQ=="
+          "hash": "vwtVIKLZpVSDid6HBfPr1Q=="
         }
       },
       "is_incremental": false,
@@ -2045,7 +2033,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 123,
+          "total_file_count": 122,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
