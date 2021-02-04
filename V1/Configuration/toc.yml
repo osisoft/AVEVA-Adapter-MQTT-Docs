@@ -10,8 +10,6 @@
 - name: Discovery configuration
   href: Discovery/toc.yml
   topicHref: ../main/V1.3/Configuration/discovery-configuration.md
-- name: Schedules configuration
-  href: ../main/V1.3/Configuration/schedules-configuration.md
 - name: PI Adapter for MQTT data selection configuration
   href: pi-adapter-for-mqtt-data-selection-configuration.md
 - name: PI Adapter for MQTT Sparkplug B data selection configuration
