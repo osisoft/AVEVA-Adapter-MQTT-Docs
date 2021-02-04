@@ -56,7 +56,7 @@ The following parameters are available for configuring an MQTT data source:
 | **ClientId**                  | Optional | `sting`   | Identification of the adapter component connecting to the MQTT broker.<br><br> **Note:** If null, the adapter generates a GUID.          |
 | **MQTTVersion**               | Optional | `enum`    | Version  of the MQTT protocol to be used. <br><br>Allowed value: `3.1.0`, or `3.1.1`, or `5.0.0` <br> Default value: `3.1.1`           |
 | **ValidateServerCertificate** | Optional | `boolean` | Determines if server certificate gets validated. <br><br>**Note:** A warning is printed in case the server certificate validation is disabled.<br> Default value: `true`           |
-| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `Mqtt1.{Topic}.{ValueField}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
+| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `MqttSparkplugB1.{Topic}.{MetricName}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
 | **DefaultStreamIdPattern**    | Optional         | `string`  |  Specifies the default stream Id pattern to use. Possible parameters: `{Topic}`, `{MetricName}`. <br><br>Allowed value: any string<br>Default value: `{Topic}.{MetricName}`  
 
 <!--
@@ -79,8 +79,8 @@ The following are examples of valid MQTT Sparkplug B data source configurations:
 
 ```json
 {
-    "HostNameOrIpAddress" : "Host1",
-    "Port" : 4321,
+    "HostNameOrIpAddress" : "148.101.185.11",
+    "Port" : 1883,
 }
 
 ```
@@ -92,14 +92,14 @@ In minimal datasource configuration, could we use an IP and port 1883 as it refl
 
 ```json
 {
-    "HostNameOrIpAddress" : "Host1",
-    "Port" : 4321,
+    "HostNameOrIpAddress" : "148.101.185.11",
+    "Port" : 1883,
     "PrimaryHostID" : "Optimus",
     "Protocol" : "Tcp",
     "TLS" : "Tls12",
-    "UserName" : "RandomUser",
-    "PassWord" : "RandomPassword",
-    "ClientId" : "Random-Client-Id",
+    "UserName" : "SampleUser",
+    "PassWord" : "SamplePassword",
+    "ClientId" : "734029baf8f04bb2be99750381d6602a",
     "MQTTVersion" : "3.1.1",
     "ValidateServerCertificate" : true,
     "StreamIdPrefix" : null,
