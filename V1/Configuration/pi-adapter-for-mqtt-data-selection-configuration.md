@@ -117,6 +117,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 ```
 
 <sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:
+
 ```json
 {
 "TestNode": [

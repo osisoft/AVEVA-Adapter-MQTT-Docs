@@ -91,7 +91,7 @@ The following are examples of valid MQTT data source configurations:
     "TLS" : "Tls12",
     "UserName": null,
     "Password": null,
-    "ClientId" : "Test-Cliendt-Id",
+    "ClientId" : "Test-Client-Id",
     "MQTTVersion" : "3.1.1",
     "ValidateServerCertificate" : true
 }
