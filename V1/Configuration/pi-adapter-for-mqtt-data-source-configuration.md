@@ -16,7 +16,7 @@ Complete the following steps to configure an MQTT data source:
     - For content structure, see [MQTT data source examples](#mqtt-data-source-examples).
     - For a table of all available parameters, see [MQTT data source parameters](#mqtt-data-source-parameters).
 2. Save the file. For example, `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
       **Note:** The following example uses Mqtt1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
 
