@@ -61,6 +61,10 @@ Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
 | **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`
 | **DataFilterId** | Optional | `string` | The ID of the data filter. <br><br>Allowed value: any string <br>Default value: `null`| 
 
+<!--
+Thyag: We might want to emphasize that the Topic as a whole is case sensitive along with its idividual components.
+-->
+
 ## Runtime changes
 
 PI Adapter for MQTT handles runtime changes for data selection configuration as follows:
@@ -83,7 +87,9 @@ The following are examples of valid MQTT Sparkplug B data selection configuratio
   }
 ]
 ```
-
+<!--
+Thyag: NodeIds (EdgeNode1) and DeviceIds (Device1) are capitalized by convention so we could have it here like that
+-->
 ### Complete data selection configuration
 
 ```json
@@ -98,7 +104,10 @@ The following are examples of valid MQTT Sparkplug B data selection configuratio
   }
 ]
 ```
-
+<!--
+Thyag: Name can be specified as "Device1 Temperature" and StreamId as "Device1.Temperature.Stream" 
+for better clarity from the example
+-->
 ## REST URLs
 
 | Relative URL | HTTP verb | Action |
