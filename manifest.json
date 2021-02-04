@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-data-source-configuration.html",
-          "hash": "atRTu1/hzAQCxs6kvgC00A=="
+          "hash": "5s76E7MohaJydEsJ8WIy9A=="
         }
       },
       "is_incremental": false,
@@ -147,7 +147,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "aM4uuuAzW90eCmUTvadZIw=="
+          "hash": "js3IGR8esrzo62fblaKdRg=="
         }
       },
       "is_incremental": false,
@@ -165,9 +165,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -332,7 +329,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
-          "hash": "YQXfcfL0a4oIIQ/ARvY/sg=="
+          "hash": "8dAukRQvQfblOghMFm7SMQ=="
         }
       },
       "is_incremental": false,
@@ -867,9 +864,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -906,6 +900,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -1973,7 +1970,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "Dz+B0CoSR3VluCZD/zq7/w=="
+          "hash": "4Q2XKRMvhCkHg2EZazbBdg=="
         }
       },
       "is_incremental": false,
@@ -1981,6 +1978,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",

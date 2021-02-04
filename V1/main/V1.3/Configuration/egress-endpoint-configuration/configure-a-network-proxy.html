@@ -80,7 +80,14 @@
 
 <p>Some network architectures may need a network proxy between the PI adapter and the egress endpoint. The process for configuring the adapter to egress data through a network proxy varies depending on the proxy type.</p>
 <h2 id="https-forward-proxy">HTTPS forward proxy</h2>
-<p>For the adapter to use an HTTPS forward proxy while egressing, configure the <code>https_proxy</code> environment variable. The value of this environment variable must contain the URL of the proxy server, beginning with <code>http</code>. The format of the string is <code>[user[:password]@]http://hostname[:port]</code>.</p>
+<p>For the adapter to use an HTTPS forward proxy while egressing, configure the <code>https_proxy</code> environment variable. For information on how to configure system environment variables, refer to your platform specific documentation:</p>
+<ul>
+<li>Windows: <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">setx</a></li>
+<li>Ubuntu: <a href="https://help.ubuntu.com/community/EnvironmentVariables">EnvironmentVariables</a></li>
+<li>Debian: <a href="https://wiki.debian.org/EnvironmentVariables">EnvironmentVariables</a></li>
+<li>Docker: <a href="https://docs.docker.com/compose/environment-variables/">Environment variables in Compose</a></li>
+</ul>
+<p>The value of this environment variable must contain the URL of the proxy server, beginning with <code>http</code>. The format of the string is <code>[user[:password]@]http://hostname[:port]</code>.</p>
 <h3 id="https-proxy-environment-variable">HTTPS proxy environment variable</h3>
 <table>
 <thead>
@@ -109,19 +116,12 @@
 </tbody>
 </table>
 <p><strong>Note:</strong> Usage of the <code>https_proxy</code> environment variable may affect other .NET or .NET Core applications. If you set this environment variable, it will affect the adapter egress endpoints and the adapter health endpoints.</p>
-<p><strong>Example:</strong></p>
+<p><strong>Examples:</strong></p>
 <pre><code class="lang-json">myUser@http://192.168.2.2
-myUser:myPassword@http://proxymachine.domain:3128
-http://proxymachine.domain
+</code></pre><pre><code class="lang-json">myUser:myPassword@http://proxymachine.domain:3128
+</code></pre><pre><code class="lang-json">http://proxymachine.domain
 </code></pre><p>In Windows, this may look something like:</p>
 <p><img src="../../images/windows-network-proxy-environment-variable.png" alt="Windows HTTPS network proxy environment variable"></p>
-<p>For more information on how to configure system environment variables, refer to your platform specific documentation:</p>
-<ul>
-<li>Windows: <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">setx</a></li>
-<li>Ubuntu: <a href="https://help.ubuntu.com/community/EnvironmentVariables">EnvironmentVariables</a></li>
-<li>Debian: <a href="https://wiki.debian.org/EnvironmentVariables">EnvironmentVariables</a></li>
-<li>Docker: <a href="https://docs.docker.com/compose/environment-variables/">Environment variables in Compose</a></li>
-</ul>
 <p>Example of an architecture with an https forward proxy:</p>
 <p><img src="../../images/forward-proxy.png" alt="Forward proxy"></p>
 <h2 id="reverse-proxy">Reverse proxy</h2>
