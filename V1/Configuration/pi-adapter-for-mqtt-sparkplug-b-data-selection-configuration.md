@@ -56,7 +56,7 @@ Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
 |-------------------------------|----------|-----------|-------------|
 | **Selected** | Optional | `boolean` |  Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true` |
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Allowed value: any string <br>Default value: `null`  |
-| **Topic** | Required | `string` | The MQTT topic string in the following format: `{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}`<br><br>The following rules apply to the MQTT topic string:<br>1. `{namespace}` must be `spBv1.0` (case-sensitive)<br>2. `{groupId}` must be non-blank and can contain any character except for `+` and `#`<br>3. `{messageType}` must be either `DDATA` or `NDATA` (uppercase) <br>**Note:** When `NDATA` is specified, `{deviceId}` must not be specified <br>4. `edgeNodeId` must be non-blank and can contain any character except for `+` and `#`<br>5. `{deviceId}` must be non-blank and can contain any character except for `+` and `#`<br><br>**Examples**:<br>`spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004`<br>`spBv1.0/DemoCenters/NDATA/EPIC-DC004` | 
+| **Topic** | Required | `string` | The MQTT topic string in the following format: `{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}`<br><br>The following rules apply to the MQTT topic string:<br>1. Both the topic string as a whole and the individual components are case-sensitive<br>2. `{namespace}` must be `spBv1.0` (case-sensitive)<br>3. `{groupId}` must be non-blank and can contain any character except for `+` and `#`<br>4. `{messageType}` must be either `DDATA` or `NDATA` (uppercase) <br>**Note:** When `NDATA` is specified, `{deviceId}` must not be specified <br>5. `edgeNodeId` must be non-blank and can contain any character except for `+` and `#`<br>6. `{deviceId}` must be non-blank and can contain any character except for `+` and `#`<br><br>**Examples**:<br>`spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004`<br>`spBv1.0/DemoCenters/NDATA/EPIC-DC004` | 
 | **MetricName** | Required | `string` | The name of the property in the metric. <br><br>Allowed value: cannot be `null`, empty, or whitespace. 
 | **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`
 | **DataFilterId** | Optional | `string` | The ID of the data filter. <br><br>Allowed value: any string <br>Default value: `null`| 
@@ -82,7 +82,7 @@ The following are examples of valid MQTT Sparkplug B data selection configuratio
 ```json
 [
   {
-    "Topic" : "spBv1.0/group1/DDATA/edgeNode1/device1",
+    "Topic" : "spBv1.0/group1/DDATA/EdgeNode1/Device1",
     "MetricName" : "Temperature"
   }
 ]
@@ -98,8 +98,8 @@ Thyag: NodeIds (EdgeNode1) and DeviceIds (Device1) are capitalized by convention
     "Selected" : true,
     "Name" : "Temperature",
     "Topic" : "spBv1.0/group1/DDATA/edgeNode1/device1",
-    "MetricName" : "Temperature",
-    "StreamId" : "RandomStreamId",
+    "MetricName" : "Device1 Temperature",
+    "StreamId" : "Device1.Temperature.Stream",
     "DataFilterId" : null
   }
 ]
