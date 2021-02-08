@@ -79,8 +79,6 @@ Certain metadata are sent with each stream created. The following metadata are c
 - **ComponentId**: Specifies the data source, for example, _MQTT1_
 - **ComponentType**: Specifies the type of adapter, for example, _MQTT_
 
-For MQTT specific metadata, see [MQTT specific metadata](xref:MQTTSpecificMetadata1-3) and for MQTT Sparkplug B specific metadata, see [MQTT Sparkplug B specific metadata](xref:MQTTSparkplugBSpecificMetadata1-3).
-
 ### MQTT specific metadata
 
 Metadata specific to the MQTT generic component are:
