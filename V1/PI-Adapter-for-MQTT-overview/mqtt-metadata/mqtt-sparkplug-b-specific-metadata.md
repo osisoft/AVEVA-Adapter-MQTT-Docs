@@ -11,7 +11,7 @@ Metadata specific to the MQTT Sparkplug B component are:
 - **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure
 - **Device_Id**: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node
 
-**Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the MQTT adapter, the following metadata is sent for the individual level:
+**Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the MQTT Sparkplug B adapter, the following metadata is sent for the individual level:
 
 - `None`: No metadata
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
