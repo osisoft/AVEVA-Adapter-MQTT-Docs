@@ -179,7 +179,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>Mqtt1.{Topic}.{ValueField}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
+<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>MqttSparkplugB1.{Topic}.{MetricName}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
@@ -197,19 +197,19 @@
 <p>The following are examples of valid MQTT Sparkplug B data source configurations:</p>
 <h3 id="minimal-data-source-configuration">Minimal data source configuration</h3>
 <pre><code class="lang-json">{
-    &quot;HostNameOrIpAddress&quot; : &quot;Host1&quot;,
-    &quot;Port&quot; : 4321,
+    &quot;HostNameOrIpAddress&quot; : &quot;148.101.185.11&quot;,
+    &quot;Port&quot; : 1883,
 }
 </code></pre><h3 id="complete-data-source-configuration">Complete data source configuration</h3>
 <pre><code class="lang-json">{
-    &quot;HostNameOrIpAddress&quot; : &quot;Host1&quot;,
-    &quot;Port&quot; : 4321,
+    &quot;HostNameOrIpAddress&quot; : &quot;148.101.185.11&quot;,
+    &quot;Port&quot; : 1883,
     &quot;PrimaryHostID&quot; : &quot;Optimus&quot;,
     &quot;Protocol&quot; : &quot;Tcp&quot;,
     &quot;TLS&quot; : &quot;Tls12&quot;,
-    &quot;UserName&quot; : &quot;RandomUser&quot;,
-    &quot;PassWord&quot; : &quot;RandomPassword&quot;,
-    &quot;ClientId&quot; : &quot;Random-Client-Id&quot;,
+    &quot;UserName&quot; : &quot;SampleUser&quot;,
+    &quot;PassWord&quot; : &quot;SamplePassword&quot;,
+    &quot;ClientId&quot; : &quot;734029baf8f04bb2be99750381d6602a&quot;,
     &quot;MQTTVersion&quot; : &quot;3.1.1&quot;,
     &quot;ValidateServerCertificate&quot; : true,
     &quot;StreamIdPrefix&quot; : null,

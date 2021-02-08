@@ -202,6 +202,12 @@ references:
 - uid: MQTTConfiguration
   name: Configuration
   href: V1/Configuration/configuration.html
+- uid: MQTTSparkplugBSpecificMetadata1-3
+  name: MQTT Sparkplug B specific metadata
+  href: V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html
+- uid: MQTTSpecificMetadata1-3
+  name: MQTT specific metadata
+  href: V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-specific-metadata.html
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/next-health-message-expected.html

@@ -111,7 +111,7 @@
 <p>The following rules apply for specifying the query string:</p>
 <ul>
 <li>Multiple queries are separated by a semicolon (<code>;</code>).</li>
-<li>Partial queries are terminated by a multi-level wildcard.</li>
+<li>Partial queries are terminated by a multi-level wildcard (<code>#</code>).</li>
 <li>A query cannot be terminated by a trailing slash (<code>/</code>).</li>
 <li>A query cannot start with a leading slash (<code>/</code>) or <code>$</code>.</li>
 <li>Topics are case sensitive.</li>
@@ -131,8 +131,8 @@
 <code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/&lt;[Device_Id]&gt;</code>.</p>
 <h3 id="sparkplug-b-data-source-discovery-initiation">Sparkplug B data source discovery initiation</h3>
 <pre><code class="lang-json">{
-&quot;id&quot; : &quot;40&quot;,
-&quot;query&quot; : &quot;group1/edge2&quot;
+    &quot;id&quot; : &quot;40&quot;,
+    &quot;query&quot; : &quot;group1/edge2&quot;
 }
 </code></pre><h3 id="sparkplug-b-data-source-discovery-results">Sparkplug B data source discovery results</h3>
 <pre><code class="lang-json">[
@@ -141,9 +141,9 @@
         &quot;query&quot;: &quot;group1/edge2&quot;,
         &quot;startTime&quot;: &quot;2020-12-14T14:19:01.4383791-08:00&quot;,
         &quot;endTime&quot;: &quot;2020-12-14T14:19:31.8549164-08:00&quot;,
-        &quot;progress&quot;: 729,
-        &quot;itemsFound&quot;: 729,
-        &quot;newItems&quot;: 729,
+        &quot;progress&quot;: 30,
+        &quot;itemsFound&quot;: 700,
+        &quot;newItems&quot;: 200,
         &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result&quot;,
         &quot;autoSelect&quot;: false,
         &quot;status&quot;: &quot;Complete&quot;,

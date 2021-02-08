@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter health </title>
+    <title>MQTT Sparkplug B specific metadata </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter health ">
+    <meta name="title" content="MQTT Sparkplug B specific metadata ">
     <meta name="generator" content="docfx 2.56.5.0">
     
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../../../../">
+    <meta property="docfx:rel" content="../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
-                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../V1/index.html" width="46">
+                <img id="logo" src="../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,21 +75,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AdapterHealth1-3">
-<h1 id="adapter-health">Adapter health</h1>
+            <article class="content wrap" id="_content" data-uid="MQTTSparkplugBSpecificMetadata1-3">
+<h1 id="mqtt-sparkplug-b-specific-metadata">MQTT Sparkplug B specific metadata</h1>
 
-<p>PI Adapters produce different kinds of health data that can be egressed to different health endpoints.</p>
-<p>To egress health related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/health-endpoint-configuration.html">Health endpoint configuration</a>.</p>
-<h2 id="available-health-data">Available health data</h2>
-<p>Dynamic data is sent every minute to configured health endpoints.</p>
-<p>The following health data is available:</p>
+<p>Metadata specific to the MQTT Sparkplug B component are:</p>
 <ul>
-<li><a class="xref" href="device-status.html">Device status</a></li>
-<li><a class="xref" href="next-health-message-expected.html">Next Health Message Expected</a></li>
+<li><strong>Namespace</strong>: Specifies the Topic namespace.</li>
+<li><strong>Group_Id</strong>: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients</li>
+<li><strong>Edge_Node_Id</strong>: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure</li>
+<li><strong>Device_Id</strong>: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node</li>
 </ul>
-<h2 id="af-structure">AF structure</h2>
-<p>With a health endpoint configured to a PI server, you can use PI System Explorer to view the health of a given adapter. The element hierarchy is shown in the following image.</p>
-<p><img src="../images/health-data.PNG" alt="Health data"></p>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../../main/V1/Configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
+<ul>
+<li><code>None</code>: No metadata</li>
+<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
+<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and MetricName</li>
+</ul>
+<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<pre><code class="lang-code">&lt;AdapterComponentID&gt;.&lt;Topic&gt;.&lt;MetricName&gt;
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../../Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</p>
 </article>
           </div>
           
@@ -98,7 +102,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Health/adapter-health.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/master/V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -124,8 +128,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

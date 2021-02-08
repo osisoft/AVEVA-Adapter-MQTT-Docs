@@ -89,7 +89,7 @@
 <h2 id="connection">Connection</h2>
 <p>The adapter uses either the Transmission Control Protocol (TCP) or WebSocket protocol (WS) to speak to an MQTT server. For more information on how to configure which protocol should be used, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The adapter collects time-series data from the MQTT server using Topics. The adapter supports data from generic MQTT devices producing Json payload and devices adhering to the Sparkplug B specification. For more information see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a> and <a href="xref:PIAdapterForMQTTSparkplugB">PI Adapter for MQTT Sparkplug B data selection configuration</a>.</p>
+<p>The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing Json payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a> and <a href="xref:PIAdapterForMQTTSparkplugB">PI Adapter for MQTT Sparkplug B data selection configuration</a>.</p>
 <h3 id="data-types">Data types</h3>
 <p>The following table lists MQTT variable types that the adapter collects data from and types of streams that will be created.</p>
 <table>
@@ -100,10 +100,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Boolean</td>
-<td>Boolean</td>
-</tr>
 <tr>
 <td>Byte</td>
 <td>Int16</td>
@@ -117,20 +113,20 @@
 <td>Int16</td>
 </tr>
 <tr>
-<td>UInt16</td>
-<td>UInt16</td>
-</tr>
-<tr>
 <td>Int32</td>
 <td>Int32</td>
 </tr>
 <tr>
-<td>UInt32</td>
-<td>UInt32</td>
+<td>Int64</td>
+<td>Int64</td>
 </tr>
 <tr>
-<td>Int64</td>
-<td>Int64</td>
+<td>UInt16</td>
+<td>UInt16</td>
+</tr>
+<tr>
+<td>UInt32</td>
+<td>UInt32</td>
 </tr>
 <tr>
 <td>UInt64</td>
@@ -145,11 +141,83 @@
 <td>Float64</td>
 </tr>
 <tr>
-<td>DateTime</td>
-<td>DateTime</td>
+<td>Boolean</td>
+<td>Boolean</td>
 </tr>
 <tr>
 <td>String</td>
+<td>String</td>
+</tr>
+<tr>
+<td>DateTime</td>
+<td>DateTime</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mqtt-sparkplug-b-data-types">MQTT Sparkplug B data types</h4>
+<p>The following table lists MQTT Sparkplug B variable types that the adapter collects data from and types of streams that will be created.</p>
+<table>
+<thead>
+<tr>
+<th>MQTT Sparkplug B data type</th>
+<th>Stream data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Int8</td>
+<td>Int8</td>
+</tr>
+<tr>
+<td>Int16</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>Int32</td>
+<td>Int32</td>
+</tr>
+<tr>
+<td>Int64</td>
+<td>Int64</td>
+</tr>
+<tr>
+<td>UInt8</td>
+<td>UInt8</td>
+</tr>
+<tr>
+<td>UInt16</td>
+<td>UInt16</td>
+</tr>
+<tr>
+<td>UInt32</td>
+<td>UInt32</td>
+</tr>
+<tr>
+<td>UInt64</td>
+<td>UInt64</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>Double</td>
+<td>Float64</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>String</td>
+<td>String</td>
+</tr>
+<tr>
+<td>DateTime</td>
+<td>UInt64</td>
+</tr>
+<tr>
+<td>Text</td>
 <td>String</td>
 </tr>
 </tbody>
@@ -182,27 +250,7 @@
 <li><strong>ComponentId</strong>: Specifies the data source, for example, <em>MQTT1</em></li>
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>MQTT</em></li>
 </ul>
-<p>Metadata specific to the MQTT generic component are:</p>
-<ul>
-<li><strong>Topic</strong>: Specifies the MQTT topic string</li>
-<li><strong>ValueField</strong>: Specifies the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server</li>
-</ul>
-<p>Metadata specific to the MQTT Sparkplug B component are:</p>
-<ul>
-<li><strong>Namespace</strong>: Specifies the Topic namespace.</li>
-<li><strong>Group_Id</strong>: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients</li>
-<li><strong>Edge_Node_Id</strong>: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure</li>
-<li><strong>Device_Id</strong>: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node</li>
-</ul>
-<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
-<ul>
-<li><code>None</code>: No metadata</li>
-<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
-<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField</li>
-</ul>
-<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
-<pre><code class="lang-code">&lt;AdapterComponentID&gt;.&lt;Topic&gt;.&lt;ValueField&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a>.</p>
+<p>For MQTT specific metadata, see <a class="xref" href="mqtt-metadata/mqtt-specific-metadata.html">MQTT specific metadata</a> and for MQTT Sparkplug B specific metadata, see <a class="xref" href="mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html">MQTT Sparkplug B specific metadata</a>.</p>
 </article>
           </div>
           

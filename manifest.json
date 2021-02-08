@@ -30,19 +30,22 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Discovery/sparkplug-b-data-source-discovery.html",
-          "hash": "AyLpfkdzg2HjL/2h1R8X0w=="
+          "hash": "QVyvlW7BaKRPddx1c73VQA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Configuration/configuration.md",
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/configuration.html",
-          "hash": "jYtYvX61TTcUl+f6wVpJEQ=="
+          "hash": "8q3LPPrC7eAjUbYspbqGqQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "CrJj2Vg6Zn2AeU3mTcyLRg=="
+          "hash": "DEHvkf5EbkxGJBpoU3y5cA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html",
-          "hash": "Bk5XRdXLDFvSJgwe00he8g=="
+          "hash": "rRkJbEx/Btsj9PeF3NUCZQ=="
         }
       },
       "is_incremental": false,
@@ -96,7 +99,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "4BZAj6/kyri3iuMizjDsBw=="
+          "hash": "e/s7816AiNgEvzoVxuF+tw=="
         }
       },
       "is_incremental": false,
@@ -127,6 +130,30 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html",
+          "hash": "0obMUpq5fEP4IfqN7o32EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-specific-metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/PI-Adapter-for-MQTT-overview/mqtt-metadata/mqtt-specific-metadata.html",
+          "hash": "oxYZzx2Q/Hu4Kg8ADRCk4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "UidNotFound"
       ],
@@ -135,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html",
-          "hash": "FNq97fKDgzydC0+uBg1P1Q=="
+          "hash": "A8ucY5VjAwnxGMm+CUKRIQ=="
         }
       },
       "is_incremental": false,
@@ -317,7 +344,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
-          "hash": "aqT6a6kfwCXN/5+IF19W2A=="
+          "hash": "ph47v1bmY4h7Jnij6P416g=="
         }
       },
       "is_incremental": false,
@@ -509,7 +536,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/adapter-health.html",
-          "hash": "coHfTJEeAySJ5BSgKDO4EQ=="
+          "hash": "+90SzVeXn6R2YELa3udJig=="
         }
       },
       "is_incremental": false,
@@ -1100,7 +1127,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Health/adapter-health.html",
-          "hash": "nBtuAoHXXBM+8vnJp3RG4w=="
+          "hash": "Dg/gONh1y1thz/Tk7YYWXQ=="
         }
       },
       "is_incremental": false,
@@ -1715,7 +1742,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/adapter-health.html",
-          "hash": "2WQp/kXXRhT/M5WmHrg3Bw=="
+          "hash": "ml34m8iYeHfrVf8qnxZbwA=="
         }
       },
       "is_incremental": false,
@@ -1970,7 +1997,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "4Q2XKRMvhCkHg2EZazbBdg=="
+          "hash": "a8/pKiZ1IFbbqFc/4l7Wzw=="
         }
       },
       "is_incremental": false,
@@ -2031,7 +2058,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 122,
+          "total_file_count": 124,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

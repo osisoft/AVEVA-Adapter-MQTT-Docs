@@ -137,7 +137,7 @@
 <td><strong>Topic</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The MQTT topic string in the following format: <code>{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}</code><br><br>The following rules apply to the MQTT topic string:<br>1. <code>{namespace}</code> must be <code>spBv1.0</code> (case-sensitive)<br>2. <code>{groupId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>3. <code>{messageType}</code> must be either <code>DDATA</code> or <code>NDATA</code> (uppercase) <br><strong>Note:</strong> When <code>NDATA</code> is specified, <code>{deviceId}</code> must not be specified <br>4. <code>edgeNodeId</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>5. <code>{deviceId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br><br><strong>Examples</strong>:<br><code>spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004</code><br><code>spBv1.0/DemoCenters/NDATA/EPIC-DC004</code></td>
+<td>The MQTT topic string in the following format: <code>{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}</code><br><br>The following rules apply to the MQTT topic string:<br>1. Both the topic string as a whole and the individual components are case-sensitive<br>2. <code>{namespace}</code> must be <code>spBv1.0</code> (case-sensitive)<br>3. <code>{groupId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>4. <code>{messageType}</code> must be either <code>DDATA</code> or <code>NDATA</code> (uppercase) <br><strong>Note:</strong> When <code>NDATA</code> is specified, <code>{deviceId}</code> must not be specified <br>5. <code>edgeNodeId</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br>6. <code>{deviceId}</code> must be non-blank and can contain any character except for <code>+</code> and <code>#</code><br><br><strong>Examples</strong>:<br><code>spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004</code><br><code>spBv1.0/DemoCenters/NDATA/EPIC-DC004</code></td>
 </tr>
 <tr>
 <td><strong>MetricName</strong></td>
@@ -168,7 +168,7 @@
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
 <pre><code class="lang-json">[
   {
-    &quot;Topic&quot; : &quot;spBv1.0/group1/DDATA/edgeNode1/device1&quot;,
+    &quot;Topic&quot; : &quot;spBv1.0/group1/DDATA/EdgeNode1/Device1&quot;,
     &quot;MetricName&quot; : &quot;Temperature&quot;
   }
 ]
@@ -178,8 +178,8 @@
     &quot;Selected&quot; : true,
     &quot;Name&quot; : &quot;Temperature&quot;,
     &quot;Topic&quot; : &quot;spBv1.0/group1/DDATA/edgeNode1/device1&quot;,
-    &quot;MetricName&quot; : &quot;Temperature&quot;,
-    &quot;StreamId&quot; : &quot;RandomStreamId&quot;,
+    &quot;MetricName&quot; : &quot;Device1 Temperature&quot;,
+    &quot;StreamId&quot; : &quot;Device1.Temperature.Stream&quot;,
     &quot;DataFilterId&quot; : null
   }
 ]

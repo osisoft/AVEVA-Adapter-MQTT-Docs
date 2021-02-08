@@ -161,13 +161,13 @@
 <td><strong>DataType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The expected data type of the values for the specified field. <br><br>Allowed value: OMF supported data types</td>
+<td>The expected data type of the values for the specified field. <br><br>Allowed value: See <a class="xref" href="../PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html#data-types">PI Adapter for MQTT principles of operation</a></td>
 </tr>
 <tr>
 <td><strong>TimeFormat</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom datetime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
+<td>The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom datetime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
@@ -183,7 +183,7 @@
 <p>When you create a new data selection item with a new <strong>Topic</strong> property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.</p>
 <p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.</p>
 <h2 id="mqtt-data-selection-examples">MQTT data selection examples</h2>
-<p>The following are examples of valid MQTT data selection configurations:</p>
+<p>The following are examples of valid MQTT data selection configurations<sup>1</sup>:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
 <pre><code class="lang-json">[
   {
@@ -207,6 +207,19 @@
 
   }
 ]
+</code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:</p>
+<pre><code class="lang-json">{
+&quot;TestNode&quot;: [
+{
+&quot;Time&quot; : &quot;01/14/2021&quot;,
+&quot;Value&quot;: &quot;0123-4567-8888&quot;
+},
+{
+&quot;Time&quot; : &quot;01/13/2022&quot;,
+&quot;Value&quot;: &quot;0123-4567-8910&quot;
+}
+]
+}
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
