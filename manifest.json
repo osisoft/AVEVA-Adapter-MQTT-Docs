@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html",
-          "hash": "A8ucY5VjAwnxGMm+CUKRIQ=="
+          "hash": "qcX0v9lTggSGmnH+cXPAtw=="
         }
       },
       "is_incremental": false,
@@ -192,6 +192,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -891,9 +894,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -930,6 +930,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -1997,7 +2000,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "a8/pKiZ1IFbbqFc/4l7Wzw=="
+          "hash": "WMB2cAr4zvJ1VO0F5C/JyQ=="
         }
       },
       "is_incremental": false,
@@ -2005,7 +2008,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
