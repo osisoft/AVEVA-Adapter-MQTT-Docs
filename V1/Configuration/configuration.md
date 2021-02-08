@@ -3,12 +3,7 @@ uid: MQTTConfiguration
 ---
 
 # Configuration
-<!--
-Comments from Bo:
-The statement below does not list all available configuration routes supported by the MQTT adapter
-For example, Discovery and Client Settings configurations are not mentioned below.
-The Quick start guide also does not contain the confgiuration options mentioned above
--->
+
 PI Adapter for MQTT provides configuration of data source, client settings, discovery, and data selection for both components the generic and the Sparkplug B component.
 
 The examples in the configuration topics use `curl`, a commonly available tool on both Windows and Linux. You can configure the adapter with any programming language or tool that supports making REST calls or with the EdgeCmd utility. For more information, see the [EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html)](https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html). To validate successful configurations, you can perform data retrieval (`GET` commands) with a browser, if available, on your device.
@@ -27,6 +22,6 @@ Complete the following steps to establish a data flow from a MQTT data source de
 
 4. Optional: Perform a data discovery. See [Discovery configuration](xref:DiscoveryConfiguration).
 
-5. Configure an MQTT data selection for each MQTT data source.<br>See [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration#configure-mqtt-data-selection) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTT SparkplugBDataSelectionConfiguration#configure-mqtt-sparkplug-b-data-selection).
+5. Configure an MQTT data selection for each MQTT data source.<br>See [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration#configure-mqtt-data-selection) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration#configure-mqtt-sparkplug-b-data-selection).
 
 6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).

@@ -59,10 +59,6 @@ The following parameters are available for configuring an MQTT data source:
 | **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `MqttSparkplugB1.{Topic}.{MetricName}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
 | **DefaultStreamIdPattern**    | Optional         | `string`  |  Specifies the default stream Id pattern to use. Possible parameters: `{Topic}`, `{MetricName}`. <br><br>Allowed value: any string<br>Default value: `{Topic}.{MetricName}`  
 
-<!--
-Thyag:
-In the above table for StreamIdPrefix description we can use can componentId MqttSparkplugB1.{Topic}.{MetricName} to be consistent
--->
 ## Runtime changes
 
 PI Adapter for MQTT handles runtime changes for data source configuration as follows:
@@ -84,10 +80,7 @@ The following are examples of valid MQTT Sparkplug B data source configurations:
 }
 
 ```
-<!--
-Thyag:
-In minimal datasource configuration, could we use an IP and port 1883 as it reflects the most commonly available scenario.
--->
+
 ### Complete data source configuration
 
 ```json
@@ -106,12 +99,7 @@ In minimal datasource configuration, could we use an IP and port 1883 as it refl
     "DefaultStreamIdPattern" : "{Topic}.{MetricName}"
 }
 ```
-<!--
-Thyag:
-If we use IP instead of hostname in the previous example, we can updated the above example too.
-For username, password and clientId, use of word 'Sample' is preferable over 'Random'.
-We could also use a Guid (E.g. 734029baf8f04bb2be99750381d6602a) for ClientId as it is more common.
--->
+
 ## REST URLs
 
 | Relative URL | HTTP verb | Action |

@@ -20,25 +20,10 @@ The adapter uses either the Transmission Control Protocol (TCP) or WebSocket pro
 
 ## Data collection
 
-<!--
-Comments from Bo:
-We may want to explicitly emphysize that the genric MQTT adapter only supports JSON payload. 
-The statement below may not be that obvious and may not bring enough attention to the user.
--->
-<!--TU: Rewrote section-->
 The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing Json payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
 
 ### Data types
-<!--
-Comments from Bo: 
-The data types section only lists the supported data types for generic MQTT adapter, but not MQTT Sparkplug B. There are some overlaps regarding supported data types, but there are also adapter-specific data types supported by each component. 
-Thyag can provide information about the supported data types for Sparkplug B component. With that being said, the structure of this section may need to be adjusted to have two sub-section for two components.
--->
-<!--
-Thyag
-For SpB the data types are defined in https://www.eclipse.org/tahu/spec/Sparkplug%20Topic%20Namespace%20and%20State%20ManagementV2.2-with%20appendix%20B%20format%20-%20Eclipse.pdf Sec. 15.2.1. Metric Datatypes
-We might consider having a separate table as suggested by Bo.
--->
+
 The following table lists MQTT variable types that the adapter collects data from and types of streams that will be created.
 
 | MQTT data type | Stream data type |
@@ -56,8 +41,6 @@ The following table lists MQTT variable types that the adapter collects data fro
 | Boolean          | Boolean          |
 | String           | String           |
 | DateTime         | DateTime         |
-
-<!-- TU: Starting a new section--->
 
 #### MQTT Sparkplug B data types
 

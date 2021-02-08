@@ -51,11 +51,7 @@ Windows: `%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas`
 Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
 
 ## MQTT data selection parameters
-<!--
-Comments from Bo:
-Data selection configuration schema DataType property description: should we explicitly list the allowed data types?
-Data selection configuration schema TimeFormat property description: should we give some examples of time formats that are typically used? The link to the documentation listed above seems very verbose and not very useful.
--->
+
 | Parameter        | Required | Type      | Description |
 |------------------|----------|-----------|-------------|
 | **Selected**     | Optional | `boolean` |  Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`           |
@@ -79,10 +75,7 @@ When you create a new data selection item with a new **Topic** property, the ada
 **Note:** Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.
 
 ## MQTT data selection examples
-<!-- 
-Comments from Bo:
-Data selection configuration example: We might want to provide the expected JSON payload from the data source to match up with the ValueField and TimeField properties configured in the data selection configuration in the example. Otherwise, the value listed below could cause confusion about where they are from. 
--->
+
 The following are examples of valid MQTT data selection configurations<sup>1</sup>:
 
 ### Minimal data selection configuration
