@@ -60,8 +60,8 @@ Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
 | **Topic**        | Required | `string`  |  The MQTT topic string.<br><br>Allowed value: cannot be `null`, empty, or whitespace.        |
 | **ValueField**   | Required | `string`  |  The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`.<br><br>Allowed value: cannot be `null`, empty, or whitespace.          |
 | **TimeField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<sup>1</sup><br><br>Allowed value: any valid JsonPath expression      |
-| **DataType**     | Required | `string`  |  The expected data type of the values for the specified field. <br><br>Allowed value: OMF supported data types           |
-| **TimeFormat**   | Optional | `string`  | The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method. For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>1</sup><br><br>**Note:** If the string cannot be parsed, specify a custom datetime string or one of the following keywords: `Adapter`, `UnixTimeSeconds`, `UnixTimeMilliseconds`<br>Default value: `null`            |
+| **DataType**     | Required | `string`  |  The expected data type of the values for the specified field. <br><br>Allowed value: See [PI Adapter for MQTT principles of operation](xref:PIAdapterForMQTTPrinciplesOfOperation#data-types)|
+| **TimeFormat**   | Optional | `string`  | The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>1</sup><br><br>**Note:** If the string cannot be parsed, specify a custom datetime string or one of the following keywords: `Adapter`, `UnixTimeSeconds`, `UnixTimeMilliseconds`<br>Default value: `null`            |
 | **DataFilterId** | Optional  | `string`  | The ID of the data filter. <br><br>Allowed value: any string <br>Default value: `null`            |
 
 <sup>1</sup> If you do not specify **TimeField** and **TimeFormat**, the adapter automatically sets the latter to `Adapter`, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify **TimeFormat** only, with a value other than `Adapter`, the validation fails and the adapter throws an error.
@@ -76,7 +76,7 @@ When you create a new data selection item with a new **Topic** property, the ada
 
 ## MQTT data selection examples
 
-The following are examples of valid MQTT data selection configurations:
+The following are examples of valid MQTT data selection configurations<sup>1</sup>:
 
 ### Minimal data selection configuration
 
@@ -107,6 +107,23 @@ The following are examples of valid MQTT data selection configurations:
 
   }
 ]
+```
+
+<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:
+
+```json
+{
+"TestNode": [
+{
+"Time" : "01/14/2021",
+"Value": "0123-4567-8888"
+},
+{
+"Time" : "01/13/2022",
+"Value": "0123-4567-8910"
+}
+]
+}
 ```
 
 ## REST URLs

@@ -21,7 +21,7 @@ The string of the **query** parameter must contain string items in the following
 The following rules apply for specifying the query string:
 
 - Multiple queries are separated by a semicolon (`;`).
-- Partial queries are terminated by a multi-level wildcard.
+- Partial queries are terminated by a multi-level wildcard (`#`).
 - A query cannot be terminated by a trailing slash (`/`).
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
@@ -47,8 +47,8 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 
 ```json
 {
-"id" : "40",
-"query" : "group1/edge2"
+	"id" : "40",
+	"query" : "group1/edge2"
 }
 ```
 
@@ -61,9 +61,9 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 	    "query": "group1/edge2",
 	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
 	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
-	    "progress": 729,
-	    "itemsFound": 729,
-	    "newItems": 729,
+	    "progress": 30,
+	    "itemsFound": 700,
+	    "newItems": 200,
 	    "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result",
 	    "autoSelect": false,
 	    "status": "Complete",
