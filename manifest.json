@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/configuration.html",
-          "hash": "8q3LPPrC7eAjUbYspbqGqQ=="
+          "hash": "b/dlnkCDHDnALqpwBghWTg=="
         }
       },
       "is_incremental": false,
@@ -204,6 +204,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -324,6 +327,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -360,9 +366,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -2017,7 +2020,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
