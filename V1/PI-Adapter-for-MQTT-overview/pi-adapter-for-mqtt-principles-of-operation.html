@@ -252,6 +252,37 @@
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>MQTT</em></li>
 </ul>
 <p>For MQTT specific metadata, see <a class="xref" href="mqtt-metadata/mqtt-specific-metadata.html">MQTT specific metadata</a> and for MQTT Sparkplug B specific metadata, see <a class="xref" href="mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html">MQTT Sparkplug B specific metadata</a>.</p>
+<h3 id="mqtt-specific-metadata">MQTT specific metadata</h3>
+<p>Metadata specific to the MQTT generic component are:</p>
+<ul>
+<li><strong>Topic</strong>: Specifies the MQTT topic string</li>
+<li><strong>ValueField</strong>: Specifies the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server</li>
+</ul>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
+<ul>
+<li><code>None</code>: No metadata</li>
+<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
+<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField</li>
+</ul>
+<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a>.</p>
+<h3 id="mqtt-sparkplug-b-specific-metadata">MQTT Sparkplug B specific metadata</h3>
+<p>Metadata specific to the MQTT Sparkplug B component are:</p>
+<ul>
+<li><strong>Namespace</strong>: Specifies the Topic namespace.</li>
+<li><strong>Group_Id</strong>: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients</li>
+<li><strong>Edge_Node_Id</strong>: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure</li>
+<li><strong>Device_Id</strong>: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node</li>
+</ul>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
+<ul>
+<li><code>None</code>: No metadata</li>
+<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
+<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and MetricName</li>
+</ul>
+<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<pre><code class="lang-code">&lt;AdapterComponentID&gt;.&lt;Topic&gt;.&lt;MetricName&gt;
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</p>
 </article>
           </div>
           
