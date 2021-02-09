@@ -56,7 +56,7 @@ Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
 |------------------|----------|-----------|-------------|
 | **Selected**     | Optional | `boolean` |  Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`           |
 | **Name**         | Optional | `string`  | The optional friendly name of the data item collected from the data source. <br><br>Allowed value: any string<br>Default value: `null`            |
-| **StreamId**     | Optional | `string`  |  The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`           |
+| **StreamId**     | Optional | `string`  |  The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar <!-- you can't escape a pipe character? ><br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`           |
 | **Topic**        | Required | `string`  |  The MQTT topic string.<br><br>Allowed value: cannot be `null`, empty, or whitespace.        |
 | **ValueField**   | Required | `string`  |  The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`.<br><br>Allowed value: cannot be `null`, empty, or whitespace.          |
 | **TimeField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<sup>1</sup><br><br>Allowed value: any valid JsonPath expression      |
@@ -68,7 +68,7 @@ Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
 
 ## Runtime changes
 
-PI Adapter for MQTT handles runtime changes for data selection configuration as follows:
+PI Adapter for MQTT handles runtime changes for data selection configuration as follows: <! See previous comment about this sentence >
 
 When you create a new data selection item with a new **Topic** property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.
 
@@ -109,7 +109,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 ]
 ```
 
-<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:
+<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure: <!-- capitalize JSON. I would replace the semicolon with a comma. When you use a semicolon in this type of situation, both sides of the sentence should be able to stand as complete sentences. Currently, the second clause does not. >
 
 ```json
 {
@@ -137,4 +137,4 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | PUT | Updates or creates a new data selection with the specified *StreamId*|
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | DELETE | Deletes a specific data selection item of the MQTT data selection configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your MQTT component, for example Mqtt1.
+**Note:** Replace _ComponentId_ with the Id of your MQTT component, for example Mqtt1. <!-- kind of picayune, but when you use "for example," the phrase is set off by commas. So this should read "for example, Matt1." It might also read better as a sentence unto itself. "For example, Matt1." But maybe that's just getting too fussy. >
