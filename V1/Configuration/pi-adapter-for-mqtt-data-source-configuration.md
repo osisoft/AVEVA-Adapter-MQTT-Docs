@@ -15,7 +15,7 @@ Complete the following steps to configure an MQTT data source:
 1. Use any text editor to create a file that contains an MQTT data source in the JSON format.
     - For content structure, see [MQTT data source examples](#mqtt-data-source-examples).
     - For a table of all available parameters, see [MQTT data source parameters](#mqtt-data-source-parameters).
-2. Save the file. For example, `ConfigureDataSource.json`.
+2. Save the file. For example, `ConfigureDataSource.json`. <!-- Not sure what the example is doing? Does it provide an example name? 
 3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
       **Note:** The following example uses Mqtt1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
@@ -30,7 +30,7 @@ Complete the following steps to configure an MQTT data source:
 
     **Note:** Run this command from the same directory where the file is located.
 
-4. Configure data selection. For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMqttDataSelectionConfiguration1-2).
+4. Configure data selection. For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMqttDataSelectionConfiguration1-2). <!-- This link is not resolving >
 
 ## MQTT data source schema
 
@@ -47,10 +47,10 @@ The following parameters are available for configuring an MQTT data source:
 | Parameter                     | Required | Type      | Description |
 |-------------------------------|----------|-----------|-------------|
 | **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server.  <br><br>Allowed value: any valid WS or TCP/IP endpoint address <br> Default value: `null`       |
-| **Port**                      | Required | `integer` |  Port number of the MQTT  server. <br><br>Allowed value: valid port range <br> Default value: `0`.            |
+| **Port**                      | Required | `integer` |  Port number of the MQTT  server. <br><br>Allowed value: valid port range <br> Default value: `0`. <!-- do you want that period there after "0"? >           |
 | **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker. <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
 | **TLS**                       | Optional | `enum`    |  Determines if TLS should be used and what version. <br><br>Allowed value: none, `TLS`, `TLS11`, `TLS12`, `TLS13` <br> Default value: `TLS12`            |
-| **UserName**                  | Optional | `string`  | User name or client id for accessing the MQTT server. <br><br>Allowed value: any string <br> Default value: `null`          |
+| **UserName**                  | Optional | `string`  | User name or client id for accessing the MQTT server. <br><br>Allowed value: any string <br> Default value: `null`    <!-- Do we have a standard for "id"? I would always use ID unless referencing something in the GUI or in code >      |
 | **Password**                  | Optional | `string`  |  Password or token for accessing the MQTT server. <br><br>**Note:** OSIsoft recommends using REST to configure the data source when the password must be specified because the adapter will encrypt the password when using REST. If you do not use REST, the plain text password will be stored on-disk. Password cannot be specified without UserName. <br><br>Allowed value: any string <br> Default value: `null`           |
 | **ClientId**                  | Optional | `sting`   | Identification of the adapter component connecting to the MQTT broker.<br><br> **Note:** If null, the adapter generates a GUID.          |
 | **MQTTVersion**               | Optional | `enum`    | Version  of the MQTT protocol to be used.  <br><br>Allowed value: `3.1.0`, or `3.1.1`, or `5.0.0` <br> Default value: `3.1.1`           |
