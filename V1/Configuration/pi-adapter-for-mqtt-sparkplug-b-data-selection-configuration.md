@@ -8,7 +8,7 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ## Configure MQTT Sparkplug B data selection
 
-**Note:** You cannot modify MQTT Sparkplug B data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+**Note:** You cannot modify MQTT Sparkplug B data selection configurations manually. You must use the REST endpoints to add or edit the configuration. <!-- I don't think this is worth changing right now, but I don't like starting a topic with a note. A note tends to interrupt the flow of information. Here you haven't even started before you interrupt. It seems this note could probably be presented just as text, but maybe there's a reason to make it a note. This same comment applies to all the similar topics in this document. >
 
 Complete the following steps to configure the MQTT Sparkplug B data selection:
 
@@ -16,7 +16,7 @@ Complete the following steps to configure the MQTT Sparkplug B data selection:
     - For content structure, see [MQTT Sparkplug B data selection examples](#mqtt-sparkplug-b-data-selection-examples).
     - For a table of all available parameters, see [MQTT Sparkplug B data selection parameters](#mqtt-sparkplug-b-data-selection-parameters).
 2. Save the file. For example, `ConfigureDataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint: <!-- If you are going to use a colon to introduce a list and then present a note and some text before the list starts, I would skip the colon. It's okay to end that sentence with a period. > 
 
     **Note:** The following examples use MqttSparkplugB1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
   
@@ -58,12 +58,12 @@ Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Allowed value: any string <br>Default value: `null`  |
 | **Topic** | Required | `string` | The MQTT topic string in the following format: `{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}`<br><br>The following rules apply to the MQTT topic string:<br>1. Both the topic string as a whole and the individual components are case-sensitive<br>2. `{namespace}` must be `spBv1.0` (case-sensitive)<br>3. `{groupId}` must be non-blank and can contain any character except for `+` and `#`<br>4. `{messageType}` must be either `DDATA` or `NDATA` (uppercase) <br>**Note:** When `NDATA` is specified, `{deviceId}` must not be specified <br>5. `edgeNodeId` must be non-blank and can contain any character except for `+` and `#`<br>6. `{deviceId}` must be non-blank and can contain any character except for `+` and `#`<br><br>**Examples**:<br>`spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004`<br>`spBv1.0/DemoCenters/NDATA/EPIC-DC004` | 
 | **MetricName** | Required | `string` | The name of the property in the metric. <br><br>Allowed value: cannot be `null`, empty, or whitespace. 
-| **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`
+| **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar <!-- same question about escaping the pipe character > <br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`
 | **DataFilterId** | Optional | `string` | The ID of the data filter. <br><br>Allowed value: any string <br>Default value: `null`| 
 
 ## Runtime changes
 
-PI Adapter for MQTT handles runtime changes for data selection configuration as follows:
+PI Adapter for MQTT handles runtime changes for data selection configuration as follows: <!-- same comment about the colon followed by a paragraph >
 
 When you create a new data selection item with a new **Topic** property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item. When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.
 
