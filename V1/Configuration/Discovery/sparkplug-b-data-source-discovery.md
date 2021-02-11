@@ -12,7 +12,7 @@ The string of the **query** parameter must contain string items in the following
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
-| **Group_Id**     | Optional | This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients. <!-- The "and back to..." phrase doesn't mean anything to me, but maybe I need to understand the material better >
+| **Group_Id**     | Optional | This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.
 | **Edge_Node_Id** | Optional | This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.<br>**Group_Id** combined with **Edge_Node_Id** must be unique from any other **Group_Id**/**Edge_Node_Id** assigned in the MQTT infrastructure.
 | **Device_Id**    | Optional | This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically).
 
