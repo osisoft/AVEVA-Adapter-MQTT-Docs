@@ -11,7 +11,7 @@ This adapter's operations focus on data collection and stream creation.
 For the MQTT adapter to start data collection, configure the following:
 
 - Data source: Provide the data source from which the adapter should collect data.<br> For more details, see the data source topics [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
-- Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the data selection topics [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
+- Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the data selection topics [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
 ## Connection
@@ -20,7 +20,7 @@ The adapter uses either the Transmission Control Protocol (TCP) or WebSocket pro
 
 ## Data collection
 
-The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing Json payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugB).
+The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing JSON payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
 
 ### Data types
 
@@ -94,14 +94,18 @@ Metadata specific to the MQTT generic component are:
 
 Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
-**Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
+```code
+<AdapterComponentID>.<Topic>.<ValueField>
+```
+
+**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
 
 ### MQTT Sparkplug B specific metadata
 
 Metadata specific to the MQTT Sparkplug B component are:
 
-- **Namespace**: Specifies the Topic namespace.
-- **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients
+- **Namespace**: Specifies the topic namespace.
+- **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients
 - **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure
 - **Device_Id**: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node
 
@@ -117,4 +121,4 @@ Each stream created for the selected measurement has a unique identifier (stream
 <AdapterComponentID>.<Topic>.<MetricName>
 ```
 
-**Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
+**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).

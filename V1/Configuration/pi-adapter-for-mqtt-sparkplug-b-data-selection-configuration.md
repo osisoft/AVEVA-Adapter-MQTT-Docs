@@ -8,15 +8,15 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ## Configure MQTT Sparkplug B data selection
 
-**Note:** You cannot modify MQTT Sparkplug B data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure the MQTT Sparkplug B data selection.
 
-Complete the following steps to configure the MQTT Sparkplug B data selection:
+**Note:** You cannot modify MQTT Sparkplug B data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
 1. Use any text editor to create a file that contains an MQTT Sparkplug B data selection in the JSON format.
     - For content structure, see [MQTT Sparkplug B data selection examples](#mqtt-sparkplug-b-data-selection-examples).
     - For a table of all available parameters, see [MQTT Sparkplug B data selection parameters](#mqtt-sparkplug-b-data-selection-parameters).
-2. Save the file. For example, `ConfigureDataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:
+2. Save the file, for example as `ConfigureDataSelection.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.
 
     **Note:** The following examples use MqttSparkplugB1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
   
@@ -63,8 +63,6 @@ Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
 
 ## Runtime changes
 
-PI Adapter for MQTT handles runtime changes for data selection configuration as follows:
-
 When you create a new data selection item with a new **Topic** property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item. When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.
 
 **Note:** Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.
@@ -110,4 +108,4 @@ The following are examples of valid MQTT Sparkplug B data selection configuratio
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | PUT | Updates or creates a new data selection with the specified *StreamId*|
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | DELETE | Deletes a specific data selection item of the MQTT Sparkplug data selection configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your MQTT Sparkplug B component, for example MqttSparkplugB1.
+**Note:** Replace _ComponentId_ with the Id of your MQTT Sparkplug B component. For example, MqttSparkplugB1.

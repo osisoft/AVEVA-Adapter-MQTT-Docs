@@ -15,8 +15,8 @@ Complete the following steps to configure the MQTT data selection:
 1. Use any text editor to create a file that contains an MQTT data selection in the JSON format.
     - For content structure, see [MQTT data selection examples](#mqtt-data-selection-examples).
     - For a table of all available parameters, see [MQTT data selection parameters](#mqtt-data-selection-parameters).
-2. Save the file. For example, `ConfigureDataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:
+2. Save the file, for example as `ConfigureDataSelection.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.
 
     **Note:** The following examples use Mqtt1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
   
@@ -68,8 +68,6 @@ Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
 
 ## Runtime changes
 
-PI Adapter for MQTT handles runtime changes for data selection configuration as follows:
-
 When you create a new data selection item with a new **Topic** property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.
 
 **Note:** Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.
@@ -109,7 +107,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 ]
 ```
 
-<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:
+<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified, in other words what the data source returns. The previous examples use the following Json payload structure:
 
 ```json
 {
@@ -137,4 +135,4 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | PUT | Updates or creates a new data selection with the specified *StreamId*|
 | api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | DELETE | Deletes a specific data selection item of the MQTT data selection configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your MQTT component, for example Mqtt1.
+**Note:** Replace _ComponentId_ with the Id of your MQTT component. For example, Mqtt1.
