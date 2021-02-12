@@ -8,7 +8,7 @@ To use the adapter, you must configure the data source from which it polls data.
 
 ## Configure MQTT Sparkplug B data source
 
-**Note:** To modify MQTT Sparkplug B data source configuration, you must use the REST endpoints to add or edit the configuration.
+**Note:** To modify the MQTT Sparkplug B data source configuration, you must use the REST endpoints to add or edit the configuration.
 
 Complete the following steps to configure an MQTT Sparkplug B data source:
 
@@ -36,9 +36,8 @@ Complete the following steps to configure an MQTT Sparkplug B data source:
 
 The full schema definition for the MQTT Sparkplug B data source configuration is in the `MQTTSparkplugB_DataSource_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\MqttSparkplugB\Schemas`
-
-Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
+* Windows: `%ProgramFiles%\OSIsoft\Adapters\MqttSparkplugB\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas`
 
 ## MQTT Sparkplug B data source parameters
 
@@ -46,24 +45,24 @@ The following parameters are available for configuring an MQTT data source:
 
 | Parameter                     | Required | Type      | Description |
 |-------------------------------|----------|-----------|-------------|
-| **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server.  <br><br>Allowed value: any valid WS or TCP/IP endpoint address |
-| **Port**                      | Required | `integer` |  Port number of the MQTT  server. <br><br>Allowed value: valid port range          |
-| **PrimaryHostID** | Optional | `string` | The ID of the primary host. The adapter is considered the primary application. <br><br>Allowed value: any string without the following characters: `+ # /`<br>Default value: `null`
-| **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker. <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
-| **TLS**                       | Optional | `enum`    |  Determines if TLS should be used and what version. <br><br>Allowed value: none, `TLS`, `TLS11`, `TLS12`, `TLS13` <br> Default value: `TLS12`            |
-| **UserName**                  | Optional | `string`  | User name or client ID for accessing the MQTT server. <br><br>Allowed value: any string <br> Default value: `null`    |
-| **PassWord**                  | Optional | `string`  |  Password or token for accessing the MQTT server. <br><br>**Note:** OSIsoft recommends using REST to configure the data source when the password must be specified because REST will encrypt the password. If you do not use REST, the plain text password will be stored on disk. PassWord cannot be specified without UserName. <br><br>Allowed value: any string <br> Default value: `null`     |
-| **ClientId**                  | Optional | `sting`   | Identification of the adapter component connecting to the MQTT broker.<br><br> **Note:** If null, the adapter generates a GUID.          |
-| **MQTTVersion**               | Optional | `enum`    | Version  of the MQTT protocol to be used. <br><br>Allowed value: `3.1.0`, or `3.1.1`, or `5.0.0` <br> Default value: `3.1.1`           |
-| **ValidateServerCertificate** | Optional | `boolean` | Determines if server certificate gets validated. <br><br>**Note:** A warning is printed in case the server certificate validation is disabled.<br> Default value: `true`           |
-| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `MqttSparkplugB1.{Topic}.{MetricName}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
+| **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server  <br><br>Allowed value: Any valid WS or TCP/IP endpoint address |
+| **Port**                      | Required | `integer` |  Port number of the MQTT  server <br><br>Allowed value: Valid port range          |
+| **PrimaryHostID** | Optional | `string` | The ID of the primary host. The adapter is considered the primary application. <br><br>Allowed value: Any string without the following characters: `+ # /`<br>Default value: `null`
+| **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
+| **TLS**                       | Optional | `enum`    |  Determines if TLS should be used and what version <br><br>Allowed value: None, `TLS`, `TLS11`, `TLS12`, `TLS13` <br> Default value: `TLS12`            |
+| **UserName**                  | Optional | `string`  | User name or client ID for accessing the MQTT server <br><br>Allowed value: Any string <br> Default value: `null`    |
+| **PassWord**                  | Optional | `string`  |  Password or token for accessing the MQTT server <br><br>**Note:** OSIsoft recommends using REST to configure the data source when the password must be specified because REST will encrypt the password. If you do not use REST, the plain text password is stored on-disk. You cannot specify a PassWord without specifying a UserName. <br><br>Allowed value: Any string <br> Default value: `null`     |
+| **ClientId**                  | Optional | `sting`   | Identification of the adapter component connecting to the MQTT broker<br><br> **Note:** If ClientId is null, the adapter generates a GUID.          |
+| **MQTTVersion**               | Optional | `enum`    | Version  of the MQTT protocol to be used <br><br>Allowed value: `3.1.0`, or `3.1.1`, or `5.0.0` <br> Default value: `3.1.1`           |
+| **ValidateServerCertificate** | Optional | `boolean` | Determines if server certificate gets validated <br><br>**Note:** A warning is printed in case the server certificate validation is disabled.<br> Default value: `true`           |
+| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix is added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `MqttSparkplugB1.{Topic}.{MetricName}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
 | **DefaultStreamIdPattern**    | Optional         | `string`  |  Specifies the default stream ID pattern to use. Possible parameters: `{Topic}`, `{MetricName}`. <br><br>Allowed value: any string<br>Default value: `{Topic}.{MetricName}`
 
 ## Runtime changes
 
 When you set up a new data source configuration, the adapter automatically connects to the new data source. When you delete a data source configuration, the adapter automatically disconnects from the data source and stops data collection for all streams associated with that data source. Additionally, when you update existing data source properties, the changes are reflected at runtime.
 
-**Note:** Runtime changes also handle validation of configuration, which means that an invalid data source configuration will be rejected.
+**Note:** Runtime changes also handle validation of configuration, which means that an invalid data source configuration is rejected.
 
 ## MQTT Sparkplug B data source examples
 
