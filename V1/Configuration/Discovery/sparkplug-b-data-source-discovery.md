@@ -30,12 +30,12 @@ The following rules apply for specifying the query string:
 
 #### Wildcards
 
-Wildcards are allowed in the query.
+Wildcards are allowed in the query with the following specifications:
 
 - A single-level wildcard replaces one topic level and is indicated by `+`.
 - A multi-level wildcard covers many topic levels and is indicated by `#`.
 - Wildcards can be combined.
-- `#` must not be used more than once and only at the end of the topic.
+- `#` must not be used more than once and can only be used at the end of the topic.
 - No query, an empty string, or `null` as the query parameter is equivalent to `#`.
 
 ## Discovery query example
