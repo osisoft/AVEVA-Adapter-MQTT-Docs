@@ -80,7 +80,7 @@
 
 <p>Some network architectures may need a network proxy between the PI adapter and the egress endpoint. The process for configuring the adapter to egress data through a network proxy varies depending on the proxy type.</p>
 <h2 id="https-forward-proxy">HTTPS forward proxy</h2>
-<p>For the adapter to use an HTTPS forward proxy while egressing, configure the <code>https_proxy</code> environment variable. The value of this environment variable must contain the URL of the proxy server, beginning with <code>http</code>. The format of the string is <code>[user[:password]@]http://hostname[:port]</code>.</p>
+<p>For the adapter to use an HTTPS forward proxy while egressing, configure the <code>https_proxy</code> environment variable. The value of this environment variable must contain the URL of the proxy server beginning with <code>http</code>. The format of the string is <code>[user[:password]@]http://hostname[:port]</code>.</p>
 <h3 id="https-proxy-environment-variable">HTTPS proxy environment variable</h3>
 <table>
 <thead>
@@ -94,7 +94,7 @@
 <tr>
 <td> <code>user</code></td>
 <td>Optional</td>
-<td>The user name for the HTTPS forward proxy.</td>
+<td>The user name for the HTTPS forward proxy</td>
 </tr>
 <tr>
 <td> <code>password</code></td>

@@ -88,8 +88,8 @@
 <li>For a table of all available parameters, see <a href="#mqtt-data-selection-parameters">MQTT data selection parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>ConfigureDataSelection.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:</p>
+<li>Save the file. For example, as <code>ConfigureDataSelection.json</code>.</li>
+<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> The following examples use Mqtt1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1.3/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <ul>
@@ -108,8 +108,10 @@
 </ol>
 <h2 id="mqtt-data-selection-schema">MQTT data selection schema</h2>
 <p>The full schema definition for the MQTT data selection configuration is in the <code>Mqtt_DataSelection_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/Mqtt/Schemas</code></p>
+<ul>
+<li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas</code></li>
+<li>Linux: <code>/opt/OSIsoft/Adapters/Mqtt/Schemas</code></li>
+</ul>
 <h2 id="mqtt-data-selection-parameters">MQTT data selection parameters</h2>
 <table>
 <thead>
@@ -125,63 +127,62 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Selects or clears a measurement. To select an item, set to <code>true</code>. To remove an item, leave the field empty or set to <code>false</code>.  <br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code></td>
+<td>Selects or clears a measurement. To select an item, set the field to <code>true</code>. To remove an item, leave the field empty or set the value to <code>false</code>.  <br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The optional friendly name of the data item collected from the data source. <br><br>Allowed value: any string<br>Default value: <code>null</code></td>
+<td>The optional friendly name of the data item collected from the data source <br><br>Allowed value: Any string<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>StreamId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the DataSource parameter. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-source-configuration.html#mqtt-data-source-parameters">PI Adapter for MQTT data source configuration</a>. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code></td>
+<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-source-configuration.html#mqtt-data-source-parameters">PI Adapter for MQTT data source configuration</a>. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores (&quot;__&quot;)<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code>.</td>
 </tr>
 <tr>
 <td><strong>Topic</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The MQTT topic string.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The MQTT topic string<br><br>Allowed value: Cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>ValueField</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with <code>$</code>.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with <code>$</code>.<br><br>Allowed value: Cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>TimeField</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with <code>$</code>. <br><br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<sup>1</sup><br><br>Allowed value: any valid JsonPath expression</td>
+<td>The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with <code>$</code>. <br><br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<sup>1</sup><br><br>Allowed value: Any valid JsonPath expression</td>
 </tr>
 <tr>
 <td><strong>DataType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The expected data type of the values for the specified field. <br><br>Allowed value: See <a class="xref" href="../PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html#data-types">PI Adapter for MQTT principles of operation</a></td>
+<td>The expected data type of the values for the specified field <br><br>Allowed value: See <a class="xref" href="../PI-Adapter-for-MQTT-overview/pi-adapter-for-mqtt-principles-of-operation.html#data-types">PI Adapter for MQTT principles of operation</a></td>
 </tr>
 <tr>
 <td><strong>TimeFormat</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The time format of the timestamp value specified in the TimeField property.<br><br>Allowed value: any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom datetime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
+<td>The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> If the string cannot be parsed, specify a custom DateTime string or one of the following keywords: <code>Adapter</code>, <code>UnixTimeSeconds</code>, <code>UnixTimeMilliseconds</code><br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The ID of the data filter. <br><br>Allowed value: any string <br>Default value: <code>null</code></td>
+<td>The Id of the data filter <br><br>Allowed value: Any string <br>Default value: <code>null</code></td>
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> If you do not specify <strong>TimeField</strong> and <strong>TimeFormat</strong>, the adapter automatically sets the latter to <code>Adapter</code>, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify <strong>TimeFormat</strong> only, with a value other than <code>Adapter</code>, the validation fails and the adapter throws an error.</p>
+<p><sup>1</sup> If you do not specify <strong>TimeField</strong> and <strong>TimeFormat</strong>, the adapter automatically sets the latter to <code>Adapter</code>, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify <strong>TimeFormat</strong> only with a value other than <code>Adapter</code>, the validation fails and the adapter throws an error.</p>
 <h2 id="runtime-changes">Runtime changes</h2>
-<p>PI Adapter for MQTT handles runtime changes for data selection configuration as follows:</p>
 <p>When you create a new data selection item with a new <strong>Topic</strong> property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.</p>
-<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.</p>
+<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data selection configuration is rejected.</p>
 <h2 id="mqtt-data-selection-examples">MQTT data selection examples</h2>
 <p>The following are examples of valid MQTT data selection configurations<sup>1</sup>:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
@@ -207,7 +208,7 @@
 
   }
 ]
-</code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the Json payload to be specified; in other words what the data source returns. The previous examples use the following Json payload structure:</p>
+</code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following Json payload structure:</p>
 <pre><code class="lang-json">{
 &quot;TestNode&quot;: [
 {
@@ -262,7 +263,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component, for example Mqtt1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component. For example, Mqtt1.</p>
 </article>
           </div>
           

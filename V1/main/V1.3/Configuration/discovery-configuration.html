@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="DiscoveryConfiguration1-3">
 <h1 id="discovery-configuration">Discovery configuration</h1>
 
-<p>You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate.</p>
-<p> Data discovery includes different routes. For example, you can choose to do the following:</p>
+<p>You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery ID, which you can either specify or let the adapter generate.</p>
+<p>Data discovery includes different routes. For example, you can choose to do the following:</p>
 <ul>
 <li>Retrieve the discovery results</li>
 <li>Query the discovery status</li>
 <li>Cancel or delete discoveries</li>
 <li>Merge discovery results with the data selection item</li>
-<li>Retrieve results from a current discovery and compare it with results from a previous or discovery</li>
+<li>Retrieve results from a current discovery and compare it with results from a previous discovery</li>
 <li>Retrieve results from a current discovery and compare it with results from a current data selection configuration</li>
 </ul>
 <h2 id="configure-discovery">Configure discovery</h2>
@@ -97,22 +97,8 @@
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
 </code></pre></li>
 </ol>
-<!---
-## Discovery schema
-
-The full schema definition for the general configuration is in the `<AdapterName>_Discovery_schema.json` file located in one of the following folders:
-
-Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
-
-Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
---->
 <!--
 Only Id, Query and AutoSelect will have effect when initiating the discovery query. The other parameters for the 'discovery state' are redundant and will be overridden even if specified in the configuration. To avoid any confusion we could mention only the 3 relevant ones to the customer for configuring discovery. The table below is the State of the discovrery is mainly for intepreting discovery result.
--->
-<!--
-Thyag:
-Specific to MQTT Sparkplug B, the descriptions
-Progress = also indicated the number of topics found through the discovery 
 -->
 <h2 id="discovery-parameters">Discovery parameters</h2>
 <table>
@@ -127,12 +113,12 @@ Progress = also indicated the number of topics found through the discovery
 <tr>
 <td> <strong>id</strong></td>
 <td><code>string</code></td>
-<td>The Id of the discovery. <br><br> <strong>Note:</strong> You cannot run multiple discoveries with the same Id.</td>
+<td>The ID of the discovery. <br><br> <strong>Note:</strong> You cannot run multiple discoveries with the same ID.</td>
 </tr>
 <tr>
 <td> <strong>query</strong></td>
 <td><code>string</code></td>
-<td>A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.</td>
+<td>A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.</td>
 </tr>
 <tr>
 <td> <strong>startTime</strong></td>
@@ -147,7 +133,7 @@ Progress = also indicated the number of topics found through the discovery
 <tr>
 <td> <strong>progress</strong></td>
 <td><code>double</code></td>
-<td>Progress of the discovery.</td>
+<td>Progress of the discovery (number of topics found through the discovery)</td>
 </tr>
 <tr>
 <td> <strong>itemsFound</strong></td>
@@ -233,7 +219,7 @@ Progress = also indicated the number of topics found through the discovery
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>
 <td>GET</td>
-<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified Id does not exist, you will get an error message</td>
+<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified ID does not exist, you will get an error message</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>
@@ -258,7 +244,7 @@ Progress = also indicated the number of topics found through the discovery
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em>/result</td>
 <td>DELETE</td>
-<td>Cancels and deletes discovery result.<br><br><strong>Note:</strong> The discovery Id is still valid, but a query will contain a status of <code>canceled</code><br>Only the <strong>Status</strong> property will contain a <code>canceled</code> status, but not the query</td>
+<td>Cancels and deletes discovery result.<br><br><strong>Note:</strong> The discovery ID is still valid, but the <strong>Status</strong> property of a discovery query will contain a status of <code>canceled</code></td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/dataselection/select?discoveryid=<em>discoveryId</em></td>
@@ -272,7 +258,7 @@ Progress = also indicated the number of topics found through the discovery
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>componentId</em> with the Id of your adapter component, for example OpcUa1.<br>Replace <em>discoveryId</em> with the Id of the discovery for which you want to perform the action.</p>
+<p><strong>Note:</strong> Replace <em>componentId</em> with the ID of your adapter component, for example OpcUa1.<br>Replace <em>discoveryId</em> with the Id of the discovery for which you want to perform the action.</p>
 </article>
           </div>
           

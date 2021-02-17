@@ -93,17 +93,17 @@ The following statements are only true for the genric MQTT component. Sparkplug 
 <li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
 <li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField</li>
 </ul>
-<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<p>Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:</p>
 <!--
 Comments from Bo:
-The default stream ID patter listed below is true for the generic MQTT adapter but not the Sparkplug B component
-The Default stream ID pattern for generic MQTT is:
-<AdapterComponentID>.<Topic>.<ValueField>
-The default stream ID pattern for MQTT Sparkplug B is:
+The default stream Id patter listed below is true for the generic MQTT adapter but not the Sparkplug B component
+The Default stream Id pattern for generic MQTT is:
+<AdapterComponentId>.<Topic>.<ValueField>
+The default stream Id pattern for MQTT Sparkplug B is:
 <AdapterComponentId>.<Topic>.<MetricName>
 Similarly, we may want to have two sub-sections to discuss all the difference including the items mentioned above
 -->
-<pre><code class="lang-code">&lt;AdapterComponentID&gt;.&lt;Topic&gt;.&lt;ValueField&gt;
+<pre><code class="lang-code">&lt;AdapterComponentId&gt;.&lt;Topic&gt;.&lt;ValueField&gt;
 </code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../../Configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a>.</p>
 </article>
           </div>

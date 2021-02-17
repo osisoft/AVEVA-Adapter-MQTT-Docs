@@ -80,16 +80,16 @@
 
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.</p>
 <h2 id="configure-mqtt-sparkplug-b-data-selection">Configure MQTT Sparkplug B data selection</h2>
+<p>Complete the following steps to configure the MQTT Sparkplug B data selection.</p>
 <p><strong>Note:</strong> You cannot modify MQTT Sparkplug B data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following steps to configure the MQTT Sparkplug B data selection:</p>
 <ol>
 <li>Use any text editor to create a file that contains an MQTT Sparkplug B data selection in the JSON format.<ul>
 <li>For content structure, see <a href="#mqtt-sparkplug-b-data-selection-examples">MQTT Sparkplug B data selection examples</a>.</li>
 <li>For a table of all available parameters, see <a href="#mqtt-sparkplug-b-data-selection-parameters">MQTT Sparkplug B data selection parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>ConfigureDataSelection.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint:</p>
+<li>Save the file. For example, as <code>ConfigureDataSelection.json</code>.</li>
+<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> The following examples use MqttSparkplugB1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1.3/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <ul>
@@ -108,8 +108,10 @@
 </ol>
 <h2 id="mqtt-sparkplug-b-data-selection-schema">MQTT Sparkplug B data selection schema</h2>
 <p>The full schema definition for the MQTT Sparkplug B data selection configuration is in the <code>MqttSparkplugB_DataSelection_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\MqttSparkplugB\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas</code></p>
+<ul>
+<li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\MqttSparkplugB\Schemas</code></li>
+<li>Linux: <code>/opt/OSIsoft/Adapters/MqttSparkplugB/Schemas</code></li>
+</ul>
 <h2 id="mqtt-sparkplug-b-data-selection-parameters">MQTT Sparkplug B data selection parameters</h2>
 <table>
 <thead>
@@ -131,7 +133,7 @@
 <td><strong>Name</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The optional friendly name of the data item collected from the data source. <br><br>Allowed value: any string <br>Default value: <code>null</code></td>
+<td>The optional friendly name of the data item collected from the data source <br><br>Allowed value: Any string <br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Topic</strong></td>
@@ -143,26 +145,25 @@
 <td><strong>MetricName</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The name of the property in the metric. <br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The name of the property in the metric <br><br>Allowed value: Cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>StreamId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code></td>
+<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the measurement configuration. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores (&quot;__&quot;)<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code>.</td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The ID of the data filter. <br><br>Allowed value: any string <br>Default value: <code>null</code></td>
+<td>The Id of the data filter <br><br>Allowed value: Any string <br>Default value: <code>null</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="runtime-changes">Runtime changes</h2>
-<p>PI Adapter for MQTT handles runtime changes for data selection configuration as follows:</p>
 <p>When you create a new data selection item with a new <strong>Topic</strong> property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item. When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.</p>
-<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data selection configuration will be rejected.</p>
+<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data selection configuration is rejected.</p>
 <h2 id="mqtt-sparkplug-b-data-selection-examples">MQTT Sparkplug B data selection examples</h2>
 <p>The following are examples of valid MQTT Sparkplug B data selection configurations:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
@@ -225,7 +226,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT Sparkplug B component, for example MqttSparkplugB1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT Sparkplug B component. For example, MqttSparkplugB1.</p>
 </article>
           </div>
           

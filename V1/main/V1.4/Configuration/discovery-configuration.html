@@ -79,7 +79,7 @@
 <h1 id="discovery-configuration">Discovery configuration</h1>
 
 <p>You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.</p>
-<p> Data discovery includes different routes. For example, you can choose to do the following:</p>
+<p>Data discovery includes different routes. For example, you can choose to do the following:</p>
 <ul>
 <li>Retrieve the discovery results</li>
 <li>Query the discovery status</li>
@@ -119,7 +119,7 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 <tr>
 <td> <strong>id</strong></td>
 <td><code>string</code></td>
-<td>The Id of the discovery. <br><br> <strong>Note:</strong> You cannot run multiple discoveries with the same Id.</td>
+<td>The Id of the discovery <br><br> <strong>Note:</strong> You cannot run multiple discoveries with the same Id.</td>
 </tr>
 <tr>
 <td> <strong>query</strong></td>
@@ -129,37 +129,37 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 <tr>
 <td> <strong>startTime</strong></td>
 <td><code>datetime</code></td>
-<td>Time when the discovery started.</td>
+<td>Time when the discovery started</td>
 </tr>
 <tr>
 <td> <strong>endTime</strong></td>
 <td><code>datetime</code></td>
-<td>Time when the discovery ended.</td>
+<td>Time when the discovery ended</td>
 </tr>
 <tr>
 <td> <strong>progress</strong></td>
 <td><code>double</code></td>
-<td>Progress of the discovery.</td>
+<td>Progress of the discovery</td>
 </tr>
 <tr>
 <td> <strong>itemsFound</strong></td>
 <td><code>integer</code></td>
-<td>Number of data pieces that the discovery found on the data source.</td>
+<td>Number of data pieces that the discovery found on the data source</td>
 </tr>
 <tr>
 <td> <strong>newItems</strong></td>
 <td><code>integer</code></td>
-<td>Number of new data pieces that the discovery found in comparison to the previous discovery.</td>
+<td>Number of new data pieces that the discovery found in comparison to the previous discovery</td>
 </tr>
 <tr>
 <td> <strong>newAssets</strong></td>
 <td><code>integer</code></td>
-<td>Number of new assets that the discovery found in comparison to the previous discovery.</td>
+<td>Number of new assets that the discovery found in comparison to the previous discovery</td>
 </tr>
 <tr>
 <td> <strong>resultUri</strong></td>
 <td><code>integer</code></td>
-<td>URL at which you can access the results of the discovery.</td>
+<td>URL at which you can access the results of the discovery</td>
 </tr>
 <tr>
 <td> <strong>autoSelect</strong></td>
@@ -169,17 +169,17 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 <tr>
 <td> <strong>status</strong></td>
 <td><code>reference</code></td>
-<td>Status of the discovery, for example <code>Active</code> or <code>Complete</code>.</td>
+<td>Status of the discovery, for example <code>Active</code> or <code>Complete</code></td>
 </tr>
 <tr>
 <td> <strong>errors</strong></td>
 <td><code>string</code></td>
-<td>Errors encountered during the discovery.</td>
+<td>Errors encountered during the discovery</td>
 </tr>
 </tbody>
 </table>
 <h2 id="discoveries-status-example">Discoveries status example</h2>
-<p>The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
+<p>The following example shows the status of all discoveries. The discovery Id in this example was auto-generated.<br>
 <strong>Note:</strong> This is an example. It does not necessarily reflect the adapter you are currently using.</p>
 <pre><code class="lang-json">[
     {
@@ -225,7 +225,7 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>
 <td>GET</td>
-<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified Id does not exist, you will get an error message</td>
+<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified Id does not exist, you will get an error message.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>

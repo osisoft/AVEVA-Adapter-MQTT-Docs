@@ -80,7 +80,7 @@
 
 <p>To use the adapter, you must configure the data source from which it polls data.</p>
 <h2 id="configure-mqtt-data-source">Configure MQTT data source</h2>
-<p><strong>Note:</strong> To modify MQTT data source configuration, you must use the REST endpoints to add or edit the configuration.</p>
+<p><strong>Note:</strong> To modify the MQTT data source configuration, you must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following steps to configure an MQTT data source:</p>
 <ol>
 <li>Use any text editor to create a file that contains an MQTT data source in the JSON format.<ul>
@@ -88,7 +88,7 @@
 <li>For a table of all available parameters, see <a href="#mqtt-data-source-parameters">MQTT data source parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>ConfigureDataSource.json</code>.</li>
+<li>Save the file. For example, as <code>ConfigureDataSource.json</code>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>.</p>
 <p>   <strong>Note:</strong> The following example uses Mqtt1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1.3/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
@@ -96,13 +96,15 @@
 <pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Mqtt1/DataSource&quot;
 </code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 </li>
-<li><p>Configure data selection. For more information, see <a href="xref:PIAdapterForMqttDataSelectionConfiguration1-2">PI Adapter for MQTT data selection configuration</a>.</p>
+<li><p>Configure data selection. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a>.</p>
 </li>
 </ol>
 <h2 id="mqtt-data-source-schema">MQTT data source schema</h2>
 <p>The full schema definition for the MQTT data source configuration is in the <code>MQTT_DataSource_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/Mqtt/Schemas</code></p>
+<ul>
+<li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas</code></li>
+<li>Linux: <code>/opt/OSIsoft/Adapters/Mqtt/Schemas</code></li>
+</ul>
 <h2 id="mqtt-data-source-parameters">MQTT data source parameters</h2>
 <p>The following parameters are available for configuring an MQTT data source:</p>
 <table>
@@ -119,74 +121,73 @@
 <td><strong>HostNameOrIpAddress</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Host name or IP address of the MQTT server.  <br><br>Allowed value: any valid WS or TCP/IP endpoint address <br> Default value: <code>null</code></td>
+<td>Host name or IP address of the MQTT server  <br><br>Allowed value: Any valid WS or TCP/IP endpoint address <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Port</strong></td>
 <td>Required</td>
 <td><code>integer</code></td>
-<td>Port number of the MQTT  server. <br><br>Allowed value: valid port range <br> Default value: <code>0</code>.</td>
+<td>Port number of the MQTT  server <br><br>Allowed value: Valid port range <br> Default value: <code>0</code></td>
 </tr>
 <tr>
 <td><strong>Protocol</strong></td>
 <td>Optional</td>
 <td><code>enum</code></td>
-<td>The protocol used to communicate to the MQTT broker. <br><br>Allowed value: <code>WS</code> or <code>TCP</code> <br> Default value: <code>TCP</code></td>
+<td>The protocol used to communicate to the MQTT broker <br><br>Allowed value: <code>WS</code> or <code>TCP</code> <br> Default value: <code>TCP</code></td>
 </tr>
 <tr>
 <td><strong>TLS</strong></td>
 <td>Optional</td>
 <td><code>enum</code></td>
-<td>Determines if TLS should be used and what version. <br><br>Allowed value: none, <code>TLS</code>, <code>TLS11</code>, <code>TLS12</code>, <code>TLS13</code> <br> Default value: <code>TLS12</code></td>
+<td>Determines if TLS should be used and what version <br><br>Allowed value: <code>None</code>, <code>TLS</code>, <code>TLS11</code>, <code>TLS12</code>, <code>TLS13</code> <br> Default value: <code>TLS12</code></td>
 </tr>
 <tr>
 <td><strong>UserName</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>User name or client id for accessing the MQTT server. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
+<td>User name or client Id for accessing the MQTT server <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Password or token for accessing the MQTT server. <br><br><strong>Note:</strong> OSIsoft recommends using REST to configure the data source when the password must be specified because the adapter will encrypt the password when using REST. If you do not use REST, the plain text password will be stored on-disk. Password cannot be specified without UserName. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
+<td>Password or token for accessing the MQTT server <br><br><strong>Note:</strong> OSIsoft recommends using REST to configure the data source when the password must be specified because the adapter will encrypt the password when using REST. If you do not use REST, the plain text password is stored on-disk. You cannot specify a Password without specifying a UserName. <br><br>Allowed value: Any string <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Optional</td>
 <td><code>sting</code></td>
-<td>Identification of the adapter component connecting to the MQTT broker.<br><br> <strong>Note:</strong> If null, the adapter generates a GUID.</td>
+<td>Identification of the adapter component connecting to the MQTT broker<br><br> <strong>Note:</strong> If the ClientId is null, the adapter generates a GUID.</td>
 </tr>
 <tr>
 <td><strong>MQTTVersion</strong></td>
 <td>Optional</td>
 <td><code>enum</code></td>
-<td>Version  of the MQTT protocol to be used.  <br><br>Allowed value: <code>3.1.0</code>, or <code>3.1.1</code>, or <code>5.0.0</code> <br> Default value: <code>3.1.1</code></td>
+<td>Version  of the MQTT protocol to be used  <br><br>Allowed value: <code>3.1.0</code>, or <code>3.1.1</code>, or <code>5.0.0</code> <br> Default value: <code>3.1.1</code></td>
 </tr>
 <tr>
 <td><strong>ValidateServerCertificate</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Determines if server certificate gets validated. <br><br><strong>Note:</strong> A warning is printed in case the server certificate validation is disabled.<br> Default value: <code>true</code></td>
+<td>Determines if the server certificate gets validated <br><br><strong>Note:</strong> A warning is printed in case the server certificate validation is disabled.<br> Default value: <code>true</code></td>
 </tr>
 <tr>
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>Mqtt1.{Topic}.{ValueField}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
+<td>Specifies what prefix is used for stream Ids. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix is added to the stream Ids and names. A <code>null</code> value defaults to <em>ComponentId</em> followed by a period.<br><br>Example: <code>Mqtt1.{Topic}.{ValueField}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: Any string <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the default stream Id pattern to use. Possible parameters: <code>{Topic}</code>, <code>{ValueField}</code>, <code>{DataType}</code>. <br><br>Allowed value: any string<br>Default value: <code>{Topic}.{ValueField}</code></td>
+<td>Specifies the default stream Id pattern to use. Possible parameters: <code>{Topic}</code>, <code>{ValueField}</code>, <code>{DataType}</code>. <br><br>Allowed value: Any string<br>Default value: <code>{Topic}.{ValueField}</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="runtime-changes">Runtime changes</h2>
-<p>PI Adapter for MQTT handles runtime changes for data source configuration as follows:</p>
 <p>When you set up a new data source configuration, the adapter automatically connects to the new data source. When you delete a data source configuration, the adapter automatically disconnects from the data source and stops data collection for all streams associated with that data source. Additionally, when you update existing data source properties, the changes are reflected at runtime.</p>
-<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data source configuration will be rejected.</p>
+<p><strong>Note:</strong> Runtime changes also handle validation of configuration, which means that an invalid data source configuration is rejected.</p>
 <h2 id="mqtt-data-source-examples">MQTT data source examples</h2>
 <p>The following are examples of valid MQTT data source configurations:</p>
 <h3 id="minimal-data-source-configuration">Minimal data source configuration</h3>
@@ -240,7 +241,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component, for example Mqtt1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component. For example, Mqtt1.</p>
 </article>
           </div>
           

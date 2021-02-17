@@ -93,7 +93,7 @@
 <tr>
 <td><strong>Group_Id</strong></td>
 <td>Optional</td>
-<td>This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients.</td>
+<td>This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.</td>
 </tr>
 <tr>
 <td><strong>Edge_Node_Id</strong></td>
@@ -118,12 +118,12 @@
 </ul>
 <p><strong>Note:</strong> The data source might contain tens of thousands of metrics. Use the <code>#</code> judiciously and narrow down the query string to something specific or break down the query into different discoveries.</p>
 <h4 id="wildcards">Wildcards</h4>
-<p>Wildcards are allowed in the query.</p>
+<p>Wildcards are allowed in the query with the following specifications:</p>
 <ul>
 <li>A single-level wildcard replaces one topic level and is indicated by <code>+</code>.</li>
 <li>A multi-level wildcard covers many topic levels and is indicated by <code>#</code>.</li>
 <li>Wildcards can be combined.</li>
-<li><code>#</code> must not be used more than once and only at the end of the topic.</li>
+<li><code>#</code> must not be used more than once and can only be used at the end of the topic.</li>
 <li>No query, an empty string, or <code>null</code> as the query parameter is equivalent to <code>#</code>.</li>
 </ul>
 <h2 id="discovery-query-example">Discovery query example</h2>
