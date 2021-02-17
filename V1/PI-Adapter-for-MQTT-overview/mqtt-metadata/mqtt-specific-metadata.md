@@ -19,18 +19,18 @@ The following statements are only true for the genric MQTT component. Sparkplug 
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
 - `Medium`: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField
 
-Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:
 <!--
 Comments from Bo:
-The default stream ID patter listed below is true for the generic MQTT adapter but not the Sparkplug B component
-The Default stream ID pattern for generic MQTT is:
-<AdapterComponentID>.<Topic>.<ValueField>
-The default stream ID pattern for MQTT Sparkplug B is:
+The default stream Id patter listed below is true for the generic MQTT adapter but not the Sparkplug B component
+The Default stream Id pattern for generic MQTT is:
+<AdapterComponentId>.<Topic>.<ValueField>
+The default stream Id pattern for MQTT Sparkplug B is:
 <AdapterComponentId>.<Topic>.<MetricName>
 Similarly, we may want to have two sub-sections to discuss all the difference including the items mentioned above
 -->
 ```code
-<AdapterComponentID>.<Topic>.<ValueField>
+<AdapterComponentId>.<Topic>.<ValueField>
 ```
 
 **Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
