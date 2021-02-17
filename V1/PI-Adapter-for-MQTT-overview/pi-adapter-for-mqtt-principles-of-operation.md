@@ -92,10 +92,10 @@ Metadata specific to the MQTT generic component are:
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
 - `Medium`: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField
 
-Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:
 
 ```code
-<AdapterComponentID>.<Topic>.<ValueField>
+<AdapterComponentId>.<Topic>.<ValueField>
 ```
 
 **Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
@@ -115,10 +115,10 @@ Metadata specific to the MQTT Sparkplug B component are:
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
 - `Medium`: AdapterType (ComponentType), DataSource (ComponentId), Topic, and MetricName
 
-Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:
 
 ```code
-<AdapterComponentID>.<Topic>.<MetricName>
+<AdapterComponentId>.<Topic>.<MetricName>
 ```
 
 **Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
