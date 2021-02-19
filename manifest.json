@@ -305,7 +305,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/configuration-tools.html",
-          "hash": "TZdf0fPvblPz8aynOTPcYQ=="
+          "hash": "IYXKTHSIvWlSr0vf8EqFIQ=="
         }
       },
       "is_incremental": false,
@@ -1968,6 +1968,33 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/introduction-to-pi-adapters.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/introduction-to-pi-adapters.html",
+          "hash": "ekR8ddKe3rcdZwBkFf2VWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/pi-adapter-users.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/pi-adapter-users.html",
+          "hash": "aYAPsmED69DNLIFk9vUjvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/technical-support-and-feedback.md",
       "output": {
@@ -2058,7 +2085,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 124,
+          "total_file_count": 126,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
