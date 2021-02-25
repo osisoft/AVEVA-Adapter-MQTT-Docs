@@ -112,12 +112,8 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 {
 "TestNode": [
 {
-"Time" : "01/14/2021",
-"Value": "0123-4567-8888"
-},
-{
-"Time" : "01/13/2022",
-"Value": "0123-4567-8910"
+"Time" : "02/17/2021 12:01:36 AM PST",
+"Value": "4578"
 }
 ]
 }
