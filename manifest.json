@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "zOzkLe5Ayf/rXkBNTFTbuA=="
+          "hash": "CysEQ82wFL/GJ60aEMzVZA=="
         }
       },
       "is_incremental": false,
@@ -312,6 +312,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -341,16 +344,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
-          "hash": "kF0czy5E+9tNx/cvgEmCfA=="
+          "hash": "W9Y+qxGYsJ6oSH9kpnMIHg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -584,7 +584,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Installation/install-the-adapter.html",
-          "hash": "UFZ9abHd5eWtm9aWi6eg4A=="
+          "hash": "t5+Q+j7xveGHTvU5mJQtgQ=="
         }
       },
       "is_incremental": false,
@@ -923,7 +923,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/discovery-configuration.html",
-          "hash": "/TNs4if226VDhqEwZYqBBQ=="
+          "hash": "MGO4GmSq/aZBveMBR4WG7w=="
         }
       },
       "is_incremental": false,
@@ -1187,7 +1187,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Installation/install-the-adapter.html",
-          "hash": "Ro4Zf9jwBngDv5qi0qwitA=="
+          "hash": "IsHE44dJvgXN/krhF6w7+w=="
         }
       },
       "is_incremental": false,
@@ -1814,7 +1814,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/install-the-adapter.html",
-          "hash": "ZTWR+8Ta+flCfFyil4EryA=="
+          "hash": "fskjR5tI9OKfMkRkSo047w=="
         }
       },
       "is_incremental": false,

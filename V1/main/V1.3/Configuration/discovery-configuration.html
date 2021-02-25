@@ -92,7 +92,7 @@
 <ol>
 <li>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
 <li><p>Run a <code>POST</code> command with the <code>Id</code> of the discovery and <code>autoSelect</code> set to either <code>true</code> or <code>false</code> to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries</code>.</p>
-<p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p><strong>Note:</strong><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
 </code></pre></li>
