@@ -15,19 +15,21 @@ PI Adapter for MQTT is capable of collecting health and diagnostics information.
 
 For more information see [PI Adapter for MQTT overview](xref:PIAdapterForMQTTOverview).
 
-## Known issues
+## Setup
+
+### Known issues
 
 There are no known issues at this time.
 
-## System requirements
+### System requirements
 
 Refer to [System requirements](xref:SystemRequirements).
 
-## Installation
+### Installation and upgrade
 
 Refer to [Install the adapter](xref:InstallTheAdapter).
 
-## Uninstallation
+### Uninstallation
 
 Refer to [Uninstall the adapter](xref:UninstallTheAdapter).
 
