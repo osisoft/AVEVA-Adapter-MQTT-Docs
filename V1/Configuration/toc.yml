@@ -1,5 +1,8 @@
 - name: Configuration tools
   href: ../main/V1.3/Configuration/configuration-tools.md
+- name: Text parser
+  href: ../main/V1.3/Configuration/Text-parser/JSONpath/toc.yml
+  topicHref: ../main/V1.3/Configuration/Text-parser/text-parser.md
 - name: System components configuration
   href: ../main/V1.3/Configuration/System configuration/toc.yml
   topicHref: ../main/V1.3/Configuration/system-components-configuration.md
