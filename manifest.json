@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "js3IGR8esrzo62fblaKdRg=="
+          "hash": "rI4frxmgjMHD474rx/f/Yg=="
         }
       },
       "is_incremental": false,
@@ -192,6 +192,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -2080,7 +2083,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
