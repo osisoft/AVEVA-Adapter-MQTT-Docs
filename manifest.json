@@ -288,6 +288,54 @@
       "version": ""
     },
     {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.3/Configuration/Text-parser/All-file-types/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/Text-parser/All-file-types/toc.html",
+          "hash": "+oxGA9S3veLADY7S+Vw+nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/Text-parser/jsonpath-syntax-for-value-retrieval.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/Text-parser/jsonpath-syntax-for-value-retrieval.html",
+          "hash": "/qd6jSS13HSmQQgjNOzh2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/Text-parser/text-parser.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/Text-parser/text-parser.html",
+          "hash": "x4VOukeC32AzNeuvJXZGXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/Text-parser/xpath-and-csv-syntax-for-value-retrieval.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/Text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
+          "hash": "I7FiUd1FkuU0bxHHcW+u6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/buffering-configuration.md",
       "output": {
@@ -891,9 +939,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -930,6 +975,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -2024,7 +2072,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "4Q2XKRMvhCkHg2EZazbBdg=="
+          "hash": "mzCYLDr0nRTiQDieGhPUAg=="
         }
       },
       "is_incremental": false,
@@ -2085,7 +2133,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 126,
+          "total_file_count": 129,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
