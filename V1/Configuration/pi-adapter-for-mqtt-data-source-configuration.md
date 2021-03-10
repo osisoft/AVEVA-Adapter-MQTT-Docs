@@ -8,29 +8,37 @@ To use the adapter, you must configure the data source from which it polls data.
 
 ## Configure MQTT data source
 
-**Note:** To modify the MQTT data source configuration, you must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure an MQTT data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to initialize the configuration.
 
-Complete the following steps to configure an MQTT data source:
+1. Using a text editor, create an empty text file.
 
-1. Use any text editor to create a file that contains an MQTT data source in the JSON format.
-    - For content structure, see [MQTT data source examples](#mqtt-data-source-examples).
-    - For a table of all available parameters, see [MQTT data source parameters](#mqtt-data-source-parameters).
-2. Save the file. For example, as `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
+2. Copy and paste an example configuration for an MQTT data source into the file.
 
-      **Note:** The following example uses Mqtt1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
+    For sample JSON, see [MQTT data source examples](#mqtt-data-source-examples).
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+3. Update the example JSON parameters for your environment.
 
-    Example using `curl`:
+    For a table of all available parameters, see [MQTT data source parameters](#mqtt-data-source-parameters).
+
+4. Save the file. For example, as `ConfigureDataSource.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Mqtt1/DataSource"
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/DataSource"
     ```
 
-    **Note:** Run this command from the same directory where the file is located.
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If you use a component ID other than `MQTT1`, update the endpoint with your chosen component ID.
+    * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
-4. Configure data selection. For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
+7. Configure data source.
 
 ## MQTT data source schema
 
