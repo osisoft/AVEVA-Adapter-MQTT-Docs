@@ -38,8 +38,6 @@ Complete the following steps to configure an MQTT Sparkplug B data selection. Us
     <br/>
     <br/>
 
-7. Configure data selection.
-
 ## MQTT Sparkplug B data selection parameters
 
 | Parameter                     | Required | Type      | Description |

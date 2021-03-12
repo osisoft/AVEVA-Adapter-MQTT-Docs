@@ -38,7 +38,7 @@ Complete the following steps to configure an MQTT Sparkplug B data source. Use t
     <br/>
     <br/>
 
-7. Configure data source.
+7. Configure data selection.
 
 ## MQTT data source schema
 

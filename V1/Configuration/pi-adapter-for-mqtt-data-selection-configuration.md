@@ -38,8 +38,6 @@ Complete the following steps to configure an MQTT data selection. Use the `PUT` 
     <br/>
     <br/>
 
-7. Configure data selection.
-
 ## MQTT data selection schema
 
 The full schema definition for the MQTT data selection configuration is in the `Mqtt_DataSelection_schema.json` file located in one of the following folders:

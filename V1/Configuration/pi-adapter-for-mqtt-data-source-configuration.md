@@ -38,7 +38,7 @@ Complete the following steps to configure an MQTT data source. Use the `PUT` met
     <br/>
     <br/>
 
-7. Configure data source.
+7. Configure data selection.
 
 ## MQTT data source schema
 
