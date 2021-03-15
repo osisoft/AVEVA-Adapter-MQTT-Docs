@@ -8,39 +8,35 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ## Configure MQTT data selection
 
-**Note:** You cannot modify MQTT data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure an MQTT data selection. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSelection` REST endpoint to initialize the configuration.
 
-Complete the following steps to configure the MQTT data selection:
+1. Using a text editor, create an empty text file.
 
-1. Use any text editor to create a file that contains an MQTT data selection in the JSON format.
-    - For content structure, see [MQTT data selection examples](#mqtt-data-selection-examples).
-    - For a table of all available parameters, see [MQTT data selection parameters](#mqtt-data-selection-parameters).
-2. Save the file. For example, as `ConfigureDataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.
+2. Copy and paste an example configuration for an MQTT data selection into the file.
 
-    **Note:** The following examples use Mqtt1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
+    For sample JSON, see [MQTT data selection examples](#mqtt-data-selection-examples).
+
+3. Update the example JSON parameters for your environment.
+
+    For a table of all available parameters, see [MQTT data selection parameters](#mqtt-data-selection-parameters).
+
+4. Save the file. For example, as `ConfigureDataSelection.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureDataSelection.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the data selection configuration.
+
+    ```bash
+    curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/DataSelection"
+    ```
+
+    **Notes:**
   
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/`
-
-      Example using `curl`:
-
-      ```bash
-      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Mqtt1/DataSelection"
-      ```
-
-      **Note:** Run this command from the same directory where the file is located.
-
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<StreamId>`
-
-      Example using `curl`:
-
-        ```bash
-        curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Mqtt1/DataSelection"
-        ```
-
-        **Note:** Run this command from the same directory where the file is located.
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If you use a component ID other than `MQTT1`, update the endpoint with your chosen component ID.
+    * For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## MQTT data selection schema
 
