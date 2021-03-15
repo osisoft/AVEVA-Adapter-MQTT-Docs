@@ -80,23 +80,33 @@
 
 <p>To use the adapter, you must configure the data source from which it polls data.</p>
 <h2 id="configure-mqtt-data-source">Configure MQTT data source</h2>
-<p><strong>Note:</strong> To modify the MQTT data source configuration, you must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following steps to configure an MQTT data source:</p>
+<p>Complete the following steps to configure an MQTT data source. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSource</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Use any text editor to create a file that contains an MQTT data source in the JSON format.<ul>
-<li>For content structure, see <a href="#mqtt-data-source-examples">MQTT data source examples</a>.</li>
-<li>For a table of all available parameters, see <a href="#mqtt-data-source-parameters">MQTT data source parameters</a>.</li>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
+<li><p>Copy and paste an example configuration for an MQTT data source into the file.</p>
+<p> For sample JSON, see <a href="#mqtt-data-source-examples">MQTT data source examples</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#mqtt-data-source-parameters">MQTT data source parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureDataSource.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureDataSource.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data source configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/MQTT1/DataSource&quot;
+</code></pre><p> <strong>Notes:</strong></p>
+<ul>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>If you use a component ID other than <code>MQTT1</code>, update the endpoint with your chosen component ID.</li>
+<li>For a list of other REST operations you can perform, like updating or deleting a data source configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
 </li>
-<li>Save the file. For example, as <code>ConfigureDataSource.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>.</p>
-<p>   <strong>Note:</strong> The following example uses Mqtt1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1.3/Configuration/system-components-configuration.html">System components configuration</a>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Mqtt1/DataSource&quot;
-</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-</li>
-<li><p>Configure data selection. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a>.</p>
+<li><p>Configure data selection.</p>
+<p> For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-selection-configuration.html">PI Adapter for MQTT data selection configuration</a></p>
 </li>
 </ol>
 <h2 id="mqtt-data-source-schema">MQTT data source schema</h2>

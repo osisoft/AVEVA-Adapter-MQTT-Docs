@@ -80,29 +80,29 @@
 
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.</p>
 <h2 id="configure-mqtt-data-selection">Configure MQTT data selection</h2>
-<p><strong>Note:</strong> You cannot modify MQTT data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following steps to configure the MQTT data selection:</p>
+<p>Complete the following steps to configure an MQTT data selection. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Use any text editor to create a file that contains an MQTT data selection in the JSON format.<ul>
-<li>For content structure, see <a href="#mqtt-data-selection-examples">MQTT data selection examples</a>.</li>
-<li>For a table of all available parameters, see <a href="#mqtt-data-selection-parameters">MQTT data selection parameters</a>.</li>
-</ul>
+<li><p>Using a text editor, create an empty text file.</p>
 </li>
-<li>Save the file. For example, as <code>ConfigureDataSelection.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
-<p> <strong>Note:</strong> The following examples use Mqtt1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1.3/Configuration/system-components-configuration.html">System components configuration</a>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<li><p>Copy and paste an example configuration for an MQTT data selection into the file.</p>
+<p> For sample JSON, see <a href="#mqtt-data-selection-examples">MQTT data selection examples</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#mqtt-data-selection-parameters">MQTT data selection parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureDataSelection.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureDataSelection.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data selection configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/MQTT1/DataSelection&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentId&gt;/DataSelection/</code></p>
-<p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/Mqtt1/DataSelection&quot;
-</code></pre><p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-</li>
-<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentId&gt;/DataSelection/&lt;StreamId&gt;</code></p>
-<p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Mqtt1/DataSelection&quot;
-</code></pre><p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-</li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>If you use a component ID other than <code>MQTT1</code>, update the endpoint with your chosen component ID.</li>
+<li>For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
 </li>
 </ol>

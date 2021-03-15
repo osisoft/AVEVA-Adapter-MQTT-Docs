@@ -223,6 +223,9 @@ references:
 - uid: NextHealthMessageExpected1-4
   name: Next health message expected
   href: V1/main/V1.4/Health/next-health-message-expected.html
+- uid: PIAdapterForMQTTConfigurationExamples
+  name: PI Adapter for MQTT configuration examples
+  href: V1/Configuration/pi-adapter-for-mqtt-configuration-examples.html
 - uid: PIAdapterForMQTTDataSelectionConfiguration
   name: PI Adapter for MQTT data selection configuration
   href: V1/Configuration/pi-adapter-for-mqtt-data-selection-configuration.html
