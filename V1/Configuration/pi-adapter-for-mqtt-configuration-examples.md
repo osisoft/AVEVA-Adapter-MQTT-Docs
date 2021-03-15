@@ -112,7 +112,7 @@ The following tables provide examples for all configurations available for PI Ad
             },
             {
                 "Id": "EDS",
-                "Endpoint": "http://localhost:/api/v1/tenants/default/namespaces/default/omf"
+                "Endpoint": "http://localhost:/api/v1/tenants/default/namespaces/default/omf",
                 "UserName": "eds",
                 "Password": "eds"
             }
