@@ -86,8 +86,8 @@
 <li><p>Run a <code>DELETE</code> command to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;</code></p>
 <p> <strong>Note:</strong> You must make an empty <code>DELETE</code> command  against the <code>Id</code> of the component you want to delete. <br> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>   Example using <code>curl</code> :</p>
-<p> <strong>Delete OpcUa1 adapter component</strong></p>
-<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1&quot;
+<p> <strong>Delete an adapter component</strong></p>
+<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;&quot;
 </code></pre></li>
 </ol>
 <h2 id="file-relocation">File relocation</h2>
@@ -98,8 +98,7 @@
 <p>Log files are moved to the following location:</p>
 <p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\Logs\Removed</code></p>
 <p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/Logs/Removed</code></p>
-<p>In the following example, one Modbus adapter service is installed on a particular Windows node with the name <code>ModbusService1</code>. A Modbus component with the name <code>ModbusDeviceX</code> was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
-<p><strong>Note:</strong> This is an example; it does not necessarily represent the adapter that you are currently using.</p>
+<p>In the following example, one adapter service is installed on a particular Windows node with the name <code>&lt;Adapter&gt;Service1</code>. An adapter component with the name <code>&lt;Adapter&gt;DeviceX</code> was added and configured to this adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
 <p><img src="../images/configuration-folder.png" alt="ConfigurationFolder"></p>
 <p><img src="../images/removed-configurations.png" alt="RemovedConfigurations"></p>
 <p><img src="../images/logs-folder.png" alt="LogsFolder"></p>

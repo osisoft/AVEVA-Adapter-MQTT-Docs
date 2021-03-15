@@ -83,8 +83,7 @@
 <ol>
 <li><p>Open Windows services.</p>
 </li>
-<li><p>Select <strong>PI Adapter for <em>AdapterName</em></strong>, for example, PI Adapter for Modbus.</p>
-<p> <strong>Note:</strong> This is an example; it does not necessarily represent the adapter that you are currently using.</p>
+<li><p>Select <strong>PI Adapter for &lt;AdapterName></strong>.</p>
 </li>
 <li><p>Depending on whether your adapter is running or not, click either <strong>Start</strong> or <strong>Stop</strong>.</p>
 </li>
@@ -95,13 +94,12 @@
 </li>
 <li><p>Depending on whether your adapter is running or not, type one of the following commands:</p>
 <p> Example:</p>
-<p> <em>Start</em> PI Adapter for OPC UA</p>
-<pre><code class="lang-cmdline">sudo systemctl start pi.adapter.opcua
+<p> <em>Start</em> PI Adapter for &lt;AdapterName></p>
+<pre><code class="lang-cmdline">sudo systemctl start pi.adapter.&lt;adapterName&gt;
 </code></pre><p> Example:</p>
-<p> <em>Stop</em> PI Adapter for Modbus TCP</p>
-<pre><code class="lang-cmdline">sudo systemctl stop pi.adapter.modbus
-</code></pre><p>   <strong>Note:</strong> These commands are examples; they do not necessarily represent the adapter that you are currently using.</p>
-</li>
+<p> <em>Stop</em> PI Adapter for &lt;AdapterName></p>
+<pre><code class="lang-cmdline">sudo systemctl stop pi.adapter.&lt;adapterName&gt;
+</code></pre></li>
 <li><p>Press Enter.</p>
 </li>
 </ol>

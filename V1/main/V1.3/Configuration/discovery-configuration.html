@@ -97,9 +97,6 @@
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
 </code></pre></li>
 </ol>
-<!--
-Only Id, Query and AutoSelect will have effect when initiating the discovery query. The other parameters for the 'discovery state' are redundant and will be overridden even if specified in the configuration. To avoid any confusion we could mention only the 3 relevant ones to the customer for configuring discovery. The table below is the State of the discovrery is mainly for intepreting discovery result.
--->
 <h2 id="discovery-parameters">Discovery parameters</h2>
 <table>
 <thead>
@@ -173,8 +170,7 @@ Only Id, Query and AutoSelect will have effect when initiating the discovery que
 </tbody>
 </table>
 <h2 id="discoveries-status-example">Discoveries status example</h2>
-<p>The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
-<strong>Note:</strong> This is an example. It does not necessarily reflect the adapter you are currently using.</p>
+<p>The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br></p>
 <pre><code class="lang-json">[
     {
         &quot;id&quot;: &quot;8ff855f1-a636-490a-bb31-207410a6e607&quot;,
@@ -185,7 +181,7 @@ Only Id, Query and AutoSelect will have effect when initiating the discovery que
         &quot;itemsFound&quot;: 4,
         &quot;newItems&quot;: 0,
         &quot;newAssets&quot;: 0,
-        &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/OpcUa1/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result&quot;,
+        &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/&lt;ComponentId&gt;/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result&quot;,
         &quot;autoSelect&quot;: false,
         &quot;status&quot;: &quot;Complete&quot;,
         &quot;errors&quot;: null
@@ -258,7 +254,7 @@ Only Id, Query and AutoSelect will have effect when initiating the discovery que
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>componentId</em> with the ID of your adapter component, for example OpcUa1.<br>Replace <em>discoveryId</em> with the Id of the discovery for which you want to perform the action.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component.<br>Replace <em>DiscoveryId</em> with the Id of the discovery for which you want to perform the action.</p>
 </article>
           </div>
           

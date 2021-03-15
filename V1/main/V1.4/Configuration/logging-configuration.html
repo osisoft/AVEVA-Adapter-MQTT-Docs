@@ -83,26 +83,33 @@
 <p>• Linux: <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
 <h2 id="configure-logging">Configure logging</h2>
-<p>Complete the following steps to change the logging configuration:</p>
+<p>Complete the following steps to configure logging. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the logging configuration in the JSON format.</p>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
+<li><p>Copy and paste an example configuration for logging into the file.</p>
+<p> For sample JSON, see <a href="#example">Example</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#logging-parameters">Logging parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureLogging.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureLogging.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the logging configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureLogging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li>For content structure, see <a href="#example">Example</a>.</li>
-<li>For all available parameters, see <a href="#logging-parameters">Logging parameters</a>.</li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or retrieving a logging configuration, see <a href="#rest-urls">REST URLs</a>.</li>
+<li>Any parameter not specified in the updated configuration file reverts to the default schema value
+<br>
+<br></li>
 </ul>
 </li>
-<li><p>Save the file. For example, <code>ConfigureLogging.json</code>.</p>
-</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
-<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter. For example, <em>OpcUa1</em>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureLogging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging&quot;
-</code></pre></li>
 </ol>
 <p>On successful execution, the log-level change takes effect immediately during runtime. The other configurations (log file size and file count) are updated after the adapter is restarted.</p>
-<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file reverts to the default schema value.</p>
 <h2 id="logging-schema">Logging schema</h2>
 <p>The full schema definition for the logging configuration is in the component specific logging file: <code>AdapterName_Logging_schema.json</code>, <code>OmfEgress_Logging_schema.json</code>, or <code>System_Logging_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\&lt;AdapterName&gt;\Schemas</code></p>
@@ -219,7 +226,7 @@ The following logging configuration is the installation default for a component:
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component. For example, Modbus1 or OpcUa1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component.</p>
 </article>
           </div>
           

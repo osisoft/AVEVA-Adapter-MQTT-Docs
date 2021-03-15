@@ -80,22 +80,29 @@
 
 <p>PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the ID of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
 <h2 id="configure-data-filters">Configure data filters</h2>
-<p>Complete the following steps to change the data filters configuration:</p>
+<p>Complete the following steps to configure data filters. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the data filters configuration in the JSON format.</p>
-<ul>
-<li>For content structure, see <a href="#data-filters-example">Data filters example</a>.</li>
-<li>For all available parameters, see <a href="#data-filters-parameters">Data filters parameters</a>.</li>
-</ul>
+<li><p>Using a text editor, create an empty text file.</p>
 </li>
-<li><p>Save the file, for example, as <code>ConfigureDataFilters.json</code>.</p>
+<li><p>Copy and paste an example configuration for data filters into the file.</p>
+<p> For sample JSON, see <a href="#data-filters-example">Data filters example</a>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
-<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example, <em>Modbus1</em>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#data-filters-parameters">Data filters parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureDataFilters.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureDataFilters.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data filters configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureDataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
-</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</code></pre><p> <strong>Notes:</strong></p>
+<ul>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or deleting a data filters configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
+</ul>
 </li>
 </ol>
 <p>On successful execution, the change that you have made to data filters takes effect immediately during runtime.</p>
@@ -203,7 +210,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example, Modbus1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component.</p>
 </article>
           </div>
           

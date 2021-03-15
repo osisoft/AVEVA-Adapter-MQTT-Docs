@@ -78,27 +78,30 @@
             <article class="content wrap" id="_content" data-uid="SchedulesConfiguration1-3">
 <h1 id="schedules-configuration">Schedules configuration</h1>
 
-<p>You can configure PI adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.</p>
-<p><strong>Note:</strong> If the adapter supports scheduling and you start an ingress component without a schedules configuration, a default schedules configuration will be added to be used as an example.</p>
-<p><strong>Note:</strong> When the adapter framework scheduler misses or skips a scan due to any reason, either one of the following messages is printed: <code>Scan skipped for schedule id &lt;Id&gt;</code> or <code>Scan missed for schedule &lt;id&gt;</code>.</p>
-<h2 id="configure-schedules">Configure schedules</h2>
-<p>Complete the following steps to change the schedules configuration:</p>
+<p>Complete the following steps to configure schedules. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the schedules configuration in the JSON format.</p>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
+<li><p>Copy and paste an example configuration for schedules into the file.</p>
+<p> For sample JSON, see <a href="#example">Example</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#schedules-parameters">Schedules parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureSchedules.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureSchedules.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the schedules configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureSchedules.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li>For content structure, see <a href="#example">Example</a>.</li>
-<li>For all available parameters, see <a href="#schedules-parameters">Schedules parameters</a>.</li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or replacing a schedules configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
 </li>
-<li><p>Save the file. For example, <code>ConfigureSchedules.json</code>.</p>
-</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules</code>.</p>
-<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter. For example, <em>Modbus1</em>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureSchedules.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules&quot;
-</code></pre></li>
 </ol>
 <p>On successful execution, the schedules change takes effect immediately during runtime.</p>
 <h2 id="schedules-schema">Schedules schema</h2>
@@ -198,7 +201,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component. For example, Modbus1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component.</p>
 </article>
           </div>
           

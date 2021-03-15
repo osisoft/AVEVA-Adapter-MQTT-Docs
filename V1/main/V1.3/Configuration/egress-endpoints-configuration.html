@@ -89,36 +89,28 @@
 <p><strong>Note:</strong> Egress to EDS requires the adapter to be on the same server as EDS.</p>
 <p>The name of the PI point or OCS or EDS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.</p>
 <h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
-<p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoint configurations, see <a href="#rest-urls">REST URLs</a>.</p>
-<p>Complete the following steps to configure egress endpoints:</p>
+<p>Complete the following steps to configure egress endpoints. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li><p>Using any text editor, create a file that contains one or more egress endpoints in the JSON format.</p>
-<ul>
-<li>For content structure, see <a href="#examples">Examples</a>.</li>
-<li>For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
-</ul>
+<li><p>Using a text editor, create an empty text file.</p>
 </li>
-<li><p>Save the file. For example, <code>ConfigureEgressEndpoints.json</code>.</p>
+<li><p>Copy and paste an example configuration for egress endpoints into the file.</p>
+<p> For sample JSON, see <a href="#examples">Examples</a>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Examples using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run the commands from the same directory where the file is located.</p>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureEgressEndpoints.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureEgressEndpoints.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the egress endpoints configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li><p><em>Add endpoints</em></p>
-<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
-</code></pre></li>
-<li><p><em>Delete an endpoint</em></p>
-<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
-</code></pre></li>
-<li><p><em>Update an endpoint</em></p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
-</code></pre></li>
-<li><p><em>View endpoints</em></p>
-<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
-</code></pre></li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or replacing an egress endpoints configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
 </li>
 </ol>

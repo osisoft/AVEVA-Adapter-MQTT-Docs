@@ -82,73 +82,29 @@
 <p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system individually using REST, but you can also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The configuration of system components includes adding, updating, and deleting components.</p>
-<h3 id="add-a-system-component">Add a system component</h3>
-<p>Complete the following steps to add a new component to the system:</p>
-<p><strong>Note:</strong> The examples in this procedure do not necessarily represent the adapter that your are currently using.</p>
+<p>Complete the following steps to configure system components. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the component to be added to the system in the JSON format.</p>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
+<li><p>Copy and paste an example configuration for system components into the file.</p>
+<p> For sample JSON, see <a href="#examples">Examples</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureComponents.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureComponents.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the system components configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li>For content structure, see <a href="#examples">Examples</a>.</li>
-<li><p>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
-<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.</p>
-<p>The following example adds a Modbus TCP adapter:</p>
-<pre><code class="lang-json">  {
-    &quot;ComponentId&quot;: &quot;Modbus1&quot;,
-    &quot;ComponentType&quot;: &quot;Modbus&quot;
-  }
-</code></pre><p><strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter to be added.</p>
-</li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or deleting a system components configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
-</li>
-<li><p>Save the file. For example, <em>AddComponent.json</em>.</p>
-</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint.</p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<ul>
-<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
-</code></pre></li>
-<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components/Modbus1&quot;
-</code></pre><p>After the curl command completes successfully, you can configure or use the new component.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="update-system-components">Update system components</h3>
-<p>Complete the following steps to update the components of the system, for example, by adding or deleting one or more adapter components.</p>
-<ol>
-<li><p>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</p>
-</li>
-<li><p>Delete or add components as you need.</p>
-<p> <strong>Note:</strong> You cannot delete the OmfEgress component.</p>
-</li>
-<li><p>Save the file. For example,  <em>UpdateComponents.json</em></p>
-</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@UpdateComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
-</code></pre></li>
-</ol>
-<h3 id="delete-a-system-component">Delete a system component</h3>
-<p>Complete the following steps to delete a specific existing component:</p>
-<ol>
-<li><p>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</p>
-</li>
-<li><p>Run a <code>DELETE</code> command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run this command from the same directory where the file is located. <br>
- <em>Delete OpcUa1 component</em></p>
-<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
-</code></pre><p> All the logs and configurations files for the deleted components are moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>
 <h2 id="system-components-schema">System components schema</h2>
@@ -171,13 +127,13 @@
 <td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The ID of the component<sup>1</sup>. It can be any alphanumeric string, for example, Modbus1. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
+<td>The ID of the component<sup>1</sup>. It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
 </tr>
 <tr>
 <td><strong>ComponentType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The type of the component, for example, Modbus. There are two types of components: OmfEgress and the adapter.<sup>1</sup></td>
+<td>The type of the component. There are two types of components: OmfEgress and the adapter.<sup>1</sup></td>
 </tr>
 </tbody>
 </table>
@@ -192,15 +148,14 @@
   }
 ]
 </code></pre><h3 id="system-components-configuration-with-two-adapter-instances">System components configuration with two adapter instances</h3>
-<p><strong>Note:</strong> This is an example configuration; it does not necessarily include the adapter that you are currently using.</p>
 <pre><code class="lang-json">[
   {
-                &quot;ComponentId&quot;: &quot;Modbus1&quot;,
-                &quot;ComponentType&quot;: &quot;Modbus&quot;
+                &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;1&quot;,
+                &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
             },
             {
-                &quot;ComponentId&quot;: &quot;Modbus2&quot;,
-                &quot;ComponentType&quot;: &quot;Modbus&quot;
+                &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;2&quot;,
+                &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
             },
             {
                 &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
@@ -235,7 +190,7 @@
 <tr>
 <td>api/v1/configuration/system/components/<em>componentId</em></td>
 <td>DELETE</td>
-<td>Deletes a specific component from the system components configuration</td>
+<td>Deletes a specific component from the system components configuration<br><strong>Note:</strong> All the logs and configurations files for the deleted components are moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/components/<em>componentId</em></td>

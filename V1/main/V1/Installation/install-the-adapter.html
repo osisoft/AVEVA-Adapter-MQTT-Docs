@@ -104,8 +104,7 @@
 <li><p>Open a terminal.</p>
 </li>
 <li><p>Run the <code>sudo apt install</code> app install command.</p>
-<p> <strong>Examples</strong>: <br> To install the Linux ARM Debian package, run the command <br><code>sudo apt install ./OpcUa_linux-arm.deb</code> <br> To install the Linux x64 package, run the command <br> <code>sudo apt install ./Modbus_linux-x64.deb</code></p>
-<p> <strong>Note:</strong> The previous file names are examples. They do not necessarily represent the adapter that you are currently using.</p>
+<p> <strong>Examples</strong>: <br> To install the Linux ARM Debian package, run the command <br><code>sudo apt install ./{AdapterName}_linux-arm.deb</code> <br> To install the Linux x64 package, run the command <br> <code>sudo apt install ./{AdapterName}_linux-x64.deb</code></p>
 </li>
 <li><p>Optional: To verify the installation, run the following <code>curl</code> command with the port number that you specified during installation:</p>
 <pre><code class="lang-bash">curl http://localhost:5590/api/v1/configuration

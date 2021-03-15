@@ -82,26 +82,28 @@
 <p>For more information about adapter health, see <a class="xref" href="../Health/adapter-health.html">Adapter health</a>.</p>
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
 <p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
+<p>Complete the following steps to configure health endpoints. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Use any text editor to create a file that contains one or more health endpoints in the JSON format.<ul>
-<li>For content structure, see <a href="#examples">Examples</a>.</li>
-<li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
-</ul>
+<li><p>Using a text editor, create an empty text file.</p>
 </li>
-<li>Save the file. For example, <code>ConfigureHealthEndpoints.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint.</p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<li><p>Copy and paste an example configuration for health endpoints into the file.</p>
+<p> For sample JSON, see <a href="#examples">Examples</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureHealthEndpoints.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureHealthEndpoints.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the health endpoint configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureHealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
+</code></pre><p> <strong>Notes:</strong></p>
 <ul>
-<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureHealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
-</code></pre></li>
-<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureHealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
-</code></pre></li>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or replacing a health endpoints configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
 </ul>
 </li>
 </ol>

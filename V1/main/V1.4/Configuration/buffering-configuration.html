@@ -81,18 +81,29 @@
 <p>You can configure PI adapters to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.</p>
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless it is necessary. Changes to the buffering configuration parameters only take effect during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
+<p>Complete the following steps to configure buffering. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/system/buffering</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Using any text editor, create a file that contains the buffering configuration in the JSON format.<ul>
-<li>For content structure, see the sample output in <a href="#examples">Examples - Retrieve the buffering configuration</a>.</li>
-<li>For a table of all available parameters, see <a href="#buffering-parameters">Buffering parameters</a>.</li>
-</ul>
+<li><p>Using a text editor, create an empty text file.</p>
 </li>
-<li>Save the file. For example, <code>ConfigureBuffering.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests and run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
-<p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>  Example using <code>curl</code>:</p>
-<pre><code class="lang-bash"> curl -d &quot;@ConfigureBuffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
-</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<li><p>Copy and paste an example configuration for buffering into the file.</p>
+<p> For sample JSON, see <a href="#examples">Examples - Retrieve the buffering configuration</a>.</p>
+</li>
+<li><p>Update the example JSON parameters for your environment.</p>
+<p> For a table of all available parameters, see <a href="#buffering-parameters">Buffering parameters</a>.</p>
+</li>
+<li><p>Save the file. For example, as <code>ConfigureBuffering.json</code>.</p>
+</li>
+<li><p>Open a command line session. Change directory to the location of <code>ConfigureBuffering.json</code>.</p>
+</li>
+<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the buffering configuration.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureBuffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+</code></pre><p> <strong>Notes:</strong></p>
+<ul>
+<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
+<li>For a list of other REST operations you can perform, like updating or replacing a buffering configuration, see <a href="#rest-urls">REST URLs</a>.
+<br>
+<br></li>
+</ul>
 </li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>
@@ -137,7 +148,7 @@
 <pre><code class="lang-cmd">curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
 <pre><code class="lang-code">{
-    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Buffers&quot;,
+    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/&lt;AdapterName&gt;/Buffers&quot;,
     &quot;maxBufferSizeMB&quot;: 1024,
     &quot;enablePersistentBuffering&quot;: true
 }

@@ -83,11 +83,11 @@
 <p>Complete the following steps to start an individual ingress component:</p>
 <ol>
 <li>Use any of the <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ingressComponentId&gt;</code> with the ingress component that you want to start: <code>http://localhost:5590/api/v1/administration/&lt;ingressComponentId&gt;/Start</code></p>
+<li><p>Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ingress component that you want to start: <code>http://localhost:5590/api/v1/Administration/&lt;ComponentId&gt;/Start</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
-<p> <strong>Start the OpcUa1 ingress component</strong></p>
-<pre><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/OpcUa1/Start&quot;
+<p> <strong>Start the adapter ingress component</strong></p>
+<pre><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/&lt;ComponentId&gt;/Start&quot;
 </code></pre></li>
 </ol>
 <h2 id="stop-an-ingress-component">Stop an ingress component</h2>
@@ -95,11 +95,11 @@
 <ol>
 <li><p>Start any configuration tool capable of making HTTP requests.</p>
 </li>
-<li><p>Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ingressComponentId&gt;</code> with the ingress component that you want to stop: <code>http://localhost:5590/api/v1/administration/&lt;ingressComponentId&gt;/Stop</code></p>
+<li><p>Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ingress component that you want to stop: <code>http://localhost:5590/api/v1/Administration/&lt;ComponentId&gt;/Stop</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
-<p> <strong>Stop the Modbus1 ingress component</strong></p>
-<pre><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/Modbus1/Stop&quot;
+<p> <strong>Stop the adapter ingress component</strong></p>
+<pre><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/&lt;ComponentId&gt;/Stop&quot;
 </code></pre></li>
 </ol>
 </article>

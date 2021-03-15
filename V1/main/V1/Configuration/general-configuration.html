@@ -83,7 +83,7 @@ For more information about available diagnostics data, see <a class="xref" href=
 For more information about available metadata and what metadata are sent per metadata level, see <a class="xref" href="../Metadata/adapter-metadata.html">Adapter Metadata</a>.</p>
 <h2 id="configure-general">Configure general</h2>
 <ol>
-<li>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
+<li>Start any of the <a class="xref" href="../../V1.3/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
 <li><p>Run a <code>PUT</code> command to the following endpoint, setting <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
