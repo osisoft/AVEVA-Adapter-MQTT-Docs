@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PI Adapter for MQTT configuration examples </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PI Adapter for MQTT configuration examples ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../v1/index.html" width="46">
+                <img id="logo" src="../../v1/main/v1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PIAdapterForMQTTConfigurationExamples">
+<h1 id="pi-adapter-for-mqtt-configuration-examples">PI Adapter for MQTT configuration examples</h1>
+
+<p>The following tables provide examples for all configurations available for PI Adapter for MQTT.</p>
+<p><strong>Note:</strong> The examples in this topic are using the default port number <code>5590</code>. If you selected a different port number, replace it with that value.TEST</p>
+<h2 id="system-components-configuration-with-two-mqtt-adapter-instances">System components configuration with two MQTT adapter instances</h2>
+<pre><code class="lang-json">[
+    {
+        &quot;ComponentId&quot;: &quot;Mqtt1&quot;,
+        &quot;ComponentType&quot;: &quot;Mqtt&quot;
+    },
+    {
+        &quot;ComponentId&quot;: &quot;Mqtt2&quot;,
+        &quot;ComponentType&quot;: &quot;Mqtt&quot;
+    },
+    {
+        &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
+        &quot;ComponentType&quot;: &quot;OmfEgress&quot;
+     }
+]
+</code></pre><h2 id="mqtt-adapter-configuration">MQTT adapter configuration</h2>
+<pre><code class="lang-json">{
+    &quot;Mqtt1&quot;: {
+        &quot;Logging&quot;: {
+            &quot;logLevel&quot;: &quot;Information&quot;,
+            &quot;logFileSizeLimitBytes&quot;: 34636833,
+            &quot;logFileCountLimit&quot;: 31
+        },
+        &quot;DataSource&quot;: {
+            &quot;StreamIdPrefix&quot; : null,
+            &quot;DefaultStreamIdPattern&quot; : &quot;{Topic}.{ValueField}&quot;,
+            &quot;HostNameOrIpAddress&quot; : &quot;125.0.0.0&quot;,
+            &quot;Port&quot; : 8765,
+            &quot;Protocol&quot; : &quot;Tcp&quot;,
+            &quot;TLS&quot; : &quot;Tls12&quot;,
+            &quot;UserName&quot;: null,
+            &quot;Password&quot;: null,
+            &quot;ClientId&quot; : &quot;Test-Cliendt-Id&quot;,
+            &quot;MQTTVersion&quot; : &quot;3.1.1&quot;,
+            &quot;ValidateServerCertificate&quot; : true
+        },
+        &quot;DataSelection&quot;: [
+            {
+                &quot;Selected&quot; : true,
+                &quot;Name&quot; : null,
+                &quot;StreamId&quot; : &quot;RandomStreamId&quot;,
+                &quot;DataFilterId&quot; : null,
+                &quot;Topic&quot; : &quot;RandomTopic&quot;,
+                &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
+                &quot;TimeField&quot; : &quot;$.TestNode[:1].Time&quot;,
+                &quot;DataType&quot; : &quot;uint64&quot;,
+                &quot;TimeFormat&quot; : null
+            }
+        ]
+    },
+    &quot;System&quot;: {
+        &quot;Logging&quot;: {
+            &quot;logLevel&quot;: &quot;Information&quot;,
+            &quot;logFileSizeLimitBytes&quot;: 34636833,
+            &quot;logFileCountLimit&quot;: 31
+        },
+        &quot;HealthEndpoints&quot;: [
+        ],
+    &quot;Diagnostics&quot;: {
+            &quot;enableDiagnostics&quot;: true
+    },
+        &quot;Components&quot;: [
+            {
+                &quot;componentId&quot;: &quot;Egress&quot;,
+                &quot;componentType&quot;: &quot;OmfEgress&quot;
+            },
+            {
+                &quot;componentId&quot;: &quot;Mqtt1&quot;,
+                &quot;componentType&quot;: &quot;Mqtt&quot;
+            }
+        ],
+    &quot;Buffering&quot;: {
+            &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Mqtt/Buffers&quot;,
+            &quot;MaxBufferSizeMB&quot;: -1,
+            &quot;EnableBuffering&quot;: true
+        }
+     },
+    &quot;OmfEgress&quot;: {
+        &quot;Logging&quot;: {
+            &quot;logLevel&quot;: &quot;Information&quot;,
+            &quot;logFileSizeLimitBytes&quot;: 34636833,
+            &quot;logFileCountLimit&quot;: 31
+        },
+        &quot;DataEndpoints&quot;: [
+            {
+                &quot;id&quot;: &quot;WebAPI EndPoint&quot;,
+                &quot;endpoint&quot;: &quot;https://PIWEBAPIServer/piwebapi/omf&quot;,
+                &quot;userName&quot;: &quot;USERNAME&quot;,
+                &quot;password&quot;: &quot;PASSWORD&quot;
+            },
+            {
+                &quot;id&quot;: &quot;OCS Endpoint&quot;,
+                &quot;endpoint&quot;: &quot;https://OCSEndpoint/omf&quot;,
+                &quot;clientId&quot;: &quot;CLIENTID&quot;,
+                &quot;clientSecret&quot;: &quot;CLIENTSECRET&quot;
+            },
+            {
+                &quot;Id&quot;: &quot;EDS&quot;,
+                &quot;Endpoint&quot;: &quot;http://localhost:/api/v1/tenants/default/namespaces/default/omf&quot;,
+                &quot;UserName&quot;: &quot;eds&quot;,
+                &quot;Password&quot;: &quot;eds&quot;
+            }
+        ]
+    }
+}
+</code></pre><h2 id="data-source-configuration">Data source configuration</h2>
+<p>The following are representations of minimal and complete data source configurations of MQTT adapter.</p>
+<h3 id="mqtt-generic---minimal-data-source-configuration">MQTT (generic) - Minimal data source configuration</h3>
+<pre><code class="lang-json">{
+    &quot;HostNameOrIpAddress&quot; : &quot;125.0.0.0&quot; ,
+    &quot;Port&quot; : 8765
+}
+</code></pre><h3 id="mqtt-generic---complete-data-source-configuration">MQTT (generic) - Complete data source configuration</h3>
+<pre><code class="lang-json">{
+    &quot;StreamIdPrefix&quot; : null,
+    &quot;DefaultStreamIdPattern&quot; : &quot;{Topic}.{ValueField}&quot;,
+    &quot;HostNameOrIpAddress&quot; : &quot;125.0.0.0&quot;,
+    &quot;Port&quot; : 8765,
+    &quot;Protocol&quot; : &quot;Tcp&quot;,
+    &quot;TLS&quot; : &quot;Tls12&quot;,
+    &quot;UserName&quot;: null,
+    &quot;Password&quot;: null,
+    &quot;ClientId&quot; : &quot;Test-Cliendt-Id&quot;,
+    &quot;MQTTVersion&quot; : &quot;3.1.1&quot;,
+    &quot;ValidateServerCertificate&quot; : true
+}
+</code></pre><h3 id="mqtt-sparkplug-b---minimal-data-source-configuration">MQTT Sparkplug B - Minimal data source configuration</h3>
+<pre><code class="lang-json">{
+    &quot;HostNameOrIpAddress&quot; : &quot;Host1&quot;,
+    &quot;Port&quot; : 4321,
+}
+</code></pre><h3 id="mqtt-sparkplug-b---complete--data-source-configuration">MQTT Sparkplug B - Complete  data source configuration</h3>
+<pre><code class="lang-json">{
+    &quot;HostNameOrIpAddress&quot; : &quot;Host1&quot;,
+    &quot;Port&quot; : 4321,
+    &quot;PrimaryHostId&quot; : &quot;Optimus&quot;,
+    &quot;Protocol&quot; : &quot;Tcp&quot;,
+    &quot;TLS&quot; : &quot;Tls12&quot;,
+    &quot;UserName&quot; : &quot;RandomUser&quot;,
+    &quot;PassWord&quot; : &quot;RandomPassword&quot;,
+    &quot;ClientId&quot; : &quot;Random-Client-Id&quot;,
+    &quot;MQTTVersion&quot; : &quot;3.1.1&quot;,
+    &quot;ValidateServerCertificate&quot; : true,
+    &quot;StreamIdPrefix&quot; : null,
+    &quot;DefaultStreamIdPattern&quot; : &quot;{PointId}&quot;
+}
+</code></pre><h2 id="client-settings-configuration">Client settings configuration</h2>
+<pre><code class="lang-json">{
+    &quot;KeepAlivePeriod&quot; : true,
+    &quot;QosLevel&quot; : 2,
+    &quot;MaxInternalQueueSize&quot; : 350000
+}
+</code></pre><h2 id="data-selection-configuration">Data selection configuration</h2>
+<p>The following are representations of minimal and complete data selection configurations of MQTT adapter.</p>
+<h3 id="mqtt-generic---minimal-data-selection-configuration">MQTT (generic) - Minimal data selection configuration</h3>
+<pre><code class="lang-json">[
+ {
+    &quot;Topic&quot; : &quot;RandomTopic&quot;,
+    &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
+    &quot;DataType&quot; : &quot;uint64&quot;,
+  }
+]
+</code></pre><h3 id="mqtt-generic---complete-data-selection-configuration">MQTT (generic) - Complete data selection configuration</h3>
+<pre><code class="lang-json">[
+ {  &quot;Selected&quot; : true,
+    &quot;Name&quot; : null,
+    &quot;StreamId&quot; : &quot;RandomStreamId&quot;,
+    &quot;DataFilterId&quot; : null,
+    &quot;Topic&quot; : &quot;RandomTopic&quot;,
+    &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
+    &quot;TimeField&quot; : &quot;$.TestNode[:1].Time&quot;,
+    &quot;DataType&quot; : &quot;uint64&quot;,
+    &quot;TimeFormat&quot; : null
+  }
+]
+</code></pre><h3 id="mqtt-sparkplug-b---minimal-data-selection-configuration">MQTT Sparkplug B - Minimal data selection configuration</h3>
+<pre><code class="lang-json">[
+  {
+    &quot;Topic&quot; : &quot;Home/Sensors&quot;,
+    &quot;PropertyName&quot; : &quot;Temperature&quot;
+  }
+]
+</code></pre><h3 id="mqtt-sparkplug-b---complete-data-selection-configuration">MQTT Sparkplug B - Complete data selection configuration</h3>
+<pre><code class="lang-json">[
+  {
+    &quot;Selected&quot; : true,
+    &quot;Name&quot; : &quot;Temperature&quot;,
+    &quot;Topic&quot; : &quot;Home/Sensors&quot;,
+    &quot;PropertyName&quot; : &quot;temperature&quot;,
+    &quot;StreamId&quot; : &quot;RandomStreamId&quot;,
+    &quot;DataFilterId&quot; : null
+  }
+]
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/master/v1/configuration/pi-adapter-for-mqtt-configuration-examples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

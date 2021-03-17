@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction to PI Adapters </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction to PI Adapters ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../v1/index.html" width="46">
+                <img id="logo" src="../../../v1/main/v1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="IntroductionToPIAdapters">
+<h1 id="introduction-to-pi-adapters">Introduction to PI Adapters</h1>
+
+<p>PI Adapters is an edge data collection technology that provides access to time-series data previously isolated on remote assets or in secondary networks. Available for Windows and Linux devices, PI Adapters pull real-time data from IIoT gateways and sensor-enabled equipment and securely route the data to:</p>
+<ul>
+<li>Edge Data Store (EDS) for additional edge applications </li>
+<li>PI Server for on-premises storage </li>
+<li>OSIsoft Cloud Services (OCS) for cloud-hosted data management service</li>
+</ul>
+<p>PI Adapters offer the following generic capabilities:</p>
+<ul>
+<li>Connection to <a href="#inbound-data">inbound data</a> sources from common industrial protocols</li>
+<li>Real-time <a href="#data-transfer">data transfer</a> to PI Server, OCS, and EDS with optional data filtering to manipulate data on the outbound side</li>
+<li><a href="#buffering">Buffering</a> to overcome network and system disruptions</li>
+<li><a href="#administration">Administration</a> functions for simplified management, scalable installation, and configuration</li>
+</ul>
+<h2 id="capabilities-in-detail">Capabilities in detail</h2>
+<p>The following capabilities are available for every PI Adapter. A specific PI Adapter might or might not include additional capabilities such as network proxy support or data source auto discovery.</p>
+<h3 id="inbound-data">Inbound data</h3>
+<p>PI Adapters provide connections to a variety of inbound data sources from common industrial protocols. </p>
+<p>The optional stream metadata capability allows you to set the amount of metadata sent with each stream. Metadata are different for every adapter type.</p>
+<p>For more information, see the Data source configuration and Data selection configuration topics.</p>
+<h3 id="data-transfer">Data transfer</h3>
+<p>PI Adapters allow you to transfer real-time data to one or more egress endpoint: PI Server, OSIsoft Cloud Services (OCS), or Edge Data Store (EDS). The data filtering capability improves the configuration flexibility by manipulating data on the outbound side and minimizes network bandwidth consumption through exception reporting capabilities.</p>
+<p>For more information, see <a class="xref" href="configuration/egress-endpoints-configuration.html">Egress endpoints configuration</a>.</p>
+<h3 id="buffering">Buffering</h3>
+<p>The PI Adapters&#39; buffering capability creates a robust data collection for data egressed from the adapter to egress endpoints or health endpoints. Buffering helps to overcome network and system disruptions that often result in data loss.</p>
+<p>For more information, see <a class="xref" href="configuration/buffering-configuration.html">Buffering configuration</a>.</p>
+<h3 id="administration">Administration</h3>
+<p>PI Adapters provide administrative functions such as starting and stopping of an adapter or ingress component, or deleting an adapter component. Administrative functions simplify management and make installation and configuration scalable.</p>
+<p>For more information, see <a class="xref" href="administration/administration.html">Administration</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/v1/introduction-to-pi-adapters.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

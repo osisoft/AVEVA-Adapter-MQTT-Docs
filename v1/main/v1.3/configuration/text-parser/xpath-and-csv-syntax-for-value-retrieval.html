@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>XPath and CSV syntax for value retrieval </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="XPath and CSV syntax for value retrieval ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="all-file-types/toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../v1/index.html" width="46">
+                <img id="logo" src="../../../../../v1/main/v1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XPathAndCSVSyntaxForValueRetrieval">
+<h1 id="xpath-and-csv-syntax-for-value-retrieval">XPath and CSV syntax for value retrieval</h1>
+
+<p>For information on which semantics are used for retrieving values from XML and CSV files, see the following documentation:</p>
+<ul>
+<li>XML - <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/">XML Path Language (XPath)</a></li>
+<li>CSV - Column Index (1 based) or Header value (if header defined)</li>
+</ul>
+<p>The following syntaxes are used to extract values from XML or CSV documents.</p>
+<h3 id="xml---simple-xpath-example">XML - Simple XPath example</h3>
+<pre><code class="lang-xml">&lt;values&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:46.0928791Z&lt;/time&gt;
+    &lt;value&gt;1.234567890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:47.0928791Z&lt;/time&gt;
+    &lt;value&gt;12.34567890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:48.0928791Z&lt;/time&gt;
+    &lt;value&gt;123.4567890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:49.0928791Z&lt;/time&gt;
+    &lt;value&gt;1234.567890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:50.0928791Z&lt;/time&gt;
+    &lt;value&gt;12345.67890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:51.0928791Z&lt;/time&gt;
+    &lt;value&gt;123456.7890&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:52.0928791Z&lt;/time&gt;
+    &lt;value&gt;12345678.90&lt;/value&gt;
+  &lt;/value&gt;
+  &lt;value&gt;
+    &lt;time&gt;2020-08-10T12:10:53.0928791Z&lt;/time&gt;
+    &lt;value&gt;123456789.0&lt;/value&gt;
+  &lt;/value&gt;
+&lt;/values&gt;
+</code></pre><p>The following XPath configuration reads a series of values:</p>
+<pre><code class="lang-json">{
+    &quot;Id&quot;: &quot;DoubleValue&quot;,
+    &quot;FieldDefinition&quot;: &quot;./values/value/value&quot;,
+    &quot;DataType&quot;: &quot;Double&quot;
+},
+{
+     &quot;Id&quot;: &quot;Timestamp&quot;,
+    &quot;FieldDefinition&quot;: &quot;./values/value/time&quot;,
+    &quot;DataType&quot;: &quot;DateTime&quot;,
+    &quot;IsIndex&quot;: true
+}
+</code></pre><h3 id="csv---simple-csv-column-index-example">CSV - Simple CSV column index example</h3>
+<pre><code class="lang-csv">2020-08-10T12:10:46.0928791Z,1.234567890
+2020-08-10T12:10:47.0928791Z,12.34567890
+2020-08-10T12:10:48.0928791Z,123.4567890
+2020-08-10T12:10:49.0928791Z,1234.567890
+2020-08-10T12:10:50.0928791Z,12345.67890
+2020-08-10T12:10:51.0928791Z,123456.7890
+2020-08-10T12:10:52.0928791Z,12345678.90
+2020-08-10T12:10:53.0928791Z,123456789.0
+</code></pre><p>The following CSV column index configuration requires the text parser be configured with <code>HasHeader=false</code>. The column indexes are 1 based and configured as strings.</p>
+<pre><code class="lang-json">{
+    &quot;Id&quot;: &quot;DoubleValue&quot;,
+    &quot;FieldDefinition&quot;: &quot;2&quot;,
+    &quot;DataType&quot;: &quot;Double&quot;
+},
+{
+    &quot;Id&quot;: &quot;Timestamp&quot;,
+    &quot;FieldDefinition&quot;: &quot;1&quot;,
+    &quot;DataType&quot;: &quot;DateTime&quot;,
+    &quot;IsIndex&quot;: true
+}
+</code></pre><h3 id="csv---simple-csv-column-header-example">CSV - Simple CSV column header example</h3>
+<pre><code class="lang-csv">Date,Value
+2020-08-10T12:10:46.0928791Z,1.234567890
+2020-08-10T12:10:47.0928791Z,12.34567890
+2020-08-10T12:10:48.0928791Z,123.4567890
+2020-08-10T12:10:49.0928791Z,1234.567890
+2020-08-10T12:10:50.0928791Z,12345.67890
+2020-08-10T12:10:51.0928791Z,123456.7890
+2020-08-10T12:10:52.0928791Z,12345678.90
+2020-08-10T12:10:53.0928791Z,123456789.0
+</code></pre><p>The following CSV column header configuration requires the text parser be configured with <code>HasHeader=true</code>.</p>
+<pre><code class="lang-json">{
+    &quot;Id&quot;: &quot;DoubleValue&quot;,
+    &quot;FieldDefinition&quot;: &quot;Value&quot;,
+    &quot;DataType&quot;: &quot;Double&quot;
+},
+{
+    &quot;Id&quot;: &quot;Timestamp&quot;,
+    &quot;FieldDefinition&quot;: &quot;Date&quot;,
+    &quot;DataType&quot;: &quot;DateTime&quot;,
+    &quot;IsIndex&quot;: true
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/v1.3/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>
