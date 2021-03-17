@@ -25,7 +25,7 @@
 - name: Health endpoint configuration
   href: ../main/v1.3/configuration/health-endpoint-configuration.md
 - name: General configuration
-  href: ../main/v1.3/Metadata/toc.yml
+  href: ../main/v1.3/metadata/toc.yml
   topicHref: ../main/v1.3/configuration/general-configuration.md
 - name: Buffering configuration
   href: ../main/v1.3/configuration/buffering-configuration.md
