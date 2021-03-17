@@ -1,0 +1,20 @@
+- name: PI Adapter for MQTT overview
+  href: PI-Adapter-for-MQTT-overview/toc.yml
+  topicHref: index.md
+  homepage: index.md
+- name: Installation
+  href: installation/toc.yml
+  topicHref: main/v1.3/installation/installation.md
+- name: Configuration
+  href: configuration/toc.yml
+  topicHref: configuration/configuration.md
+- name: Administration
+  href: main/v1.3/administration/toc.yml
+  topicHref: main/v1.3/administration/administration.md
+- name: Health and diagnostics
+  href: main/v1.3/health/toc.yml
+  topicHref: main/v1.3/health/health-and-diagnostics.md
+- name: Release notes
+  href: release-notes/release-notes.md
+- name: Technical support and feedback
+  href: main/v1.3/technical-support-and-feedback.md
