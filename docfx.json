@@ -29,7 +29,7 @@
     ],
     "resource": [
       {
-        "files": ["content/images/**", "content/main/shared-content/images/**", "content/main/shared-content/images/**", "content/main/shared-content/images/**" ]
+        "files": ["content/images/**", "content/main/shared-content/images/**"]
         
       }
     ],
