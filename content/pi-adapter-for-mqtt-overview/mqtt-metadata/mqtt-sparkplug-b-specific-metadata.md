@@ -1,5 +1,5 @@
 ---
-uid: MQTTSparkplugBSpecificMetadata1-3
+uid: MQTTSparkplugBSpecificMetadata
 ---
 
 # MQTT Sparkplug B specific metadata

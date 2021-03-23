@@ -1,5 +1,5 @@
 ---
-uid: MQTTSpecificMetadata1-3
+uid: MQTTSpecificMetadata
 --- 
 
 # MQTT specific metadata

@@ -4,17 +4,17 @@
   homepage: index.md
 - name: Installation
   href: installation/toc.yml
-  topicHref: main/v1.3/installation/installation.md
+  topicHref: main/shared-content/installation/installation.md
 - name: Configuration
   href: configuration/toc.yml
   topicHref: configuration/configuration.md
 - name: Administration
-  href: main/v1.3/administration/toc.yml
-  topicHref: main/v1.3/administration/administration.md
+  href: main/shared-content/administration/toc.yml
+  topicHref: main/shared-content/administration/administration.md
 - name: Health and diagnostics
-  href: main/v1.3/health/toc.yml
-  topicHref: main/v1.3/health/health-and-diagnostics.md
+  href: main/shared-content/health/toc.yml
+  topicHref: main/shared-content/health/health-and-diagnostics.md
 - name: Release notes
   href: release-notes/release-notes.md
 - name: Technical support and feedback
-  href: main/v1.3/technical-support-and-feedback.md
+  href: main/shared-content/technical-support-and-feedback.md
