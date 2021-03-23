@@ -2,5 +2,5 @@
   dropdown: true
   items:
   - name: PI Adapter for MQTT 1.0
-    href: v1/
-    homepage: v1/index.md
+    href: content/
+    homepage: content/index.md
