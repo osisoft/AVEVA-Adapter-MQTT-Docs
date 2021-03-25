@@ -1,5 +1,5 @@
 - name: PI Adapter for MQTT overview
-  href: PI-Adapter-for-MQTT-overview/toc.yml
+  href: pi-adapter-for-mqtt-overview/toc.yml
   topicHref: index.md
 - name: Installation
   href: installation/toc.yml
