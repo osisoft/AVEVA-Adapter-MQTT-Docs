@@ -14,7 +14,7 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 Complete the following steps to establish a data flow from an MQTT data source device to a data endpoint.
 
-1. Configure one or more MQTT system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
+1. Configure one or more MQTT system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#system-components-configuration).
 
 2. Configure an MQTT data source for each MQTT device.<br>See [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#configure-mqtt-data-source) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration#configure-mqtt-sparkplug-b-data-source).
 
