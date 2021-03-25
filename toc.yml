@@ -1,6 +1,3 @@
-- name: PI Adapter for MQTT versions
-  dropdown: true
-  items:
-  - name: PI Adapter for MQTT 1.0
-    href: content/
-    homepage: content/index.md
+- name: PI Adapter for MQTT 1.0
+  href: content/
+  topicHref: content/index.md
