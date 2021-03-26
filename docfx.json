@@ -14,7 +14,9 @@
   ],
   "build": {
     "globalMetadata": {
-      "_enableSearch": true
+      "_enableSearch": true,
+      "_gitContribute": {
+        "branch": "main"
     },
     "content": [
       {
