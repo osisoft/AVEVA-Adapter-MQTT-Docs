@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshoot the adapter </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshoot the adapter ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TroubleshootTheAdapter">
+<h1 id="troubleshoot-the-adapter">Troubleshoot the adapter</h1>
+
+<p>PI adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact OSIsoft Technical Support through the <a href="https://my.osisoft.com/">OSIsoft Customer Portal</a>.</p>
+<p><strong>Note:</strong> Make sure to also check the troubleshooting information specific to your adapter in this user guide.</p>
+<h2 id="logs">Logs</h2>
+<p>Messages from the System and OmfEgress logs provide information on the status of the adapter. For example, they show if a connection from the adapter to an egress endpoint exists.</p>
+<p>Perform the following steps to view the System and OmfEgress logs:</p>
+<ol>
+<li><p>Navigate to the logs directory:<br>
+ Windows: <code>%ProgramData%\OSIsoft\Adapters\&lt;AdapterName&gt;\Logs</code><br>
+ Linux: <code>/usr/share/OSIsoft/Adapters/&lt;AdapterName&gt;/Logs</code>.<br><br>
+ <strong>Example:</strong><br> A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:</p>
+<pre><code class="lang-json">2020-11-02 11:08:51.870 -06:00 [Information] Data will be sent to the following OMF endpoint: 
+Id: &lt;omfegress id&gt;
+Endpoint: &lt;pi web api URL&gt;   (note: the pi web api default port is 443)
+ValidateEndpointCertificate: &lt;true or false&gt;
+</code></pre></li>
+<li><p>Optional: Change the log level of the adapter to receive more information and context. For more information, see <a class="xref" href="../configuration/logging-configuration.html">Logging configuration</a>.</p>
+</li>
+</ol>
+<h3 id="asp-net-core-platform">ASP .NET Core platform</h3>
+<p>The ASP .NET Core platform log provides information from the Kestrel web server that hosts the application. The log will only be present in case EDS encounters heartbeat failures or if the adapter throughput is too high. Perform the following steps to spread the load among multiple adapters:</p>
+<ol>
+<li>Decrease the scan frequency.</li>
+<li>Lower the amount of data selection items.</li>
+</ol>
+<!--## PI Web API and OCS user documentation
+
+PI Web API and OCS user documentation provides troubleshooting information for <placeholder> -->
+<h2 id="wireshark">Wireshark</h2>
+<p>Wireshark is a protocol-specific troubleshooting tool that supports all current adapter protocols. Perform the following steps if you want to use Wireshark to capture traffic from the data source to the adapter or from the adapter to the OMF destination.</p>
+<ol>
+<li>Download <a href="https://www.wireshark.org/download.html">Wireshark</a>.</li>
+<li>Familiarize yourself with the tool and read the <a href="https://www.wireshark.org/docs/wsug_html_chunked/">Wireshark user guide</a>.</li>
+</ol>
+<h2 id="health-and-diagnostics-egress-to-pi-web-api">Health and diagnostics egress to PI Web API</h2>
+<p>The adapter sends health and diagnostics data to PI Web API; in some cases, conflicts may occur that are due to changes or perceived changes in PI Web API. For example, a <code>409 - Conflict</code> error message displays if you upgrade your adapter version and the PI points do not match in  the upgraded version. However, data is continued to be sent as long as containers are created, so buffering only starts if no containers are created.</p>
+<p>To resolve the conflict, perform the following steps:</p>
+<ol>
+<li>Stop the adapter.</li>
+<li>Delete the <code>Health</code> folder inside of the <code>Buffers</code> folder.</li>
+<li>Stop PI Web API.</li>
+<li>Delete the relevant adapter created AF structure.</li>
+<li>Delete the associated health and diagnostics PI points on any or all PI Data Archives created by PI Web API.</li>
+<li>Start PI Web API.</li>
+<li>Start the adapter.</li>
+</ol>
+<h2 id="adapter-connection-to-egress-endpoint">Adapter connection to egress endpoint</h2>
+<p>Certain egress health information in both PI Web API and OCS show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:</p>
+<h3 id="pi-web-api-connection">PI Web API connection</h3>
+<p>Perform the following steps to determine if a connection to the PI Web API endpoint exists:</p>
+<ol>
+<li>Open PI Web API.</li>
+<li>Select the OmfEgress component of your adapter, for example <em>GVAdapterUbuntu.&lt;AdapterName>.OmfEgress</em>.</li>
+<li>Make sure that the following PI points have been created for your egress endpoint:<ul>
+<li><strong>DeviceStatus</strong></li>
+<li><strong>NextHealthMessageExpected</strong></li>
+<li><strong>IORate</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="ocs-connection">OCS connection</h3>
+<p>Perform the following steps to determine if a connection to the OCS endpoint exists:</p>
+<ol>
+<li>Open OCS.</li>
+<li>Click <strong>Sequential Data Store</strong> &gt; <strong>Streams</strong>.</li>
+<li>Makes sure that  the following streams have been created for your egress endpoint:<ul>
+<li><strong>DeviceStatus</strong></li>
+<li><strong>NextHealthMessageExpected</strong></li>
+<li><strong>IORate</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="tcp-connection">TCP connection</h3>
+<p>Perform the following steps to see all established TCP sessions in Linux:</p>
+<ol>
+<li>Open a terminal.</li>
+<li>Type the following command: <code>ss  -o state established -t -p</code></li>
+<li>Press Enter.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/v1.3/shared-content/troubleshooting/troubleshoot-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

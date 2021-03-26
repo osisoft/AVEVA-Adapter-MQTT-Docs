@@ -3,373 +3,160 @@ sorted: true
 references:
 - uid: AdapterDiagnostics
   name: Adapter diagnostics
-  href: v1/main/v1/diagnostics/adapter-diagnostics.html
-- uid: AdapterDiagnostics1-3
-  name: Adapter diagnostics
-  href: v1/main/v1.3/diagnostics/adapter-diagnostics.html
-- uid: AdapterDiagnostics1-4
-  name: Adapter diagnostics
-  href: v1/main/v1.4/diagnostics/adapter-diagnostics.html
-- uid: AdapterDiagnosticsOld
-  name: Adapter diagnostics
-  href: v1/main/v1/ARCHIVE/Adapter%20diagnostics_old.html
+  href: content/main/shared-content/diagnostics/adapter-diagnostics.html
 - uid: AdapterHealth
   name: Adapter health
-  href: v1/main/v1/health/adapter-health.html
-- uid: AdapterHealth1-3
-  name: Adapter health
-  href: v1/main/v1.3/health/adapter-health.html
-- uid: AdapterHealth1-4
-  name: Adapter health
-  href: v1/main/v1.4/health/adapter-health.html
+  href: content/main/shared-content/health/adapter-health.html
 - uid: AdapterMetadata
   name: Adapter metadata
-  href: v1/main/v1/metadata/adapter-metadata.html
-- uid: AdapterMetadata1-3
-  name: Adapter metadata
-  href: v1/main/v1.3/metadata/adapter-metadata.html
-- uid: AdapterMetadata1-4
-  name: Adapter metadata
-  href: v1/main/v1.4/metadata/adapter-metadata.html
+  href: content/main/shared-content/metadata/adapter-metadata.html
 - uid: Administration
   name: Administration
-  href: v1/main/v1/administration/administration.html
-- uid: Administration1-3
-  name: Administration
-  href: v1/main/v1.3/administration/administration.html
-- uid: Administration1-4
-  name: Administration
-  href: v1/main/v1.4/administration/administration.html
+  href: content/main/shared-content/administration/administration.html
 - uid: BufferingConfiguration
   name: Buffering configuration
-  href: v1/main/v1/configuration/buffering-configuration.html
-- uid: BufferingConfiguration1-3
-  name: Buffering configuration
-  href: v1/main/v1.3/configuration/buffering-configuration.html
-- uid: BufferingConfiguration1-4
-  name: Buffering configuration
-  href: v1/main/v1.4/configuration/buffering-configuration.html
+  href: content/main/shared-content/configuration/buffering-configuration.html
 - uid: ConfigurationTools
   name: Configuration tools
-  href: v1/main/v1/configuration/configuration-tools.html
-- uid: ConfigurationTools1-3
-  name: Configuration tools
-  href: v1/main/v1.3/configuration/configuration-tools.html
-- uid: ConfigurationTools1-4
-  name: Configuration tools
-  href: v1/main/v1.4/configuration/configuration-tools.html
-- uid: ConfigureANetworkProxy1-3
+  href: content/main/shared-content/configuration/configuration-tools.html
+- uid: ConfigureANetworkProxy
   name: Configure a network proxy
-  href: v1/main/v1.3/configuration/configure-a-network-proxy.html
-- uid: ConfigureANetworkProxy1-4
-  name: Configure a network proxy
-  href: v1/main/v1.4/configuration/configure-a-network-proxy.html
+  href: content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.html
 - uid: DataFiltersConfiguration
   name: Data filters configuration
-  href: v1/main/v1/configuration/data-filters-configuration.html
-- uid: DataFiltersConfiguration1-3
-  name: Data filters configuration
-  href: v1/main/v1.3/configuration/data-filters-configuration.html
-- uid: DataFiltersConfiguration1-4
-  name: Data filters configuration
-  href: v1/main/v1.4/configuration/data-filters-configuration.html
+  href: content/main/shared-content/configuration/data-filters-configuration.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
-  href: v1/main/v1/administration/delete-an-adapter-component.html
-- uid: DeleteAnAdapterComponent1-3
-  name: Delete an adapter component
-  href: v1/main/v1.3/administration/delete-an-adapter-component.html
-- uid: DeleteAnAdapterComponent1-4
-  name: Delete an adapter component
-  href: v1/main/v1.4/administration/delete-an-adapter-component.html
+  href: content/main/shared-content/administration/delete-an-adapter-component.html
 - uid: DeviceStatus
   name: Device status
-  href: v1/main/v1/health/device-status.html
-- uid: DeviceStatus1-3
-  name: Device status
-  href: v1/main/v1.3/health/device-status.html
-- uid: DeviceStatus1-4
-  name: Device status
-  href: v1/main/v1.4/health/device-status.html
-- uid: DiagnosticsConfiguration
-  name: Diagnostics configuration
-  href: v1/main/v1/ARCHIVE/Diagnostics%20configuration.html
-- uid: DiscoveryConfiguration1-3
+  href: content/main/shared-content/health/device-status.html
+- uid: DiscoveryConfiguration
   name: Discovery configuration
-  href: v1/main/v1.3/configuration/discovery-configuration.html
-- uid: DiscoveryConfiguration1-4
-  name: Discovery configuration
-  href: v1/main/v1.4/configuration/discovery-configuration.html
-- uid: Egress_DataEndpoints_schema
-  name: Egress endpoint configuration schema
-  href: v1/main/v1/ARCHIVE/Egress_DataEndpoints_schema.html
+  href: content/main/shared-content/configuration/discovery-configuration.html
 - uid: EgressDiagnostics
   name: Egress diagnostics
-  href: v1/main/v1/diagnostics/egress-diagnostics.html
-- uid: EgressDiagnostics1-3
-  name: Egress diagnostics
-  href: v1/main/v1.3/diagnostics/egress-diagnostics.html
-- uid: EgressDiagnostics1-4
-  name: Egress diagnostics
-  href: v1/main/v1.4/diagnostics/egress-diagnostics.html
+  href: content/main/shared-content/diagnostics/egress-diagnostics.html
 - uid: EgressEndpointsConfiguration
   name: Egress endpoints configuration
-  href: v1/main/v1/configuration/egress-endpoints-configuration.html
-- uid: EgressEndpointsConfiguration1-3
-  name: Egress endpoints configuration
-  href: v1/main/v1.3/configuration/egress-endpoints-configuration.html
-- uid: EgressEndpointsConfiguration1-4
-  name: Egress endpoints configuration
-  href: v1/main/v1.4/configuration/egress-endpoints-configuration.html
+  href: content/main/shared-content/configuration/egress-endpoints-configuration.html
 - uid: ErrorRate
   name: Error rate
-  href: v1/main/v1/diagnostics/error-rate.html
-- uid: ErrorRate1-3
-  name: Error rate
-  href: v1/main/v1.3/diagnostics/error-rate.html
-- uid: ErrorRate1-4
-  name: Error rate
-  href: v1/main/v1.4/diagnostics/error-rate.html
+  href: content/main/shared-content/diagnostics/error-rate.html
 - uid: GeneralConfiguration
   name: General configuration
-  href: v1/main/v1/configuration/general-configuration.html
-- uid: GeneralConfiguration1-3
-  name: General configuration
-  href: v1/main/v1.3/configuration/general-configuration.html
-- uid: GeneralConfiguration1-4
-  name: General configuration
-  href: v1/main/v1.4/configuration/general-configuration.html
+  href: content/main/shared-content/configuration/general-configuration.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
-  href: v1/main/v1/health/health-and-diagnostics.html
-- uid: HealthAndDiagnostics1-3
-  name: Health and Diagnostics
-  href: v1/main/v1.3/health/health-and-diagnostics.html
-- uid: HealthAndDiagnostics1-4
-  name: Health and Diagnostics
-  href: v1/main/v1.4/health/health-and-diagnostics.html
+  href: content/main/shared-content/health/health-and-diagnostics.html
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
-  href: v1/main/v1/configuration/health-endpoint-configuration.html
-- uid: HealthEndpointConfiguration1-3
-  name: Health endpoint configuration
-  href: v1/main/v1.3/configuration/health-endpoint-configuration.html
-- uid: HealthEndpointConfiguration1-4
-  name: Health endpoint configuration
-  href: v1/main/v1.4/configuration/health-endpoint-configuration.html
+  href: content/main/shared-content/configuration/health-endpoint-configuration.html
 - uid: index
   name: PI Adapter for MQTT overview
-  href: index.html
+  href: content/index.html
 - uid: Installation
   name: Installation
-  href: v1/main/v1/installation/installation.html
-- uid: Installation1-3
-  name: Installation
-  href: v1/main/v1.3/installation/installation.html
-- uid: Installation1-4
-  name: Installation
-  href: v1/main/v1.4/installation/installation.html
+  href: content/main/shared-content/installation/installation.html
 - uid: InstallPIAdapterForMQTTUsingDocker
   name: Install PI Adapter for MQTT using Docker
-  href: v1/installation/install-pi-adapter-for-mqtt-using-docker.html
+  href: content/installation/install-pi-adapter-for-mqtt-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
-  href: v1/main/v1/installation/install-the-adapter.html
-- uid: InstallTheAdapter1-3
-  name: Install the adapter
-  href: v1/main/v1.3/installation/install-the-adapter.html
-- uid: InstallTheAdapter1-4
-  name: Install the adapter
-  href: v1/main/v1.4/installation/install-the-adapter.html
-- uid: IntroductionToPIAdapters
-  name: Introduction to PI Adapters
-  href: v1/main/v1/introduction-to-pi-adapters.html
+  href: content/main/shared-content/installation/install-the-adapter.html
 - uid: IORate
   name: IO rate
-  href: v1/main/v1/diagnostics/io-rate.html
-- uid: IORate1-3
-  name: IO rate
-  href: v1/main/v1.3/diagnostics/io-rate.html
-- uid: IORate1-4
-  name: IO rate
-  href: v1/main/v1.4/diagnostics/io-rate.html
+  href: content/main/shared-content/diagnostics/io-rate.html
 - uid: JSONPathSyntaxForValueRetrieval
   name: JSONPath syntax for value retrieval
-  href: v1/main/v1.3/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
+  href: content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
 - uid: LoggingConfiguration
   name: Logging configuration
-  href: v1/main/v1/configuration/logging-configuration.html
-- uid: LoggingConfiguration1-3
-  name: Logging configuration
-  href: v1/main/v1.3/configuration/logging-configuration.html
-- uid: LoggingConfiguration1-4
-  name: Logging configuration
-  href: v1/main/v1.4/configuration/logging-configuration.html
+  href: content/main/shared-content/configuration/logging-configuration.html
 - uid: MQTTConfiguration
   name: Configuration
-  href: v1/configuration/configuration.html
-- uid: MQTTSparkplugBSpecificMetadata1-3
+  href: content/configuration/configuration.html
+- uid: MQTTSparkplugBSpecificMetadata
   name: MQTT Sparkplug B specific metadata
-  href: v1/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html
-- uid: MQTTSpecificMetadata1-3
+  href: content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html
+- uid: MQTTSpecificMetadata
   name: MQTT specific metadata
-  href: v1/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.html
+  href: content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.html
 - uid: NextHealthMessageExpected
   name: Next health message expected
-  href: v1/main/v1/health/next-health-message-expected.html
-- uid: NextHealthMessageExpected1-3
-  name: Next health message expected
-  href: v1/main/v1.3/health/next-health-message-expected.html
-- uid: NextHealthMessageExpected1-4
-  name: Next health message expected
-  href: v1/main/v1.4/health/next-health-message-expected.html
+  href: content/main/shared-content/health/next-health-message-expected.html
 - uid: PIAdapterForMQTTConfigurationExamples
   name: PI Adapter for MQTT configuration examples
-  href: v1/configuration/pi-adapter-for-mqtt-configuration-examples.html
+  href: content/configuration/pi-adapter-for-mqtt-configuration-examples.html
 - uid: PIAdapterForMQTTDataSelectionConfiguration
   name: PI Adapter for MQTT data selection configuration
-  href: v1/configuration/pi-adapter-for-mqtt-data-selection-configuration.html
+  href: content/configuration/pi-adapter-for-mqtt-data-selection-configuration.html
 - uid: PIAdapterForMQTTDataSourceConfiguration
   name: PI Adapter for MQTT data source configuration
-  href: v1/configuration/pi-adapter-for-mqtt-data-source-configuration.html
+  href: content/configuration/pi-adapter-for-mqtt-data-source-configuration.html
 - uid: PIAdapterForMQTTOverview
   name: PI Adapter for MQTT overview
   href: pi-adapter-for-mqtt-overview.html
 - uid: PIAdapterForMQTTPrinciplesOfOperation
   name: PI Adapter for MQTT principles of operation
-  href: v1/pi-adapter-for-mqtt-overview/pi-adapter-for-mqtt-principles-of-operation.html
+  href: content/pi-adapter-for-mqtt-overview/pi-adapter-for-mqtt-principles-of-operation.html
 - uid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
   name: PI Adapter for MQTT Sparkplug B data selection configuration
-  href: v1/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html
+  href: content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html
 - uid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
   name: PI Adapter for MQTT Sparkplug B data source configuration
-  href: v1/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html
-- uid: PIAdapterUsers
-  name: PI Adapter users
-  href: v1/main/v1/pi-adapter-users.html
+  href: content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
-  href: v1/main/v1/configuration/egress-endpoint-configuration/prepare-egress-destinations.html
-- uid: PrepareEgressDestinations1-3
-  name: Prepare egress destinations
-  href: v1/main/v1.3/configuration/egress-endpoint-configuration/prepare-egress-destinations.html
-- uid: PrepareEgressDestinations1-4
-  name: Prepare egress destinations
-  href: v1/main/v1.4/configuration/egress-endpoint-configuration/prepare-egress-destinations.html
+  href: content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.html
 - uid: releaseNotes
   name: Release notes
-  href: v1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
+  href: content/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
-  href: v1/release-notes/release-notes.html
+  href: content/release-notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
-  href: v1/main/v1/administration/retrieve-product-version-information.html
-- uid: RetrieveProductVersionInformation1-3
-  name: Retrieve product version information
-  href: v1/main/v1.3/administration/retrieve-product-version-information.html
-- uid: RetrieveProductVersionInformation1-4
-  name: Retrieve product version information
-  href: v1/main/v1.4/administration/retrieve-product-version-information.html
+  href: content/main/shared-content/administration/retrieve-product-version-information.html
 - uid: SchedulesConfiguration
   name: Schedules configuration
-  href: v1/main/v1/configuration/schedules-configuration.html
-- uid: SchedulesConfiguration1-3
-  name: Schedules configuration
-  href: v1/main/v1.3/configuration/schedules-configuration.html
-- uid: SchedulesConfiguration1-4
-  name: Schedules configuration
-  href: v1/main/v1.4/configuration/schedules-configuration.html
+  href: content/main/shared-content/configuration/schedules-configuration.html
 - uid: SparkplugBDataSourceDiscovery
   name: Sparkplug B data source discovery
-  href: v1/configuration/discovery/sparkplug-b-data-source-discovery.html
+  href: content/configuration/discovery/sparkplug-b-data-source-discovery.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
-  href: v1/main/v1/administration/start-and-stop-an-adapter.html
-- uid: StartAndStopAnAdapter1-3
-  name: Start and stop an adapter
-  href: v1/main/v1.3/administration/start-and-stop-an-adapter.html
-- uid: StartAndStopAnAdapter1-4
-  name: Start and stop an adapter
-  href: v1/main/v1.4/administration/start-and-stop-an-adapter.html
+  href: content/main/shared-content/administration/start-and-stop-an-adapter.html
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
-  href: v1/main/v1/administration/start-and-stop-ingress-component.html
-- uid: StartAndStopIngressComponent1-3
-  name: Start and stop ingress component
-  href: v1/main/v1.3/administration/start-and-stop-ingress-component.html
-- uid: StartAndStopIngressComponent1-4
-  name: Start and stop ingress component
-  href: v1/main/v1.4/administration/start-and-stop-ingress-component.html
+  href: content/main/shared-content/administration/start-and-stop-ingress-component.html
 - uid: StreamCount
   name: Stream count
-  href: v1/main/v1/diagnostics/stream-count.html
-- uid: StreamCount1-3
-  name: Stream count
-  href: v1/main/v1.3/diagnostics/stream-count.html
-- uid: StreamCount1-4
-  name: Stream count
-  href: v1/main/v1.4/diagnostics/stream-count.html
+  href: content/main/shared-content/diagnostics/stream-count.html
 - uid: System
   name: System
-  href: v1/main/v1/diagnostics/system.html
-- uid: System1-3
-  name: System
-  href: v1/main/v1.3/diagnostics/system.html
-- uid: System1-4
-  name: System
-  href: v1/main/v1.4/diagnostics/system.html
+  href: content/main/shared-content/diagnostics/system.html
 - uid: SystemAndAdapterConfiguration
   name: System and adapter configuration
-  href: v1/main/v1/configuration/system-and-adapter-configuration.html
-- uid: SystemAndAdapterConfiguration1-3
-  name: System and adapter configuration
-  href: v1/main/v1.3/configuration/system-and-adapter-configuration.html
-- uid: SystemAndAdapterConfiguration1-4
-  name: System and adapter configuration
-  href: v1/main/v1.4/configuration/system-and-adapter-configuration.html
+  href: content/main/shared-content/configuration/system-and-adapter-configuration.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
-  href: v1/main/v1/configuration/system-components-configuration.html
-- uid: SystemComponentsConfiguration1-3
-  name: System components configuration
-  href: v1/main/v1.3/configuration/system-components-configuration.html
-- uid: SystemComponentsConfiguration1-4
-  name: System components configuration
-  href: v1/main/v1.4/configuration/system-components-configuration.html
+  href: content/main/shared-content/configuration/system-components-configuration.html
 - uid: SystemRequirements
   name: System requirements
-  href: v1/installation/system-requirements.html
+  href: content/installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
-  href: v1/main/v1/technical-support-and-feedback.html
-- uid: TechnicalSupportAndFeedback1-3
-  name: Technical support and feedback
-  href: v1/main/v1.3/technical-support-and-feedback.html
-- uid: TechnicalSupportAndFeedback1-4
-  name: Technical support and feedback
-  href: v1/main/v1.4/technical-support-and-feedback.html
+  href: content/main/shared-content/technical-support-and-feedback.html
 - uid: TextParser
   name: Text parser
-  href: v1/main/v1.3/configuration/text-parser/text-parser.html
-- uid: Troubleshooting
-  name: Troubleshooting
-  href: v1/main/v1/troubleshooting/troubleshoot-the-adapter.html
-- uid: TroubleshootTheAdapter1-3
+  href: content/main/shared-content/configuration/text-parser/text-parser.html
+- uid: TroubleshootTheAdapter
   name: Troubleshoot the adapter
-  href: v1/main/v1.3/troubleshooting/troubleshoot-the-adapter.html
-- uid: TroubleshootTheAdapter1-4
-  name: Troubleshoot the adapter
-  href: v1/main/v1.4/troubleshooting/troubleshoot-the-adapter.html
+  href: content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
-  href: v1/main/v1/installation/uninstall-the-adapter.html
-- uid: UninstallTheAdapter1-3
-  name: Uninstall the adapter
-  href: v1/main/v1.3/installation/uninstall-the-adapter.html
-- uid: UninstallTheAdapter1-4
-  name: Uninstall the adapter
-  href: v1/main/v1.4/installation/uninstall-the-adapter.html
+  href: content/main/shared-content/installation/uninstall-the-adapter.html
 - uid: XPathAndCSVSyntaxForValueRetrieval
   name: XPath and CSV syntax for value retrieval
-  href: v1/main/v1.3/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html
+  href: content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html

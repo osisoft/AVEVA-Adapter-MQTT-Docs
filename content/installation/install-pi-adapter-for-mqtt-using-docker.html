@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Install PI Adapter for MQTT using Docker </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Install PI Adapter for MQTT using Docker ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="InstallPIAdapterForMQTTUsingDocker">
+<h1 id="install-pi-adapter-for-mqtt-using-docker">Install PI Adapter for MQTT using Docker</h1>
+
+<p>Docker is a set of tools that you can use on Linux to manage application deployments.</p>
+<p><strong>Note:</strong> If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the MQTT adapter. Docker is not required to use  the MQTT adapter.</p>
+<p>This topic provides examples of how to create a Docker container with the MQTT adapter.</p>
+<h2 id="create-a-startup-script-for-the-adapter">Create a startup script for the adapter</h2>
+<ol>
+<li><p>Use a text editor to create a script similar to one of the following examples:</p>
+<p> <strong>Note:</strong> The script varies slightly by processor.</p>
+<p> <strong>ARM32</strong></p>
+<pre><code class="lang-bash">#!/bin/sh
+if [ -z $portnum ] ; then
+    exec /MQTT_linux-arm/OSIsoft.Data.System.Host
+else
+    exec /MQTT_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+fi
+</code></pre><p> <strong>ARM64</strong></p>
+<pre><code class="lang-bash">#!/bin/sh
+if [ -z $portnum ] ; then
+    exec /MQTT_linux-arm64/OSIsoft.Data.System.Host
+else
+    exec /MQTT_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+fi
+</code></pre><p> <strong>AMD64</strong></p>
+<pre><code class="lang-bash">#!/bin/sh
+if [ -z $portnum ] ; then
+    exec /MQTT_linux-x64/OSIsoft.Data.System.Host
+else
+    exec /MQTT_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+fi
+</code></pre></li>
+<li><p>Name the script <code>mqttdockerstart.sh</code> and save it to the directory where you plan to create the container.</p>
+</li>
+</ol>
+<h2 id="create-a-docker-container-containing-the-mqtt-adapter">Create a Docker container containing the MQTT adapter</h2>
+<ol>
+<li><p>Create the following <code>Dockerfile</code> in the directory where you want to create and run the container.</p>
+<p> <strong>Note:</strong> <code>Dockerfile</code> is the required name of the file. Use the variation according to your operating system:</p>
+<p> <strong>ARM32</strong></p>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
+COPY mqttdockerstart.sh /
+RUN chmod +x /mqttdockerstart.sh
+ADD ./mqtt_linux-arm.tar.gz .
+ENTRYPOINT [&quot;/mqttdockerstart.sh&quot;]
+</code></pre><p> <strong>ARM64</strong></p>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
+COPY mqttdockerstart.sh /
+RUN chmod +x /mqttdockerstart.sh
+ADD ./MQTT_linux-arm64.tar.gz .
+ENTRYPOINT [&quot;/mqttdockerstart.sh&quot;]
+</code></pre><p> <strong>AMD64 (x64)</strong></p>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
+COPY mqttdockerstart.sh /
+RUN chmod +x /mqttdockerstart.sh
+ADD ./MQTT_linux-x64.tar.gz .
+ENTRYPOINT [&quot;/mqttdockerstart.sh&quot;]
+</code></pre></li>
+<li><p>Copy the <code>MQTT_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
+</li>
+<li><p>Copy the <code>mqttdockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</p>
+</li>
+<li><p>Run the following command line in the same directory (<code>sudo</code> may be necessary):</p>
+<pre><code class="lang-bash">docker build -t mqttadapter .
+</code></pre></li>
+</ol>
+<h2 id="run-the-mqtt-adapter-docker-container">Run the MQTT adapter Docker container</h2>
+<h3 id="rest-access-from-the-local-host-to-the-docker-container">REST access from the local host to the Docker container</h3>
+<p>Complete the following steps to run the container:</p>
+<ol>
+<li>Use the docker container image <code>mqttadapter</code> created previously.</li>
+<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<pre><code class="lang-bash">docker run -d --network host mqttadapter
+</code></pre></li>
+</ol>
+<p>Port <code>5590</code> is accessible from the host and you can make REST calls to MQTT adapter from applications on the local host computer. In this example, all data stored by the MQTT adapter is stored in the container itself. When you delete the container, the stored data is also deleted.</p>
+<h3 id="provide-persistent-storage-for-the-docker-container">Provide persistent storage for the Docker container</h3>
+<p>Complete the following steps to run the container:</p>
+<ol>
+<li>Use the docker container image <code>mqttadapter</code> created previously.</li>
+<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<pre><code class="lang-bash">docker run -d --network host -v /mqtt:/usr/share/OSIsoft/ mqttadapter
+</code></pre></li>
+</ol>
+<p>Port <code>5590</code> is accessible from the host and you can make REST calls to MQTT adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, <code>/mqtt</code>. You can specify any directory.</p>
+<h3 id="port-number-change">Port number change</h3>
+<p>To use a different port other than <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to start the adapter using port <code>6000</code> instead of <code>5590</code>, use the following command:</p>
+<pre><code class="lang-bash">docker run -d -e portnum=6000 --network host mqttadapter
+</code></pre><p>This command accesses the REST API with port <code>6000</code> instead of port <code>5590</code>. The following <code>curl</code> command returns the configuration for the container.</p>
+<pre><code class="lang-bash">curl http://localhost:6000/api/v1/configuration
+</code></pre><h3 id="remove-rest-access-to-the-docker-container">Remove REST access to the Docker container</h3>
+<p>If you remove the <code>--network host</code> option from the docker run command, REST access is not possible from outside the container. This may be of value where you want to host an application in the same container as OPC UA adapter but do not want to have external REST access enabled</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/master/content/installation/install-pi-adapter-for-mqtt-using-docker.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
