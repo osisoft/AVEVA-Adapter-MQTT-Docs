@@ -474,6 +474,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.3/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
       "output": {
@@ -486,9 +489,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.3/configuration/text-parser/text-parser.md",
       "output": {
@@ -501,9 +501,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.3/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.md",
       "output": {
@@ -1119,9 +1116,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.4/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
       "output": {
@@ -1146,6 +1140,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.4/configuration/text-parser/text-parser.md",
       "output": {
@@ -1158,6 +1155,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.4/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.md",
       "output": {
