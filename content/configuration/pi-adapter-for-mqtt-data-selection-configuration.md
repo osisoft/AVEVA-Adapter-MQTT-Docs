@@ -51,7 +51,7 @@ The full schema definition for the MQTT data selection configuration is in the `
 |------------------|----------|-----------|-------------|
 | **Selected**     | Optional | `boolean` |  Selects or clears a measurement. To select an item, set the field to `true`. To remove an item, leave the field empty or set the value to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`           |
 | **Name**         | Optional | `string`  | The optional friendly name of the data item collected from the data source <br><br>Allowed value: Any string<br>Default value: `null`            |
-| **StreamId**     | Optional | `string`  |  The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores ("__")<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`.           |
+| **StreamId**     | Optional | `string`  |  The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (`/`)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (`__`)<br>Cannot use the following characters:<br> `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`.           |
 | **Topic**        | Required | `string`  |  The MQTT topic string<br><br>Allowed value: Cannot be `null`, empty, or whitespace.        |
 | **ValueField**   | Required | `string`  |  The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`.<br><br>Allowed value: Cannot be `null`, empty, or whitespace.          |
 | **TimeField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<sup>1</sup><br><br>Allowed value: Any valid JsonPath expression      |
@@ -106,12 +106,12 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 
 ```json
 {
-"TestNode": [
-{
-"Time" : "02/17/2021 12:01:36 AM PST",
-"Value": "4578"
-}
-]
+  "TestNode": [
+    {
+      "Time": "02/17/2021 12:01:36 AM PST",
+      "Value": "4578"
+    }
+  ]
 }
 ```
 
