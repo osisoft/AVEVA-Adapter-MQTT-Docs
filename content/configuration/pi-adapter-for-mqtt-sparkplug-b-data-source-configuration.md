@@ -116,4 +116,4 @@ The following are examples of valid MQTT Sparkplug B data source configurations:
 | api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the MQTT Sparkplug B data source configuration. Overwrites any active MQTT Sparkplug B data source configuration. If no configuration is active, the adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The MQTT Sparkplug B data source configuration `PUT` request is received.<br/>&bull; A MQTT Sparkplug B data selection configuration is active. |
 | api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the MQTT Sparkplug B data source configuration. After the request is received, the adapter stops collecting data. |
 
-**Note:** Replace <ComponentId\> with the Id of your MQTT Sparkplug B component. For example, MqttSparkplugB1.
+**Note:** Replace <ComponentId\> with the Id of your MQTT Sparkplug B component. For example, _MqttSparkplugB1_.
