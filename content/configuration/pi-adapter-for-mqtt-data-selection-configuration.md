@@ -126,4 +126,4 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 | api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `PUT` | Updates or creates a new data selection item by **StreamId**. For new items, the adapter starts collecting data after the request is received. |
 | api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `DELETE` | Deletes a data selection item from the configuration by **StreamId**. The adapter stops collecting data for the deleted item. |
 
-**Note:** Replace _ComponentId_ with the Id of your MQTT component. For example, Mqtt1.
+**Note:** Replace _ComponentId_ with the Id of your MQTT component. For example, _Mqtt1_.
