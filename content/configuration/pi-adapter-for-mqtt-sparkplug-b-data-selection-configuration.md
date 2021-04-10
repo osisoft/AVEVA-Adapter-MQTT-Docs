@@ -89,11 +89,11 @@ The following are examples of valid MQTT Sparkplug B data selection configuratio
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | GET | Retrieves the MQTT Sparkplug B data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection  | PUT | Configures or updates the MQTT Sparkplug B data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection | DELETE | Deletes the MQTT Sparkplug B data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection | PATCH | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its *StreamId*. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | PUT | Updates or creates a new data selection with the specified *StreamId*|
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | DELETE | Deletes a specific data selection item of the MQTT Sparkplug data selection configuration |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the MQTT Sparkplug B data selection configuration, including all data selection items. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `PUT` | Configures or updates the MQTT Sparkplug B data selection configuration. The adapter starts collecting data for each data selection item when the following conditions are met:<br/><br/>&bull; The MQTT Sparkplug B data selection configuration `PUT` request is received.<br/>&bull; A MQTT Sparkplug B data source configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `DELETE` | Deletes the active MQTT Sparkplug B data selection configuration. The adapter stops collecting data. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `PATCH` | Allows partial updates of configured data selection items.<br/><br/>**Note:** The request must be an array containing one or more data selection items. Each item in the array must include its **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `PUT` | Updates or creates a new data selection item by **StreamId**. For new items, the adapter starts collecting data after the request is received. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId\> | `DELETE` | Deletes a data selection item from the configuration by **StreamId**. The adapter stops collecting data for the deleted item. |
 
-**Note:** Replace _ComponentId_ with the Id of your MQTT Sparkplug B component. For example, MqttSparkplugB1.
+**Note:** Replace _ComponentId_ with the Id of your MQTT Sparkplug B component. For example, _MqttSparkplugB1_.
