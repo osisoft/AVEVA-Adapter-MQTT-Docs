@@ -514,7 +514,7 @@
         &quot;show_monthly_runtime_history&quot;: true
     }
 }
-</code></pre><p>The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from Adapter local time.</p>
+</code></pre><p>The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from the Adapter local time.</p>
 <pre><code class="lang-json">{
     &quot;Id&quot;: &quot;Temperature&quot;,
     &quot;DataType&quot;: &quot;Double&quot;,
@@ -527,7 +527,7 @@
     &quot;IsIndex&quot;: true
 }
 </code></pre><h2 id="error-handling">Error handling</h2>
-<p>If you encounter text parser related errors that is errors for the <strong>ValueField</strong> or <strong>TimeField</strong>, check the StreamId associated with the error message.</p>
+<p>If you encounter text parser related errors for the <strong>ValueField</strong> or <strong>TimeField</strong>, check the StreamId associated with the error message.</p>
 <p>Possible errors include the following:</p>
 <ul>
 <li>The JSONPath expression of <strong>ValueField</strong> or <strong>TimeField</strong> is pointing to a non-existing value</li>

@@ -139,7 +139,7 @@
 <td><strong>StreamId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-source-configuration.html#mqtt-data-source-parameters">PI Adapter for MQTT data source configuration</a>. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores (&quot;__&quot;)<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code>.</td>
+<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see <a class="xref" href="pi-adapter-for-mqtt-data-source-configuration.html#mqtt-data-source-parameters">PI Adapter for MQTT data source configuration</a>. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (<code>/</code>)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (<code>__</code>)<br>Cannot use the following characters:<br> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code>.</td>
 </tr>
 <tr>
 <td><strong>Topic</strong></td>
@@ -210,12 +210,12 @@
 ]
 </code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following Json payload structure:</p>
 <pre><code class="lang-json">{
-&quot;TestNode&quot;: [
-{
-&quot;Time&quot; : &quot;02/17/2021 12:01:36 AM PST&quot;,
-&quot;Value&quot;: &quot;4578&quot;
-}
-]
+  &quot;TestNode&quot;: [
+    {
+      &quot;Time&quot;: &quot;02/17/2021 12:01:36 AM PST&quot;,
+      &quot;Value&quot;: &quot;4578&quot;
+    }
+  ]
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
@@ -228,38 +228,38 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
-<td>GET</td>
-<td>Retrieves the MQTT data selection configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>GET</code></td>
+<td>Retrieves the MQTT data selection configuration, including all data selection items.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
-<td>PUT</td>
-<td>Configures or updates the MQTT data selection configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the MQTT data selection configuration. The adapter starts collecting data for each data selection item when the following conditions are met:<br><br>&bull; The MQTT data selection configuration <code>PUT</code> request is received.<br>&bull; A MQTT data source configuration is active.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
-<td>DELETE</td>
-<td>Deletes the MQTT data selection configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>DELETE</code></td>
+<td>Deletes the active MQTT data selection configuration. The adapter stops collecting data.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
-<td>PATCH</td>
-<td>Allows partial updating of configured data selection items. <br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each data selection item in the array must include its <em>StreamId</em>.</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>PATCH</code></td>
+<td>Allows partial updates of configured data selection items.<br><br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each item in the array must include its <strong>StreamId</strong>.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em></td>
-<td>PUT</td>
-<td>Updates or creates a new data selection with the specified <em>StreamId</em></td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId></td>
+<td><code>PUT</code></td>
+<td>Updates or creates a new data selection item by <strong>StreamId</strong>. For new items, the adapter starts collecting data after the request is received.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em></td>
-<td>DELETE</td>
-<td>Deletes a specific data selection item of the MQTT data selection configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId></td>
+<td><code>DELETE</code></td>
+<td>Deletes a data selection item from the configuration by <strong>StreamId</strong>. The adapter stops collecting data for the deleted item.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component. For example, Mqtt1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT component. For example, <em>Mqtt1</em>.</p>
 </article>
           </div>
           

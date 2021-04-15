@@ -104,7 +104,7 @@ The text parser produces OMF compatible output, which in turn is compatible with
 </ul>
 <p><strong>Note:</strong> Not all data types supported by the text parser are also supported by OMF.</p>
 <h2 id="culture-support">Culture support</h2>
-<p>Some numeric values and datetimes support cultures when they are being parsed. The default culture is <code>en-US (US English)</code> (InvariantCulture). OSIsoft recommends to leave the adapter at the default unless you expect culturally variant input.</p>
+<p>Some numeric values and datetimes support cultures when they are being parsed. The default culture is <code>en-US (US English)</code> (InvariantCulture). OSIsoft recommends that you leave the adapter at the default unless you expect culturally variant input.</p>
 <p><strong>Note:</strong> Installed cultures vary by machine with both Linux and Windows. If the specified culture is not installed, the text parser fails to parse input that requires that culture.</p>
 <h2 id="time-zone-support">Time zone support</h2>
 <p>A time zone or offset specified by a time is always used to convert to UTC time. Time zones are only used if there is no offset or time zone specifier in a text date and time string.</p>

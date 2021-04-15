@@ -237,28 +237,28 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
-<td>GET</td>
-<td>Retrieves the MQTT Sparkplug B data source configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
+<td><code>GET</code></td>
+<td>Retrieves the MQTT Sparkplug B data source configuration.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
-<td>POST</td>
-<td>Creates the MQTT Sparkplug B data source configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
+<td><code>POST</code></td>
+<td>Creates the MQTT Sparkplug B data source configuration. The adapter starts collecting data after the following conditions are met:<br><br>&bull; The MQTT Sparkplug B data source configuration <code>POST</code> request is received.<br>&bull; A MQTT Sparkplug B data selection configuration is active.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
-<td>PUT</td>
-<td>Configures or updates the MQTT Sparkplug B data source configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the MQTT Sparkplug B data source configuration. Overwrites any active MQTT Sparkplug B data source configuration. If no configuration is active, the adapter starts collecting data after the following conditions are met:<br><br>&bull; The MQTT Sparkplug B data source configuration <code>PUT</code> request is received.<br>&bull; A MQTT Sparkplug B data selection configuration is active.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
-<td>DELETE</td>
-<td>Deletes the MQTT Sparkplug B data source configuration</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
+<td><code>DELETE</code></td>
+<td>Deletes the MQTT Sparkplug B data source configuration. After the request is received, the adapter stops collecting data.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your MQTT Sparkplug B component. For example, MqttSparkplugB1.</p>
+<p><strong>Note:</strong> Replace &lt;ComponentId> with the Id of your MQTT Sparkplug B component. For example, <em>MqttSparkplugB1</em>.</p>
 </article>
           </div>
           

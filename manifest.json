@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/agent/_work/1/s",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "ORJUf44Rbny2SXMW5cSrmQ=="
+          "hash": "OlWBeKJ0WhYfY8aHrQ+zTg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-data-source-configuration.html",
-          "hash": "TJXp3M2dpaXufgDQgg78jA=="
+          "hash": "nK9diNbTv+FKohnnfax9NQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html",
-          "hash": "h/OfPDEBlE/sVcqmyI77PA=="
+          "hash": "6JZxW5w7iJ/J8trkfHqQnQ=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "3opgtkmiV4CFxCQjvZrhLQ=="
+          "hash": "O89zDNuFyZ0fNqx1QQ93yQ=="
         }
       },
       "is_incremental": false,
@@ -389,7 +389,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-components-configuration.html",
-          "hash": "YHAabfq9T5mFssoroWaPrA=="
+          "hash": "4IEOFxTmA49+Qjs4o1RZpA=="
         }
       },
       "is_incremental": false,
@@ -413,7 +413,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html",
-          "hash": "8rFKlteugcpTu/2JiFweXw=="
+          "hash": "Y7PL+ldqoLHWDluyuzBl/Q=="
         }
       },
       "is_incremental": false,
@@ -425,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
-          "hash": "R3iwEx8kkcnq2RleKvSlDQ=="
+          "hash": "zhfxbbqU24ctlbrTPCiqmA=="
         }
       },
       "is_incremental": false,
