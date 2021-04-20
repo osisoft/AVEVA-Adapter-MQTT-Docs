@@ -10,10 +10,25 @@ PI Adapter for MQTT provides troubleshooting features that enable you to verify 
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. Navigate to [data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and verify that <!-- Insert data source parameters that need to be checked --> are correct.
-2. Navigate to [data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and verify that the following data selection items are correct:
+1. Navigate to [data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and verify the following for each configured data selection item below:
 
-    <!-- Insert data selection parameters that need to be checked-->
+    * **HostNameOrIpAddress** - The correct host name or IP address of the MQTT server is referenced. A non-existent or incorrect **HostNameOrIpAddress** causes the adapter to not find the MQTT server.
+    * **Protocol** - The correct protocol is referenced. With a non-existent or incorrect **Protocol** specified, the adapter cannot communicate to the MQTT broker.
+    * **TLS** - The correct **TLS** (Transport Layer Security) is enabled (if enabled).
+    * **MQTTVersion** - The correct **MQTTVersion** is referenced.
+    * **ValidateServerCertificate** - If enabled (and TLS is enabled), the certificate has been added to the certificate store. Otherwise, set **ValidateServerCertificate** to `false`.
+
+1. Navigate to [data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and verify that the following data selection items are correct:
+
+    For the MQTT Sparkplug B component:
+    * **Topic** - The topic string is valid. An incorrect topic string causes the adapter to not find the MQTT data source and hence no data is selected.
+    * **MetricName** - 
+    
+    For the generic MQTT component:
+    * **ValueField** - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a data value from the MQTT server payload.
+    * **TimeField** - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a timestamp from the MQTT server payload.
+    * **DataType** - The correct data type is referenced. An incorrect data type causes data conversion to fail.
+    * **TimeFormat** - The correct time format is referenced. A time format that does not match the value from **TimeField** causes the data selection to fail.
 
 3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
