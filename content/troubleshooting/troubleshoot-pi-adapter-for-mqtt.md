@@ -13,22 +13,23 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 1. Navigate to [data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and verify the following for each configured data selection item below:
 
     * **HostNameOrIpAddress** - The correct host name or IP address of the MQTT server is referenced. A non-existent or incorrect **HostNameOrIpAddress** causes the adapter to not find the MQTT server.
-    * **Protocol** - The correct protocol is referenced. With a non-existent or incorrect **Protocol** specified, the adapter cannot communicate to the MQTT broker.
-    * **TLS** - The correct **TLS** (Transport Layer Security) is enabled (if enabled).
+    * **Port** - The correct port number is referenced. With an incorrect port number specified, the adapter cannot communicate to the MQTT server.
+    * **Protocol** - The correct protocol is referenced. With an incorrect **Protocol** specified, the adapter cannot communicate to the MQTT broker.
+    * **TLS** - The supported **TLS** (Transport Layer Security) is used.
     * **MQTTVersion** - The correct **MQTTVersion** is referenced.
-    * **ValidateServerCertificate** - If enabled (and TLS is enabled), the certificate has been added to the certificate store. Otherwise, set **ValidateServerCertificate** to `false`.
+    * **ValidateServerCertificate** - If enabled (and TLS is enabled), the adapter validates the server certificate. When the server certificate is not trusted, you can either add it to the OS certificate store or set **ValidateServerCertificate** to false.
 
 1. Navigate to [data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and verify that the following data selection items are correct:
 
     For the MQTT Sparkplug B component:
-    * **Topic** - The topic string is valid. An incorrect topic string causes the adapter to not find the MQTT data source and hence no data is selected.
-    * **MetricName** - 
-    
+    * **Topic** - The topic string is valid. An incorrect topic string causes the adapter to not receive any values for this data selection item.
+    * **MetricName** - The metric name string is valid. With an incorrect metric name, the adapter cannot extract a data value from the MQTT server payload.
+
     For the generic MQTT component:
     * **ValueField** - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a data value from the MQTT server payload.
     * **TimeField** - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a timestamp from the MQTT server payload.
     * **DataType** - The correct data type is referenced. An incorrect data type causes data conversion to fail.
-    * **TimeFormat** - The correct time format is referenced. A time format that does not match the value from **TimeField** causes the data selection to fail.
+    * **TimeFormat** - The correct time format is referenced. A time format that does not match the value from **TimeField** means that the adapter cannot convert timestamp from the MQTT server payload.
 
 3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
