@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-configuration-examples.html",
-          "hash": "vOYCSxy2A6d/DwlAPSDsig=="
+          "hash": "CAcQx+NX/dvtQ5WoiSyuxQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "OlWBeKJ0WhYfY8aHrQ+zTg=="
+          "hash": "ZKhdT55VbkBJD6t2x2YaBg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-data-source-configuration.html",
-          "hash": "nK9diNbTv+FKohnnfax9NQ=="
+          "hash": "8YKiTtTfAaJ9n6ILzeVaOA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "O89zDNuFyZ0fNqx1QQ93yQ=="
+          "hash": "qkcw9UjCs9wRk+aQepofJA=="
         }
       },
       "is_incremental": false,
@@ -281,7 +281,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/discovery-configuration.html",
-          "hash": "dEvuwoOsyXb7iVS8uiykSg=="
+          "hash": "LLx457ZHqgiiemWP4BRD2w=="
         }
       },
       "is_incremental": false,
@@ -341,7 +341,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.html",
-          "hash": "sXfcBfoAMGcKPFoWgc3BSQ=="
+          "hash": "3B8OS1VaqKwIKko21uOjZw=="
         }
       },
       "is_incremental": false,
@@ -425,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
-          "hash": "zhfxbbqU24ctlbrTPCiqmA=="
+          "hash": "JTpGSn/se23LZZbBFVlnaQ=="
         }
       },
       "is_incremental": false,
@@ -845,7 +845,19 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "SquCePNKP/gV7WU5z2U9wg=="
+          "hash": "WmOKtzFCLwj3xuVfebbBIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html",
+          "hash": "wTdfnWKCqy7SUxlgBuLe+w=="
         }
       },
       "is_incremental": false,
@@ -890,7 +902,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 57,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

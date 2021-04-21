@@ -188,7 +188,8 @@
     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }
-</code></pre><h3 id="eds-endpoint">EDS endpoint</h3>
+</code></pre><p><strong>Note:</strong> When you use an adapter with a PI Web API health endpoint, the AF structure is required. If the elements are deleted, the adapter recreates the elements; if the account used to authenticate to the PI Web API has its permissions removed on the AF Server, the adapter retries sending health data to the PI Web API until the permissions are restored.</p>
+<h3 id="eds-endpoint">EDS endpoint</h3>
 <pre><code class="lang-code">[{
      &quot;Id&quot;: &quot;EDS&quot;,
      &quot;Endpoint&quot;: &quot;http://localhost:&lt;port&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,

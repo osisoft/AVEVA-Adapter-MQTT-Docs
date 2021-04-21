@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshoot PI Adapter for MQTT </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshoot PI Adapter for MQTT ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TroubleshootPIAdapterForMQTT">
+<h1 id="troubleshoot-pi-adapter-for-mqtt">Troubleshoot PI Adapter for MQTT</h1>
+
+<p>PI Adapter for MQTT provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the <a href="https://my.osisoft.com/">OSIsoft Customer Portal</a>.</p>
+<h2 id="check-configurations">Check configurations</h2>
+<p>Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.</p>
+<ol>
+<li><p>Navigate to <a class="xref" href="../configuration/pi-adapter-for-mqtt-data-source-configuration.html">data source configuration</a> and verify the following for each configured data selection item below:</p>
+<ul>
+<li><strong>HostNameOrIpAddress</strong> - The correct host name or IP address of the MQTT server is referenced. A non-existent or incorrect <strong>HostNameOrIpAddress</strong> causes the adapter to not find the MQTT server.</li>
+<li><strong>Port</strong> - The correct port number is referenced. With an incorrect port number specified, the adapter cannot communicate to the MQTT server.</li>
+<li><strong>Protocol</strong> - The correct protocol is referenced. With an incorrect <strong>Protocol</strong> specified, the adapter cannot communicate to the MQTT broker.</li>
+<li><strong>TLS</strong> - The supported <strong>TLS</strong> (Transport Layer Security) is used.</li>
+<li><strong>MQTTVersion</strong> - The correct <strong>MQTTVersion</strong> is referenced.</li>
+<li><strong>ValidateServerCertificate</strong> - If enabled (and TLS is enabled), the adapter validates the server certificate. When the server certificate is not trusted, you can either add it to the OS certificate store or set <strong>ValidateServerCertificate</strong> to false.</li>
+</ul>
+</li>
+<li><p>Navigate to <a class="xref" href="../configuration/pi-adapter-for-mqtt-data-selection-configuration.html">data selection configuration</a> and verify that the following data selection items are correct:</p>
+<p> For the MQTT Sparkplug B component:</p>
+<ul>
+<li><strong>Topic</strong> - The topic string is valid. An incorrect topic string causes the adapter to not receive any values for this data selection item.</li>
+<li><p><strong>MetricName</strong> - The metric name string is valid. With an incorrect metric name, the adapter cannot extract a data value from the MQTT server payload.</p>
+<p>For the generic MQTT component:</p>
+</li>
+<li><strong>ValueField</strong> - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a data value from the MQTT server payload.</li>
+<li><strong>TimeField</strong> - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a timestamp from the MQTT server payload.</li>
+<li><strong>DataType</strong> - The correct data type is referenced. An incorrect data type causes data conversion to fail.</li>
+<li><strong>TimeFormat</strong> - The correct time format is referenced. A time format that does not match the value from <strong>TimeField</strong> means that the adapter cannot convert timestamp from the MQTT server payload.</li>
+</ul>
+</li>
+<li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints-configuration.html">egress endpoints configuration</a>. For each configured endpoint, verify that the <strong>Endpoint</strong> and authentication properties are correct.</p>
+<ul>
+<li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
+<li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="check-connectivity">Check connectivity</h2>
+<p>Perform the following steps to verify active connections to the data source and egress endpoints.</p>
+<ol>
+<li>Start PI Web API and verify that the PI point values are updating or start OCS and verify that the stream values are updating.</li>
+<li>If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/shared-content/health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
+</ol>
+<h2 id="check-logs">Check logs</h2>
+<p>Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.</p>
+<ol>
+<li>Navigate to the logs directory:<br>
+ Windows: <code>%ProgramData%\OSIsoft\Adapters\MQTT\Logs</code><br>
+ Linux: <code>/usr/share/OSIsoft/Adapters/MQTT/Logs</code>.</li>
+<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/shared-content/configuration/logging-configuration.html">Logging configuration</a>.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

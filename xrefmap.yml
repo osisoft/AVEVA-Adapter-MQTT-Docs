@@ -151,6 +151,9 @@ references:
 - uid: TextParser
   name: Text parser
   href: content/main/shared-content/configuration/text-parser/text-parser.html
+- uid: TroubleshootPIAdapterForMQTT
+  name: Troubleshoot PI Adapter for MQTT
+  href: content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html
 - uid: TroubleshootTheAdapter
   name: Troubleshoot the adapter
   href: content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html
