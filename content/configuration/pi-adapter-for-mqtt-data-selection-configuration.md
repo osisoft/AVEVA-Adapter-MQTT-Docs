@@ -40,10 +40,10 @@ Complete the following steps to configure an MQTT data selection. Use the `PUT` 
 
 ## MQTT data selection schema
 
-The full schema definition for the MQTT data selection configuration is in the `Mqtt_DataSelection_schema.json` file located in one of the following folders:
+The full schema definition for the MQTT data selection configuration is in the `MQTT_DataSelection_schema.json` file located in one of the following folders:
 
-* Windows: `%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas`
-* Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
+* Windows: `%ProgramFiles%\OSIsoft\Adapters\MQTT\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/MQTT/Schemas`
 
 ## MQTT data selection parameters
 
