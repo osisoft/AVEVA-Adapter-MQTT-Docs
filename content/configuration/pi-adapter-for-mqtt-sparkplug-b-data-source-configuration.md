@@ -46,8 +46,8 @@ Complete the following steps to configure an MQTT Sparkplug B data source. Use t
 
 The full schema definition for the MQTT data source configuration is in the `MQTT_DataSource_schema.json` file located in one of the following folders:
 
-* Windows: `%ProgramFiles%\OSIsoft\Adapters\Mqtt\Schemas`
-* Linux: `/opt/OSIsoft/Adapters/Mqtt/Schemas`
+* Windows: `%ProgramFiles%\OSIsoft\Adapters\MQTT\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/MQTT/Schemas`
 
 ## MQTT Sparkplug B data source parameters
 

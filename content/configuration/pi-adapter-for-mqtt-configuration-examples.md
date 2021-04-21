@@ -14,11 +14,11 @@ The following tables provide examples for all configurations available for PI Ad
 [
     {
         "ComponentId": "Mqtt1",
-        "ComponentType": "Mqtt"
+        "ComponentType": "MQTT"
     },
     {
         "ComponentId": "Mqtt2",
-        "ComponentType": "Mqtt"
+        "ComponentType": "MQTT"
     },
     {
         "ComponentId": "OmfEgress",
@@ -82,11 +82,11 @@ The following tables provide examples for all configurations available for PI Ad
             },
             {
                 "componentId": "Mqtt1",
-                "componentType": "Mqtt"
+                "componentType": "MQTT"
             }
         ],
     "Buffering": {
-            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/Mqtt/Buffers",
+            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/MQTT/Buffers",
             "MaxBufferSizeMB": -1,
             "EnableBuffering": true
         }
