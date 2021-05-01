@@ -10,7 +10,7 @@ PI Adapter for MQTT provides troubleshooting features that enable you to verify 
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. Navigate to [data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and verify the following for each configured data selection item below:
+1. Navigate to [data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and verify the following for each configured data source item below:
 
     * **HostNameOrIpAddress** - The correct host name or IP address of the MQTT server is referenced. A non-existent or incorrect **HostNameOrIpAddress** causes the adapter to not find the MQTT server.
     * **Port** - The correct port number is referenced. With an incorrect port number specified, the adapter cannot communicate to the MQTT server.
