@@ -210,12 +210,12 @@
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapters</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
     <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_Preview</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapters</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
     <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_Preview</Data></Cell>
    </Row>
    <Row>
@@ -242,8 +242,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>4</ActiveRow>
-     <ActiveCol>6</ActiveCol>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -828,8 +828,7 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>63</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>116</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
