@@ -11,7 +11,7 @@
   <LastAuthor>Tina Ullmann</LastAuthor>
   <Revision>1</Revision>
   <Created>2021-03-29T20:56:44Z</Created>
-  <LastSaved>2021-03-31T23:35:32Z</LastSaved>
+  <LastSaved>2021-04-12T13:53:59Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -21,10 +21,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>7050</WindowHeight>
-  <WindowWidth>19200</WindowWidth>
-  <WindowTopX>0</WindowTopX>
-  <WindowTopY>0</WindowTopY>
+  <WindowHeight>20130</WindowHeight>
+  <WindowWidth>13880</WindowWidth>
+  <WindowTopX>23990</WindowTopX>
+  <WindowTopY>120</WindowTopY>
   <TabRatio>500</TabRatio>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -152,46 +152,46 @@
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
   <Style ss:ID="s45">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
     ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
   <Style ss:ID="s46">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
-    ss:WrapText="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
-  </Style>
-  <Style ss:ID="s47">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
   </Style>
-  <Style ss:ID="s48">
+  <Style ss:ID="s47">
    <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
     ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s49">
+  <Style ss:ID="s48">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s50">
+  <Style ss:ID="s49">
    <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s51">
+  <Style ss:ID="s50">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#4472C4"/>
   </Style>
-  <Style ss:ID="s52">
+  <Style ss:ID="s51">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#4472C4"/>
   </Style>
-  <Style ss:ID="s53">
+  <Style ss:ID="s52">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s53">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"
+    ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
  </Styles>
  <Names>
   <NamedRange ss:Name="Access" ss:RefersTo="='tag index lookup'!R6C4:R8C4"/>
-  <NamedRange ss:Name="Product" ss:RefersTo="='tag index lookup'!R6C1:R15C1"/>
+  <NamedRange ss:Name="Product" ss:RefersTo="='tag index lookup'!R6C1:R18C1"/>
   <NamedRange ss:Name="Role" ss:RefersTo="='tag index lookup'!R6C2:R9C2"/>
   <NamedRange ss:Name="TaskType" ss:RefersTo="='tag index lookup'!R6C3:R14C3"/>
  </Names>
@@ -200,9 +200,7 @@
    x:FullRows="1" ss:DefaultColumnWidth="63.5" ss:DefaultRowHeight="12.5">
    <Column ss:AutoFitWidth="0" ss:Width="215.5"/>
    <Column ss:AutoFitWidth="0" ss:Width="133"/>
-   <Column ss:AutoFitWidth="0" ss:Width="79.5"/>
-   <Column ss:Width="132"/>
-   <Column ss:AutoFitWidth="0" ss:Width="79.5" ss:Span="2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="79.5" ss:Span="4"/>
    <Row>
     <Cell><Data ss:Type="String">Filename</Data></Cell>
     <Cell><Data ss:Type="String">Title</Data></Cell>
@@ -212,13 +210,13 @@
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-MQTT_1.0</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapters</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_Preview</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-MQTT_1.0</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapters</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_Preview</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -241,468 +239,11 @@
     <VerticalResolution>300</VerticalResolution>
    </Print>
    <Selected/>
-   <LeftColumnVisible>2</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>10</ActiveRow>
-     <ActiveCol>2</ActiveCol>
-    </Pane>
-   </Panes>
-   <ProtectObjects>False</ProtectObjects>
-   <ProtectScenarios>False</ProtectScenarios>
-  </WorksheetOptions>
- </Worksheet>
- <Worksheet ss:Name="tag index lookup">
-  <Table ss:ExpandedColumnCount="11" ss:ExpandedRowCount="138" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="63.5" ss:DefaultRowHeight="12.5">
-   <Column ss:AutoFitWidth="0" ss:Width="113"/>
-   <Column ss:Width="291.5"/>
-   <Column ss:Index="8" ss:AutoFitWidth="0" ss:Width="79.5" ss:Span="3"/>
-   <Row ss:Height="13">
-    <Cell ss:StyleID="s21"><Data ss:Type="String">Notes</Data></Cell>
-   </Row>
-   <Row>
-    <Cell><Data ss:Type="String">Apply Product Name key by using correct version subkey. Do not apply parent key and version subkey. Only apply one Product Name key per publication.</Data></Cell>
-   </Row>
-   <Row>
-    <Cell><Data ss:Type="String">Apply Product Family only to publications where family is relevant. See Tags by Publication Lookup tab. Some products should not have a family (OCS, Server, Edge, Cloud Connect). Product Family is used to group and filter groups of parallel products.</Data></Cell>
-   </Row>
-   <Row ss:Index="5" ss:Height="13" ss:StyleID="s21">
-    <Cell><Data ss:Type="String">Product Family</Data></Cell>
-    <Cell><Data ss:Type="String">Product Name</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">adapter</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s17"><Data ss:Type="String">OSIsoft-Cloud-Services-(OCS)</Data><NamedCell
-      ss:Name="Role"/></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">connector</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Server</Data><NamedCell
-      ss:Name="Role"/></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">developer</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Server_2018-SP3</Data><NamedCell
-      ss:Name="Role"/></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">integrator</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Vision</Data><NamedCell
-      ss:Name="Role"/></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">interface</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Vision_2020</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell><Data ss:Type="String">visualization</Data><NamedCell ss:Name="Product"/></Cell>
-    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Vision_2021</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-DataLink</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-DataLink_2019</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Manual-Logger</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Manual-Logger_2017-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">RtReports</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">RtReports_4.1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-ProcessBook-to-PI-Vision-Migration-Utility</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-ProcessBook-to-PI-Vision-Migration-Utility_2020</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Cloud-Connect</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-Business-Analytics</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-Business-Analytics_2020</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-Esri-ArcGIS</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-Esri-ArcGIS_2017-SP1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-SAP-HANA</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-SAP-HANA_2017-SP1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Data-Access-Server-(PI-Integrators)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Data-Access-Server-(PI-Integrators)_2016-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-OLEDB</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-OLEDB_2018-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-ODBC</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-ODBC_2018-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-JDBC</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-JDBC_2018-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Data-Access-Server-(RTQP-Engine)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Data-Access-Server-(RTQP-Engine)_2018-SP3</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-OPC-DA-Server</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-OPC-DA-Server_2018-Patch-1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)_1.2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s45"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)_1.1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s45"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Web-API</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Web-API_2019-SP1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">AF-SDK</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">AF-SDK_2018-R2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">Powershell-Tools-for-the-PI-System</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Powershell-Tools-for-the-PI-System_2018-SP2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">Edge-Data-Store</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Edge-Data-Store_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">Edgecmd</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Edgecmd_1.1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-DNP3</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-DNP3_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-OPC-UA</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-OPC-UA_1.1</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-BACnet_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-RDBMS</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-RDBMS_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Structured-Data-Files</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Structured-Data-Files_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs_1.2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-HTTPS-Network-Proxy-Support</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-HTTPS-Network-Proxy-Support_1.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-OPC-DA</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-OPC-DA_2.7.1.41</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Relational-Database-(RDBMS-via-ODBC)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Relational-Database-(RDBMS-via-ODBC)_3.24.5.79</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Modbus-Ethernet-PLC</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Modbus-Ethernet-PLC_4.3.1.24</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Universal-File-and-Stream-Loading-(UFL)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Universal-File-and-Stream-Loading-(UFL)_3.6.7.135</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-DNP-3.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-DNP-3.0_3.3.1.38</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Event-Frames-Generator</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Event-Frames-Generator_4.1.15</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-Configuration-Utility-(ICU)</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-Configuration-Utility-(ICU)_1.5.1.10</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-OPC-HDA</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-OPC-HDA_1.6.1.63</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Performance-Monitor</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Performance-Monitor_2.2.0.38</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s51"><Data ss:Type="String">PI-to-PI-Interface</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s52"><Data ss:Type="String">PI-to-PI-Interface_3.9.4.15</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Ping</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Ping_2.1.2.49</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Ramp-Soak-Simulator</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Ramp-Soak-Simulator_3.5.1.10</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Random-Simulator</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Random-Simulator_3.5.1.10</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Rockwell-PharmaSuite</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Rockwell-PharmaSuite_4.1.3.3279</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-SNMP</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-SNMP_1.7.0.37</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-TCP-Response</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-TCP-Response_1.3.0.47</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Batch-Interfaces</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Batch-Interfaces_4.x</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-ABB-800xA-Batch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-ABB-800xA-Batch_4.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s49"><Data ss:Type="String">PI-Interface-for-Werum-PAX-X-Batch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s50"><Data ss:Type="String">PI-Interface-for-Werum-PAX-X-Batch_4.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s19"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Batch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s46"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Batch_4.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Syncade-Batch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s48"><Data ss:Type="String">TBD</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-WonderWare-InBatch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s48"><Data ss:Type="String">TBD</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-Rockwell-Factory-Talk-Batch</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s48"><Data ss:Type="String">TBD</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-BACnet</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-BACnet_1.3.8.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-EtherNet/IP</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-EtherNet-IP_1.2.9.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-HART-IP</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-HART-IP_1.4.6.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-IEC-60870-5-104</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-IEC-60870-5-104_1.2.3.89</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-IEC-61850</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-IEC-61850_2.0.0.27</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-MQTT-Sparkplug</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-MQTT-Sparkplug_1.0.0.6</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-OPC-UA</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-OPC-UA_2.0.1.33</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Ping</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Ping_1.1.11.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Siemens-SIMATIC-PCS-7</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Siemens-SIMATIC-PCS-7_7.1.2.2</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-UFL</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-UFL_1.3.2.139</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Wonderware-Historian</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Wonderware-Historian_1.6.7.0</Data></Cell>
-   </Row>
-   <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-System-Connector</Data></Cell>
-   </Row>
-   <Row>
-    <Cell ss:Index="2" ss:StyleID="s47"><Data ss:Type="String">PI-System-Connector_2.3.1.1</Data></Cell>
-   </Row>
-  </Table>
-  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
-   <PageSetup>
-    <Header x:Margin="0.78749999999999998"
-     x:Data="&amp;C&amp;&quot;Times New Roman,Regular&quot;&amp;12&amp;A"/>
-    <Footer x:Margin="0.78749999999999998"
-     x:Data="&amp;C&amp;&quot;Times New Roman,Regular&quot;&amp;12Page &amp;P"/>
-    <PageMargins x:Bottom="1.05277777777778" x:Left="0.78749999999999998"
-     x:Right="0.78749999999999998" x:Top="1.05277777777778"/>
-   </PageSetup>
-   <Print>
-    <ValidPrinterInfo/>
-    <PaperSizeIndex>9</PaperSizeIndex>
-    <HorizontalResolution>300</HorizontalResolution>
-    <VerticalResolution>300</VerticalResolution>
-   </Print>
-   <TopRowVisible>54</TopRowVisible>
-   <Panes>
-    <Pane>
-     <Number>3</Number>
-     <ActiveRow>51</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>6</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -710,7 +251,7 @@
   </WorksheetOptions>
  </Worksheet>
  <Worksheet ss:Name="tags by publication lookup">
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="79" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="80" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s16" ss:DefaultRowHeight="14.5">
    <Column ss:StyleID="s16" ss:Width="120"/>
    <Column ss:StyleID="s27" ss:AutoFitWidth="0" ss:Width="120"/>
@@ -729,47 +270,65 @@
     <Cell><Data ss:Type="String">Active Versions?</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3" ss:StyleID="s28"><Data ss:Type="String">OSIsoft Cloud Services (OCS)</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft-Cloud-Services-(OCS)</Data></Cell>
+    <Cell><Data ss:Type="String">OSIsoft Cloud Services</Data></Cell>
+    <Cell><Data ss:Type="String">cloud</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">OSIsoft Cloud Services (OCS)</Data></Cell>
+    <Cell><Data ss:Type="String">OSIsoft-Cloud-Services</Data></Cell>
     <Cell><Data ss:Type="String">OSIsoft Cloud Services</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI Server</Data></Cell>
+    <Cell><Data ss:Type="String">PI Server</Data></Cell>
+    <Cell><Data ss:Type="String">server</Data></Cell>
+    <Cell><Data ss:Type="String">PI Server</Data></Cell>
     <Cell><Data ss:Type="String">PI-Server</Data></Cell>
     <Cell><Data ss:Type="String">PI Server</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI Server</Data></Cell>
+    <Cell><Data ss:Type="String">PI Server</Data></Cell>
+    <Cell><Data ss:Type="String">server</Data></Cell>
+    <Cell><Data ss:Type="String">PI Server</Data></Cell>
     <Cell><Data ss:Type="String">PI-Server</Data></Cell>
     <Cell><Data ss:Type="String">Benefits of Upgrading your PI System </Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI Vision</Data></Cell>
+    <Cell><Data ss:Type="String">Visualization</Data></Cell>
+    <Cell><Data ss:Type="String">visualization</Data></Cell>
+    <Cell><Data ss:Type="String">PI Vision</Data></Cell>
     <Cell><Data ss:Type="String">PI-Vision</Data></Cell>
     <Cell><Data ss:Type="String">PI Vision</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI DataLink</Data></Cell>
+    <Cell><Data ss:Type="String">Visualization</Data></Cell>
+    <Cell><Data ss:Type="String">visualization</Data></Cell>
+    <Cell><Data ss:Type="String">PI DataLink</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">PI-DataLink</Data></Cell>
     <Cell><Data ss:Type="String">PI DataLink</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI Manual Logger</Data></Cell>
+    <Cell><Data ss:Type="String">Visualization</Data></Cell>
+    <Cell><Data ss:Type="String">visualization</Data></Cell>
+    <Cell><Data ss:Type="String">PI Manual Logger</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">PI-Manual-Logger</Data></Cell>
     <Cell><Data ss:Type="String">PI Manual Logger</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">RtReports</Data></Cell>
+    <Cell><Data ss:Type="String">Visualization</Data></Cell>
+    <Cell><Data ss:Type="String">visualization</Data></Cell>
+    <Cell><Data ss:Type="String">RtReports</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">RtReports</Data></Cell>
     <Cell><Data ss:Type="String">RtReports</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI ProcessBook to PI Vision Migration Utility</Data></Cell>
+    <Cell><Data ss:Type="String">Visualization</Data></Cell>
+    <Cell><Data ss:Type="String">visualization</Data></Cell>
+    <Cell><Data ss:Type="String">PI ProcessBook to PI Vision Migration Utility</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">PI-ProcessBook-to-PI-Vision-Migration-Utility</Data></Cell>
     <Cell><Data ss:Type="String">PI ProcessBook to PI Vision Migration Utility</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="String">PI Cloud Connect</Data></Cell>
+    <Cell><Data ss:Type="String">OSIsoft Cloud Services</Data></Cell>
+    <Cell><Data ss:Type="String">cloud</Data></Cell>
+    <Cell><Data ss:Type="String">PI Cloud Connect</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">PI-Cloud-Connect</Data></Cell>
     <Cell><Data ss:Type="String">PI Cloud Connect</Data></Cell>
    </Row>
@@ -840,7 +399,7 @@
     <Cell ss:StyleID="s32"><Data ss:Type="String">Developer</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">developer</Data></Cell>
     <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
-    <Cell ss:StyleID="s31"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
     <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s33"><Data ss:Type="String">Yes</Data></Cell>
    </Row>
@@ -884,19 +443,27 @@
     <Cell ss:Index="7" ss:StyleID="s33"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s32"/>
-    <Cell ss:StyleID="s31"/>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Edge Data Store</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">edge</Data></Cell>
     <Cell ss:StyleID="s32"><Data ss:Type="String">Edge Data Store</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">Edge-Data-Store</Data></Cell>
     <Cell><Data ss:Type="String">Edge Data Store</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s33"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s32"/>
-    <Cell ss:StyleID="s31"/>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Edge Data Store</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">edge</Data></Cell>
     <Cell ss:StyleID="s32"><Data ss:Type="String">Edgecmd</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">Edgecmd</Data></Cell>
     <Cell><Data ss:Type="String">Edgecmd</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s33"><Data ss:Type="String">Yes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">PI Adapters</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">PI Adapter for MQTT</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">PI-Adapter-for-MQTT</Data></Cell>
+    <Cell><Data ss:Type="String">PI Adapter for MQTT</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s33"><Data ss:Type="String">Yes</Data></Cell>
    </Row>
    <Row>
@@ -1151,7 +718,9 @@
    <Row>
     <Cell><Data ss:Type="String">PI Connectors</Data></Cell>
     <Cell><Data ss:Type="String">connector</Data></Cell>
-    <Cell ss:Index="5"><Data ss:Type="String">PI Connector Administration</Data></Cell>
+    <Cell><Data ss:Type="String">PI Connector Administration</Data></Cell>
+    <Cell><Data ss:Type="String">PI-Connector-Administration</Data></Cell>
+    <Cell><Data ss:Type="String">PI Connector Administration</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">PI Connectors</Data></Cell>
@@ -1237,7 +806,7 @@
     <Cell ss:StyleID="s31"><Data ss:Type="String">PI-System-Connector</Data></Cell>
     <Cell><Data ss:Type="String">PI System Connector</Data></Cell>
    </Row>
-   <Row ss:Index="79">
+   <Row ss:Index="80">
     <Cell ss:Index="4" ss:StyleID="s42"/>
    </Row>
   </Table>
@@ -1251,7 +820,7 @@
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>1</TopRowBottomPane>
+   <TopRowBottomPane>58</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -1259,8 +828,474 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>77</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>63</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="tag index lookup">
+  <Table ss:ExpandedColumnCount="11" ss:ExpandedRowCount="141" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="63.5" ss:DefaultRowHeight="12.5">
+   <Column ss:AutoFitWidth="0" ss:Width="113"/>
+   <Column ss:Width="291.5"/>
+   <Column ss:Index="8" ss:AutoFitWidth="0" ss:Width="79.5" ss:Span="3"/>
+   <Row ss:Height="13">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Notes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Apply Product Name key by using correct version subkey. Do not apply parent key and version subkey. Only apply one Product Name key per publication.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Apply Product Family only to publications where family is relevant. See Tags by Publication Lookup tab. Some products should not have a family (OCS, Server, Edge, Cloud Connect). Product Family is used to group and filter groups of parallel products.</Data></Cell>
+   </Row>
+   <Row ss:Index="5" ss:Height="13" ss:StyleID="s21">
+    <Cell><Data ss:Type="String">Product Family</Data></Cell>
+    <Cell><Data ss:Type="String">Product Name</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">adapter</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">OSIsoft-Cloud-Services</Data><NamedCell
+      ss:Name="Role"/></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">cloud</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Server</Data><NamedCell
+      ss:Name="Role"/></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">connector</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Server_2018-SP3</Data><NamedCell
+      ss:Name="Role"/></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">developer</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Vision</Data><NamedCell
+      ss:Name="Role"/></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">edge</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Vision_2020</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">integrator</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="String">PI-Vision_2021</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">interface</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-DataLink</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">server</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s44"><Data ss:Type="String">PI-DataLink_2019</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell><Data ss:Type="String">visualization</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Manual-Logger</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Manual-Logger_2017-R2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">RtReports</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">RtReports_4.1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-ProcessBook-to-PI-Vision-Migration-Utility</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-ProcessBook-to-PI-Vision-Migration-Utility_2020</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Cloud-Connect</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-Business-Analytics</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-Business-Analytics_2020</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-Esri-ArcGIS</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-Esri-ArcGIS_2017-SP1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Integrator-for-SAP-HANA</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Integrator-for-SAP-HANA_2017-SP1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Data-Access-Server-(PI-Integrators)</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Data-Access-Server-(PI-Integrators)_2016-R2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-OLEDB</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-OLEDB_2018-R2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-ODBC</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-ODBC_2018-R2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Client-JDBC</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Client-JDBC_2018-R2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-SQL-Data-Access-Server-(RTQP-Engine)</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-SQL-Data-Access-Server-(RTQP-Engine)_2018-SP3</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-OPC-DA-Server</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-OPC-DA-Server_2018-Patch-1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">OSIsoft-Message-Format-1.2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">OSIsoft-Message-Format-1.1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">OSIsoft-Message-Format-1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Web-API</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Web-API_2019-SP1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">AF-SDK</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">AF-SDK_2018-SP2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s52"><Data ss:Type="String">Powershell-Tools-for-the-PI-System</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Powershell-Tools-for-the-PI-System_2018-SP2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">Edge-Data-Store</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Edge-Data-Store_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">Edgecmd</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Edgecmd_1.2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Edgecmd_1.1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s52"><Data ss:Type="String">PI I-Adapter-for-MQTT_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-MQTT_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-DNP3</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-DNP3_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-OPC-UA</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-OPC-UA_1.1</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-BACnet_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-RDBMS</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-RDBMS_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Structured-Data-Files</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Structured-Data-Files_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs_1.2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-HTTPS-Network-Proxy-Support</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-HTTPS-Network-Proxy-Support_1.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-OPC-DA</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-OPC-DA_2.7.1.41</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Relational-Database-(RDBMS-via-ODBC)</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Relational-Database-(RDBMS-via-ODBC)_3.24.5.79</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Modbus-Ethernet-PLC</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Modbus-Ethernet-PLC_4.3.1.24</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Universal-File-and-Stream-Loading-(UFL)</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Universal-File-and-Stream-Loading-(UFL)_3.6.7.135</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-DNP-3.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-DNP-3.0_3.3.1.38</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Event-Frames-Generator</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Event-Frames-Generator_4.1.15</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-Configuration-Utility-(ICU)</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-Configuration-Utility-(ICU)_1.5.1.10</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-OPC-HDA</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-OPC-HDA_1.6.1.63</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Performance-Monitor</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Performance-Monitor_2.2.0.38</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s50"><Data ss:Type="String">PI-to-PI-Interface</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s51"><Data ss:Type="String">PI-to-PI-Interface_3.9.4.15</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Ping</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Ping_2.1.2.49</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Ramp-Soak-Simulator</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Ramp-Soak-Simulator_3.5.1.10</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Random-Simulator</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Random-Simulator_3.5.1.10</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-Rockwell-PharmaSuite</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-Rockwell-PharmaSuite_4.1.3.3279</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-SNMP</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-SNMP_1.7.0.37</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-TCP-Response</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-TCP-Response_1.3.0.47</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Batch-Interfaces</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Batch-Interfaces_4.x</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Interface-for-ABB-800xA-Batch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Interface-for-ABB-800xA-Batch_4.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s48"><Data ss:Type="String">PI-Interface-for-Werum-PAX-X-Batch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s49"><Data ss:Type="String">PI-Interface-for-Werum-PAX-X-Batch_4.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s19"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Batch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s45"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Batch_4.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-Emerson-DeltaV-Syncade-Batch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s47"><Data ss:Type="String">TBD</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-WonderWare-InBatch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s47"><Data ss:Type="String">TBD</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s20"><Data ss:Type="String">PI-Interface-for-Rockwell-Factory-Talk-Batch</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s47"><Data ss:Type="String">TBD</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-BACnet</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-BACnet_1.3.8.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-EtherNet/IP</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-EtherNet-IP_1.2.9.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-HART-IP</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-HART-IP_1.4.6.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-IEC-60870-5-104</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-IEC-60870-5-104_1.2.3.89</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-IEC-61850</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-IEC-61850_2.0.0.27</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-MQTT-Sparkplug</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-MQTT-Sparkplug_1.0.0.6</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-OPC-UA</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-OPC-UA_2.0.1.33</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Ping</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Ping_1.1.11.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Siemens-SIMATIC-PCS-7</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Siemens-SIMATIC-PCS-7_7.1.2.2</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-UFL</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-UFL_1.3.2.139</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Connector-for-Wonderware-Historian</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-Connector-for-Wonderware-Historian_1.6.7.0</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5">
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-System-Connector</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s46"><Data ss:Type="String">PI-System-Connector_2.3.1.1</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.78749999999999998"
+     x:Data="&amp;C&amp;&quot;Times New Roman,Regular&quot;&amp;12&amp;A"/>
+    <Footer x:Margin="0.78749999999999998"
+     x:Data="&amp;C&amp;&quot;Times New Roman,Regular&quot;&amp;12Page &amp;P"/>
+    <PageMargins x:Bottom="1.05277777777778" x:Left="0.78749999999999998"
+     x:Right="0.78749999999999998" x:Top="1.05277777777778"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>300</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>14</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
