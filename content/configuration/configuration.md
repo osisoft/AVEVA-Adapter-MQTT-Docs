@@ -24,7 +24,10 @@ This Quick Start guides you through setup of each configuration file available f
 
 4. Configure an MQTT data selection for each MQTT data source.<br>See [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration#configure-mqtt-data-selection) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration#configure-mqtt-sparkplug-b-data-selection).
 
-5. **Optional**: If there is a proxy between the adapter and your egress endpoints, define it.<br>See using the [Configure a network proxy](xref:ConfigureANetworkProxy).
+5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
+
+- [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
+- [Configure a network proxy](xref:ConfigureANetworkProxy)
 
 6. Configure one or more egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
 
