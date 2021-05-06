@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "R+sz4upu5tlPp10TYwIp7A=="
+          "hash": "CCT7d6XEe7S0QhTGQpvpCA=="
         }
       },
       "is_incremental": false,
@@ -281,7 +281,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/discovery-configuration.html",
-          "hash": "LLx457ZHqgiiemWP4BRD2w=="
+          "hash": "giQ/NFdODMfunTIjr+T0zg=="
         }
       },
       "is_incremental": false,

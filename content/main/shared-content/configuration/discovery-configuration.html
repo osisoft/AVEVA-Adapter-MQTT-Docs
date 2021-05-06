@@ -92,10 +92,15 @@
 <ol>
 <li>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
 <li><p>Run a <code>POST</code> command with the <code>Id</code> of the discovery and <code>autoSelect</code> set to either <code>true</code> or <code>false</code> to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries</code>.</p>
-<p><strong>Note:</strong><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Including an <code>Id</code> is optional. If you do not include one, the adapter automatically generates one.</li>
+<li><p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
 </code></pre></li>
+</ul>
+</li>
 </ol>
 <h2 id="discovery-parameters">Discovery parameters</h2>
 <table>
@@ -108,62 +113,62 @@
 </thead>
 <tbody>
 <tr>
-<td> <strong>id</strong></td>
+<td><strong>id</strong></td>
 <td><code>string</code></td>
-<td>The ID of the discovery. <br><br> <strong>Note:</strong> You cannot run multiple discoveries with the same ID.</td>
+<td>The Id of the discovery <br><br> <strong>Notes:</strong><br>&bull; You cannot run multiple discoveries with the same Id.<br>&bull; Including an <code>id</code> is optional. If you do not include one, the adapter automatically generates one.</td>
 </tr>
 <tr>
-<td> <strong>query</strong></td>
+<td><strong>query</strong></td>
 <td><code>string</code></td>
 <td>A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.</td>
 </tr>
 <tr>
-<td> <strong>startTime</strong></td>
+<td><strong>startTime</strong></td>
 <td><code>datetime</code></td>
 <td>Time when the discovery started.</td>
 </tr>
 <tr>
-<td> <strong>endTime</strong></td>
+<td><strong>endTime</strong></td>
 <td><code>datetime</code></td>
 <td>Time when the discovery ended.</td>
 </tr>
 <tr>
-<td> <strong>progress</strong></td>
+<td><strong>progress</strong></td>
 <td><code>double</code></td>
 <td>Progress of the discovery (number of topics found through the discovery)</td>
 </tr>
 <tr>
-<td> <strong>itemsFound</strong></td>
+<td><strong>itemsFound</strong></td>
 <td><code>integer</code></td>
 <td>Number of data pieces that the discovery found on the data source.</td>
 </tr>
 <tr>
-<td> <strong>newItems</strong></td>
+<td><strong>newItems</strong></td>
 <td><code>integer</code></td>
 <td>Number of new data pieces that the discovery found in comparison to the previous discovery.</td>
 </tr>
 <tr>
-<td> <strong>newAssets</strong></td>
+<td><strong>newAssets</strong></td>
 <td><code>integer</code></td>
 <td>Number of new assets that the discovery found in comparison to the previous discovery.</td>
 </tr>
 <tr>
-<td> <strong>resultUri</strong></td>
+<td><strong>resultUri</strong></td>
 <td><code>integer</code></td>
 <td>URL at which you can access the results of the discovery.</td>
 </tr>
 <tr>
-<td> <strong>autoSelect</strong></td>
+<td><strong>autoSelect</strong></td>
 <td><code>boolean</code></td>
 <td>When set to <code>true</code>, the result of the discovery gets pushed to the data selection.</td>
 </tr>
 <tr>
-<td> <strong>status</strong></td>
+<td><strong>status</strong></td>
 <td><code>reference</code></td>
 <td>Status of the discovery, for example <code>Active</code> or <code>Complete</code>.</td>
 </tr>
 <tr>
-<td> <strong>errors</strong></td>
+<td><strong>errors</strong></td>
 <td><code>string</code></td>
 <td>Errors encountered during the discovery.</td>
 </tr>
