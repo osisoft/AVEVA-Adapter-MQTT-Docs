@@ -16,7 +16,7 @@ This Quick Start guides you through setup of each configuration file available f
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-1. Configure one or more MQTT system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#system-components-configuration).
+1. Configure one or more MQTT system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
 
 2. Configure an MQTT data source for each MQTT device.<br>See [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#configure-mqtt-data-source) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration#configure-mqtt-sparkplug-b-data-source).
 
@@ -26,8 +26,8 @@ This Quick Start guides you through setup of each configuration file available f
 
 5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
 
-- [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
-- [Configure a network proxy](xref:ConfigureANetworkProxy)
+    - [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
+    - [Configure a network proxy](xref:ConfigureANetworkProxy)
 
 6. Configure one or more egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
 
