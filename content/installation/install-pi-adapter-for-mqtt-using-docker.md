@@ -65,7 +65,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./mqtt_linux-arm.tar.gz .
+	ADD ./MQTT_linux-arm.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 	**ARM64**

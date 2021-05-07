@@ -201,7 +201,7 @@ The following are representations of minimal and complete data selection configu
  {
     "Topic" : "RandomTopic",
     "ValueField" : "$.TestNode[:1].Value",
-    "DataType" : "uint64",
+    "DataType" : "uint64"
   }
 ]
 ```
