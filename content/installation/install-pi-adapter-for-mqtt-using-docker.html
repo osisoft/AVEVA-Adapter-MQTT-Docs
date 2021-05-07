@@ -120,7 +120,7 @@ WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 COPY mqttdockerstart.sh /
 RUN chmod +x /mqttdockerstart.sh
-ADD ./mqtt_linux-arm.tar.gz .
+ADD ./MQTT_linux-arm.tar.gz .
 ENTRYPOINT [&quot;/mqttdockerstart.sh&quot;]
 </code></pre><p> <strong>ARM64</strong></p>
 <pre><code class="lang-bash">FROM ubuntu

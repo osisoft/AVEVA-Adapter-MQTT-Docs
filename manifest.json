@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-configuration-examples.html",
-          "hash": "CAcQx+NX/dvtQ5WoiSyuxQ=="
+          "hash": "520qFpiqFJRcsF98c4A/MA=="
         }
       },
       "is_incremental": false,
@@ -137,7 +137,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/install-pi-adapter-for-mqtt-using-docker.html",
-          "hash": "3ND7AFDXWZ64Oi0MMG5u4w=="
+          "hash": "f0//gHUxyJuJ57Mr3w4xmw=="
         }
       },
       "is_incremental": false,
