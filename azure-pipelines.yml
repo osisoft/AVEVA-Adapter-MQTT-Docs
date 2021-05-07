@@ -9,6 +9,9 @@ parameters:
   - name: targetGithubBranch
     type: string
     default: main
+    values:
+      - main
+      - single-toc
 
   - name: publishSite
     displayName: Publish Site
@@ -67,7 +70,7 @@ jobs:
 
             echo "Submodule checkout/pull - content\main"
             cd content\main
-            git checkout main
+            git checkout main-remove-toc
             git rev-parse HEAD
             dir
             cd ..\..
