@@ -68,7 +68,7 @@ jobs:
             git submodule init
             git submodule update
 
-            echo "Submodule checkout/pull - content\main"
+            echo "Submodule checkout/pull - content\main-remove-toc"
             cd content\main
             git checkout main-remove-toc
             git rev-parse HEAD
