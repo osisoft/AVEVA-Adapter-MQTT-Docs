@@ -10,3 +10,4 @@ _site_pdf/
 /.vs
 docfx_pdf.json
 **/.DS_Store
+/.vscode
