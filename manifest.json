@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-mqtt-data-source-configuration.html",
-          "hash": "8YKiTtTfAaJ9n6ILzeVaOA=="
+          "hash": "KXIljHM7UhDF6CHEHmjKQw=="
         }
       },
       "is_incremental": false,
@@ -396,18 +396,6 @@
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "content/main/shared-content/configuration/text-parser/all-file-types/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/configuration/text-parser/all-file-types/toc.html",
-          "hash": "+oxGA9S3veLADY7S+Vw+nw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
       "output": {
@@ -437,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
-          "hash": "uDfVxAPAAKjTwsdY4mb8Sw=="
+          "hash": "CBRWNTjNf9juFn5VsJqYTQ=="
         }
       },
       "is_incremental": false,
@@ -845,7 +833,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "WmOKtzFCLwj3xuVfebbBIA=="
+          "hash": "TXoDz1/09xwDYdrTlbeu8g=="
         }
       },
       "is_incremental": false,
