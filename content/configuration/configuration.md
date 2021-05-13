@@ -16,24 +16,20 @@ This Quick Start guides you through setup of each configuration file available f
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-1. Configure one or more MQTT system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
+1. Configure one or more MQTT system components.<br>See [System components](xref:SystemComponentsConfiguration#configure-system-components).
 
-2. Configure an MQTT data source for each MQTT device.<br>See [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#configure-mqtt-data-source) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration#configure-mqtt-sparkplug-b-data-source).
+2. Configure an MQTT data source for each MQTT device.<br>See [Data source (generic)](xref:PIAdapterForMQTTDataSourceConfiguration#configure-mqtt-data-source) and [Data source (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration#configure-mqtt-sparkplug-b-data-source).
 
-3. **Optional**: Configure data discovery. See [Discovery configuration](xref:DiscoveryConfiguration#configure-discovery).
+3. **Optional**: Configure data discovery. See [Discovery](xref:DiscoveryConfiguration#configure-discovery).
 
-4. Configure an MQTT data selection for each MQTT data source.<br>See [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration#configure-mqtt-data-selection) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration#configure-mqtt-sparkplug-b-data-selection).
+4. Configure an MQTT data selection for each MQTT data source.<br>See [Data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration#configure-mqtt-data-selection) and [Data selection (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration#configure-mqtt-sparkplug-b-data-selection).
 
-5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
+5. **Optional**: Configure data filters, diagnostics and metadata, buffering, logging, and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
 
-    - [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
+    - [Data filters](xref:DataFiltersConfiguration#configure-data-filters)
+    - [Diagnostics and metadata](xref:GeneralConfiguration#configure-general)
+    - [Buffering](xref:BufferingConfiguration#configure-buffering)
+    - [Logging](xref:LoggingConfiguration#configure-logging)
     - [Configure a network proxy](xref:ConfigureANetworkProxy)
 
-6. Configure one or more egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
-
-7. **Optional**: Configure health endpoints, general (diagnostics and metadata), buffering, and logging. See the following topics:
-
-    - [Health endpoint configuration](xref:HealthEndpointConfiguration#configure-health-endpoint)
-    - [General configuration](xref:GeneralConfiguration#configure-general)
-    - [Buffering configuration](xref:BufferingConfiguration#configure-buffering)
-    - [Logging configuration](xref:LoggingConfiguration#configure-logging)
+6. Configure one or more egress and health endpoints. <br>See [Egress endpoints](xref:EgressEndpointsConfiguration#configure-egress-endpoints) and [Health endpoints](xref:HealthEndpointConfiguration#configure-health-endpoint).

@@ -2,7 +2,7 @@
 uid: PIAdapterForMQTTDataSourceConfiguration
 ---
 
-# PI Adapter for MQTT data source configuration
+# Data source (generic)
 
 To use the adapter, you must configure the data source from which it polls data.
 

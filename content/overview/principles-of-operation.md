@@ -2,7 +2,7 @@
 uid: PIAdapterForMQTTPrinciplesOfOperation
 ---
 
-# PI Adapter for MQTT principles of operation
+# Principles of operation
 
 This adapter's operations focus on data collection and stream creation.
 

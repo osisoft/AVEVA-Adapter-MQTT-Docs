@@ -2,7 +2,7 @@
 uid: SparkplugBDataSourceDiscovery
 ---
 
-# Sparkplug B data source discovery
+# Data source discovery (Sparkplug B)
 
 A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional **query** parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.
 
