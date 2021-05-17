@@ -2,7 +2,7 @@
 uid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
 ---
 
-# PI Adapter for MQTT Sparkplug B data source configuration
+# Data source (Sparkplug B)
 
 To use the adapter, you must configure the data source from which it polls data.
 

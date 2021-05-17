@@ -24,23 +24,23 @@
   - topicUid: PIAdapterForMQTTDataSelectionConfiguration
   - topicUid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
   - topicUid: DataFiltersConfiguration
-  - topicUid: EgressEndpointsConfiguration
-    items:
-    - topicUid: PrepareEgressDestinations
-    - topicUid: ConfigureANetworkProxy
-  - topicUid: HealthEndpointConfiguration
   - topicUid: GeneralConfiguration
     items: 
     - topicUid: AdapterMetadata
   - topicUid: BufferingConfiguration
   - topicUid: LoggingConfiguration
+  - topicUid: EgressEndpointsConfiguration
+    items:
+    - topicUid: PrepareEgressDestinations
+    - topicUid: ConfigureANetworkProxy
+  - topicUid: HealthEndpointConfiguration
   - topicUid: PIAdapterForMQTTConfigurationExamples
 - topicUid: Administration
   items:
   - topicUid: StartAndStopAnAdapter
   - topicUid: StartAndStopIngressComponent
-  - topicUid: RetrieveProductVersionInformation
   - topicUid: DeleteAnAdapterComponent
+  - topicUid: RetrieveProductVersionInformation
 - topicUid: HealthAndDiagnostics
   items:
   - topicUid: AdapterHealth
@@ -53,7 +53,7 @@
     - topicUid: StreamCount
     - topicUid: IORate
     - topicUid: ErrorRate
-  - topicUid: EgressDiagnostics
+    - topicUid: EgressDiagnostics
 - topicUid: TroubleshootTheAdapter
   items:
   - topicUid: TroubleshootPIAdapterForMQTT
