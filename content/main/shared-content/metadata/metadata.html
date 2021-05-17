@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter diagnostics </title>
+    <title>Metadata </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter diagnostics ">
+    <meta name="title" content="Metadata ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,27 +75,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
-<h1 id="adapter-diagnostics">Adapter diagnostics</h1>
+            <article class="content wrap" id="_content" data-uid="AdapterMetadata">
+<h1 id="metadata">Metadata</h1>
 
-<p>The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The <code>System_Diagnostics.json</code> file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.</p>
-<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../configuration/health-endpoint-configuration.html">Health endpoint configuration</a>.</p>
-<h2 id="available-diagnostics-data">Available diagnostics data</h2>
-<p>Every minute, dynamic data is sent to configured health endpoints.</p>
-<p>The following diagnostics data are available:</p>
+<p>If the metadataLevel is set to <code>Low</code> or higher in the <a class="xref" href="../configuration/diagnostics-and-metadata.html">General configuration</a>, adapter streams created by the ingress components include the following metadata:</p>
+<pre><code class="lang-code">  Datasource: {ComponentId}
+  AdapterType: {ComponentType}
+</code></pre><p><code>ComponentId</code> corresponds to the adapter components&#39; data source configured in the <a class="xref" href="../configuration/system-components.html">Components configuration</a>. <code>ComponentType</code> corresponds to the adapter type.</p>
+<h2 id="metadata-for-health-and-diagnostics-streams">Metadata for health and diagnostics streams</h2>
+<p>If you configure a health endpoint and enable metadata, they are included in the health streams (<a class="xref" href="../health/device-status.html">Device status</a> and <a class="xref" href="../health/next-health-message-expected.html">Next health message expected</a>) together with <code>ComponentId</code> and <code>ComponentType</code>.</p>
+<p>If you enable diagnostics in <a class="xref" href="../configuration/diagnostics-and-metadata.html">General configuration</a>, metadata are included in the diagnostics streams (<a class="xref" href="../diagnostics/stream-count.html">Stream count</a>, <a class="xref" href="../diagnostics/io-rate.html">IO rate</a>, <a class="xref" href="../diagnostics/error-rate.html">Error rate</a>) together with <code>ComponentId</code> and <code>ComponentType</code>.</p>
+<p>The adapter may also send its own stream metadata not including health and diagnostics streams. For more information about what custom metadata is included in each stream, see the user guide for your adapter.</p>
+<p><strong>Note:</strong></p>
 <ul>
-<li><a class="xref" href="system.html">System</a></li>
-<li><a class="xref" href="stream-count.html">Stream count</a></li>
-<li><a class="xref" href="io-rate.html">IO rate</a></li>
-<li><a class="xref" href="error-rate.html">Error rate</a></li>
-</ul>
-<h2 id="af-structure">AF structure</h2>
-<p>After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.</p>
-<p><img src="../images/diagnostics.png" alt="Diagnostics"></p>
-<ul>
-<li>The <strong>Elements</strong> root contains a link to an <strong>Adapters</strong> node. This is the root node for all adapter instances.</li>
-<li>Below <strong>Adapters</strong>, you will find one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>{ComputerName}.{ServiceName}</code>. For example, in the following image, <strong>MachineName</strong> is the computer name and <strong>OpcUa</strong> is the service name.</li>
-<li>To see the <strong>System.Diagnostics</strong> values, click on an adapter node and set the tab to <strong>Attributes</strong>. Example values are shown in the image.</li>
+<li>Metadata is only sent for streams created by the ingress components.</li>
+<li>Currently, the only endpoint that persists sent metadata is OCS (OSIsoft Cloud Services).</li>
 </ul>
 </article>
           </div>
@@ -105,7 +99,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/diagnostics/adapter-diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/metadata/metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

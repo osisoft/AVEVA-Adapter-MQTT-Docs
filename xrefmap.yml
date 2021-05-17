@@ -2,29 +2,29 @@
 sorted: true
 references:
 - uid: AdapterDiagnostics
-  name: Adapter diagnostics
-  href: content/main/shared-content/diagnostics/adapter-diagnostics.html
+  name: Diagnostics
+  href: content/main/shared-content/diagnostics/diagnostics.html
 - uid: AdapterHealth
-  name: Adapter health
-  href: content/main/shared-content/health/adapter-health.html
+  name: Health
+  href: content/main/shared-content/health/health.html
 - uid: AdapterMetadata
-  name: Adapter metadata
-  href: content/main/shared-content/metadata/adapter-metadata.html
+  name: Metadata
+  href: content/main/shared-content/metadata/metadata.html
 - uid: Administration
   name: Administration
   href: content/main/shared-content/administration/administration.html
 - uid: BufferingConfiguration
-  name: Buffering configuration
-  href: content/main/shared-content/configuration/buffering-configuration.html
+  name: Buffering
+  href: content/main/shared-content/configuration/buffering.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: content/main/shared-content/configuration/configuration-tools.html
 - uid: ConfigureANetworkProxy
   name: Configure a network proxy
-  href: content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.html
+  href: content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html
 - uid: DataFiltersConfiguration
-  name: Data filters configuration
-  href: content/main/shared-content/configuration/data-filters-configuration.html
+  name: Data filters
+  href: content/main/shared-content/configuration/data-filters.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: content/main/shared-content/administration/delete-an-adapter-component.html
@@ -32,35 +32,35 @@ references:
   name: Device status
   href: content/main/shared-content/health/device-status.html
 - uid: DiscoveryConfiguration
-  name: Discovery configuration
-  href: content/main/shared-content/configuration/discovery-configuration.html
+  name: Discovery
+  href: content/main/shared-content/configuration/discovery.html
 - uid: EgressDiagnostics
-  name: Egress diagnostics
-  href: content/main/shared-content/diagnostics/egress-diagnostics.html
+  name: Egress
+  href: content/main/shared-content/diagnostics/egress.html
 - uid: EgressEndpointsConfiguration
-  name: Egress endpoints configuration
-  href: content/main/shared-content/configuration/egress-endpoints-configuration.html
+  name: Egress endpoints
+  href: content/main/shared-content/configuration/egress-endpoints.html
 - uid: ErrorRate
   name: Error rate
   href: content/main/shared-content/diagnostics/error-rate.html
 - uid: GeneralConfiguration
-  name: General configuration
-  href: content/main/shared-content/configuration/general-configuration.html
+  name: Diagnostics and metadata
+  href: content/main/shared-content/configuration/diagnostics-and-metadata.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
   href: content/main/shared-content/health/health-and-diagnostics.html
 - uid: HealthEndpointConfiguration
-  name: Health endpoint configuration
-  href: content/main/shared-content/configuration/health-endpoint-configuration.html
+  name: Health endpoints
+  href: content/main/shared-content/configuration/health-endpoints.html
 - uid: index
-  name: PI Adapter for MQTT overview
+  name: Overview
   href: content/index.html
 - uid: Installation
   name: Installation
   href: content/main/shared-content/installation/installation.html
 - uid: InstallPIAdapterForMQTTUsingDocker
-  name: Install PI Adapter for MQTT using Docker
-  href: content/installation/install-pi-adapter-for-mqtt-using-docker.html
+  name: Installation using Docker
+  href: content/installation/installation-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: content/main/shared-content/installation/install-the-adapter.html
@@ -71,44 +71,44 @@ references:
   name: JSONPath syntax for value retrieval
   href: content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
 - uid: LoggingConfiguration
-  name: Logging configuration
-  href: content/main/shared-content/configuration/logging-configuration.html
+  name: Logging
+  href: content/main/shared-content/configuration/logging.html
 - uid: MQTTConfiguration
   name: Configuration
   href: content/configuration/configuration.html
 - uid: MQTTSparkplugBSpecificMetadata
   name: MQTT Sparkplug B specific metadata
-  href: content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html
+  href: content/overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html
 - uid: MQTTSpecificMetadata
   name: MQTT specific metadata
-  href: content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.html
+  href: content/overview/mqtt-metadata/mqtt-specific-metadata.html
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
 - uid: PIAdapterForMQTTConfigurationExamples
-  name: PI Adapter for MQTT configuration examples
-  href: content/configuration/pi-adapter-for-mqtt-configuration-examples.html
+  name: Configuration examples
+  href: content/configuration/configuration-examples.html
 - uid: PIAdapterForMQTTDataSelectionConfiguration
-  name: PI Adapter for MQTT data selection configuration
-  href: content/configuration/pi-adapter-for-mqtt-data-selection-configuration.html
+  name: Data selection (generic)
+  href: content/configuration/data-selection-generic.html
 - uid: PIAdapterForMQTTDataSourceConfiguration
-  name: PI Adapter for MQTT data source configuration
-  href: content/configuration/pi-adapter-for-mqtt-data-source-configuration.html
+  name: Data source (generic)
+  href: content/configuration/data-source-generic.html
 - uid: PIAdapterForMQTTOverview
   name: PI Adapter for MQTT overview
   href: pi-adapter-for-mqtt-overview.html
 - uid: PIAdapterForMQTTPrinciplesOfOperation
-  name: PI Adapter for MQTT principles of operation
-  href: content/pi-adapter-for-mqtt-overview/pi-adapter-for-mqtt-principles-of-operation.html
+  name: Principles of operation
+  href: content/overview/principles-of-operation.html
 - uid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
-  name: PI Adapter for MQTT Sparkplug B data selection configuration
-  href: content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html
+  name: Data selection (Sparkplug B)
+  href: content/configuration/data-selection-sparkplug-b.html
 - uid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
-  name: PI Adapter for MQTT Sparkplug B data source configuration
-  href: content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html
+  name: Data source (Sparkplug B)
+  href: content/configuration/data-source-sparkplug-b.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
-  href: content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.html
+  href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html
 - uid: releaseNotes
   name: Release notes
   href: content/main/Templates/Markdown%20Release%20Notes%20template-V1.html
@@ -119,11 +119,11 @@ references:
   name: Retrieve product version information
   href: content/main/shared-content/administration/retrieve-product-version-information.html
 - uid: SchedulesConfiguration
-  name: Schedules configuration
-  href: content/main/shared-content/configuration/schedules-configuration.html
+  name: Schedules
+  href: content/main/shared-content/configuration/schedules.html
 - uid: SparkplugBDataSourceDiscovery
-  name: Sparkplug B data source discovery
-  href: content/configuration/discovery/sparkplug-b-data-source-discovery.html
+  name: Data source discovery (Sparkplug B)
+  href: content/configuration/discovery/data-source-discovery-sparkplug-b.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
   href: content/main/shared-content/administration/start-and-stop-an-adapter.html
@@ -137,11 +137,11 @@ references:
   name: System
   href: content/main/shared-content/diagnostics/system.html
 - uid: SystemAndAdapterConfiguration
-  name: System and adapter configuration
-  href: content/main/shared-content/configuration/system-and-adapter-configuration.html
+  name: System and adapter
+  href: content/main/shared-content/configuration/system-and-adapter.html
 - uid: SystemComponentsConfiguration
-  name: System components configuration
-  href: content/main/shared-content/configuration/system-components-configuration.html
+  name: System components
+  href: content/main/shared-content/configuration/system-components.html
 - uid: SystemRequirements
   name: System requirements
   href: content/installation/system-requirements.html
@@ -155,8 +155,8 @@ references:
   name: Troubleshoot PI Adapter for MQTT
   href: content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html
 - uid: TroubleshootTheAdapter
-  name: Troubleshoot the adapter
-  href: content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html
+  name: Troubleshooting
+  href: content/main/shared-content/troubleshooting/troubleshooting.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
     <meta property="docfx:rel" content="../../../">
     
@@ -83,7 +83,7 @@
 <li><strong>Topic</strong>: Specifies the MQTT topic string</li>
 <li><strong>ValueField</strong>: Specifies the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server</li>
 </ul>
-<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../../main/shared-content/configuration/general-configuration.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../../main/shared-content/configuration/diagnostics-and-metadata.html">General configuration</a>. For the MQTT adapter, the following metadata is sent for the individual level:</p>
 <!--
 Comments from Bo:
 The following statements are only true for the genric MQTT component. Sparkplug B sends a different set of stream metadata. Simmlar to above, Thyag can help with the Sparkplug B specific topics. Also, we probably have to have two sub-sections to discuss the different behavior in metadata sending by two diffferent components.
@@ -104,7 +104,7 @@ The default stream Id pattern for MQTT Sparkplug B is:
 Similarly, we may want to have two sub-sections to discuss all the difference including the items mentioned above
 -->
 <pre><code class="lang-code">&lt;AdapterComponentId&gt;.&lt;Topic&gt;.&lt;ValueField&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../../configuration/pi-adapter-for-mqtt-data-source-configuration.html">PI Adapter for MQTT data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../../configuration/data-source-generic.html">PI Adapter for MQTT data source configuration</a>.</p>
 </article>
           </div>
           
@@ -113,7 +113,7 @@ Similarly, we may want to have two sub-sections to discuss all the difference in
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/overview/mqtt-metadata/mqtt-specific-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

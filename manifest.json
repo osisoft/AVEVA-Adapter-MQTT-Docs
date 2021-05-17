@@ -26,11 +26,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/configuration/configuration-examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/configuration-examples.html",
+          "hash": "vOfBBDg7vbsWTCqbs4jIjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/configuration/configuration.md",
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "Vhkdk2PB4ToUymOqoIw3RQ=="
+          "hash": "taGZAB3sDsl1FCys907d0w=="
         }
       },
       "is_incremental": false,
@@ -38,11 +50,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/discovery/sparkplug-b-data-source-discovery.md",
+      "source_relative_path": "content/configuration/data-selection-generic.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/discovery/sparkplug-b-data-source-discovery.html",
-          "hash": "udGd1sOLfGR5bpZm5MAGAQ=="
+          "relative_path": "content/configuration/data-selection-generic.html",
+          "hash": "A2Ub/Gxx4lNJVRAHiaArtQ=="
         }
       },
       "is_incremental": false,
@@ -50,11 +62,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-mqtt-configuration-examples.md",
+      "source_relative_path": "content/configuration/data-selection-sparkplug-b.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-mqtt-configuration-examples.html",
-          "hash": "520qFpiqFJRcsF98c4A/MA=="
+          "relative_path": "content/configuration/data-selection-sparkplug-b.html",
+          "hash": "RMGtmIJE53Fq0iVk6rBgjQ=="
         }
       },
       "is_incremental": false,
@@ -62,11 +74,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-mqtt-data-selection-configuration.md",
+      "source_relative_path": "content/configuration/data-source-generic.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-mqtt-data-selection-configuration.html",
-          "hash": "gqlcm19Z4KIxy3mMJmB5ig=="
+          "relative_path": "content/configuration/data-source-generic.html",
+          "hash": "qPt5TV6tjs5Rd9yOSNXf3w=="
         }
       },
       "is_incremental": false,
@@ -74,11 +86,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-mqtt-data-source-configuration.md",
+      "source_relative_path": "content/configuration/data-source-sparkplug-b.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-mqtt-data-source-configuration.html",
-          "hash": "KXIljHM7UhDF6CHEHmjKQw=="
+          "relative_path": "content/configuration/data-source-sparkplug-b.html",
+          "hash": "5txnQqGEeBM0RkkKInItVA=="
         }
       },
       "is_incremental": false,
@@ -86,23 +98,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.md",
+      "source_relative_path": "content/configuration/discovery/data-source-discovery-sparkplug-b.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-selection-configuration.html",
-          "hash": "lLKwYKBihlEwrMAjCU+dug=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html",
-          "hash": "uyjtwGex9KlzP4RrdoqvjQ=="
+          "relative_path": "content/configuration/discovery/data-source-discovery-sparkplug-b.html",
+          "hash": "LO+apzNqzuEe66WdANf+Vw=="
         }
       },
       "is_incremental": false,
@@ -125,7 +125,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "bIRYCSIvarBy9SbUi1WJ5w=="
+          "hash": "PbXGsbJGp51VDohugdMKlA=="
         }
       },
       "is_incremental": false,
@@ -133,11 +133,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/installation/install-pi-adapter-for-mqtt-using-docker.md",
+      "source_relative_path": "content/installation/installation-using-docker.md",
       "output": {
         ".html": {
-          "relative_path": "content/installation/install-pi-adapter-for-mqtt-using-docker.html",
-          "hash": "f0//gHUxyJuJ57Mr3w4xmw=="
+          "relative_path": "content/installation/installation-using-docker.html",
+          "hash": "b3o+0KMG3dmNV28P1ynURQ=="
         }
       },
       "is_incremental": false,
@@ -149,7 +149,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/system-requirements.html",
-          "hash": "nMTfVOQXy5BfVVuf0Nblag=="
+          "hash": "d27ugQ9AYq3znlAkjdQ1cQ=="
         }
       },
       "is_incremental": false,
@@ -241,11 +241,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/buffering-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/buffering.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/buffering-configuration.html",
-          "hash": "fNRBla+T14Lc6AESqGLyPg=="
+          "relative_path": "content/main/shared-content/configuration/buffering.html",
+          "hash": "mmmljSzHJTG39S8bRgzh7A=="
         }
       },
       "is_incremental": false,
@@ -265,11 +265,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/data-filters-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/data-filters.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/data-filters-configuration.html",
-          "hash": "oqFDZR9KXTdoji9g1SGrwg=="
+          "relative_path": "content/main/shared-content/configuration/data-filters.html",
+          "hash": "FrwtEdfN9sSVCZmZrqfkcQ=="
         }
       },
       "is_incremental": false,
@@ -277,11 +277,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/discovery-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/discovery-configuration.html",
-          "hash": "giQ/NFdODMfunTIjr+T0zg=="
+          "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
+          "hash": "1Vvv+U10n62jQZNnvqGpmQ=="
         }
       },
       "is_incremental": false,
@@ -289,11 +289,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "source_relative_path": "content/main/shared-content/configuration/discovery.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
-          "hash": "KW8dA2gvl29nE0mgN8XN/g=="
+          "relative_path": "content/main/shared-content/configuration/discovery.html",
+          "hash": "ODCfh2Bb84p1uQvC/mbAiA=="
         }
       },
       "is_incremental": false,
@@ -301,11 +301,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
-          "hash": "YszALKC5+HGyHyIMCwoJEQ=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
+          "hash": "vTgeyus//RIMSA6qnV2EMg=="
         }
       },
       "is_incremental": false,
@@ -313,11 +313,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.html",
-          "hash": "9S91Q6RmLx8vyXeePrD6Mw=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html",
+          "hash": "xFNweH+asaIc76RN0bewcg=="
         }
       },
       "is_incremental": false,
@@ -325,11 +325,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/general-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/general-configuration.html",
-          "hash": "qMHBB52jdJ6mRz6adsBTuQ=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
+          "hash": "QXJGvHCv4L4c09sc4srYGw=="
         }
       },
       "is_incremental": false,
@@ -337,11 +337,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/health-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.html",
-          "hash": "3B8OS1VaqKwIKko21uOjZw=="
+          "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
+          "hash": "/M/iMfNt/R4mHK7VojS+2Q=="
         }
       },
       "is_incremental": false,
@@ -349,11 +349,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/logging-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/logging.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/logging-configuration.html",
-          "hash": "t4ZsCwKo1/DrUuX87vKXEw=="
+          "relative_path": "content/main/shared-content/configuration/logging.html",
+          "hash": "Yucn7ZnH+re3I5CIvoVB8Q=="
         }
       },
       "is_incremental": false,
@@ -361,11 +361,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/schedules-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/schedules.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/schedules-configuration.html",
-          "hash": "RPo1O6qEd/zwN6LygfJJ3Q=="
+          "relative_path": "content/main/shared-content/configuration/schedules.html",
+          "hash": "RdxjLszoRx5fPzNB0gPn4Q=="
         }
       },
       "is_incremental": false,
@@ -373,11 +373,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.html",
-          "hash": "XkTMIwM4/mpTz+ilVxGOig=="
+          "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
+          "hash": "bjxEglIOw4tddytVINsL2A=="
         }
       },
       "is_incremental": false,
@@ -385,11 +385,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-components-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-components.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-components-configuration.html",
-          "hash": "4IEOFxTmA49+Qjs4o1RZpA=="
+          "relative_path": "content/main/shared-content/configuration/system-components.html",
+          "hash": "KfS//V8n0edkRbwolpz2UQ=="
         }
       },
       "is_incremental": false,
@@ -433,11 +433,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.html",
-          "hash": "CKvhCsuHzwEm1cJ8jdHhJg=="
+          "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
+          "hash": "hZ0gkuVZd8lN0DpOnj2OKA=="
         }
       },
       "is_incremental": false,
@@ -445,11 +445,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/egress.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.html",
-          "hash": "Q4a7FHexYkTQsUFgyM56bQ=="
+          "relative_path": "content/main/shared-content/diagnostics/egress.html",
+          "hash": "GYptNblvzTynv7zAs3bVxQ=="
         }
       },
       "is_incremental": false,
@@ -505,18 +505,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/health/adapter-health.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/health/adapter-health.html",
-          "hash": "YaIfYCHDUG1mzdj0/jKmVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/health/device-status.md",
       "output": {
         ".html": {
@@ -533,7 +521,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "M4kmKncz3h8nlWb1Zxzp7w=="
+          "hash": "shm+RIpKA+x4iZCOfSLSgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/health/health.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/health/health.html",
+          "hash": "H6h/KHHCu9yaF+6yd4F8lQ=="
         }
       },
       "is_incremental": false,
@@ -721,11 +721,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/metadata/adapter-metadata.md",
+      "source_relative_path": "content/main/shared-content/metadata/metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/metadata/adapter-metadata.html",
-          "hash": "AdfZfjA075guLQo7n3i8+g=="
+          "relative_path": "content/main/shared-content/metadata/metadata.html",
+          "hash": "y//4Pkh2aabL8QPACVrLNQ=="
         }
       },
       "is_incremental": false,
@@ -745,11 +745,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.md",
+      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshooting.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "ipjV5TrEpZjVNVFsf4dN1g=="
+          "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
+          "hash": "uGDhwYOuGgcqk1n/6PUolg=="
         }
       },
       "is_incremental": false,
@@ -769,11 +769,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.md",
+      "source_relative_path": "content/overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html",
-          "hash": "/CFv44FwH3PaVD06pJZrkQ=="
+          "relative_path": "content/overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html",
+          "hash": "OzcmWaboQm6Yjh39JAVZNA=="
         }
       },
       "is_incremental": false,
@@ -781,23 +781,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.md",
+      "source_relative_path": "content/overview/mqtt-metadata/mqtt-specific-metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-specific-metadata.html",
-          "hash": "lL+Tht+5BdR5vFfxAeCzig=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "content/pi-adapter-for-mqtt-overview/mqtt-metadata/toc.html",
-          "hash": "S5qGztDsU1d8LvnwC6pnZg=="
+          "relative_path": "content/overview/mqtt-metadata/mqtt-specific-metadata.html",
+          "hash": "gFuaJ/X3FKEjufk61Z8GMw=="
         }
       },
       "is_incremental": false,
@@ -805,11 +793,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/pi-adapter-for-mqtt-overview/pi-adapter-for-mqtt-principles-of-operation.md",
+      "source_relative_path": "content/overview/principles-of-operation.md",
       "output": {
         ".html": {
-          "relative_path": "content/pi-adapter-for-mqtt-overview/pi-adapter-for-mqtt-principles-of-operation.html",
-          "hash": "MghTKpJnNbyUnWPTKR+VHw=="
+          "relative_path": "content/overview/principles-of-operation.html",
+          "hash": "ZMEUC39CLkBKLxKlKzXFkw=="
         }
       },
       "is_incremental": false,
@@ -833,7 +821,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "TXoDz1/09xwDYdrTlbeu8g=="
+          "hash": "jmlUG7IbpHNLbLIZgGsRFA=="
         }
       },
       "is_incremental": false,
@@ -845,7 +833,7 @@
       "output": {
         ".html": {
           "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html",
-          "hash": "SReM2cZVuv8s6F6Dzgofrw=="
+          "hash": "9OHpiSxYxLzeU6Pt6SusWw=="
         }
       },
       "is_incremental": false,

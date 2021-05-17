@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>System and adapter configuration </title>
+    <title>Diagnostics and metadata </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="System and adapter configuration ">
+    <meta name="title" content="Diagnostics and metadata ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,33 +75,61 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SystemAndAdapterConfiguration">
-<h1 id="system-and-adapter-configuration">System and adapter configuration</h1>
+            <article class="content wrap" id="_content" data-uid="GeneralConfiguration">
+<h1 id="diagnostics-and-metadata">Diagnostics and metadata</h1>
 
-<p>You can configure the system component and adapter component together using a single file.</p>
-<h2 id="change-system-and-adapter-configuration">Change system and adapter configuration</h2>
-<p>Complete the following steps to configure system and adapter. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration</code> REST endpoint to initialize the configuration.</p>
+<p>You can configure PI adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
+For more information about available diagnostics data, see <a class="xref" href="../diagnostics/diagnostics.html">Adapter diagnostics</a> and <a class="xref" href="../diagnostics/egress.html">Egress diagnostics</a>.
+For more information about available metadata and what metadata are sent per metadata level, see <a class="xref" href="../metadata/metadata.html">Adapter Metadata</a>.</p>
+<h2 id="configure-general">Configure general</h2>
 <ol>
-<li><p>Using a text editor, create an empty text file.</p>
-</li>
-<li><p>Copy and paste an example configuration for system and adapter into the file.</p>
-<p> For sample JSON, see the corresponding adapter configuration examples topic.</p>
-</li>
-<li><p>Save the file. For example, as <code>ConfigureSystemAndAdapter.json</code>.</p>
-</li>
-<li><p>Open a command line session. Change directory to the location of <code>ConfigureSystemAndAdapter.json</code>.</p>
-</li>
-<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the system and adapter configuration.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureSystemAndAdapter.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration&quot;
-</code></pre><p> <strong>Notes:</strong></p>
-<ul>
-<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
-<li>In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</li>
-</ul>
-</li>
+<li>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
+<li><p>Run a <code>PUT</code> command to the following endpoint, setting <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
+<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using <code>curl</code>:</p>
+<pre><code class="lang-bash">curl -d &quot;{ \&quot;enableDiagnostics\&quot;:true, \&quot;enableMetadata\&quot;:false }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/general&quot;
+</code></pre></li>
 </ol>
-<p>If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.</p>
-<h2 id="rest-urls">REST URLs</h2>
+<h2 id="general-schema">General schema</h2>
+<p>The full schema definition for the general configuration is in the <code>System_General_schema.json</code> file located in one of the following folders:</p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\&lt;AdapterName&gt;\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/&lt;AdapterName&gt;/Schemas</code></p>
+<h2 id="general-parameters">General parameters</h2>
+<p>The following parameters are available for configuring general:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EnableDiagnostics</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>Determines if diagnostics are enabled<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code><br></td>
+</tr>
+<tr>
+<td><strong>MetadataLevel</strong></td>
+<td>Optional</td>
+<td><code>reference</code></td>
+<td>Defines amount of metadata sent to OMF endpoints.<br><br> Allowed value: <code>None</code>, <code>Low</code>, <code>Medium</code>, and <code>High</code><br> Default value: <code>Medium</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<h3 id="retrieve-the-general-configuration">Retrieve the general configuration</h3>
+<p>Example using <code>curl</code>:</p>
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/general&quot;
+</code></pre><p>Sample output:</p>
+<pre><code class="lang-code">{
+  &quot;EnableDiagnostics&quot;: true,
+  &quot;MetadataLevel&quot;: &quot;Medium&quot;
+}
+</code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
 <tr>
@@ -112,9 +140,19 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/</td>
+<td>api/v1/configuration/system/General</td>
+<td>GET</td>
+<td>Gets the general configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/General</td>
 <td>PUT</td>
-<td>Replaces the configuration for the entire adapter</td>
+<td>Replaces the existing general configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/General</td>
+<td>PATCH</td>
+<td>Allows partial updating of general configuration</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +164,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/system-and-adapter-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/diagnostics-and-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

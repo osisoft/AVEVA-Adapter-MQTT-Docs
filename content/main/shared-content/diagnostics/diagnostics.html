@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MQTT Sparkplug B specific metadata </title>
+    <title>Diagnostics </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="MQTT Sparkplug B specific metadata ">
+    <meta name="title" content="Diagnostics ">
     <meta name="generator" content="docfx 2.56.5.0">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
-    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:rel" content="../../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../../content/index.html" width="46">
-                <img id="logo" src="../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,25 +75,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MQTTSparkplugBSpecificMetadata">
-<h1 id="mqtt-sparkplug-b-specific-metadata">MQTT Sparkplug B specific metadata</h1>
+            <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
+<h1 id="diagnostics">Diagnostics</h1>
 
-<p>Metadata specific to the MQTT Sparkplug B component are:</p>
+<p>The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The <code>System_Diagnostics.json</code> file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.</p>
+<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../configuration/health-endpoints.html">Health endpoint configuration</a>.</p>
+<h2 id="available-diagnostics-data">Available diagnostics data</h2>
+<p>Every minute, dynamic data is sent to configured health endpoints.</p>
+<p>The following diagnostics data are available:</p>
 <ul>
-<li><strong>Namespace</strong>: Specifies the Topic namespace.</li>
-<li><strong>Group_Id</strong>: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and back to the consuming MQTT clients</li>
-<li><strong>Edge_Node_Id</strong>: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure</li>
-<li><strong>Device_Id</strong>: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node</li>
+<li><a class="xref" href="system.html">System</a></li>
+<li><a class="xref" href="stream-count.html">Stream count</a></li>
+<li><a class="xref" href="io-rate.html">IO rate</a></li>
+<li><a class="xref" href="error-rate.html">Error rate</a></li>
 </ul>
-<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../../main/shared-content/configuration/general-configuration.html">General configuration</a>. For the MQTT Sparkplug B adapter, the following metadata is sent for the individual level:</p>
+<h2 id="af-structure">AF structure</h2>
+<p>After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.</p>
+<p><img src="../images/diagnostics.png" alt="Diagnostics"></p>
 <ul>
-<li><code>None</code>: No metadata</li>
-<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
-<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), Topic, and MetricName</li>
+<li>The <strong>Elements</strong> root contains a link to an <strong>Adapters</strong> node. This is the root node for all adapter instances.</li>
+<li>Below <strong>Adapters</strong>, you will find one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>{ComputerName}.{ServiceName}</code>. For example, in the following image, <strong>MachineName</strong> is the computer name and <strong>OpcUa</strong> is the service name.</li>
+<li>To see the <strong>System.Diagnostics</strong> values, click on an adapter node and set the tab to <strong>Attributes</strong>. Example values are shown in the image.</li>
 </ul>
-<p>Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:</p>
-<pre><code class="lang-code">&lt;AdapterComponentId&gt;.&lt;Topic&gt;.&lt;MetricName&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../../configuration/pi-adapter-for-mqtt-sparkplug-b-data-source-configuration.html">PI Adapter for MQTT Sparkplug B data source configuration</a>.</p>
 </article>
           </div>
           
@@ -102,7 +105,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/pi-adapter-for-mqtt-overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/diagnostics/diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -128,8 +131,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>
