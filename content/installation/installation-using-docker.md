@@ -6,7 +6,11 @@ uid: InstallPIAdapterForMQTTUsingDocker
 
 Docker is a set of tools that you can use on Linux to manage application deployments.
 
-**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the MQTT adapter. Docker is not required to use  the MQTT adapter.
+**Note:**<br>
+
+- If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the MQTT adapter. Docker is not required to use  the MQTT adapter.
+- Running adapters in Docker containers on Windows is not supported.
+
 
 This topic provides examples of how to create a Docker container with the MQTT adapter.
 
@@ -60,7 +64,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	**ARM32**
 
 	```bash
-	FROM ubuntu
+	FROM ubuntu:20.04
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY mqttdockerstart.sh /
@@ -71,7 +75,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	**ARM64**
 
 	```bash
-	FROM ubuntu
+	FROM ubuntu:20.04
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
@@ -83,7 +87,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	**AMD64 (x64)**
 
 	```bash
-	FROM ubuntu
+	FROM ubuntu:20.04
 	WORKDIR /
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
@@ -92,7 +96,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
-2. Copy the `MQTT_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `MQTT_linux-<platform>.tar.gz` file to the same directory as the `Dockerfile`.
 
 3. Copy the `mqttdockerstart.sh` script to the same directory as the `Dockerfile`.
 
