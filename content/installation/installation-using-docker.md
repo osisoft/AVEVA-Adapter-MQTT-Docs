@@ -11,7 +11,6 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 - If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the MQTT adapter. Docker is not required to use  the MQTT adapter.
 - Running adapters in Docker containers on Windows is not supported.
 
-
 This topic provides examples of how to create a Docker container with the MQTT adapter.
 
 ## Create a startup script for the adapter
