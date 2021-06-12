@@ -52,17 +52,17 @@ The following parameters are available for configuring MQTT client settings:
 
 | Parameter     | Required | Type | Description |
 |---------------|----------|------|-------------|
-| **KeepAlivePeriod** | Optional | `string`<br>(timespan)          | The maximum time that can elapse between sending two data items. <br><br> Allowed value: >= `0:00:05` (5 seconds)<br>Default value: ``
-| **QosLevel** | Optional |  `integer`<br><br>or<br><br>`enum`              | Defines the guarantee of delivery for a specific item.<br><br> Allowed value:<br>`0` or `AtMostOnce`: There is no guarantee of item delivery <br>`1` or `AtLeastOnce`: An item is delivered at least one time<br>`2` or `ExactlyOnce`: Each item is received only one time.<br>Default value: `` 
-| **MaxInternalQueueSize**      | Optional | `integer` | Maximum number of items that can be in the adapter internal queue. <br><br>Allowed value: >= `250`<br>Default value: `` |
+| **KeepAlivePeriod** | Optional | `string`<br>(timespan)          | The maximum time that can elapse between sending two data items. <br><br> Allowed value: >= `00:00:05` (5 seconds)<br>Default value: `00:00:30` (30 seconds)
+| **QosLevel** | Optional |  `integer`<br><br>or<br><br>`enum`              | Defines the guarantee of delivery for a specific item.<br><br> Allowed value:<br>`0` or `AtMostOnce`: There is no guarantee of item delivery <br>`1` or `AtLeastOnce`: An item is delivered at least one time<br>`2` or `ExactlyOnce`: Each item is received only one time.<br>Default value: `2` 
+| **MaxClientQueueSize**      | Optional | `integer` | Maximum number of items that can be in the adapter internal queue. <br><br>Allowed value: >= `250`<br>Default value: `1000` |
 
 ## MQTT client settings example
 
 ```json
 {
-    "keepAlivePeriod": "0:00:35",
-    "qosLevel": "AtLeastOnce",
-    "maxInternalQueueSize": 1000
+    "keepAlivePeriod": "0:00:30",
+    "qosLevel": 2,
+    "maxClientQueueSize": 1000
 }
 ```
 
