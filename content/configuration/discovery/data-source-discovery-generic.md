@@ -14,22 +14,19 @@ The string of the **query** parameter must contain string items in the following
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
-| **Topics**       | Required |  The topics that the adapter will subscribe to when the discovery is posted.<br>**Note:** If you want to specify multiple topics in the query, you must separate the topic names with a comma.  |
-| **WaitTime**     | Optional |  The time that the adapter will wait to receive data for the specified topics. Once the wait time has passed, the discovery results will be available.<br><br>Minimum value: `00:00:00:30` (30 seconds)<br>Maximum value: `07:00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `00:00:05:00` (5 minutes) will be applied.          |
-
-<!-- I was not quite sure how you would specify 7 days. Are above values accepted? -->
-
-<!-- Let me know if the query rules and wildcards below apply -->
+| **Topics**       | Optional |  The topics that the adapter will subscribe to when the discovery is posted.<br>**Note:** If you want to specify multiple topics in the query, you must separate the topic names with a comma. If you do not specify a topic, the adapter will subscribe to all topics. |
+| **WaitTime**     | Optional |  The time that the adapter will wait to receive data for the specified topics. Once the wait time has passed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.          |
 
 ### Query rules
 
 The following rules apply for specifying the query string:
 
-- Multiple queries are separated by a semicolon (`;`).
+- Only one query at a time is supported. That query can contain as many topics with the same wait time as needed. If you need different wait times for different topics, you need to create a new query once the query from the previous discovery has completed.
 - Partial queries are terminated by a multi-level wildcard (`#`).
 - A query cannot be terminated by a trailing slash (`/`).
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
+- White spaces are supported.
 
 **Note:** The data source might contain tens of thousands of metrics. Use the `#` judiciously and narrow down the query string to something specific or break down the query into different discoveries.
 
@@ -74,5 +71,34 @@ The query parameter of the generic MQTT component must be specified in the follo
 	    "status": "Complete",
 	    "errors": null
 	}
+]
+```
+
+### MQTT discovered selection items
+
+```json
+[
+    {
+        "Topic": "Sample1",
+        "ValueField": "$.Value4",
+        "TimeField": null,
+        "DataType": "Single",
+        "TimeFormat": "Adapter",
+        "Selected": false,
+        "Name": null,
+        "StreamId": "Sample1.$.Value4",
+        "DataFilterId": null
+    },
+    {
+        "Topic": "Sample2",
+        "ValueField": "$.Value1",
+        "TimeField": null,
+        "DataType": "Single",
+        "TimeFormat": "Adapter",
+        "Selected": false,
+        "Name": null,
+        "StreamId": "Sample1.$.Value1",
+        "DataFilterId": null
+    }
 ]
 ```
