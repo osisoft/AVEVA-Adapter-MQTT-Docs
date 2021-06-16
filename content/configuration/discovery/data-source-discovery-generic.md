@@ -8,7 +8,7 @@ A discovery against the data source of a generic MQTT adapter allows you to spec
 
 **Note:** Only one discovery at a time is supported.
 
-## Sparkplug B query string
+## Generic query string
 
 The string of the **query** parameter must contain string items in the following form: <br>`Topics=<TopicName>;WaitTime=<WaitTime`<br><br>
 
@@ -45,7 +45,7 @@ Wildcards are allowed in the query with the following specifications:
 
 ## Discovery query example
 
-The query parameter of the MQTT Sparkplug B component must be specified in the following form:
+The query parameter of the generic MQTT component must be specified in the following form:
 `Topics=<TopicName>;WaitTime=<WaitTime`.
 
 ### Generic data source discovery initiation
