@@ -21,6 +21,7 @@
   - topicUid: DiscoveryConfiguration
     items:
     - topicUid: SparkplugBDataSourceDiscovery
+    - topicUid: GenericDataSourceDiscovery
   - topicUid: PIAdapterForMQTTDataSelectionConfiguration
   - topicUid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
   - topicUid: DataFiltersConfiguration
