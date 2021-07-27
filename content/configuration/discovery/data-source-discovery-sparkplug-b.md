@@ -8,14 +8,13 @@ A discovery against the data source of an MQTT Sparkplug B adapter allows you to
 
 ## Sparkplug B query string
 
-The string of the **query** parameter must contain string items in the following form: <br>`Topics=<Group_Id>/<Edge_Node_Id>/[<Device_Id>];WaitTime=<WaitTime>`<br><br>
+The string of the **query** parameter must contain string items in the following form: <br>`<Group_Id>/<Edge_Node_Id>/[<Device_Id>]`<br><br>
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
-| **Group_Id**     | Optional | This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.|
-| **Edge_Node_Id** | Optional | This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.<br>**Group_Id** combined with **Edge_Node_Id** must be unique from any other **Group_Id**/**Edge_Node_Id** assigned in the MQTT infrastructure.|
-| **Device_Id**    | Optional | This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically).|
-| **WaitTime**     | Optional |  The time that the adapter will wait to receive data for the specified topics. Once the wait time has passed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.<br>When you specify **WaitTime** with a numeric value, for example `WaitTime=45`, the adapter interprets the value as seconds instead of time span.          |
+| **Group_Id**     | Optional | This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.
+| **Edge_Node_Id** | Optional | This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.<br>**Group_Id** combined with **Edge_Node_Id** must be unique from any other **Group_Id**/**Edge_Node_Id** assigned in the MQTT infrastructure.
+| **Device_Id**    | Optional | This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically).
 
 ### Query rules
 
@@ -49,7 +48,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 ```json
 {
 	"id" : "40",
-	"query" : "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30"
+	"query" : "group1/edge2"
 }
 ```
 
@@ -59,7 +58,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 [
     {
 	    "id": "40",
-	    "query": "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30",
+	    "query": "group1/edge2",
 	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
 	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
 	    "progress": 30,
