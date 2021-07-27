@@ -30,19 +30,17 @@ The following table lists MQTT variable types that the adapter collects data fro
 
 | MQTT data type | Stream data type |
 |------------------|------------------|
-| Byte             | Int16            |
-| SByte            | Int16            |
 | Int16            | Int16            |
 | Int32            | Int32            |
 | Int64            | Int64            |
 | UInt16           | UInt16           |
 | UInt32           | UInt32           |
 | UInt64           | UInt64           |
-| Float            | Float32          |
-| Double           | Float64          |
+| Float32          | Float32          |
+| Float64          | Float64          |
 | Boolean          | Boolean          |
 | String           | String           |
-| DateTime         | DateTime         |
+| Date-Time        | Date-Time        |
 
 The following table lists MQTT complex types that the adapter collects data from and the type of streams that will be created.
 
