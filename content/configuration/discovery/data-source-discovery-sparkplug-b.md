@@ -4,7 +4,7 @@ uid: SparkplugBDataSourceDiscovery
 
 # Data source discovery (Sparkplug B)
 
-A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional **query** parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection. “Query”: “Topics=group1/edgeNode1,group2/edgeNode2; WaitTime=00:00:30” 
+A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional **query** parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.
 
 ## Sparkplug B query string
 
