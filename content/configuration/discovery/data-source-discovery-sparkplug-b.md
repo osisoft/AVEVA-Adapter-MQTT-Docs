@@ -4,11 +4,11 @@ uid: SparkplugBDataSourceDiscovery
 
 # Data source discovery (Sparkplug B)
 
-A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional **query** parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.
+A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional **query** parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection. “Query”: “Topics=group1/edgeNode1,group2/edgeNode2; WaitTime=00:00:30” 
 
 ## Sparkplug B query string
 
-The string of the **query** parameter must contain string items in the following form: <br>`<Group_Id>/<Edge_Node_Id>/[<Device_Id>];WaitTime=<WaitTime>`<br><br>
+The string of the **query** parameter must contain string items in the following form: <br>`Topics=<Group_Id>/<Edge_Node_Id>/[<Device_Id>];WaitTime=<WaitTime>`<br><br>
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
@@ -49,7 +49,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 ```json
 {
 	"id" : "40",
-	"query" : "group1/edge2"
+	"query" : "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30"
 }
 ```
 
@@ -59,7 +59,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 [
     {
 	    "id": "40",
-	    "query": "group1/edge2",
+	    "query": "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30",
 	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
 	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
 	    "progress": 30,
