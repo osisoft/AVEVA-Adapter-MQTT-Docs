@@ -46,8 +46,8 @@ The following table lists MQTT variable types that the adapter collects data fro
 
 The following table lists MQTT complex types that the adapter collects data from and the type of streams that will be created.
 
-| Geolocation      | Float            |
-| Coordinates      | Float            |
+| Geolocation      | Float32            |
+| Coordinates      | Float32            |
 
 #### MQTT Sparkplug B data types
 

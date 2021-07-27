@@ -31,7 +31,7 @@ Complete the following steps to configure an MQTT data selection. Use the `PUT` 
     ```
 
     **Notes:**
-  
+
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `MQTT1`, update the endpoint with your chosen component ID.
     * For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see [REST URLs](#rest-urls).
@@ -58,7 +58,7 @@ The full schema definition for the MQTT data selection configuration is in the `
 | **IndexField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<sup>2</sup><br><br>Allowed value: Any valid JsonPath expression      |
 | **IndexFormat**   | Optional | `string`  | The time format of the timestamp value specified in the IndexField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>2</sup><br><br>**Note:** If the string cannot be parsed, specify a custom DateTime string or one of the following keywords: `Adapter`, `UnixTimeSeconds`, `UnixTimeMilliseconds`<br>Default value: `null`            |  
 | **DataType**     | Required | `string`  |  The expected data type of the values for the specified field <br><br>Allowed value: See [PI Adapter for MQTT principles of operation](xref:PIAdapterForMQTTPrinciplesOfOperation#data-types)|
-| **DataFields** | Required | `string` | A dictionary of values with key-value pairs. The keys are specific fields for a complex type and the values are the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <br><br>Allowed values: `Latitude`, `Longitude`, `x`, `y`, `z`<br>Default value: `null`
+| **DataFields** | Required | `dictionary<string, string>` | A dictionary of values with key-value pairs. The keys are specific fields for a complex type and the values are the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <br><br>Allowed keys: `Latitude`, `Longitude`, `x`, `y`, `z`<br>Default value: `null`
 
 <sup>1</sup> **ValueField** and **DataFields** are mutually exclusive. For example, if you specify **ValueField**, you cannot specify **DataFields** and vice versa.
 
