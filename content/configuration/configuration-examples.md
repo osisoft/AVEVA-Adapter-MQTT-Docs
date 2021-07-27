@@ -58,9 +58,9 @@ The following tables provide examples for all configurations available for PI Ad
                 "DataFilterId" : null,
                 "Topic" : "RandomTopic",
                 "ValueField" : "$.TestNode[:1].Value",
-                "TimeField" : "$.TestNode[:1].Time",
+                "IndexField" : "$.TestNode[:1].Time",
                 "DataType" : "uint64",
-                "TimeFormat" : null
+                "IndexFormat" : null
             }
         ]
     },
@@ -216,9 +216,9 @@ The following are representations of minimal and complete data selection configu
     "DataFilterId" : null,
     "Topic" : "RandomTopic",
     "ValueField" : "$.TestNode[:1].Value",
-    "TimeField" : "$.TestNode[:1].Time",
+    "IndexField" : "$.TestNode[:1].Time",
     "DataType" : "uint64",
-    "TimeFormat" : null
+    "IndexFormat" : null
   }
 ]
 ```

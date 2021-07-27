@@ -44,6 +44,11 @@ The following table lists MQTT variable types that the adapter collects data fro
 | String           | String           |
 | DateTime         | DateTime         |
 
+The following table lists MQTT complex types that the adapter collects data from and the type of streams that will be created.
+
+| Geolocation      | Float            |
+| Coordinates      | Float            |
+
 #### MQTT Sparkplug B data types
 
 The following table lists MQTT Sparkplug B variable types that the adapter collects data from and the types of streams that will be created.
@@ -90,7 +95,7 @@ Metadata specific to the MQTT generic component are:
 
 - `None`: No metadata
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
-- `Medium`: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField
+- `Medium`: AdapterType (ComponentType), DataSource (ComponentId), Topic, and ValueField or DataFields
 
 Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:
 
