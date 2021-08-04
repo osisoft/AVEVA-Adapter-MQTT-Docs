@@ -10,12 +10,12 @@ A discovery against the data source of a generic MQTT adapter allows you to spec
 
 ## Generic query string
 
-The string of the **query** parameter must contain string items in the following form: <br>`Topics=<TopicName>;WaitTime=<WaitTime`<br><br>
+The string of the **query** parameter must contain string items in the following form: <br>`Topics=<TopicName>;WaitTime=<WaitTime>`<br><br>
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
 | **Topics**       | Optional |  The topics that the adapter will subscribe to when the discovery is posted.<br>**Note:** If you want to specify multiple topics in the query, you must separate the topic names with a comma. If you do not specify a topic, the adapter will subscribe to all topics. |
-| **WaitTime**     | Optional |  The time that the adapter will wait to receive data for the specified topics. Once the wait time has passed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.          |
+| **WaitTime**     | Optional |  The time window in which the adapter will perform the discovery by listening for specified topics. Once the wait time has elapsed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.<br>When you specify **WaitTime** with a numeric value, for example `WaitTime=45`, the adapter interprets the value as seconds instead of time span.          |
 
 ### Query rules
 
