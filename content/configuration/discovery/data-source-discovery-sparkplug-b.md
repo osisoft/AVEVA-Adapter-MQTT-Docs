@@ -49,7 +49,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 ```json
 {
 	"id" : "40",
-	"query" : "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30"
+	"query" : "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30"
 }
 ```
 
@@ -59,7 +59,7 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 [
     {
 	    "id": "40",
-	    "query": "topics=group1/edgeNode1,group2/edgeNode2; waitTime=00:00:30",
+	    "query": "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30",
 	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
 	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
 	    "progress": 30,
