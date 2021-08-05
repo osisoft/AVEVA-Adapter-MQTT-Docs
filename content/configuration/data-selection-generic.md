@@ -66,10 +66,10 @@ The full schema definition for the MQTT data selection configuration is in the `
 
 ### CSV export/import with complex types
 
-[EdgeCmd utility](https://docs.osisoft.com/bundle/edgecmd/page/index.html) supports the export and import of data selection with complex types, such as Geolocation and Coordinates. The contents of the data selection are written to a CSV file where the complex data are all in one line. For example, the following command writes the data selection contents to a CSV file:
+[EdgeCmd utility](https://docs.osisoft.com/bundle/edgecmd/page/index.html) supports the export and import of data selection with complex types, such as Geolocation and Coordinates. For example, the following command writes the data selection contents to a CSV file:
 
 ```cmd
-edgecmd get DataSelection -cid MQTT1  -file <fileName>.csv -csv
+edgecmd get DataSelection -cid MQTT1 -file <fileName>.csv -csv
 ```
 
 After the CSV file is created, you can use `type <fileName>.csv` to display the contents of the file. The output will look similar to the following example in which the keywords are in the first line and the values, including complex types, are in the second line:
