@@ -75,8 +75,8 @@ edgecmd get DataSelection -cid MQTT1 -file <fileName>.csv -csv
 After the CSV file is created, you can use `type <fileName>.csv` to display the contents of the file. The output will look similar to the following example in which the keywords are in the first line and the values, including complex types, are in the second line:
 
 ```cmd
-generatorId,enumId,scheduleId,valueField,someComplexField,selected,name,streamId,dataFilterId
-Random1,,Schedule2,$['DoubleValue'],"{""x1"":""$[x1Value]"",""y1"":""$[y1Value]"",""z1"":""$[z1Value]""}",True,Random1,RandomStreamId1,RandomDataFilterId1
+topic,valueField,dataFields,indexField,dataType,indexFormat,selected,name,streamId,dataFilterId
+mqtt/Boilers/Boiler1,,"{""X"":"".xValue]"",""Y"":""$.yValue"",""Z"":""$.zValue""}",$['Timestamp'],Coordinates,,True,,mqtt/Boilers/Boiler1.$.xValue.$.yValue.$.zValue,
 ```
 
 ## Runtime changes
