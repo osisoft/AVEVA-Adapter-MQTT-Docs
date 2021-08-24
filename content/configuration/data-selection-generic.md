@@ -96,7 +96,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
   {
     "Topic" : "RandomTopic",
     "ValueField" : "$.TestNode[:1].Value",
-    "DataType" : "uint64",
+    "DataType" : "uint64"
   }
 ]
 ```
