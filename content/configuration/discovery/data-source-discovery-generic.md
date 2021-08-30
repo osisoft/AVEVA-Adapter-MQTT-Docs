@@ -39,6 +39,27 @@ Wildcards are allowed in the query with the following specifications:
 - Wildcards can be combined.
 - `#` must not be used more than once and can only be used at the end of the topic.
 - No query, an empty string, or `null` as the query parameter is equivalent to `#`.
+ 
+#### Special characters
+
+Special characters used in the **StreamId** parameter of data selection are automatically replaced as follows:
+
+Special character | Replacement character |
+---------|----------|
+ `*` |  |
+ `'` |  |
+`` ` `` | |
+`"` | |
+ `?` |  |
+`;` | `-`|
+`{` | `(`|
+`}` | `)` |
+`[` | `(`|
+`]` | `)` |
+`|` | `-` |
+`\` | `-` |
+
+For more information, see also [Data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration#mqtt-data-selection-parameters).
 
 ## Discovery query example
 
@@ -83,7 +104,7 @@ The query parameter of the generic MQTT component must be specified in the follo
         "ValueField": "$.Value4",
         "IndexField": null,
         "DataType": "Single",
-        "IndexFormat": "Adapter",
+        "IndexFormat": "null",
         "Selected": false,
         "Name": null,
         "StreamId": "Sample1.$.Value4",
@@ -94,7 +115,7 @@ The query parameter of the generic MQTT component must be specified in the follo
         "ValueField": "$.Value1",
         "IndexField": null,
         "DataType": "Single",
-        "IndexFormat": "Adapter",
+        "IndexFormat": "null",
         "Selected": false,
         "Name": null,
         "StreamId": "Sample1.$.Value1",
