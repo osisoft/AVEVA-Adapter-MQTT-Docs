@@ -39,25 +39,25 @@ Wildcards are allowed in the query with the following specifications:
 - Wildcards can be combined.
 - `#` must not be used more than once and can only be used at the end of the topic.
 - No query, an empty string, or `null` as the query parameter is equivalent to `#`.
- 
-#### Special characters
 
-Special characters used in the **StreamId** parameter of data selection are automatically replaced as follows:
+#### Special characters encoding
 
-Special character | Replacement character |
----------|----------|
- `*` | empty string |
- `\'` | empty string |
-`` ` `` | empty string |
-`"` | empty string |
- `?` | empty string |
-`;` | `-`|
-`\|` | `-` |
-`\\` | `-` |
-`{` | `(`|
-`}` | `)` |
-`[` | `(`|
-`]` | `)` |
+The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The encoded characters look as follows:
+
+| Special character | Encoded character |
+|-------------------|-----------------------|
+| `*`               | `%2a`                 |
+| `'`              | `%27`                 |
+| `` ` ``           | `%60`                 |
+| `"`               | `%22`                 |
+| `?`               | `%3f`                 |
+| `;`               | `%3b`                 |
+| `\|`               | `%7c`                 |
+| `\`              | `%5c`                 |
+| `{`               | `%7b`                 |
+| `}`               | `%7d`                 |
+| `[`               | `%5b`                 |
+| `]`               | `%5d`                 |
 
 For more information, see also [Data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration#mqtt-data-selection-parameters).
 
