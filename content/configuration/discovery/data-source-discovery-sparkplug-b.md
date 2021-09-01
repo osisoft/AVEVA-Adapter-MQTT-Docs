@@ -39,6 +39,27 @@ Wildcards are allowed in the query with the following specifications:
 - `#` must not be used more than once and can only be used at the end of the topic.
 - No query, an empty string, or `null` as the query parameter is equivalent to `#`.
 
+#### Special characters encoding
+
+The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The encoded characters look as follows:
+
+| Special character | Encoded character |
+|-------------------|-----------------------|
+| `*`               | `%2a`                 |
+| `'`              | `%27`                 |
+| `` ` ``           | `%60`                 |
+| `"`               | `%22`                 |
+| `?`               | `%3f`                 |
+| `;`               | `%3b`                 |
+| `\|`               | `%7c`                 |
+| `\`              | `%5c`                 |
+| `{`               | `%7b`                 |
+| `}`               | `%7d`                 |
+| `[`               | `%5b`                 |
+| `]`               | `%5d`                 |
+
+For more information, see also [Data selection (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration#mqtt-sparkplug-b-data-selection-parameters).
+
 ## Discovery query example
 
 The query parameter of the MQTT Sparkplug B component must be specified in the following form:
