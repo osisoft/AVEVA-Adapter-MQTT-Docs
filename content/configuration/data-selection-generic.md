@@ -65,19 +65,19 @@ The full schema definition for the MQTT data selection configuration is in the `
 Special characters are automatically replaced as follows:
 
 Special character | Replacement character |
------|-----|
- `*` |  |
- `'` |  |
-`` ` `` | |
-`"` | |
- `?` |  |
+---------|----------|
+ `*` | empty string |
+ `\'` | empty string |
+`` ` `` | empty string |
+`"` | empty string |
+ `?` | empty string |
 `;` | `-`|
+`|` | `-` |
+`\\` | `-` |
 `{` | `(`|
 `}` | `)` |
 `[` | `(`|
 `]` | `)` |
-`|` | `-` |
-`\` | `-` |
 
 ### <sup>2</sup>
 

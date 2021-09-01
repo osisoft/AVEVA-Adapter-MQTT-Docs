@@ -46,18 +46,18 @@ Special characters used in the **StreamId** parameter of data selection are auto
 
 Special character | Replacement character |
 ---------|----------|
- `*` |  |
- `'` |  |
-`` ` `` | |
-`"` | |
- `?` |  |
+ `*` | empty string |
+ `\'` | empty string |
+`` ` `` | empty string |
+`"` | empty string |
+ `?` | empty string |
 `;` | `-`|
+`|` | `-` |
+`\\` | `-` |
 `{` | `(`|
 `}` | `)` |
 `[` | `(`|
 `]` | `)` |
-`|` | `-` |
-`\` | `-` |
 
 For more information, see also [Data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration#mqtt-data-selection-parameters).
 
