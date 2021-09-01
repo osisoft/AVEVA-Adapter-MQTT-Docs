@@ -72,7 +72,7 @@ Special character | Replacement character |
 `"` | empty string |
  `?` | empty string |
 `;` | `-`|
-`|` | `-` |
+`\|` | `-` |
 `\\` | `-` |
 `{` | `(`|
 `}` | `)` |
