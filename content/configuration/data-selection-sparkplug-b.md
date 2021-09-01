@@ -46,8 +46,27 @@ Complete the following steps to configure an MQTT Sparkplug B data selection. Us
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source <br><br>Allowed value: Any string <br>Default value: `null`  |
 | **Topic** | Required | `string` | The MQTT topic string in the following format: `{namespace}/{groupId}/{messageType}/{edgeNodeId}/{deviceId}`<br><br>The following rules apply to the MQTT topic string:<br>1. Both the topic string as a whole and the individual components are case-sensitive<br>2. `{namespace}` must be `spBv1.0` (case-sensitive)<br>3. `{groupId}` must be non-blank and can contain any character except for `+` and `#`<br>4. `{messageType}` must be either `DDATA` or `NDATA` (uppercase) <br>**Note:** When `NDATA` is specified, `{deviceId}` must not be specified <br>5. `edgeNodeId` must be non-blank and can contain any character except for `+` and `#`<br>6. `{deviceId}` must be non-blank and can contain any character except for `+` and `#`<br><br>**Examples**:<br>`spBv1.0/DemoCenters/DDATA/EPIC-DC004/DC004`<br>`spBv1.0/DemoCenters/NDATA/EPIC-DC004` | 
 | **MetricName** | Required | `string` | The name of the property in the metric <br><br>Allowed value: Cannot be `null`, empty, or whitespace. 
-| **StreamId** | Optional | `string` | The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the measurement configuration. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (`/`)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (`__`)<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement.
+| **StreamId** | Optional | `string` | The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the measurement configuration. A properly configured custom stream Id follows these rules: <sup>1</sup><br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (`/`)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (`__`)<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement.
 | **DataFilterId** | Optional | `string` | The Id of the data filter <br><br>Allowed value: Any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created.| 
+
+### <sup>1</sup> Special characters encoding
+
+The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The encoded characters look as follows:
+
+| Special character | Encoded character |
+|-------------------|-----------------------|
+| `*`               | `%2a`                 |
+| `'`              | `%27`                 |
+| `` ` ``           | `%60`                 |
+| `"`               | `%22`                 |
+| `?`               | `%3f`                 |
+| `;`               | `%3b`                 |
+| `\|`               | `%7c`                 |
+| `\`              | `%5c`                 |
+| `{`               | `%7b`                 |
+| `}`               | `%7d`                 |
+| `[`               | `%5b`                 |
+| `]`               | `%5d`                 |
 
 ## Runtime changes
 
