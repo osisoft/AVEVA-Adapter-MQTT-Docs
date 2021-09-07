@@ -60,13 +60,9 @@ The full schema definition for the MQTT data selection configuration is in the `
 | **DataType**     | Required | `string`  |  The expected data type of the values for the specified field.<br><br>Input MQTT data types are `Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Float32`, `Float64`, `Boolean`, `String`, `Date-Time`.<br><br>Input MQTT complex data types are `Geolocation` and `Coordinates`.<br><br>For more information, see also [Principles of operation](xref:PIAdapterForMQTTPrinciplesOfOperation#data-types).|
 | **DataFields** | Required | `dictionary<string, string>` | A dictionary of values with key-value pairs. The keys are specific fields for a complex type and the values are the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <sup>1</sup> <br><br>Allowed keys: `Latitude`, `Longitude`, `x`, `y`, `z`<br>Default value: `null`
 
-### <sup>1</sup>
+<sup>1</sup> **ValueField** and **DataFields** are mutually exclusive. For example, if you specify **ValueField**, you cannot specify **DataFields** and vice versa.
 
-**ValueField** and **DataFields** are mutually exclusive. For example, if you specify **ValueField**, you cannot specify **DataFields** and vice versa.
-
-### <sup>2</sup> 
-
-If you do not specify **IndexField** and **IndexFormat**, the adapter automatically sets the latter to `Adapter`, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify **IndexFormat** only with a value other than `Adapter`, the validation fails and the adapter throws an error.
+<sup>2</sup> If you do not specify **IndexField** and **IndexFormat**, the adapter automatically sets the latter to `Adapter`, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify **IndexFormat** only with a value other than `Adapter`, the validation fails and the adapter throws an error.
 
 ### CSV export/import with complex types
 
