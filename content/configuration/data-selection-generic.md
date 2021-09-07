@@ -51,39 +51,20 @@ The full schema definition for the MQTT data selection configuration is in the `
 |------------------|----------|-----------|-------------|
 | **Selected**     | Optional | `boolean` |  Selects or clears a measurement. To select an item, set the field to `true`. To remove an item, leave the field empty or set the value to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`           |
 | **Name**         | Optional | `string`  | The optional friendly name of the data item collected from the data source. <br><br>Allowed value: Any string<br>Default value: `null`            |
-| **StreamId**     | Optional | `string`  |  The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream Id follows these rules: <sup>1</sup><br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (`/`)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (`__`)<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br><br>The default Id automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`.           |
+| **StreamId**     | Optional | `string`  |  The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the DataSource parameter. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration#mqtt-data-source-parameters). A properly configured custom stream Id follows these rules: <br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (`/`)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (`__`)<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br><br>The default Id automatically updates when there are changes to the measurement and follows the format of `<Topic>.<MetricName>`.<br><br>For more information on how the adapter encodes special characters in the **StreamId**, see [Egress endpoints](xref:EgressEndpointsConfiguration#special-characters-encoding).           |
 | **DataFilterId** | Optional  | `string`  | The Id of the data filter. <br><br>Allowed value: Any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created.   |
 | **Topic**        | Required | `string`  |  The MQTT topic string.<br><br>Allowed value: Cannot be `null`, empty, or whitespace.        |
-| **ValueField**   | Required | `string`  |  The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <sup>2</sup><br><br>Allowed value: Cannot be `null`, empty, or whitespace.          |
-| **IndexField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <sup>3</sup> <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<br><br>Allowed value: Any valid JsonPath expression      |
-| **IndexFormat**   | Optional | `string`  | The time format of the timestamp value specified in the IndexField property. <sup>3</sup><br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<br><br>**Note:** If the string cannot be parsed, specify a custom DateTime string or one of the following keywords: `Adapter`, `UnixTimeSeconds`, `UnixTimeMilliseconds`<br>Default value: `null`            |  
+| **ValueField**   | Required | `string`  |  The JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <sup>1</sup><br><br>Allowed value: Cannot be `null`, empty, or whitespace.          |
+| **IndexField**    | Optional | `string`  | The JsonPath expression to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`. <sup>2</sup> <br><br>**Note:** The adapter generates a timestamp when `null` is specified.<br><br>Allowed value: Any valid JsonPath expression      |
+| **IndexFormat**   | Optional | `string`  | The time format of the timestamp value specified in the IndexField property. <sup>2</sup><br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<br><br>**Note:** If the string cannot be parsed, specify a custom DateTime string or one of the following keywords: `Adapter`, `UnixTimeSeconds`, `UnixTimeMilliseconds`<br>Default value: `null`            |  
 | **DataType**     | Required | `string`  |  The expected data type of the values for the specified field.<br><br>Input MQTT data types are `Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Float32`, `Float64`, `Boolean`, `String`, `Date-Time`.<br><br>Input MQTT complex data types are `Geolocation` and `Coordinates`.<br><br>For more information, see also [Principles of operation](xref:PIAdapterForMQTTPrinciplesOfOperation#data-types).|
-| **DataFields** | Required | `dictionary<string, string>` | A dictionary of values with key-value pairs. The keys are specific fields for a complex type and the values are the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <sup>2</sup> <br><br>Allowed keys: `Latitude`, `Longitude`, `x`, `y`, `z`<br>Default value: `null`
+| **DataFields** | Required | `dictionary<string, string>` | A dictionary of values with key-value pairs. The keys are specific fields for a complex type and the values are the JsonPath expression used to extract the data value from a property within the payload supplied by the MQTT server. A valid JsonPath expression starts with `$`. <sup>1</sup> <br><br>Allowed keys: `Latitude`, `Longitude`, `x`, `y`, `z`<br>Default value: `null`
 
-### <sup>1</sup> Special characters encoding
-
-The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The encoded characters look as follows:
-
-| Special character | Encoded character |
-|-------------------|-----------------------|
-| `*`               | `%2a`                 |
-| `'`              | `%27`                 |
-| `` ` ``           | `%60`                 |
-| `"`               | `%22`                 |
-| `?`               | `%3f`                 |
-| `;`               | `%3b`                 |
-| `\|`               | `%7c`                 |
-| `\`              | `%5c`                 |
-| `{`               | `%7b`                 |
-| `}`               | `%7d`                 |
-| `[`               | `%5b`                 |
-| `]`               | `%5d`                 |
-
-### <sup>2</sup>
+### <sup>1</sup>
 
 **ValueField** and **DataFields** are mutually exclusive. For example, if you specify **ValueField**, you cannot specify **DataFields** and vice versa.
 
-### <sup>3</sup> 
+### <sup>2</sup> 
 
 If you do not specify **IndexField** and **IndexFormat**, the adapter automatically sets the latter to `Adapter`, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify **IndexFormat** only with a value other than `Adapter`, the validation fails and the adapter throws an error.
 
