@@ -27,8 +27,9 @@ The following rules apply for specifying the query string:
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
 - White spaces are supported.
+- Special characters are replaced by the text parser. For more information, see [Text parser](xref:TextParser#special-characters-support)
 
-**Note:** The data source might contain tens of thousands of metrics. Use the `#` judiciously and narrow down the query string to something specific or break down the query into different discoveries.
+**Note:** The data source might contain large amounts of metrics. Use the `#` judiciously and narrow down the query string to something specific or break down the query into different discoveries.
 
 #### Wildcards
 
@@ -83,7 +84,7 @@ The query parameter of the generic MQTT component must be specified in the follo
         "ValueField": "$.Value4",
         "IndexField": null,
         "DataType": "Single",
-        "IndexFormat": "Adapter",
+        "IndexFormat": "null",
         "Selected": false,
         "Name": null,
         "StreamId": "Sample1.$.Value4",
@@ -94,7 +95,7 @@ The query parameter of the generic MQTT component must be specified in the follo
         "ValueField": "$.Value1",
         "IndexField": null,
         "DataType": "Single",
-        "IndexFormat": "Adapter",
+        "IndexFormat": "null",
         "Selected": false,
         "Name": null,
         "StreamId": "Sample1.$.Value1",

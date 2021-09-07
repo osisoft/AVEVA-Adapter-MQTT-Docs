@@ -24,6 +24,8 @@ The adapter collects time-series data from the MQTT server using Topics. The gen
 
 ### Data types
 
+The following sections list both MQTT generic and MQTT Sparkplug B data types and their respective stream data types.
+
 #### MQTT data types
 
 The following table lists MQTT variable types that the adapter collects data from and the types of streams that will be created.

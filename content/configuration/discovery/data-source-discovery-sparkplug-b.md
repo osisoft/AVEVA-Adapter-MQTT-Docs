@@ -27,7 +27,7 @@ The following rules apply for specifying the query string:
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
 
-**Note:** The data source might contain tens of thousands of metrics. Use the `#` judiciously and narrow down the query string to something specific or break down the query into different discoveries.
+**Note:** The data source might contain large amounts of metrics. Use the `#` judiciously and narrow down the query string to something specific or break down the query into different discoveries.
 
 #### Wildcards
 
