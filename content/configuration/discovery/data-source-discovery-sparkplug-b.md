@@ -8,7 +8,8 @@ A discovery against the data source of an MQTT Sparkplug B adapter allows you to
 
 ## Sparkplug B query string
 
-The string of the **query** parameter must contain string items in the following form: <br>`Topics=<Group_Id>/<Edge_Node_Id>/[<Device_Id>];WaitTime=<WaitTime>`<br><br>
+The string of the **query** parameter must contain string items in the following form: <br>`Topics=Topic1,Topic2;WaitTime=<WaitTime>`<br><br>
+where the Sparkplug B topic structure is of the form <Group_Id>/<Edge_Node_Id>/[<Device_Id>]
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
@@ -21,8 +22,7 @@ The string of the **query** parameter must contain string items in the following
 
 The following rules apply for specifying the query string:
 
-- Multiple queries are separated by a semicolon (`;`).
-- Partial queries are terminated by a multi-level wildcard (`#`).
+- Multiple topics are separated by a semicolon (`,`).
 - A query cannot be terminated by a trailing slash (`/`).
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
