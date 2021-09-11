@@ -22,7 +22,7 @@ where the Sparkplug B topic structure is of the form <Group_Id>/<Edge_Node_Id>/[
 
 The following rules apply for specifying the query string:
 
-- Multiple topics are separated by a semicolon (`,`).
+- Multiple topics are separated by a comma (`,`).
 - A query cannot be terminated by a trailing slash (`/`).
 - A query cannot start with a leading slash (`/`) or `$`.
 - Topics are case sensitive.
