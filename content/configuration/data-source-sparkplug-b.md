@@ -56,7 +56,7 @@ The following parameters are available for configuring an MQTT data source:
 | Parameter                     | Required | Type      | Description |
 |-------------------------------|----------|-----------|-------------|
 | **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server  <br><br>Allowed value: Any valid WS or TCP/IP endpoint address |
-| **Port**                      | Required | `integer` |  Port number of the MQTT  server <br><br>Allowed value: Valid port range          |
+| **Port**                      | Optional | `integer` |  Port number of the MQTT  server. Required only if Protocol is TCP. <br><br>Allowed value: Valid port range or null <br> Default value: `null`  |
 | **PrimaryHostId** | Optional | `string` | The Id of the primary host. The adapter is considered the primary application. <br><br>Allowed value: Any string without the following characters: `+ # /`<br>Default value: `null`
 | **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
 | **TLS**                       | Optional | `enum`    |  Determines if TLS should be used and what version <br><br>Allowed value: None, `TLS`, `TLS11`, `TLS12`, `TLS13` <br> Default value: `TLS12`            |
