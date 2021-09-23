@@ -125,7 +125,7 @@ Metadata specific to the MQTT Sparkplug B component are:
 Each stream created for the selected measurement has a unique identifier (stream Id). If you specify a custom stream Id for the measurement in the data selection configuration, the adapter uses that stream Id to create the stream. Otherwise, the adapter constructs the stream Id using the following format:
 
 ```code
-<AdapterComponentId>.<Topic>.<MetricName>
+<AdapterComponentId>.<BaseTopic>.<MetricName>
 ```
 
 **Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
