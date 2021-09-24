@@ -53,7 +53,7 @@ Assume that this JSON was sent to MQTT Topic "Test":
 ```json
 [
   {
-    "Topic": "test",
+    "Topic": "Test",
     "ValueField": "$.[*].value",
     "DataFields": null,
     "IndexField": "$.[*].time",
@@ -144,7 +144,7 @@ Assume that this JSON was sent to MQTT Topic "Test":
 ```json
 [
   {
-    "Topic": "test",
+    "Topic": "Test",
     "ValueField": "$['StreamData'].['TPPrototype.uflsample.value_time'][*].Value",
     "DataFields": null,
     "IndexField": "$['StreamData'].['TPPrototype.uflsample.value_time'][*].Timestamp",
@@ -477,7 +477,7 @@ Assume that this JSON was sent to MQTT Topic "Test":
 ```json
 [
   {
-    "Topic": "test",
+    "Topic": "Test",
     "ValueField": "$.result.table.series[3].data[2]",
     "DataFields": null,
     "IndexField": null,
