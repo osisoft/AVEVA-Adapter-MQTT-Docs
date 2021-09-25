@@ -47,8 +47,7 @@ The following syntax is used to extract values from JSON documents.
 ]
 ```
 
-The following MQTT dataselection configuration reads a series of values:
-Assume that this JSON was sent to MQTT Topic "Test":
+The following MQTT data selection configuration reads a series of values. The configuration assumes that the JSON was sent to MQTT Topic `"Test"`:
 
 ```json
 [
@@ -138,8 +137,7 @@ The following example reads specific values from a JSON array:
 }
 ```
 
-The following MQTT dataselection configuration reads all the `TPPrototype.uflsample.value_time` values from the JSON above:
-Assume that this JSON was sent to MQTT Topic "Test":
+The following MQTT data selection configuration reads all the `TPPrototype.uflsample.value_time` values from the JSON above. The configuration assumes that the JSON was sent to MQTT Topic `"Test"`:
 
 ```json
 [
@@ -158,7 +156,7 @@ Assume that this JSON was sent to MQTT Topic "Test":
 ]
 ```
 
-The following example reads specific value from complex nested JSON:
+The following example reads specific values from a complex nested JSON:
 
 ```json
 {
@@ -471,8 +469,7 @@ The following example reads specific value from complex nested JSON:
 }
 ```
 
-The following MQTT dataselection configuration reads Sunday Average Indoor Temperature. The timestamp comes from Adapter local time.
-Assume that this JSON was sent to MQTT Topic "Test":
+The following MQTT data selection configuration reads `Sunday Average Indoor Temperature`. The timestamp is the Adapter local time. The configuration assumes that the JSON was sent to MQTT Topic `"Test"`:
 
 ```json
 [
@@ -503,4 +500,4 @@ Possible errors include the following:
 
 ## Additional help
 
-Using PI Adapter for MQTT's discovery feature can help you easily find collectible data without manually creating the data selection file. For imformation on discovery, see [Data source discovery generic](xref:GenericDataSourceDiscovery).
+PI Adapter for MQTT's discovery feature helps you find collectible data without manually creating the data selection file. For information on discovery, see [Data source discovery generic](xref:GenericDataSourceDiscovery).
