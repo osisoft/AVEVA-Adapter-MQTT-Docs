@@ -1,9 +1,9 @@
 - topicUid: index
   items: 
   - topicUid: PIAdapterForMQTTPrinciplesOfOperation
-  - topicUid: TextParser
+  - topicUid: TextParserMQTT
     items:
-    - topicUid: JSONPathSyntaxForValueRetrieval
+    - topicUid: JSONPathSyntaxForValueRetrievalMQTT
 - topicUid: Installation
   items:
   - topicUid: SystemRequirements
