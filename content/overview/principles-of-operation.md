@@ -111,6 +111,8 @@ Each stream created for the selected measurement has a unique identifier (stream
 
 Metadata specific to the MQTT Sparkplug B component are:
 
+<!-- MB 9/28/21: In the list below, we need to define the "EoN" acronym. -->
+
 - **Namespace**: Specifies the topic namespace
 - **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients
 - **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure
