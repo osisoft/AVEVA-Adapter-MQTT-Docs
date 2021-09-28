@@ -14,12 +14,12 @@ The string of the **query** parameter must contain string items in the following
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
-| **Topics**       | Optional |  The topics that the adapter will subscribe to when the discovery is posted.<br>**Note:** If you want to specify multiple topics in the query, you must separate the topic names with a comma. If you do not specify a topic, the adapter will subscribe to all topics. |
-| **WaitTime**     | Optional |  The time window in which the adapter will perform the discovery by listening for specified topics. Once the wait time has elapsed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.<br>When you specify **WaitTime** with a numeric value, for example `WaitTime=45`, the adapter interprets the value as seconds instead of time span.          |
+| **Topics**       | Optional |  The topics that the adapter subscribes to when the discovery posts.<br>**Note:** If you want to specify multiple topics in the query, you must separate the topic names with a comma. If you do not specify a topic, the adapter subscribes to all topics. |
+| **WaitTime**     | Optional |  The time window in which the adapter performs the discovery by listening for specified topics. Once the wait time elapses, the discovery results are available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) is applied.<br>When you specify **WaitTime** with a numeric value, for example `WaitTime=45`, the adapter interprets the value as seconds instead of time span.          |
 
 ### Query rules
 
-The following rules apply for specifying the query string:
+The following rules apply when specifying the query string:
 
 - Only one query at a time is supported. That query can contain as many topics with the same wait time as needed. If you need different wait times for different topics, you need to create a new query once the query from the previous discovery has completed.
 - Partial queries are terminated by a multi-level wildcard (`#`).
@@ -50,8 +50,8 @@ The query parameter of the generic MQTT component must be specified in the follo
 
 ```json
 {
-	"id" : "SampleA",
-	"query" : "Topics=Sample1,Sample2;WaitTime=00:00:30"
+    "id" : "SampleA",
+    "query" : "Topics=Sample1,Sample2;WaitTime=00:00:30"
 }
 ```
 
@@ -60,18 +60,18 @@ The query parameter of the generic MQTT component must be specified in the follo
 ```json
 [
     {
-	    "id" : "SampleA",
-	    "query" : "Topics=Sample1,Sample2;WaitTime=00:00:00:30",
-	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
-	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
-	    "progress": 30,
-	    "itemsFound": 700,
-	    "newItems": 200,
-	    "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result",
-	    "autoSelect": false,
-	    "status": "Complete",
-	    "errors": null
-	}
+        "id" : "SampleA",
+        "query" : "Topics=Sample1,Sample2;WaitTime=00:00:00:30",
+        "startTime": "2020-12-14T14:19:01.4383791-08:00",
+        "endTime": "2020-12-14T14:19:31.8549164-08:00",
+        "progress": 30,
+        "itemsFound": 700,
+        "newItems": 200,
+        "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result",
+        "autoSelect": false,
+        "status": "Complete",
+        "errors": null
+    }
 ]
 ```
 

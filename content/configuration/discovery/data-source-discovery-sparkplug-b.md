@@ -8,14 +8,12 @@ A discovery against the data source of an MQTT Sparkplug B adapter allows you to
 
 ## Sparkplug B query string
 
-The string of the **query** parameter must contain string items in the following form: <br>`Topics=Topic1,Topic2;WaitTime=<WaitTime>`<br><br>
-where the Sparkplug B topic structure is of the form spBv1.0/<Group_Id>/<Message_Type>/<Edge_Node_Id>/[<Device_Id>]
+The string of the **query** parameter must contain string items in the following form: <br>`Topics=Topic1,Topic2;WaitTime=<WaitTime>` where the Sparkplug B topic structure is of the form `spBv1.0/<Group_Id>/<Message_Type>/<Edge_Node_Id>/[<Device_Id>]`.
 
 | String item      | Required | Description |
 |------------------|----------|-------------|
 | **Group_Id**     | Optional | This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.|
-| **Message_Type**     | Optional | This element of the Topic namespace indicates how to handle the MQTT
-payload of the message. The message type is typically `NDATA` or `DDATA`. For more information, see [Data selection (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration). |
+| **Message_Type**     | Optional | This element of the Topic namespace indicates how to handle the MQTT payload of the message. The message type is typically `NDATA` or `DDATA`. For more information, see [Data selection (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration). |
 | **Edge_Node_Id** | Optional | This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.|<br>**Group_Id** combined with **Edge_Node_Id** must be unique from any other **Group_Id**/**Edge_Node_Id** assigned in the MQTT infrastructure.
 | **Device_Id**    | Optional | This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically). |
 | **WaitTime**     | Optional |  The time window in which the adapter will perform the discovery by listening for specified topics. Once the wait time has elapsed, the discovery results will be available.<br><br>Minimum value: `0.00:00:30` (30 seconds)<br>Maximum value: `7.00:00:00` (7 days)<br>**Note:** If you do not specify a wait time, the default value `0.00:01:00` (1 minute) will be applied.<br>When you specify **WaitTime** with a numeric value, for example `WaitTime=45`, the adapter interprets the value as seconds instead of time span.          |
@@ -50,8 +48,8 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 
 ```json
 {
-	"id" : "40",
-	"query" : "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30"
+    "id" : "40",
+    "query" : "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30"
 }
 ```
 
@@ -60,17 +58,17 @@ The query parameter of the MQTT Sparkplug B component must be specified in the f
 ```json
 [
     {
-	    "id": "40",
-	    "query": "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30",
-	    "startTime": "2020-12-14T14:19:01.4383791-08:00",
-	    "endTime": "2020-12-14T14:19:31.8549164-08:00",
-	    "progress": 30,
-	    "itemsFound": 700,
-	    "newItems": 200,
-	    "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result",
-	    "autoSelect": false,
-	    "status": "Complete",
-	    "errors": null
-	}
+        "id": "40",
+        "query": "topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30",
+        "startTime": "2020-12-14T14:19:01.4383791-08:00",
+        "endTime": "2020-12-14T14:19:31.8549164-08:00",
+        "progress": 30,
+        "itemsFound": 700,
+        "newItems": 200,
+        "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/mqttComponentId/Discoveries/40/result",
+        "autoSelect": false,
+        "status": "Complete",
+        "errors": null
+    }
 ]
 ```
