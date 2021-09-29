@@ -40,7 +40,7 @@ Complete the following steps to configure an MQTT data source. Use the `PUT` met
 
 7. Configure data selection.
 
-    For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration)
+    For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
 
 ## MQTT data source schema
 

@@ -132,7 +132,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
 ]
 ```
 
-<sup>1</sup> **Note:** Both **ValueField** and **IndexField** require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following Json payload structure:
+<sup>1</sup> **Note:** Both **ValueField** and **IndexField** require the correct structure of the JSON payload to be specified (in other words, what the data source returns). The previous examples use the following JSON payload structure:
 
 ```json
 {

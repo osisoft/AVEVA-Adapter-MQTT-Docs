@@ -40,7 +40,7 @@ Complete the following steps to configure an MQTT Sparkplug B data source. Use t
 
 7. Configure data selection.
 
-    For more information, see [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration)
+    For more information, see [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
 
 ## MQTT data source schema
 
