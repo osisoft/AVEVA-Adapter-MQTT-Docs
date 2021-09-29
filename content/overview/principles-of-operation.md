@@ -111,12 +111,12 @@ Each stream created for the selected measurement has a unique identifier (stream
 
 Metadata specific to the MQTT Sparkplug B component are:
 
-<!-- MB 9/28/21: In the list below, we need to define the "EoN" acronym. -->
-
 - **Namespace**: Specifies the topic namespace
-- **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients
-- **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN node within the infrastructure
-- **Device_Id**: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN node
+- **Group_Id**: Specifies the element of the topic namespace that logically groups MQTT EoN<sup>1</sup> nodes into the MQTT server and the consuming MQTT clients
+- **Edge_Node_Id**: Specifies the element of the topic namespace that uniquely identifies the MQTT EoN<sup>1</sup> node within the infrastructure
+- **Device_Id**: Specifies the element of the topic namespace that identifies a device attached to the MQTT EoN<sup>1</sup> node
+
+<sup>1</sup> EoN = Edge of Network
 
 **Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the MQTT adapter, the following metadata are sent for the individual level:
 
