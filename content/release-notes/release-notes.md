@@ -9,7 +9,7 @@ Adapter framework 1.4
 
 ## Overview
 
-This is the initial release of PI Adapter for MQTT. The product collects time-series data from MQTT servers its service nodes/devices adhering to the SparkplugB specification, but also generic JSON payload. PI Adapter for MQTT sends the data to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services.
+This is the initial release of PI Adapter for MQTT. The product collects time-series data from MQTT servers its service nodes/devices adhering to the SparkplugB specification, but also generic producing JSON payload. PI Adapter for MQTT sends the data to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services.
 
 PI Adapter for MQTT is capable of collecting health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, various Windows and Linux-based operating systems, and containerization.
 
