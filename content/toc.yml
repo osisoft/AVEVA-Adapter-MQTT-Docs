@@ -18,6 +18,7 @@
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterForMQTTDataSourceConfiguration
   - topicUid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
+  - topicUid: PIAdapterForMQTTClientSettingsConfiguration
   - topicUid: DiscoveryConfiguration
     items:
     - topicUid: GenericDataSourceDiscovery
