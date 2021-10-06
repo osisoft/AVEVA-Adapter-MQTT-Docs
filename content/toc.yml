@@ -1,9 +1,9 @@
 - topicUid: index
   items: 
   - topicUid: PIAdapterForMQTTPrinciplesOfOperation
-  - topicUid: TextParserMQTT
+  - topicUid: TextParser
     items:
-    - topicUid: JSONPathSyntaxForValueRetrievalMQTT
+    - topicUid: JSONPathSyntaxForValueRetrieval
 - topicUid: Installation
   items:
   - topicUid: SystemRequirements
@@ -20,7 +20,6 @@
   - topicUid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
   - topicUid: DiscoveryConfiguration
     items:
-    - topicUid: GenericDataSourceDiscovery
     - topicUid: SparkplugBDataSourceDiscovery
   - topicUid: PIAdapterForMQTTDataSelectionConfiguration
   - topicUid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
