@@ -64,21 +64,6 @@ The full schema definition for the MQTT data selection configuration is in the `
 
 <sup>2</sup> If you do not specify **IndexField** and **IndexFormat**, the adapter automatically sets the latter to `Adapter`, which uses an adapter-supplied timestamp for the data. The timestamp is taken after the data is published to the adapter while the adapter processes it. If you specify **IndexFormat** only with a value other than `Adapter`, the validation fails and the adapter throws an error.
 
-### CSV export/import with complex types
-
-[EdgeCmd utility](https://docs.osisoft.com/bundle/edgecmd/page/index.html) supports the export and import of data selection with complex types, such as Geolocation and Coordinates. For example, the following command writes the data selection contents to a CSV file:
-
-```cmd
-edgecmd get DataSelection -cid MQTT1 -file <fileName>.csv -csv
-```
-
-After the CSV file is created, you can use `type <fileName>.csv` to display the contents of the file. The output will look similar to the following example in which the keywords are in the first line and the values, including complex types, are in the second line:
-
-```cmd
-topic,valueField,dataFields,indexField,dataType,indexFormat,selected,name,streamId,dataFilterId
-mqtt/Boilers/Boiler1,,"{""X"":"".xValue]"",""Y"":""$.yValue"",""Z"":""$.zValue""}",$['Timestamp'],Coordinates,,True,,mqtt/Boilers/Boiler1.$.xValue.$.yValue.$.zValue,
-```
-
 ## Runtime changes
 
 When you create a new data selection item with a new **Topic** property, the adapter automatically subscribes the topic to the data source and starts data collection for the stream associated with the data selection item.  When you delete a data selection item, the adapter automatically stops collecting data for that item. Additionally, when you update a data selection item, the adapter updates the stream and continues data collection.
