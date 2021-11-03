@@ -13,7 +13,7 @@ This is the initial release of PI Adapter for MQTT. The product collects time-se
 
 PI Adapter for MQTT is capable of collecting health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, various Windows and Linux-based operating systems, and containerization.
 
-For more information see [PI Adapter for MQTT overview](xref:PIAdapterForMQTTOverview).
+For more information see [PI Adapter for MQTT overview](xref:PIAdapterForMQTTOverview). -> broken link
 
 ## Known issues
 
