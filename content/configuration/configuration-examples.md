@@ -13,17 +13,17 @@ The following tables provide examples for all configurations available for PI Ad
 ```json
 [
     {
-        "ComponentId": "Mqtt1",
-        "ComponentType": "MQTT"
+        "componentId": "OmfEgress",
+        "componentType": "OmfEgress"
     },
     {
-        "ComponentId": "Mqtt2",
-        "ComponentType": "MQTT"
+        "componentId": "MQTT1",
+        "componentType": "MQTT"
     },
     {
-        "ComponentId": "OmfEgress",
-        "ComponentType": "OmfEgress"
-     }
+        "componentId": " MQTTSparkplugB1",
+        "componentType": "MQTTSparkplugB"
+    }
 ]
 ```
 
