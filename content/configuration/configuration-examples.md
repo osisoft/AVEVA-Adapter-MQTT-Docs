@@ -109,12 +109,6 @@ The following tables provide examples for all configurations available for PI Ad
                 "endpoint": "https://OCSEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
-            },
-            {
-                "Id": "EDS",
-                "Endpoint": "http://localhost:/api/v1/tenants/default/namespaces/default/omf",
-                "UserName": "eds",
-                "Password": "eds"
             }
         ]
     }
