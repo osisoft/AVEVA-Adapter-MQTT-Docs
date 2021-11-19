@@ -24,9 +24,9 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /MQTT_linux-arm/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host
 	else
-		exec /MQTT_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -35,9 +35,9 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /MQTT_linux-arm64/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host
 	else
-		exec /MQTT_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -46,9 +46,9 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /MQTT_linux-x64/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host
 	else
-		exec /MQTT_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 	
@@ -68,7 +68,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./MQTT_linux-arm.tar.gz .
+	ADD ./PI-Adapter-for-MQTT_1.0.0.167-arm_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 	**ARM64**
@@ -79,7 +79,7 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./MQTT_linux-arm64.tar.gz .
+	ADD ./PI-Adapter-for-MQTT_1.0.0.167-arm64_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
@@ -91,11 +91,11 @@ This topic provides examples of how to create a Docker container with the MQTT a
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./MQTT_linux-x64.tar.gz .
+	ADD ./PI-Adapter-for-MQTT_1.0.0.167-x64_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
-2. Copy the `MQTT_linux-<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `PI-Adapter-for-MQTT_<versionNumber>-<platform>_.tar.gz` file to the same directory as the `Dockerfile`.
 
 3. Copy the `mqttdockerstart.sh` script to the same directory as the `Dockerfile`.
 
