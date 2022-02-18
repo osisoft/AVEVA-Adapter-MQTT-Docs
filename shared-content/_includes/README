@@ -1,0 +1,15 @@
+Update all files in the _includes directory before each release. These file control varius values throughout the doc that are unique by product/release. Think of this directory as a set of document "variables".
+
+Key/Value descriptions:
+
+File|Description|Example
+--|--|--
+component-id.md | Instance-specific component ID used during setup | `BACnet1`
+component-type.md | Adapter-specific type used during setup | `BACnet`
+docker-image.md | Name of adapter-specific docker image file | `bacnetdockerstart.sh`
+framework-version.md | Version of framework that adapter uses | `1.4`
+installer-name.md | Name of the adapter-specific installer. Need to manually add installer version and architecture | `PI-Adapter-for-BACnet`
+product-name.md | What it sounds like. | `PI Adapter for BACnet`
+product-version | Product version | `1.1`
+startup-script | Script to startup docker-image | `eventhubsdockerstart.sh`
+symantic-version | Full symantic version of the product | `1.1.1.1`

@@ -1,1 +1,6 @@
 /.vscode
+/docfx.json
+/shared-content/toc.yml
+/obj
+/_site
+/shared-content/index.md
