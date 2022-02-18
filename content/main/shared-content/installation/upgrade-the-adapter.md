@@ -28,7 +28,7 @@ Complete the following steps to upgrade a PI adapter on a Windows computer:
 
    ```json
    {
-    "Application Version": "1.1.0.128",                 // upgraded version
+    "Application Version": "1.0.0.167",                 // upgraded version
     ".Net Core Version": ".NET Core 3.1.15",
     "Operating System": "Microsoft Windows 10.0.19041"
    }
@@ -62,7 +62,7 @@ Complete the following steps to upgrade a PI adapter on a Linux computer:
 
    ```json
    {
-    "Application Version": "1.1.0.128",                 // upgraded version
+    "Application Version": "1.0.0.167",                 // upgraded version
     ".Net Core Version": ".NET Core 3.1.15",
     "Operating System": "Microsoft Windows 10.0.19041"
    }

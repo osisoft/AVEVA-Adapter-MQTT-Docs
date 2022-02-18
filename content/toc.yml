@@ -8,7 +8,7 @@
   items:
   - topicUid: SystemRequirements
   - topicUid: InstallTheAdapter
-  - topicUid: InstallPIAdapterForMQTTUsingDocker
+  - topicUid: InstallUsingDocker
   - topicUid: UninstallTheAdapter
 - topicUid: MQTTConfiguration
   items: 
