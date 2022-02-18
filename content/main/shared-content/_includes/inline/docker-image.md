@@ -1,1 +1,1 @@
-<script_name.sh>
+mqttadapter

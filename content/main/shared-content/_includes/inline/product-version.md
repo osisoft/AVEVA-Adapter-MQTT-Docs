@@ -1,1 +1,1 @@
-<PRODUCT_VERSION>
+1.0
