@@ -10,11 +10,11 @@ You can install adapters on either a Windows or Linux operating system. Before i
 
 Complete the following steps to install a PI adapter on a Windows computer:
 
-1. Download the Windows .msi file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download <code>[!include[installer](../_includes/inline/installer-name.md)]-x64_.msi</code> from the [OSIsoft Customer portal](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
-2. Run the .msi file.
+2. Run <code>[!include[installer](../_includes/inline/installer-name.md)]-x64_.msi</code> file.
 
 3. Follow the setup wizard.
 
@@ -30,9 +30,9 @@ Complete the following steps to install a PI adapter on a Windows computer:
 
 ## Linux
 
-Complete the following steps to install a PI adapter on a Linux computer:
+Complete the following steps to install an adapter on a Linux computer:
 
-1. Download the appropriate Linux distribution file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download the appropriate Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.deb</code>) from the [OSIsoft Customer portal](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
@@ -40,7 +40,9 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
 3. Run the `sudo apt update` command to update available packages information.
 
-4. Run the `sudo apt install` command against the Linux distribution file selected in step 1 of this procedure.
+4. Run the `sudo apt install` command against the Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.deb</code>) selected in step 1 of this procedure.
+
+    For example: <code>sudo apt install ./[!include[installer](../_includes/inline/installer-name.md)]-x64_.deb</code>
 
 5. Optional: To verify the installation, run the following `curl` command with the port number that you specified during installation:
 
