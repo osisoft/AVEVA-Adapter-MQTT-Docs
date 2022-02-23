@@ -4,12 +4,12 @@ Key/Value descriptions:
 
 File|Description|Example
 --|--|--
-component-id.md | Instance-specific component ID used during setup | `BACnet1`
-component-type.md | Adapter-specific type used during setup | `BACnet`
-docker-image.md | Name of adapter-specific docker image file | `bacnetdockerstart.sh`
-framework-version.md | Version of framework that adapter uses | `1.4`
-installer-name.md | Name of the adapter-specific installer. Need to manually add installer version and architecture | `PI-Adapter-for-BACnet`
-product-name.md | What it sounds like. | `PI Adapter for BACnet`
+component-id | Instance-specific component ID used during setup | `BACnet1`
+component-type | Adapter-specific type used during setup | `BACnet`
+docker-image | Name of adapter-specific docker image file | `bacnetdockerstart.sh`
+framework-version | Version of framework that adapter uses | `1.4`
+installer-name | Name of the adapter-specific installer. Need to manually add installer version and architecture | `PI-Adapter-for-BACnet`
+product-name | What it sounds like. | `PI Adapter for BACnet`
 product-version | Product version | `1.1`
 startup-script | Script to startup docker-image | `eventhubsdockerstart.sh`
 symantic-version | Full symantic version of the product | `1.1.1.1`
