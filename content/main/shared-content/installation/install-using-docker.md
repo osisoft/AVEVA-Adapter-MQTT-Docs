@@ -98,7 +98,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
-2. Copy the <code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.tar.gz</code> file to the same directory as the `Dockerfile`.
+2. Copy the <code>[!include[installer](../_includes/inline/installer-name.md)]-<var>platform</var>_.tar.gz</code> file to the same directory as the `Dockerfile`.
 
 3. Copy the <code>[!include[startup-script](../_includes/inline/startup-script.md)]</code> script to the same directory as the `Dockerfile`.
 
