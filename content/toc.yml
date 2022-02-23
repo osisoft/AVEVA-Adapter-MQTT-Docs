@@ -9,6 +9,7 @@
   - topicUid: SystemRequirements
   - topicUid: InstallTheAdapter
   - topicUid: InstallUsingDocker
+  - topicUid: UpgradeTheAdapter
   - topicUid: UninstallTheAdapter
 - topicUid: MQTTConfiguration
   items: 
