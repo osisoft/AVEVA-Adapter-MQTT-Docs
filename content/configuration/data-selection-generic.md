@@ -115,7 +115,7 @@ The following are examples of valid MQTT data selection configurations<sup>1</su
     "IndexField" : "$.Timestamp",
     "IndexFormat" : null,    
     "DataType" : "Geolocation",
-    "DataFields" : { "Latitude": "$.Float1", "Longitude": "S.Float2" }
+    "DataFields" : { "Latitude": "$.Float1", "Longitude": "$.Float2" }
   },
   {
     "Selected" : true,

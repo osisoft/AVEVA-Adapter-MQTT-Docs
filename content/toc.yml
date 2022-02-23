@@ -13,7 +13,7 @@
 - topicUid: MQTTConfiguration
   items: 
   - topicUid: ConfigurationTools
-  - topicUid: SystemComponentsConfiguration
+  - topicUid: PIAdapterForMQTTSystemComponentsConfiguration
     items: 
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterForMQTTDataSourceConfiguration
