@@ -8,7 +8,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 **Notes:** 
 
-- Installation using Docker in only recommended for users proficient with Docker. Docker is not required to use the adapter. 
+- The use of Docker is only recommended if your environment requires it. Only users proficient with Docker should use it to install the adapter. Docker is not required to use the adapter.
 
 - Running adapters in Docker containers on Windows is not supported.
 
