@@ -17,8 +17,4 @@ Alternatively, you can use tar.gz files with binaries to build your own custom i
 
 ## PI Web API compatibility
 
-<<<<<<< HEAD
-This version of PI Adapter for MQTT is compatible with PI Web API 2021 and later.
-=======
 This version of [!include[product](../_includes/inline/product-name.md)] is compatible with PI Web API 2021 and later. 
->>>>>>> b010adbbf4efe2a2b2cf60e0d8099200b96fcd4a
