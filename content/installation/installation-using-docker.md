@@ -139,13 +139,6 @@ To use a different port other than `5590`, you can specify a `portnum` variable 
 
 ```bash
 docker run -d -e portnum=6000 --network host mqttadapter
-```
-
-This command accesses the REST API with port `6000` instead of port `5590`. The following `curl` command returns the configuration for the container.
-
-```bash
-curl http://localhost:6000/api/v1/configuration
-```
 
 ### Remove REST access to the Docker container
 
