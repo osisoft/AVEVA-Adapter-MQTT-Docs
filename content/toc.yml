@@ -13,6 +13,7 @@
   - topicUid: UninstallTheAdapter
 - topicUid: MQTTConfiguration
   items: 
+  - topicUid: PIAdapterForMQTTSecurity
   - topicUid: ConfigurationTools
   - topicUid: PIAdapterForMQTTSystemComponentsConfiguration
     items: 
