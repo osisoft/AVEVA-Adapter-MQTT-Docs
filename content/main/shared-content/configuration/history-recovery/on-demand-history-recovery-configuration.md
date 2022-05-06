@@ -29,7 +29,7 @@ Parameter | Type| Description
  **Id** | `string` | The Id of the history recovery<br><br> **Note:** You cannot run multiple history recoveries with the same Id.
  **StartTime** | `datetime` | Time when the the first data items are collected.
  **EndTime** | `datetime`| Time when the last data items are collected.
-| **Checkpoint** | `double` | The latest timestamp that the history recovery has completed with the range being between **startTime** and **endTime**.
+| **Checkpoint** | `datetime` | The latest timestamp that the history recovery has completed with the range being between **startTime** and **endTime**.
 | **Items** | `double` | The amount of data selection items in the history recovery operation.
 | **RecoveredEvents** | `double` | Number of events that the history recovery found on the data source.
 | **Progress** | `double` | Progress of the history recovery (number of data items found through the history recovery).
