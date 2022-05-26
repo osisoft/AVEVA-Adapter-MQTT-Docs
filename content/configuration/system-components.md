@@ -88,7 +88,7 @@ The default _System_Components.json_ file for the System component contains the 
         "componentType": "MQTT"
     },
     {
-        "componentId": " MQTTSparkplugB1",
+        "componentId": "MQTTSparkplugB1",
         "componentType": "MQTTSparkplugB"
     }
 ]
