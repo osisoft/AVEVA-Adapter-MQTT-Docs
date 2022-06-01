@@ -30,11 +30,11 @@ To submit product feedback for PI Adapters, visit the [PI Adapters feedback page
 
 ## Documentation feedback
 
-To submit documentation feedback for PI Adapters, send an email to [documentation@osisoft.com](mailto:documentation@osisoft.com?subject=PI%20adapter%20documentation&body=Product%20name%20and%20version%20-%20Documentation%20topic%20URL%20-%20Details%20of%20the%20suggestion%20or%20error). Be sure to include the following information with your feedback:
+To submit documentation feedback for PI Adapters, send an email to [documentation@aveva.com](mailto:documentation@aveva.com?subject=PI%20adapter%20documentation&body=Product%20name%20and%20version%20-%20Documentation%20topic%20URL%20-%20Details%20of%20the%20suggestion%20or%20error). Be sure to include the following information with your feedback:
 
 - Product name and version
 - Documentation topic URL
 - Details of the suggestion or error
 
-The technical documentation team at OSIsoft will review and respond to your feedback.
+The technical documentation team will review and address your feedback in future documentation updates.
 
