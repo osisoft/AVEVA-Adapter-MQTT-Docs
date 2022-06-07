@@ -16,7 +16,7 @@ This Quick Start guides you through setup of each configuration file available f
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-1. Configure one or more MQTT system components.<br>See [System components](xref:SystemComponentsConfiguration#configure-system-components).
+1. Configure one or more MQTT system components.<br>See [System components](xref:PIAdapterForMQTTSystemComponentsConfiguration#configure-system-components).
 
 2. Configure an MQTT data source for each MQTT device.<br>See [Data source (generic)](xref:PIAdapterForMQTTDataSourceConfiguration#configure-mqtt-data-source) and [Data source (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration#configure-mqtt-sparkplug-b-data-source).
 
