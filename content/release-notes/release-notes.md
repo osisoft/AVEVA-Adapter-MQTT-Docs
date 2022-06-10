@@ -9,11 +9,24 @@ Adapter framework [!include[framework-version](../main/shared-content/_includes/
 
 ## Overview
 
-This is the initial release of PI Adapter for MQTT. The product collects time-series data from MQTT servers its service nodes/devices adhering to the SparkplugB specification, but also generic producing JSON payload. PI Adapter for MQTT sends the data to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services.
+PI Adapter for MQTT collects time-series data from MQTT servers, its service nodes/devices adhering to the SparkplugB specification, but also generic producing JSON payload. It then sends the data to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services.
 
 PI Adapter for MQTT is capable of collecting health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, various Windows and Linux-based operating systems, and containerization.
 
 For more information see [PI Adapter for MQTT overview](xref:index).
+
+## Fixes and enhancements
+
+This updated release contains bug fixes and adapter framework updates.
+
+### Fixes
+
+The following items were resolved in release 1.1.0.114 - 06/08/2022 :
+
+| Item              | Description                  |
+| ----------------- | ---------------------------- |
+| 313786 | The issue related to parsing DBIRTH messages causing data loss on startup is fixed. |
+| 318285 | The issue related to parsing multilevel wildcards has been fixed. |
 
 ## Known issues
 
@@ -49,7 +62,7 @@ To report a security vulnerability, refer to [OSIsoft's Report a Security Vulner
 
 ### Vulnerability scoring
 
-OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/v2/guide) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the [National Vulnerability Database (NVD) calculator](https://nvd.nist.gov/cvss.cfm?calculator&amp;version=2) maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses Critical, High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion-related errors of CVSS scoring.  As noted in the [CVSS specification](https://www.first.org/cvss/specification-document), Base scores range from 0 for the lowest severity to 10 for the highest severity.
+OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/v2/guide) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the [National Vulnerability Database (NVD) calculator](https://nvd.nist.gov/cvss.cfm?calculator&amp;version=2) maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion-related errors of CVSS scoring.  As noted in the [CVSS specification](https://www.first.org/cvss/specification-document), Base scores range from 0 for the lowest severity to 10 for the highest severity.
 
 ### Overview of new vulnerabilities found or fixed
 
@@ -57,9 +70,11 @@ This section is intended to provide relevant security-related information to gui
 
 No security-related information is applicable to this release.
 
-## Documentation overview
+<!-- Remove this section if there is no documentation besides the documentation in which these release notes are included. For additional documentation, provide a brief description. For example -->
 
-**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments.
+<!-- ## Documentation overview
+
+**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments. -->
 
 ## Technical support and resources
 
