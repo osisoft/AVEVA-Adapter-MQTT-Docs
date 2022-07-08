@@ -15,19 +15,6 @@ PI Adapter for MQTT is capable of collecting health and diagnostics information.
 
 For more information see [PI Adapter for MQTT overview](xref:index).
 
-## Fixes and enhancements
-
-This updated release contains bug fixes and adapter framework updates.
-
-### Fixes
-
-The following items were resolved in release 1.1.0.114 - 06/08/2022 :
-
-| Item              | Description                  |
-| ----------------- | ---------------------------- |
-| 313786 | The issue related to parsing DBIRTH messages causing data loss on startup is fixed. |
-| 318285 | The issue related to parsing multilevel wildcards has been fixed. |
-
 ## Known issues
 
 There are no known issues at this time.
