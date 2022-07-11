@@ -102,6 +102,9 @@ The following are examples of valid MQTT data source configurations:
     "ClientId" : "Test-Client-Id",
     "MQTTVersion" : "3.1.1",
     "ValidateServerCertificate" : true
+    "timeZone": "UTC",
+    "streamIdPrefix": "MyPrefix.",
+    "defaultStreamIdPattern": "{Topic}.{ValueField}"
 }
 ```
 
