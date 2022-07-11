@@ -42,7 +42,7 @@ Parameter | Type| Description
  **progress** | `double` | Progress of the discovery
  **itemsFound** | `integer` | Number of data items that the discovery found on the data source
  **newItems** | `integer` | Number of new data items that the discovery found in comparison to the previous discovery
- **resultUri** | `integer` | URL at which you can access the results of the discovery
+ **resultUri** | `string` | URL at which you can access the results of the discovery
  **autoSelect** | `boolean` | When set to `true`, the result of the discovery gets pushed to the data selection configuration.
  **status** | `reference` | Status of the discovery, for example `Active` or `Complete`
  **errors** | `string`| Errors encountered during the discovery
