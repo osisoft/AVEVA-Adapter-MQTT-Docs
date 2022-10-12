@@ -21,12 +21,19 @@ This updated release contains bug fixes and adapter framework updates.
 
 ### Fixes
 
-The following items were resolved in release 1.1.0.114:
+The following items were added in release 1.3.0.19:
 
-| Item              | Description                  |
-| ----------------- | ---------------------------- |
-| 313786 | The issue related to parsing DBIRTH messages causing data loss on startup is fixed. |
-| 318285 | The issue related to parsing multilevel wildcards has been fixed. |
+None
+
+### Enhancements
+
+The following items were added in release 1.3.0.19:
+
+| Item              | Description               |
+| ----------------- | ------------------------- |
+| 166669 | Server failover support for PI Adapter for MQTT |
+| 290389 | Client failover support for PI Adapter for MQTT |
+
 
 ## Known issues
 
