@@ -211,12 +211,12 @@
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_1.1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_1.2</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_1.1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PI-Adapter-for-MQTT_1.2</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">default</Data></Cell>
