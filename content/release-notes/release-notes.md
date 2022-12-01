@@ -13,6 +13,8 @@ PI Adapter for MQTT collects time-series data from MQTT servers, its service nod
 
 PI Adapter for MQTT is capable of collecting health and diagnostics information. It supports buffering, unsolicited data collection, automatic discovery of available data items on a SparkplugB data source, various Windows and Linux-based operating systems, and containerization.
 
+This version is released with the support for edge module.
+
 For more information see [PI Adapter for MQTT overview](xref:index).
 
 ## Fixes and enhancements
@@ -21,19 +23,15 @@ This updated release contains bug fixes and adapter framework updates.
 
 ### Fixes
 
-The following items were added in release 1.3.0.19:
+The following items were added in release 1.2.0.54:
 
 None
 
 ### Enhancements
 
-The following items were added in release 1.3.0.19:
+The following items were added in release 1.2.0.54:
 
-| Item              | Description               |
-| ----------------- | ------------------------- |
-| 166669 | Server failover support for PI Adapter for MQTT |
-| 290389 | Client failover support for PI Adapter for MQTT |
-
+None
 
 ## Known issues
 
@@ -63,9 +61,9 @@ Because the PI System often serves as a barrier protecting control system networ
 
 The practice of publicly disclosing internally discovered vulnerabilities is consistent with the [Common Industrial Control System Vulnerability Disclosure Framework](https://ics-cert.us-cert.gov/sites/default/files/ICSJWG-Archive/ICSJWG_Vulnerability_Disclosure_Framework_Final_1.pdf) developed by the [Industrial Control Systems Joint Working Group (ICSJWG)](https://ics-cert.us-cert.gov/Industrial-Control-Systems-Joint-Working-Group-ICSJWG). Despite the increased risk posed by greater transparency, OSIsoft is sharing this information to help you make an informed decision about when to upgrade to ensure your PI System has the best available protection.
 
-For more information, refer to [OSIsoft's Ethical Disclosure Policy (https://www.osisoft.com/ethical-disclosure-policy)](https://www.osisoft.com/ethical-disclosure-policy).
+For more information, refer to [OSIsoft's Ethical Disclosure Policy](https://www.osisoft.com/ethical-disclosure-policy).
 
-To report a security vulnerability, refer to [OSIsoft's Report a Security Vulnerability (https://www.osisoft.com/report-a-security-vulnerability)](https://www.osisoft.com/report-a-security-vulnerability).
+To report a security vulnerability, refer to [OSIsoft's Report a Security Vulnerability](https://www.osisoft.com/report-a-security-vulnerability).
 
 ### Vulnerability scoring
 
