@@ -23,13 +23,13 @@ This updated release contains bug fixes and adapter framework updates.
 
 ### Fixes
 
-The following items were added in release 1.2.0.54:
+The following items were added in release 1.2.0.59:
 
 None
 
 ### Enhancements
 
-The following items were added in release 1.2.0.54:
+The following items were added in release 1.2.0.59:
 
 None
 
