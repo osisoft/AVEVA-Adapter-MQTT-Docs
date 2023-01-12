@@ -14,7 +14,7 @@ git subtree pull --prefix content/main https://github.com/osisoft/PI-Adapter mai
 
 ## License
 
-<a href="https://www.osisoft.com/copyright/">&copy; 2020 - 2021 OSIsoft, LLC. All rights reserved.</a>
+<a href="https://www.osisoft.com/copyright/">&copy; 2020 - 2023 OSIsoft, LLC. All rights reserved.</a>
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
