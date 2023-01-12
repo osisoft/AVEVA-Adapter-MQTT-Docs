@@ -398,9 +398,9 @@
    <Row>
     <Cell ss:StyleID="s32"><Data ss:Type="String">Developer</Data></Cell>
     <Cell ss:StyleID="s31"><Data ss:Type="String">developer</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
-    <Cell ss:StyleID="s31"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">Open-Message-Format</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s33"><Data ss:Type="String">Yes</Data></Cell>
    </Row>
    <Row>
@@ -967,16 +967,16 @@
     <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">PI-OPC-DA-Server_2018-Patch-1</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">Open-Message-Format</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">OSIsoft-Message-Format-1.2</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s44"><Data ss:Type="String">Open-Message-Format-1.2</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">OSIsoft-Message-Format-1.1</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">Open-Message-Format-1.1</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
-    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">OSIsoft-Message-Format-1.0</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s53"><Data ss:Type="String">Open-Message-Format-1.0</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell ss:Index="2" ss:StyleID="s18"><Data ss:Type="String">PI-Web-API</Data></Cell>
