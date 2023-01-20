@@ -16,9 +16,9 @@ The possible statuses are:
 | Status                          | Meaning                               |
 |-----------------------------------|---------------------------------------|
 | `Good`                          | The component is connected to the data source and it is collecting data. |
-| `ConnectedNoData`               | The component is connected to the data source but it is not receiving data from it. |
+| `Connected / No Data`           | The component is connected to the data source but it is not receiving data from it. |
 | `Starting`                      | The component is currently in the process of starting up and is not yet connected to the data source. |
-| `DeviceInError`                 | The component encountered an error either while connecting to the data source or attempting to collect data. |
+| `Device in error`               | The component encountered an error either while connecting to the data source or attempting to collect data. |
 | `Shutdown`                      | The component is either in the process of shutting down or has finished. |
 | `Removed`                       | The adapter component has been removed and will no longer collect data. |
-| `NotConfigured`                 | The adapter component has been created but is not yet configured. |
+| `Not Configured`                | The adapter component has been created but is not yet configured. |
