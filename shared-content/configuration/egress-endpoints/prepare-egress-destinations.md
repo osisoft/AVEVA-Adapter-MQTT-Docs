@@ -25,7 +25,7 @@ To prepare OCS to receive OMF messages from the adapter, create an OMF connectio
 To prepare a PI Server to receive OMF messages from the adapter, a PI Web API OMF endpoint must be available. Complete the following steps:
 
 1. Install PI Web API and enable the **OSIsoft Message Format (OMF) Services** feature.
-    
+
     - During configuration, choose an AF database and PI Data Archive where metadata and data will be stored.
 
     - The account used in an egress configuration needs permissions to create AF elements, element templates, and PI points.

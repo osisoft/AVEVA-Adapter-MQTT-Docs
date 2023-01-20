@@ -89,3 +89,41 @@ Perform the following steps to see all established TCP sessions in Linux:
 1. Open a terminal.
 2. Type the following command: `ss  -o state established -t -p`
 3. Press Enter.
+
+## Egress debug logging
+
+Perform the following steps to enable debugging and to troubleshoot issues between the PI Adapter and the egress destination:
+
+1. Set the appropriate time value for the **DebugExpiration** property in the egress configuration.
+   **Note:** To disable debugging, set the **DebugExpiration** property to `null`.
+2. Navigate to the debugging folder to review the logs.
+
+**Note:** We recommend enabling the egress debugging feature for a limited time to avoid running out of disk space.
+
+Date and time strings should use the following formats:
+
+UTC: `yyyy-mm-ddThh:mm:ssZ`
+
+Local: `yyyy-mm-ddThh:mm:ss`
+
+If the time is not specified, it will default to the start of the day (e.g., `2025-06-19` will default to `2025-06-19T00:00:00`)
+
+### Debugging folder or file structure
+
+Because the overall number and size of each request or response pair captured by debugging can be quite large, the debugging information is stored in a separate folder. Debugging folders and files are created in the logs folder as follows:
+
+Windows: `%programdata%\OSIsoft\Adapters\{adapterType}\Logs\EgressDebugLogs\{endpointType}\{egressId}\{omfType}\{Ticks}-{Guid}-{Req/Res}.txt`
+
+Linux: `/usr/share/OSIsoft/Adapters/{adapterType}/Logs/EgressDebugLogs/{endpointType}/{egressId}/{omfType}/{Ticks}-{Guid}-{Req/Res}.txt`
+
+The specific elements of the file structure are defined in the following table.
+
+| Element    | Represents                       |
+|------------|----------------------------------|
+| **adapterType** | The type of the adapter: OpcUa, Modbus, MQTT, and so on. |
+| **endpointType** | The type of egress endpoint: Data or Health. |
+| **egressId** | The Id of egress endpoint specified in configuration. |
+| **omfType**  | The OMF message type: Type, Container, or Data. |
+| **Ticks**    | The time in milliseconds (tick count) for UTC DateTime when the determined message was written to disk. |
+| **Guid**     | The unique GUID for each request or response pair. |
+| **Req/Res**  | Whether the message was HTTP request or response. |
