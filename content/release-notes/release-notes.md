@@ -5,7 +5,17 @@ uid: ReleaseNotes
 # Release notes
 
 [!include[produce-name](../main/shared-content/_includes/inline/product-name.md)] [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
+
+PI Adapter for MQTT Module: 1.3.1.6
+
+PI Adapter for MQTT: 1.3.1.6
+
 Adapter framework [!include[framework-version](../main/shared-content/_includes/inline/framework-version.md)]
+
+Edge Module Manager: 1.0.0.694
+
+Alpine Linux: 3.1.16.2
+
 
 ## Overview
 
