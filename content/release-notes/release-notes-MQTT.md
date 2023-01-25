@@ -2,7 +2,7 @@
 uid: ReleaseNotesMQTT
 ---
 
-# PI Adapter for MQTT Release notes
+# PI Adapter for MQTT
 
 [!include[produce-name](../main/shared-content/_includes/inline/product-name.md)] [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
 
