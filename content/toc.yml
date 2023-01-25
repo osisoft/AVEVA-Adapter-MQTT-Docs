@@ -14,6 +14,9 @@
 - topicUid: MQTTConfiguration
   items: 
   - topicUid: PIAdapterForMQTTSecurity
+    items:
+    - topicUid: Secrets
+    - topicUid: ReferenceSecrets
   - topicUid: ConfigurationTools
   - topicUid: PIAdapterForMQTTSystemComponentsConfiguration
     items: 
