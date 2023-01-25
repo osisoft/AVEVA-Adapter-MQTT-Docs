@@ -65,4 +65,7 @@
   items:
   - topicUid: TroubleshootPIAdapterForMQTT
 - topicUid: ReleaseNotes
+  items:
+  - topicUid: ReleaseNotesMQTT
+  - topicUid: ReleaseNotesMQTTModule
 - topicUid: TechnicalSupportAndFeedback
