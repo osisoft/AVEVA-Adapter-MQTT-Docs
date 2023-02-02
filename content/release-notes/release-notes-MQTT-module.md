@@ -17,15 +17,15 @@ Alpine Linux: 3.16.2 <br>
 
 ## Overview
 
-PI Adapter for MQTT collects time series data and relevant metadata from an MQTT server and sends it to configured Open Message Format (OMF) endpoints, such as PI Web API and AVEVA Data Hub. 
+AVEVA Adapter for MQTT Module can collect health and diagnostics information. It supports buffering, unsolicited data collection, on-demand discovery of available data items on a data source, on-demand or automatic history recovery of data items.
 
-AVEVA Adapter for MQTT Module can also collect health and diagnostics information. It supports buffering, unsolicited data collection, on-demand discovery of available data items on a data source, on-demand or automatic history recovery of data items.
+PI Adapter for MQTT collects time series data and relevant metadata from an MQTT server and sends it to configured Open Message Format (OMF) endpoints, such as PI Web API and AVEVA Data Hub. 
 
 For more information see [PI Adapter for MQTT overview](xref:index).
 
 ## Fixes and enhancements
 
-This updated release contains bug fixes and adapter framework updates.
+This updated release contains adapter framework updates.
 
 ### Fixes
 
@@ -37,7 +37,7 @@ None
 
 The following enhancements are added in this release:
 
-+ Use machine name when generating certificates to enable secure connections in Edge Management Module environment
++ Use machine name when generating certificates to enable secure connections in Edge Management Module environment.
 
 ## Known issues
 
