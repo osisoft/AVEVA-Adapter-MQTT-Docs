@@ -2,9 +2,9 @@
 uid: TroubleshootPIAdapterForMQTT
 ---
 
-# Troubleshoot PI Adapter for MQTT
+# Troubleshoot AVEVA Adapter for MQTT
 
-PI Adapter for MQTT provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+AVEVA Adapter for MQTT provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
