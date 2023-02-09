@@ -92,7 +92,7 @@ Perform the following steps to see all established TCP sessions in Linux:
 
 ## Egress debug logging
 
-Perform the following steps to enable debugging and to troubleshoot issues between the PI Adapter and the egress destination:
+Perform the following steps to enable debugging and to troubleshoot issues between the AVEVA Adapter and the egress destination:
 
 1. Set the appropriate time value for the **DebugExpiration** property in the egress configuration.
    **Note:** To disable debugging, set the **DebugExpiration** property to `null`.
