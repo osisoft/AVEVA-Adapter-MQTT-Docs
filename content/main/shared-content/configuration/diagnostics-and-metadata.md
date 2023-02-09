@@ -4,7 +4,7 @@ uid: GeneralConfiguration
 
 # Diagnostics and metadata
 
-You can configure PI adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
+You can configure AVEVA adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
 For more information about available metadata and what metadata are sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
 
