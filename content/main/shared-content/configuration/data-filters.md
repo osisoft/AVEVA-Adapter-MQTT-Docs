@@ -4,7 +4,7 @@ uid: DataFiltersConfiguration
 
 # Data filters
 
-PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the Id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
+AVEVA adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the Id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
 
 **Note:** If data filters are enabled and data quality changes, both the old and current data quality values are passed on.
 
