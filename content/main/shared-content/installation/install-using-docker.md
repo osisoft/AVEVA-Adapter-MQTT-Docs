@@ -25,9 +25,9 @@ To create a startup script for the adapter, follow the instructions below.
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /PI-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host
 	else
-		exec /PI-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host --port:$portnum
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -36,9 +36,9 @@ To create a startup script for the adapter, follow the instructions below.
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /PI-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host
 	else
-		exec /PI-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host --port:$portnum
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -47,9 +47,9 @@ To create a startup script for the adapter, follow the instructions below.
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /PI-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host
 	else
-		exec /PI-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host --port:$portnum
+		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -71,7 +71,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./PI-Adapter-for-MQTT_1.0.0.167-arm_.tar.gz .
+	ADD ./AVEVA-Adapter-for-MQTT_1.0.0.167-arm_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 	**ARM64**
@@ -82,7 +82,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./PI-Adapter-for-MQTT_1.0.0.167-arm64_.tar.gz .
+	ADD ./AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
@@ -94,7 +94,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY mqttdockerstart.sh /
 	RUN chmod +x /mqttdockerstart.sh
-	ADD ./PI-Adapter-for-MQTT_1.0.0.167-x64_.tar.gz .
+	ADD ./AVEVA-Adapter-for-MQTT_1.0.0.167-x64_.tar.gz .
 	ENTRYPOINT ["/mqttdockerstart.sh"]
 	```
 
