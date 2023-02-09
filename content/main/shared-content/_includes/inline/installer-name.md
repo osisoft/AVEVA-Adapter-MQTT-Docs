@@ -1,1 +1,1 @@
-PI-Adapter-for-MQTT_1.0.0.167
+AVEVA-Adapter-for-MQTT_1.0.0.167
