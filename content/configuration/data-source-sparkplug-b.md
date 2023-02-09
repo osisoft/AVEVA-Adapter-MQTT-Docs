@@ -35,12 +35,10 @@ Complete the following steps to configure an MQTT Sparkplug B data source. Use t
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `MQTTSparkplugB1`, update the endpoint with your chosen component ID.
     * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
-    <br/>
-    <br/>
 
 7. Configure data selection.
 
-    For more information, see [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
+    For more information, see [Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
 
 ## MQTT data source schema
 
