@@ -4,7 +4,7 @@ uid: PIAdapterForMQTTConfigurationExamples
 
 # Configuration examples
 
-The following tables provide examples for all configurations available for PI Adapter for MQTT.
+The following tables provide examples for all configurations available for MQTT.
 
 **Note:** The examples in this topic are using the default port number `5590`. If you selected a different port number, replace it with that value.TEST
 
