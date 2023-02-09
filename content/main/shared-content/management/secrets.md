@@ -4,7 +4,8 @@ uid: Secrets
 
 # Secrets
 
-PI Adapters use secrets when authenticating with sources and destinations. All secrets are encrypted and stored in the `management_secrets.json` file and are referenced by using their ID in other configurations' protected fields (e.g. "clientSecret" : "{{Secret#2}}"). 
+AVEVA Adapters use secrets when authenticating with sources and destinations. All secrets are encrypted and stored in the `management_secrets.json` file and are referenced by using their ID in other configurations' protected fields (e.g. "clientSecret" : "{{Secret#2}}"). 
+
 See [Reference Secrets](xref:ReferenceSecrets) for more information on how to use a secret Id in other configurations.
 
 **Note:** For adapters to be as secure as possible, any secret values you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.
