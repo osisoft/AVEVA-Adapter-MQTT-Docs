@@ -10,17 +10,19 @@ This adapter's operations focus on data collection and stream creation.
 
 To start data collection for the MQTT adapter, configure the following:
 
-- Data source: Provide the data source from which the adapter should collect data.<br> For more details, see the data source topics [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
-- Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the data selection topics [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
+- Data source: Provide the data source from which the adapter should collect data.<br> For more details, see the [data source (generic) configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration) topics.
+
+- Data selection: Select MQTT items to which the adapter should subscribe for data. <br> For more details, see the [data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration) and [Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration) topics.
+
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
 ## Connection
 
-The adapter uses either the Transmission Control Protocol (TCP) or WebSocket protocol (WS) to speak to an MQTT server. For more information on how to configure which protocol should be used, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
+The adapter uses either the Transmission Control Protocol (TCP) or WebSocket protocol (WS) to speak to an MQTT server. For more information on how to configure which protocol should be used, see [data source (generic) configuration](xref:PIAdapterForMQTTDataSourceConfiguration) and [Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
 
 ## Data collection
 
-The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing JSON payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration) and [PI Adapter for MQTT Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
+The adapter collects time-series data from the MQTT server using Topics. The generic MQTT adapter only supports data from devices producing JSON payload, the MQTT Sparkplug B adapter also supports data from devices adhering to the Sparkplug B specification. For more information see [data selection (generic)](xref:PIAdapterForMQTTDataSelectionConfiguration) and [Sparkplug B data selection configuration](xref:PIAdapterForMQTTSparkplugBDataSelectionConfiguration).
 
 ### Data types
 
@@ -105,7 +107,7 @@ Each stream created for the selected measurement has a unique identifier (stream
 <AdapterComponentId>.<Topic>.<ValueField>
 ```
 
-**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT data source configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
+**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [data source (generic) configuration](xref:PIAdapterForMQTTDataSourceConfiguration).
 
 ### MQTT Sparkplug B specific metadata
 
@@ -130,4 +132,4 @@ Each stream created for the selected measurement has a unique identifier (stream
 <AdapterComponentId>.<BaseTopic>.<MetricName>
 ```
 
-**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [PI Adapter for MQTT Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
+**Note:** `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration affect the naming convention. For more information, see [Sparkplug B data source configuration](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration).
