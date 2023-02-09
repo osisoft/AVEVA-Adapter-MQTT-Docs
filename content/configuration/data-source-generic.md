@@ -35,12 +35,10 @@ Complete the following steps to configure an MQTT data source. Use the `PUT` met
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `MQTT1`, update the endpoint with your chosen component ID.
     * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
-    <br/>
-    <br/>
 
 7. Configure data selection.
 
-    For more information, see [PI Adapter for MQTT data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
+    For more information, see the [data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
 
 ## MQTT data source schema
 
