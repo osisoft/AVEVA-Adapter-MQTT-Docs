@@ -44,7 +44,7 @@ The following problems and enhancement requests have been deferred until a futur
 | Item              | Description               |
 | ----------------- | ------------------------- |
 | 381808 | At the configuration time, if the configured Data Source has already established a data flow, then when configuring the Redundant Servers, the data flow will be interrupted for a short time period (a no data period in milliseconds or a few seconds) due to connection refresh. |
-| 381814 | When performing the initial instance of Server-side Failover, the secondary server becomes the target and the adapter can failover back to the original server. Subsequent attempts to perform Server-side Failover results in numerous disconnects and reconnects if you do not restart the adapter. |
+| 381814 | When performing the initial instance of Server-side Failover, the secondary server becomes the target and the adapter will successfully failover back to the original server. However, subsequent attempts to perform Server-side Failover results in numerous disconnects and reconnects if you do not restart the adapter. **Note:** This case is rare and restarting the adapter solves the issue. |
 
 ## Setup
 
