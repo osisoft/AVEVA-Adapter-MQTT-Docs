@@ -19,9 +19,9 @@ Alpine Linux: 3.16.2 <br>
 
 AVEVA Adapter for MQTT Module can collect health and diagnostics information. It supports buffering, unsolicited data collection, on-demand discovery of available data items on a data source, on-demand or automatic history recovery of data items.
 
-PI Adapter for MQTT collects time series data and relevant metadata from an MQTT server and sends it to configured Open Message Format (OMF) endpoints, such as PI Web API and AVEVA Data Hub. 
+AVEVA Adapter for MQTT collects time series data and relevant metadata from an MQTT server and sends it to configured Open Message Format (OMF) endpoints, such as PI Web API and AVEVA Data Hub. 
 
-For more information see [PI Adapter for MQTT overview](xref:index).
+For more information see [AVEVA Adapter for MQTT overview](xref:index).
 
 ## Fixes and enhancements
 
