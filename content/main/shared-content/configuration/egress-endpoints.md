@@ -11,7 +11,7 @@ AVEVA adapters collect time series data, which  they can send to a permanent dat
 
 For long term storage and analysis, you can configure any adapter to send time series data to one or several of these endpoints in any combination. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
 
-Data egress to a PI server creates a PI point in the AVEVA adapter configuration. Data egress to OCS creates a stream in the PI adapter configuration.
+Data egress to a PI server creates a PI point in the AVEVA adapter configuration. Data egress to OCS creates a stream in the AVEVA adapter configuration.
 
 The name of the PI point or AVEVA Data Hub stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.
 
