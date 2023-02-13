@@ -55,24 +55,24 @@ The following parameters are available for configuring health endpoints:
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
-| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. <br><br>Allowed value: any string identifier<br>Default value: new GUID|
-| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data <br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null`|
-| **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`|
-| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint <br><br>_PI server:_<br>Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets))<br>Default: `null`|
-| **ClientId**                    | Required for OCS endpoints          | `string`    | The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
-| **ClientSecret**                | Required for OCS endpoints          | `string`    | The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets))<br>Default: `null`|
-| **DebugExpiration** | Optional | string | Enables logging of detailed information, for each outbound HTTP request pertaining to this egress endpoint, to disk. The value represents the date and time this detailed information should stop being saved. Examples of valid strings representing date and time: UTC: "yyyy-mm-ddThh:mm:ssZ", Local: "yyyy-mm-ddThh:mm:ss". For more information, see [Egress debug logging](xref:TroubleshootTheAdapter#egress-debug-logging).<br><br>Default: `null` |
-| **TokenEndpoint** | Optional for OCS endpoints | `string` | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
-| **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments. <br><br>Allowed value: `true` or `false`<br>Default value: `true`|
+| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.   Allowed value: any string identifier Default value: new GUID|
+| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data   Allowed value: well-formed http or https endpoint string Default: `null`|
+| **Username**                    | Optional for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint   _PI server:_ Allowed value: any string Default: `null`|
+| **Password**                    | Optional for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint   _PI server:_ Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets)) Default: `null`|
+| **ClientId**                    | Required for AVEVA Data Hub endpoints          | `string`    | The client ID used for authentication with an AVEVA Data Hub OMF endpoint   Allowed value: any string Default: `null` |
+| **ClientSecret**                | Required for AVEVA Data Hub endpoints          | `string`    | The client secret used for authentication with an AVEVA Data Hub OMF endpoint   Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets)) Default: `null`|
+| **DebugExpiration** | Optional | string | Enables logging of detailed information, for each outbound HTTP request pertaining to this egress endpoint, to disk. The value represents the date and time this detailed information should stop being saved. Examples of valid strings representing date and time: UTC: "yyyy-mm-ddThh:mm:ssZ", Local: "yyyy-mm-ddThh:mm:ss". For more information, see [Egress debug logging](xref:TroubleshootTheAdapter#egress-debug-logging).  Default: `null` |
+| **TokenEndpoint** | Optional for AVEVA Data Hub endpoints | `string` | Retrieves an AVEVA Data Hub token from an alternative endpoint   Allowed value: well-formed http or https endpoint string  Default value: `null` |
+| **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments.   Allowed value: `true` or `false` Default value: `true`|
 
 ## Examples
 
-### OCS endpoint
+### AVEVA Data Hub endpoint
 
 ```code
 {
-    "Id": "OCS",
-    "Endpoint": "https://<OCS OMF endpoint>",
+    "Id": "AVEVA Data Hub",
+    "Endpoint": "https://<AVEVA Data Hub OMF endpoint>",
     "ClientId": "<clientid>",
     "ClientSecret": "<clientsecret>"
 }
@@ -102,6 +102,17 @@ See [Reference Secrets](xref:ReferenceSecrets) for more information on how to us
 }]
 ```
 
+### PI Web API endpoint using negotiate
+
+See [Reference Secrets](xref:ReferenceSecrets) for more information on how to use a secret Id.
+
+```json
+[{
+     "Id": "PI Web API",
+     "Endpoint": "https://<pi web api server>:<port>/piwebapi/omf/"
+}]
+```
+
 **Note:** When you use an adapter with a PI Web API health endpoint, the AF structure is required. If the elements are deleted, the adapter recreates the elements; if the account used to authenticate to the PI Web API has its permissions removed on the AF Server, the adapter retries sending health data to the PI Web API until the permissions are restored.
 
 ## REST URLs
@@ -112,7 +123,7 @@ See [Reference Secrets](xref:ReferenceSecrets) for more information on how to us
 | api/v1/configuration/system/healthEndpoints      | DELETE    | Deletes all configured health endpoints |
 | api/v1/configuration/system/healthEndpoints      | POST      | Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists |
 | api/v1/configuration/system/healthEndpoints      | PUT       | Replaces all health endpoints. **Note:** Requires an array of endpoints |
-| api/v1/configuration/system/healthEndpoints     | PATCH     | Allows partial updating of configured health endpoints<br>**Note:** The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its *Id*.  |
+| api/v1/configuration/system/healthEndpoints     | PATCH     | Allows partial updating of configured health endpoints **Note:** The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its *Id*.  |
 | api/v1/configuration/system/healthEndpoints/*Id* | GET       | Gets configured health endpoint by *Id* |
 | api/v1/configuration/system/healthEndpoints/*Id*| DELETE     | Deletes configured health endpoint by *Id* |
 | api/v1/configuration/system/healthEndpoints/*Id* | PUT       | Updates or creates a new health endpoint with the specified *Id* |

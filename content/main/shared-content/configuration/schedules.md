@@ -50,9 +50,9 @@ The following parameters are available for configuring schedules:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
-|**Id**              | Required | `string` | Unique identifier for the schedule<br><br>Allowed value: any string identifier |
-|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. <br><br>Invalid inputs: `null`, negative timespan, or zero <br><br>A default value must be specified.|
-|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### <br><br>Invalid input: negative timespan<br><br>A default value must be specified. |
+|**Id**              | Required | `string` | Unique identifier for the schedule  Allowed value: any string identifier |
+|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###.   Invalid inputs: `null`, negative timespan, or zero   A default value must be specified.|
+|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.###   Invalid input: negative timespan  A default value must be specified. |
 
 **Note:** You can also specify timespans as numbers in seconds. For example, `"Period": 25` specifies 25 seconds, or `"Period": 125` specifies 2 minutes and 5 seconds.
 

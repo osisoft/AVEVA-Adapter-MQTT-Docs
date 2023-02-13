@@ -22,36 +22,36 @@ To create a startup script for the adapter, follow the instructions below.
 
 	**ARM32**
 
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host
-	else
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host
+    else
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm_/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
 
 	**ARM64**
 
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host
-	else
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host
+    else
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-arm64_/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
 
-	**AMD64**
-			
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host
-	else
-		exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
+    **AMD64**
+            
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host
+    else
+        exec /AVEVA-Adapter-for-MQTT_1.0.0.167-x64_/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
 
 2. Name the script `mqttdockerstart.sh` and save it to the directory where you plan to create the container.
 
@@ -66,15 +66,14 @@ To create a Docker container that runs the adapter, follow the instructions belo
     **ARM32**
     
     ```dockerfile
-	FROM ubuntu:20.04
-	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
-	COPY mqttdockerstart.sh /
-	RUN chmod +x /mqttdockerstart.sh
-	ADD ./AVEVA-Adapter-for-MQTT_1.0.0.167-arm_.tar.gz .
-	ENTRYPOINT ["/mqttdockerstart.sh"]
-	```
-	**ARM64**
+    FROM ubuntu:20.04
+    WORKDIR /
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
+    COPY {adapter}dockerstart.sh /
+    RUN chmod +x /{adapter}dockerstart.sh
+    ADD ./AVEVA-Adapter-for-MQTT_1.0.0.167-arm_.tar.gz .
+    ENTRYPOINT ["/{adapter}dockerstart.sh"]
+    ```
 
 	```dockerfile
 	FROM ubuntu:20.04

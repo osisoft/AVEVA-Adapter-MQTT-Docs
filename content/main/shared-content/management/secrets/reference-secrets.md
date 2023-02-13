@@ -22,13 +22,13 @@ If a secret Id and value already exist in the secret management configuration, f
 ```
 The secret Id can be referenced in any configuration with a protected property, such as client secret or password.
 
-For example, in a health configuration with a PWA and OCS endpoint `{{<secretId>}}` can be substituted in the protected properties:
+For example, in a health configuration with a PWA and AVEVA Data Hub endpoint `{{<secretId>}}` can be substituted in the protected properties:
 
 ```code
 [
     {
-        "Id": "OCS",
-        "Endpoint": "https://<OCS OMF endpoint>",
+        "Id": "AVEVA Data Hub",
+        "Endpoint": "https://<AVEVA Data Hub OMF endpoint>",
         "ClientId": "<clientid>",
         "ClientSecret": "{{<secretId>}}"
     },
@@ -52,8 +52,8 @@ Add a health configuration with a **ClientSecret** value `<clientsecret>`:
 ```code
 [
     {
-        "Id": "OCS",
-        "Endpoint": "https://<OCS OMF endpoint>",
+        "Id": "AVEVA Data Hub",
+        "Endpoint": "https://<AVEVA Data Hub OMF endpoint>",
         "ClientId": "<clientid>",
         "ClientSecret": "<clientsecret>"
     }
@@ -64,22 +64,22 @@ The secrets management configuration updates to add the following **Id** and **V
 
 ```code
 {
-    "Id": "System.HealthEndpoints.OCS.ClientSecret",
+    "Id": "System.HealthEndpoints.AVEVA Data Hub.ClientSecret",
     "Value": "<clientsecret>"
 }
 ```
 
  **Note:** The **Value** `<clientsecret>` is encrypted before storing in the secrets management configuration.
 
-The health configuration replaces the **ClientSecret** value with the generated secret Id `"{{System.HealthEndpoints.OCS.ClientSecret}}"`:
+The health configuration replaces the **ClientSecret** value with the generated secret Id `"{{System.HealthEndpoints.AVEVA Data Hub.ClientSecret}}"`:
 
 ```code
 [
     {
-        "Id": "OCS",
+        "Id": "AVEVA Data Hub",
         "Endpoint": "https://<OCS OMF endpoint>",
         "ClientId": "<clientid>",
-        "ClientSecret": "{{System.HealthEndpoints.OCS.ClientSecret}}"
+        "ClientSecret": "{{System.HealthEndpoints.AVEVA Data Hub.ClientSecret}}"
     }
 ]
 ```

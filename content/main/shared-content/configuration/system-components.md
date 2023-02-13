@@ -38,8 +38,8 @@ Complete the following steps to configure system components. Use the `PUT` metho
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * For a list of other REST operations you can perform, like updating or deleting a system components configuration, see [REST URLs](#rest-urls).
-    <br>
-    <br>
+     
+     
 
 ## System components schema
 
@@ -55,10 +55,10 @@ You can configure the following parameters for system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component<sup>1</sup> . It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `"` `(` `)` `\\` `+` `,` `;` `=` `|` `` ` `` `{` `}`<br><br>**Note:** The **ComponentId** is added to each container message that an adapter component sends to an OMF endpoint. It is displayed as the data source information (point source) in PI Web API. |
-| **ComponentType**  | Required |`string` | The type of the component. There are two types of components: OmfEgress and the adapter.<sup>1</sup> |
+| **ComponentId**    | Required |`string` | The ID of the component 1  . It can be any alphanumeric string. A properly configured ComponentID follows these rules: Cannot contain leading or trailing space   Cannot use the following characters:  `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `"` `(` `)` `\\` `+` `,` `;` `=` `|` `` ` `` `{` `}`  **Note:** The **ComponentId** is added to each container message that an adapter component sends to an OMF endpoint. It is displayed as the data source information (point source) in PI Web API. |
+| **ComponentType**  | Required |`string` | The type of the component. There are two types of components: OmfEgress and the adapter. 1  |
     
-<sup>1</sup>**Note:** The OmfEgress component is required to run the adapter. Both its **ComponentId** and **ComponentType** are reserved and should not be modified.
+ 1 **Note:** The OmfEgress component is required to run the adapter. Both its **ComponentId** and **ComponentType** are reserved and should not be modified.
 
 ## Examples
 

@@ -30,7 +30,7 @@ Complete the procedure appropriate for your operating system to start or stop an
 
     Example:
 
-    _Stop_ PI Adapter for \<AdapterName\>
+    _Stop_ AVEVA Adapter for \<AdapterName\>
   
       ```cmdline
       sudo systemctl stop aveva.adapter.<adapterName>

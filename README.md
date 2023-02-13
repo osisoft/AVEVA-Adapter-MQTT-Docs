@@ -9,7 +9,7 @@ This repository contains the documentation for AVEVA Adapter for MQTT. You can a
 This documentation repository consumes the [PI-Adapter](https://github.com/osisoft/PI-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
 
 ```bash
-git subtree pull --prefix content/main https://github.com/osisoft/PI-Adapter main --squash
+git subtree pull --prefix content/main https://github.com/osisoft/AVEVA-Adapter main --squash
 ```
 
 ## License

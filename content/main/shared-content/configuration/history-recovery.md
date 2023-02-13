@@ -13,4 +13,4 @@ The adapter you are using supports the following data collection modes which you
 History recovery for adapters supports the following two operations related to the data collection mode:
 
 - **On demand history recovery**: Recovers data from a specified start time or start and end time. If end time is not specified, the default is `utcnow`. On demand history recovery is available only when the adapter is in `HistoryOnly` data collection mode.
-- **Limited automatic history recovery**: Backfills data gaps that originated from connection disruptions, data source issues, or PI adapter shutdown or both. This is limited to a maximum time-range of four days. Limited automatic history recovery is available only when the adapter is in `CurrentWithBackfill` data collection mode.
+- **Limited automatic history recovery**: Backfills data gaps that originated from connection disruptions, data source issues, or AVEVA Adapter shutdown or both. This is limited to a maximum time-range of four days. Limited automatic history recovery is available only when the adapter is in `CurrentWithBackfill` data collection mode.
