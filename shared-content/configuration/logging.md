@@ -4,7 +4,7 @@ uid: LoggingConfiguration
 
 # Logging
 
-PI adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:
+AVEVA Adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:
 
 • Windows: *%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Logs*
 
@@ -60,20 +60,20 @@ The following parameters are available for configuring logging:
 
 | Parameter                 | Required | Type      | Description                                                  |
 | ------------------------- | -------- | --------- | ------------------------------------------------------------ |
-| **LogLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. <br>Messages with a severity below the level set are not included. <br><br>The log levels in their increasing order of severity are as follows: `Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, and `None`. <br>Default log level: `Information`<br><br>For detailed information about the log levels, see [LogLevel](#loglevel). |
-| **LogFileSizeLimitBytes** | Optional | `integer` | The maximum size (in bytes) of log files that the service will create for the component. The value must be a positive integer.<br><br>Minimum value: `1000`<br>Maximum value: `9223372036854775807`<br>Default value: `34636833` |
-| **LogFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. The value must be a positive integer.<br><br>Minimum value: `1`<br>Maximum value: `2147483647`<br> Default value: `31` |
+| **LogLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs.  Messages with a severity below the level set are not included.   The log levels in their increasing order of severity are as follows: `Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, and `None`.  Default log level: `Information`  For detailed information about the log levels, see [LogLevel](#loglevel). |
+| **LogFileSizeLimitBytes** | Optional | `integer` | The maximum size (in bytes) of log files that the service will create for the component. The value must be a positive integer.  Minimum value: `1000` Maximum value: `9223372036854775807` Default value: `34636833` |
+| **LogFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. The value must be a positive integer.  Minimum value: `1` Maximum value: `2147483647`  Default value: `31` |
 
 ### LogLevel
 
 | Level       | Description                         |
 |-------------|-------------------------------------|
-| Trace         | Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages should not be enabled in production environment.<br><br>**Note:** Trace is translated to *Verbose* in the log file. |
+| Trace         | Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages should not be enabled in production environment.  **Note:** Trace is translated to *Verbose* in the log file. |
 | Debug | Logs that can be used to troubleshoot data flow issues by recording metrics and detailed flow related information. |
-| Information | Logs that track the general flow of the application. Any non-repetitive general information like the following can be useful for diagnosing potential application errors: <br> - Version information related to the software at startup <br> - External services used <br> - Data source connection string <br> - Number of measurements <br> - Egress URL <br> - Change of state “Starting” or “Stopping” <br> - Configuration |
+| Information | Logs that track the general flow of the application. Any non-repetitive general information like the following can be useful for diagnosing potential application errors:   - Version information related to the software at startup   - External services used   - Data source connection string   - Number of measurements   - Egress URL   - Change of state “Starting” or “Stopping”   - Configuration |
 | Warning | Logs that highlight an abnormal or unexpected event in the application flow that does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, an insecure communication channel in use, or any other event that could require attention but that does not impact data flow. |
 | Error | Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity and not an application-wide failure. It can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on. |
-| Critical | Logs that describe an unrecoverable application or system crash or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.<br><br>**Note:** Critical is translated to *Fatal* in the log file. |
+| Critical | Logs that describe an unrecoverable application or system crash or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.  **Note:** Critical is translated to *Fatal* in the log file. |
 | None | Logging is disabled for the given component. |
 
 ## Example

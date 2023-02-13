@@ -4,7 +4,7 @@ uid: releaseNotes
 
 # Release notes
 
-*{ Product version x.x }*<br>
+*{ Product version x.x }* 
 
 ## Overview
 

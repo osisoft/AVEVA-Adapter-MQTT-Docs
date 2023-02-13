@@ -24,4 +24,4 @@ The adapter may also send its own stream metadata not including health and diagn
 **Note:**
 
 - Metadata is only sent for streams created by the ingress components.
-- Currently, the only endpoint that persists sent metadata is OCS (OSIsoft Cloud Services).
+- Currently, the only endpoint that persists sent metadata is AVEVA Data Hub (ADH).

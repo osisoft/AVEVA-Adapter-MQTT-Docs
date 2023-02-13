@@ -4,7 +4,7 @@ uid: Secrets
 
 # Secrets
 
-PI Adapters use secrets when authenticating with sources and destinations. All secrets are encrypted and stored in the `management_secrets.json` file and are referenced by using their ID in other configurations' protected fields (e.g. "clientSecret" : "{{Secret#2}}"). 
+AVEVA Adapters use secrets when authenticating with sources and destinations. All secrets are encrypted and stored in the `management_secrets.json` file and are referenced by using their ID in other configurations' protected fields (e.g. "clientSecret" : "{{Secret#2}}"). 
 See [Reference Secrets](xref:ReferenceSecrets) for more information on how to use a secret Id in other configurations.
 
 **Note:** For adapters to be as secure as possible, any secret values you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.
@@ -56,10 +56,10 @@ The following parameters are available for configuring secrets:
 
 | Parameter                 | Required | Type      | Description                                                  |
 | ------------------------- | -------- | --------- | ------------------------------------------------------------ |
-| **Id**              | Required | 'string' | Id of configuration to be added, edited, or removed. <br><br>Allowed value: any string that does not contain curly braces <br>(e.g., `<secretId>` is acceptable but `{{<secretId>}}`, `{<secretId>}`, `<secret{Id>`or `{<secretId>` are not)|
-| **Description** | Optional | 'string' | Description of the secret.  <br><br>Allowed value: any string <br> Default: `null` <br> **Note:** The **Description** field is metadata and not used in the adapter.|
-| **ExpirationDate** | Optional | 'datetime' | Expiration date of the secret. <br><br> Allowed formats:  UTC: `"yyyy-mm-ddThh:mm:ssZ"`; Local: `"yyyy-mm-ddThh:mm:ss"`. If the time is not specified, it will default to the start of the day (e.g., `2025-06-19` will default to `2025-06-19T00:00:00`) <br>Default: `null`<br> **Note:** The **ExpirationDate** field is metadata and not used in the adapter. |
-| **Value** | Required | 'string' | The secret value. <br><br>Allowed value: any string that is not explicitly enclosed by double curly braces <br>(e.g., `<value>`, `{{{<value>}}`, or `{{<val{ue>}}` is acceptable but `{{<value>}}` is not)|
+| **Id**              | Required | 'string' | Id of configuration to be added, edited, or removed.   Allowed value: any string that does not contain curly braces  (e.g., `<secretId>` is acceptable but `{{<secretId>}}`, `{<secretId>}`, `<secret{Id>`or `{<secretId>` are not)|
+| **Description** | Optional | 'string' | Description of the secret.    Allowed value: any string   Default: `null`   **Note:** The **Description** field is metadata and not used in the adapter.|
+| **ExpirationDate** | Optional | 'datetime' | Expiration date of the secret.    Allowed formats:  UTC: `"yyyy-mm-ddThh:mm:ssZ"`; Local: `"yyyy-mm-ddThh:mm:ss"`. If the time is not specified, it will default to the start of the day (e.g., `2025-06-19` will default to `2025-06-19T00:00:00`)  Default: `null`  **Note:** The **ExpirationDate** field is metadata and not used in the adapter. |
+| **Value** | Required | 'string' | The secret value.   Allowed value: any string that is not explicitly enclosed by double curly braces  (e.g., `<value>`, `{{{<value>}}`, or `{{<val{ue>}}` is acceptable but `{{<value>}}` is not)|
 
   **Note:** If the **Value** is the masked value "\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*", then the **Value** will be unchanged from the previous configuration. An error will be returned if the masked value is used when no previous configuration for that **Id** exists. 
 

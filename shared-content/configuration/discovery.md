@@ -35,8 +35,8 @@ Data discovery includes different routes. For example, you can choose to do the 
 
 Parameter | Type| Description
 ---------|----------|---------
- **id** | `string` | The Id of the discovery <br><br> **Notes:**<br>&bull; You cannot run multiple discoveries with the same Id.<br>&bull; Including an `id` is optional. If you do not include one, the adapter automatically generates one.
- **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.
+ **id** | `string` | The Id of the discovery    **Notes:** &bull; You cannot run multiple discoveries with the same Id. &bull; Including an `id` is optional. If you do not include one, the adapter automatically generates one.
+ **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.  For more information, see the Data source configuration topic.
  **startTime** | `datetime` | Time when the discovery started
  **endTime** | `datetime`| Time when the discovery ended
  **progress** | `double` | Progress of the discovery
@@ -49,7 +49,7 @@ Parameter | Type| Description
 
 ## Discoveries status example
 
-The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
+The following example shows the status of all discoveries. The discovery id in this example was auto-generated. 
 
 ```json
 [
@@ -76,14 +76,14 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_\<componentId>_/discoveries                                        | GET       | Returns status of all discoveries                                                                                                       |
 | api/v1/configuration/_\<componentId>_/discoveries                                        | POST      | Initiates a new discovery and returns its Id                                                                                            |
 | api/v1/configuration/_\<componentId>_/discoveries                                        | DELETE    | Cancels and deletes all saved discoveries                                                                                               |
-| api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_                          | GET       | Gets the status of an individual discovery<br><br>**Note:** If a discovery with the specified Id does not exist, you will get an error message                                                                                          |
+| api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_                          | GET       | Gets the status of an individual discovery  **Note:** If a discovery with the specified Id does not exist, you will get an error message                                                                                          |
 | api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_                          | DELETE    | Cancels and deletes discovery and result                                                                                                |
 | api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_/result                   | GET       | Returns the result of a discovery                                                                                                       |
 | api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_/result?diff=_previousId_ | GET       | Returns the difference between the result and the previous result                                                                       |
 | api/v1/configuration/_\<componentId>_/dataselection?diff=_\<discoveryId>_                   | GET       | Returns the difference between the data selection configuration and the discovery results
-| api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_/result                   | DELETE    | Cancels and deletes discovery result<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query |
+| api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_/result                   | DELETE    | Cancels and deletes discovery result  **Note:** The discovery Id is still valid, but a query will contain a status of `canceled` Only the **Status** property will contain a `canceled` status, but not the query |
 |  api/v1/configuration/_\<componentId>_/discoveries/_\<discoveryId>_/cancel | POST | Cancels the on-demand data source discovery |
 | api/v1/configuration/_\<componentId>_/dataselection/select?discoveryid=_\<discoveryId>_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
 | api/v1/configuration/_\<componentId>_/dataselection/unselect?discoveryid=_\<discoveryId>_   | POST      | Adds the discovered items to data selection with selected set to `false`
 
-**Note:** Replace _\<componentId>_ with the Id of your adapter component.<br>Replace _\<discoveryId>_ with the Id of the discovery for which you want to perform the action.
+**Note:** Replace _\<componentId>_ with the Id of your adapter component. Replace _\<discoveryId>_ with the Id of the discovery for which you want to perform the action.

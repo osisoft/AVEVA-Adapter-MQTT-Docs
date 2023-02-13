@@ -4,7 +4,7 @@ uid: TroubleshootTheAdapter
 
 # Troubleshooting
 
-PI adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+AVEVA Adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
 
 **Note:** Make sure to also check the troubleshooting information specific to your adapter in this user guide.
 
@@ -14,10 +14,10 @@ Messages from the System and OmfEgress logs provide information on the status of
 
 Perform the following steps to view the System and OmfEgress logs:
 
-1. Navigate to the logs directory:<br>
-    Windows: `%ProgramData%\OSIsoft\Adapters\<AdapterName>\Logs`<br>
-    Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.<br><br>
-    **Example:**<br> A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:
+1. Navigate to the logs directory: 
+    Windows: `%ProgramData%\OSIsoft\Adapters\<AdapterName>\Logs` 
+    Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.  
+    **Example:**  A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:
 
     ```json
     2020-11-02 11:08:51.870 -06:00 [Information] Data will be sent to the following OMF endpoint: 
@@ -58,7 +58,7 @@ To resolve the conflict, perform the following steps:
 
 ## Adapter connection to egress endpoint
 
-Certain egress health information in both PI Web API and OCS show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:
+Certain egress health information in both PI Web API and AVEVA Data Hub show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:
 
 ### PI Web API connection
 
@@ -71,11 +71,11 @@ Perform the following steps to determine if a connection to the PI Web API endpo
     - **NextHealthMessageExpected**
     - **IORate**
 
-### OCS connection
+### AVEVA Data Hub connection
 
-Perform the following steps to determine if a connection to the OCS endpoint exists:
+Perform the following steps to determine if a connection to the AVEVA Data Hub endpoint exists:
 
-1. Open OCS.
+1. Open AVEVA Data Hub.
 2. Click **Sequential Data Store** > **Streams**.
 3. Makes sure that  the following streams have been created for your egress endpoint:
     - **DeviceStatus**
@@ -92,7 +92,7 @@ Perform the following steps to see all established TCP sessions in Linux:
 
 ## Egress debug logging
 
-Perform the following steps to enable debugging and to troubleshoot issues between the PI Adapter and the egress destination:
+Perform the following steps to enable debugging and to troubleshoot issues between the AVEVA Adapter and the egress destination:
 
 1. Set the appropriate time value for the **DebugExpiration** property in the egress configuration.
    **Note:** To disable debugging, set the **DebugExpiration** property to `null`.
