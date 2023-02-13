@@ -4,15 +4,15 @@ uid: MQTTConfiguration
 
 # Configuration
 
-PI Adapter for MQTT provides configuration of data source, discovery, and data selection for both the generic and the Sparkplug B component.
+AVEVA Adapter for MQTT provides configuration of data source, discovery, and data selection for both the generic and the Sparkplug B component.
 
 The examples in the configuration topics use `curl`, a commonly available tool on both Windows and Linux. You can configure the adapter with any programming language or tool that supports making REST calls or with the EdgeCmd utility. For more information, see the [EdgeCmd utility documentation](https://docs.osisoft.com/bundle/edgecmd/page/index.html). To validate successful configurations, you can perform data retrieval (`GET` commands) with a browser, if available, on your device.
 
-For more information on PI Adapter configuration tools, see [Configuration tools](xref:ConfigurationTools).
+For more information on AVEVA Adapter configuration tools, see [Configuration tools](xref:ConfigurationTools).
 
 ## Quick start
 
-This Quick Start guides you through setup of each configuration file available for PI Adapter for MQTT. As you complete each step, perform each required configuration to establish a data flow from a data source to one or more endpoints. Some configurations are optional.
+This Quick Start guides you through setup of each configuration file available for AVEVA Adapter for MQTT. As you complete each step, perform each required configuration to establish a data flow from a data source to one or more endpoints. Some configurations are optional.
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 

@@ -4,7 +4,7 @@ uid: HealthEndpointConfiguration
 
 # Health endpoints
 
-You can configure AVEVA Adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.
+You can configure AVEVA adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.
 
 For more information about adapter health, see [Adapter health](xref:AdapterHealth).
 

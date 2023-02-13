@@ -8,7 +8,7 @@ Complete the procedure corresponding to your specific operating system to uninst
 
 ## Windows
 
-1. To delete the AVEVA Adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
+1. To delete the AVEVA adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
 
     **Note:** The configuration, data, and log files are not deleted by the uninstall process.
 

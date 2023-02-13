@@ -500,4 +500,4 @@ Possible errors include the following:
 
 ## Additional help
 
-PI Adapter for MQTT's discovery feature helps you find collectible data without manually creating the data selection file. For information on discovery, see [Data source discovery generic](xref:GenericDataSourceDiscovery).
+AVEVA Adapter for MQTT's discovery feature helps you find collectible data without manually creating the data selection file. For information on discovery, see [Data source discovery generic](xref:GenericDataSourceDiscovery).

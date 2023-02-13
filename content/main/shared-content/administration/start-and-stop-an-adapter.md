@@ -25,7 +25,7 @@ Complete the procedure appropriate for your operating system to start or stop an
     _Start_ AVEVA Adapter for \<AdapterName\>
 
     ```cmdline
-    sudo systemctl start pi.adapter.<adapterName>
+    sudo systemctl start aveva.adapter.<adapterName>
     ```
 
     Example:
@@ -33,7 +33,7 @@ Complete the procedure appropriate for your operating system to start or stop an
     _Stop_ AVEVA Adapter for \<AdapterName\>
   
       ```cmdline
-      sudo systemctl stop pi.adapter.<adapterName>
+      sudo systemctl stop aveva.adapter.<adapterName>
       ```
   
 3. Press Enter.
