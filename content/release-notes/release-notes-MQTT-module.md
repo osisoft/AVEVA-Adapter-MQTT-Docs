@@ -4,7 +4,7 @@ uid: ReleaseNotesMQTTModule
 
 # AVEVA Adapter for MQTT Module
 
-AVEVA Adapter for MQTT Module: [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
+AVEVA Adapter for MQTT Module: 1.2.0.59<br>
 
 [!include[produce-name](../main/shared-content/_includes/inline/product-name.md)]: [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
 
