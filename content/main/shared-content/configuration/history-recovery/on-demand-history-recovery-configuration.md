@@ -4,7 +4,7 @@ uid: OnDemandHistoryRecoveryConfiguration
 
 # On-demand history recovery configuration
 
-The PI adapter supports performing history recovery on-demand by specifying start and end time.
+The AVEVA Adapter supports performing history recovery on-demand by specifying start and end time.
 
 ## Configure history recovery
 
@@ -26,14 +26,14 @@ The PI adapter supports performing history recovery on-demand by specifying star
 
 Parameter | Type| Description
 ---------|----------|---------
- **Id** | `string` | The Id of the history recovery<br><br> **Note:** You cannot run multiple history recoveries with the same Id.
+ **Id** | `string` | The Id of the history recovery   **Note:** You cannot run multiple history recoveries with the same Id.
  **StartTime** | `datetime` | Time when the the first data items are collected.
  **EndTime** | `datetime`| Time when the last data items are collected.
 | **Checkpoint** | `datetime` | The latest timestamp that the history recovery has completed with the range being between **startTime** and **endTime**.
 | **Items** | `double` | The amount of data selection items in the history recovery operation.
 | **RecoveredEvents** | `double` | Number of events that the history recovery found on the data source.
 | **Progress** | `double` | Progress of the history recovery (number of data items found through the history recovery).
-| **Status** | `enum` | Status of the history recovery.<br><br>The following statuses are available:<br> - *Active* - The operation is currently in progress<br>- *Complete* - The operation has been completed<br>- *Canceled* - The operation has been canceled<br>- *Failed* - The operation failed
+| **Status** | `enum` | Status of the history recovery.  The following statuses are available:  - *Active* - The operation is currently in progress - *Complete* - The operation has been completed - *Canceled* - The operation has been canceled - *Failed* - The operation failed
 | **Errors** | `string` | Errors encountered during the history recovery.
 
 ## History recovery status example
@@ -66,6 +66,6 @@ Parameter | Type| Description
 | api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_ |  GET    | Gets the status of an individual history recovery
 | api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_ | DELETE       | Cancels history recovery and removes the state |
 | api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_/cancel | POST | Cancels history recovery|
-| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_/resume | POST | Resumes canceled or failed history recovery operation (`202`) from the checkpoint<br><br>**Note:** If the `<operationId>` is not found, a 404 HTTP error message will be returned  | 
+| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_/resume | POST | Resumes canceled or failed history recovery operation (`202`) from the checkpoint  **Note:** If the `<operationId>` is not found, a 404 HTTP error message will be returned  | 
 
 **Note:** Replace _\<componentId>_ with the Id of your adapter component. Replace _\<operationId>_ with the Id of the history recovery operation for which you want to perform the action.

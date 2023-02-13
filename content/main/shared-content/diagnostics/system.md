@@ -18,7 +18,7 @@ This diagnostic stream contains system level information related to the host pla
 | **TotalPrivilegedProcessorTime** | `double` | Privileged processor time for the host process expressed in seconds               |
 | **ThreadCount**                       | `int`    | Number of threads in the host process                                             |
 | **HandleCount**                       | `int`    | Number of handles opened by the host process                                      |
-| **ManagedMemorySize**        | `double` | Number of bytes currently thought to be allocated in managed memory<br>Unit of Measure = megabytes |
+| **ManagedMemorySize**        | `double` | Number of bytes currently thought to be allocated in managed memory Unit of Measure = megabytes |
 | **PrivateMemorySize**        | `double` | Amount of paged memory in bytes allocated for the host process<br/>Unit of Measure = megabytes |
 | **PeakPagedMemorySize**      | `double` | Maximum amount of memory in the virtual memory paging file in bytes used by the host process.<br/>Unit of Measure = megabytes |
 | **StorageTotalSize**         | `double` | Total size of the storage medium in use by the system<br/>Unit of Measure = megabytes |

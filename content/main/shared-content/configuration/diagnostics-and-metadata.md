@@ -4,7 +4,7 @@ uid: GeneralConfiguration
 
 # Diagnostics and metadata
 
-You can configure PI adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
+You can configure AVEVA Adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
 For more information about available metadata and what metadata are sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
 
@@ -35,9 +35,9 @@ The following parameters are available for configuring general:
 
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
-| **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled<br><br>Allowed value: `true` or `false`<br>Default value: `true`<br>|
-| **MetadataLevel** | Optional | `reference` | Defines amount of metadata sent to OMF endpoints.<br><br> Allowed value: `None`, `Low`, `Medium`, and `High`<br> Default value: `Medium`|
-| **HealthPrefix** | Optional | `reference` | Prefix to use for health and diagnostics stream and asset IDs.<br> Default value: `null`|
+| **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled  Allowed value: `true` or `false` Default value: `true` |
+| **MetadataLevel** | Optional | `reference` | Defines amount of metadata sent to OMF endpoints.   Allowed value: `None`, `Low`, `Medium`, and `High`  Default value: `Medium`|
+| **HealthPrefix** | Optional | `reference` | Prefix to use for health and diagnostics stream and asset IDs.  Default value: `null`|
 
 ## Example
 

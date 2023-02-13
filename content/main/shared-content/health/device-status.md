@@ -4,7 +4,7 @@ uid: DeviceStatus
 
 # Device status
 
-The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of `Good` is expected.
+The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or AVEVA Data Hub stream, depending on the endpoint type. During healthy steady-state operation, a value of `Good` is expected.
 
 | Property                          | Type                                 | Description                    |
 |-----------------------------------|--------------------------------------|--------------------------------|
