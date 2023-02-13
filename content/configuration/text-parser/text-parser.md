@@ -4,7 +4,7 @@ uid: TextParserMQTT
 
 # Text parser
 
-PI Adapter for MQTT includes the text parser component which ensures consistent parsing of text from different files. This adapter supports parsing of .json files.
+AVEVA Adapter for MQTT includes the text parser component which ensures consistent parsing of text from different files. This adapter supports parsing of .json files.
 
 Designed to be a document parser, the text parser parses a semantically complete document in its entirety. The text parser produces OMF compatible output, which in turn is compatible with the OCS backing SDS (Sequential Data Store) that stores data in streams consisting of multiple values and indexes.
 
