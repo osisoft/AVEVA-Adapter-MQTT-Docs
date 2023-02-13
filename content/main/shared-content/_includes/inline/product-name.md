@@ -1,1 +1,1 @@
-PI Adapter for MQTT
+AVEVA Adapter for MQTT
