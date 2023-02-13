@@ -34,8 +34,8 @@ The following items were added in release 1.3.0.99:
 
 | Item              | Description               |
 | ----------------- | ------------------------- |
-| 166669 | Server failover support for PI Adapter for MQTT |
-| 290389 | Client failover support for PI Adapter for MQTT |
+| 166669 | Server failover support for AVEVA Adapter for MQTT |
+| 290389 | Client failover support for AVEVA Adapter for MQTT |
 
 ## Known issues
 
