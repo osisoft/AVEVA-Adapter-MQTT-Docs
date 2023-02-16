@@ -18,7 +18,19 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "bleDy1r0hI7qK3dCdV7Sog=="
+          "hash": "CyRhIMlEHQP8EvYVblJXsbzrUK0JMAjIU0ucdVbpovc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/client-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/client-settings.html",
+          "hash": "rGtNCiwDcC299Nl+A9/rEKDQZREabOtMW+xNpNV5dEE="
         }
       },
       "is_incremental": false,
@@ -30,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration-examples.html",
-          "hash": "vOfBBDg7vbsWTCqbs4jIjA=="
+          "hash": "jmzl8kiocmZi+X64RY1HOySRj0qZd7szz+ebl7YqHoc="
         }
       },
       "is_incremental": false,
@@ -42,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "taGZAB3sDsl1FCys907d0w=="
+          "hash": "ojVoZmAqOTSLVbHGch1UwfzCAJJzCLJ6WyTN9Evtd5s="
         }
       },
       "is_incremental": false,
@@ -54,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-selection-generic.html",
-          "hash": "A2Ub/Gxx4lNJVRAHiaArtQ=="
+          "hash": "Om/Gkn2vq0Opn+NAaA/LtngfsMJPM/g8dzzrFs8MV8E="
         }
       },
       "is_incremental": false,
@@ -66,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-selection-sparkplug-b.html",
-          "hash": "RMGtmIJE53Fq0iVk6rBgjQ=="
+          "hash": "tjSM2F0iGhLhUNe1A6y0TF3ta81BU3Oi9qjbPRLsZt0="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-source-generic.html",
-          "hash": "qPt5TV6tjs5Rd9yOSNXf3w=="
+          "hash": "rSDHgRA30xUQ8o6I316+DVuCEnCPFUJaf4Q/nYqvrwo="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,19 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-source-sparkplug-b.html",
-          "hash": "5txnQqGEeBM0RkkKInItVA=="
+          "hash": "j40LEDRiQKTMHg2Zs5TMNlRDIN6yx6DHuXjTXOu0i3s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/discovery/data-source-discovery-generic.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/discovery/data-source-discovery-generic.html",
+          "hash": "JNpMbiWkcQBgX+aukcXNZwC/bCpyNETXUDvU40/Jpv4="
         }
       },
       "is_incremental": false,
@@ -102,7 +126,55 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/discovery/data-source-discovery-sparkplug-b.html",
-          "hash": "LO+apzNqzuEe66WdANf+Vw=="
+          "hash": "pWLhO9HrHNKTExGRqav2VpVUVulID+z0YTFcq/J4DkM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/security-mqtt.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/security-mqtt.html",
+          "hash": "NvhxlD6kO7YA3fYq8ghloZttMYZ2AUKCiRmYcFb7jX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/system-components.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/system-components.html",
+          "hash": "I0UO4AuWYaef+JtK2tJoiwFv2dvih/8tMTFT7Odye9I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html",
+          "hash": "WIBoHdEzmnT084nrivhNW+A2uTswFSaGLAmhlcXec/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/text-parser/text-parser.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/text-parser/text-parser.html",
+          "hash": "DoZcGiVZ4ZU2p3CefuaLR/qVxpbjSR2fEpSEdUaVUu8="
         }
       },
       "is_incremental": false,
@@ -125,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "PbXGsbJGp51VDohugdMKlA=="
+          "hash": "NakyBIM52QbpmWwsOsaqnHIhP9WSAEz4tZIU7Os71pc="
         }
       },
       "is_incremental": false,
@@ -137,7 +209,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/installation-using-docker.html",
-          "hash": "b3o+0KMG3dmNV28P1ynURQ=="
+          "hash": "DNHagUxLfuwV3Ru1d9iancr2+hfGmd4qnQu0MnswuFw="
         }
       },
       "is_incremental": false,
@@ -145,11 +217,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/installation/system-requirements.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/component-id.md",
       "output": {
         ".html": {
-          "relative_path": "content/installation/system-requirements.html",
-          "hash": "d27ugQ9AYq3znlAkjdQ1cQ=="
+          "relative_path": "content/main/shared-content/_includes/inline/component-id.html",
+          "hash": "DdhzxaJZTAKGsn4+IWAJRPrAop9NmdgJ6kYzMGsWl7g="
         }
       },
       "is_incremental": false,
@@ -157,11 +229,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/README.MD",
+      "source_relative_path": "content/main/shared-content/_includes/inline/component-type.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/README.html",
-          "hash": "cbODMjEKoClefW64Rnad4A=="
+          "relative_path": "content/main/shared-content/_includes/inline/component-type.html",
+          "hash": "2XiM5Y0ysf/YhNJINVgK4bT1ocSYH27hGRKkCNyA70Q="
         }
       },
       "is_incremental": false,
@@ -169,11 +241,95 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/Templates/Markdown Release Notes template-V1.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/docker-image.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/Templates/Markdown Release Notes template-V1.html",
-          "hash": "Z/bH+JQaWcqr7aBA0/FaEw=="
+          "relative_path": "content/main/shared-content/_includes/inline/docker-image.html",
+          "hash": "tYRYz8EUOwE/PRCLahDpyWzVpGCYBYGwEtCZLLUIy+Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/framework-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/framework-version.html",
+          "hash": "mPEapwvVVOOpyFmfnK4Fl9AVD0/i51d2qeim8o5obZs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/installer-name.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/installer-name.html",
+          "hash": "4goJtXW3rhQoiwtWFdE56xzj1Jov33Iqw+zyKxby4Eo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-name.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/product-name.html",
+          "hash": "SRkSr8FhpY1xwuVk4iVbO0x39zM5zkZem8R0SnPXwaU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-protocol.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/product-protocol.html",
+          "hash": "M9U5VGGB2XnZ0KjQOKa5+jeSrTSFFc1FosImunIXctw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/product-version.html",
+          "hash": "Z2w8KLoJDlwhkDHkxYj1iKcAi3w0+/staOCCQScyRp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/startup-script.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/startup-script.html",
+          "hash": "nnK0p428vNB7hYyIAZYAYEr6Pn4hA9geGUyx5JXbnUI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/symantic-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/symantic-version.html",
+          "hash": "f7d0knPnOd63lfqfCz9/aFY0DTM0W2UC6pkolLr+w2c="
         }
       },
       "is_incremental": false,
@@ -185,7 +341,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/administration.html",
-          "hash": "7WlniRzRjl+B8dNwJvL4Bg=="
+          "hash": "G6PIkblLdrVARhpGHvRbeS6MXx1Xrv4rKbaIc5lf5oc="
         }
       },
       "is_incremental": false,
@@ -197,7 +353,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/delete-an-adapter-component.html",
-          "hash": "RabMbPd+A4RyGsfiRtv+DA=="
+          "hash": "/wPowFqzRXJ3W5fA7dszkSNUYxRmM0Nj0JrgX1Ehlb0="
         }
       },
       "is_incremental": false,
@@ -209,7 +365,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/retrieve-product-version-information.html",
-          "hash": "a5EItQIuhWCD4KkEyYSasw=="
+          "hash": "AKS0wqlR67L4k/uJB8+tMjE8mm7jSlztzJ9a4RfG4jA="
         }
       },
       "is_incremental": false,
@@ -221,7 +377,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-an-adapter.html",
-          "hash": "6VaPQj2gWF4BJLDroimThg=="
+          "hash": "eWwILyi1/56HzfZB5/liGkDxpWdBNN4fyVsUJeNv6Hg="
         }
       },
       "is_incremental": false,
@@ -233,7 +389,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-ingress-component.html",
-          "hash": "KRPZjLaToZ7KccTXPD48kA=="
+          "hash": "d+GfzHQYevDfZUJplmSgVGZevgr0QX/h8SjZUpAFd18="
         }
       },
       "is_incremental": false,
@@ -245,7 +401,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/buffering.html",
-          "hash": "mmmljSzHJTG39S8bRgzh7A=="
+          "hash": "0reg48fllt6T/3e6WiYajhXx6myezkUkoJSstxqhmAE="
         }
       },
       "is_incremental": false,
@@ -257,7 +413,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/configuration-tools.html",
-          "hash": "KJrsxjtwrSrL5lUJm1VA5w=="
+          "hash": "wVM4r88PGE5x8hYXdG8kFcbExe+GRL2K+8pCv5AQ+Hs="
         }
       },
       "is_incremental": false,
@@ -269,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/data-filters.html",
-          "hash": "FrwtEdfN9sSVCZmZrqfkcQ=="
+          "hash": "3YcgUjsTZj1mPZnQs0jpCJex0pn5jExi/LygVgqkrqM="
         }
       },
       "is_incremental": false,
@@ -281,7 +437,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
-          "hash": "1Vvv+U10n62jQZNnvqGpmQ=="
+          "hash": "NQ5STiqEfewAh6KnKC+jQcvOTGyhh+qngB1EtCHqbtI="
         }
       },
       "is_incremental": false,
@@ -293,7 +449,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/discovery.html",
-          "hash": "ODCfh2Bb84p1uQvC/mbAiA=="
+          "hash": "tVN7Y8mldkXX70FRy93/lz+lF22oZ+FsUCYcyG8Ybu4="
         }
       },
       "is_incremental": false,
@@ -305,7 +461,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
-          "hash": "vTgeyus//RIMSA6qnV2EMg=="
+          "hash": "1S7BrG7MJbyvjXUixdTcC950wPR7zyD8VYbmQa7TMGE="
         }
       },
       "is_incremental": false,
@@ -317,7 +473,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html",
-          "hash": "xFNweH+asaIc76RN0bewcg=="
+          "hash": "SAQqVltY3LcAzlNmzgHS3nig2DElafylq7ZpMioQi20="
         }
       },
       "is_incremental": false,
@@ -329,7 +485,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
-          "hash": "QXJGvHCv4L4c09sc4srYGw=="
+          "hash": "uH3p6HmjZ1uw9juf1TQ83Een+I9Lk30vJ+6Ggo5AqBk="
         }
       },
       "is_incremental": false,
@@ -341,7 +497,43 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
-          "hash": "/M/iMfNt/R4mHK7VojS+2Q=="
+          "hash": "Ty3k/ChhLRUN4ryLyXmPdA3yLxTbjPKkAvI9KwCCieU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery.html",
+          "hash": "NwXN/Ke/1XHQDRPhLaVY5MxlNtKHjYv08nzWNW3SEUs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery/automatic-history-recovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery/automatic-history-recovery.html",
+          "hash": "SP/Y6JXQBIXYQu42QjDt0kX7e+PkWocwTfyO2ks5amU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.html",
+          "hash": "n/mI/b6f3Kv/g4zQfjROe4ZjrjHdEgHFA4wG681GCcs="
         }
       },
       "is_incremental": false,
@@ -353,7 +545,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/logging.html",
-          "hash": "Yucn7ZnH+re3I5CIvoVB8Q=="
+          "hash": "4CT5L1xWXLfn16EyMhPVrycm5qqywFWoSrqqNCwQy+Y="
         }
       },
       "is_incremental": false,
@@ -365,7 +557,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/schedules.html",
-          "hash": "RdxjLszoRx5fPzNB0gPn4Q=="
+          "hash": "hg32xJnTwLPUw0jUZHbPM/yTmfbGCs4j5ZlJML6wrv8="
         }
       },
       "is_incremental": false,
@@ -377,7 +569,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
-          "hash": "bjxEglIOw4tddytVINsL2A=="
+          "hash": "ZXU36hxoIGUm3iDYkrWNzR/WNxw+j9pkRHLaMJMIwAI="
         }
       },
       "is_incremental": false,
@@ -389,7 +581,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-components.html",
-          "hash": "KfS//V8n0edkRbwolpz2UQ=="
+          "hash": "fHGuVGepKkIIdi6JoQSyzRfnx6kgD97SAoz/QYTIlpQ="
         }
       },
       "is_incremental": false,
@@ -401,7 +593,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html",
-          "hash": "Y7PL+ldqoLHWDluyuzBl/Q=="
+          "hash": "/aD2NLCgasOwp3YyhawgoUYi5j+6oJN3lumElchAzI8="
         }
       },
       "is_incremental": false,
@@ -413,7 +605,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
-          "hash": "JTpGSn/se23LZZbBFVlnaQ=="
+          "hash": "92igx8AA9d6qy+ySACuZaIIolq5ENX7scDVx9EzXrJQ="
         }
       },
       "is_incremental": false,
@@ -425,7 +617,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
-          "hash": "CBRWNTjNf9juFn5VsJqYTQ=="
+          "hash": "r3WH/ZMPouIz/y6VDvXZ8c/sB12GkJAQbV7wXc8lKYk="
         }
       },
       "is_incremental": false,
@@ -437,7 +629,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
-          "hash": "hZ0gkuVZd8lN0DpOnj2OKA=="
+          "hash": "4vbhKnIoe6xgDStMildB7jbH2ZAp8wRYGAmgDX0DHvE="
         }
       },
       "is_incremental": false,
@@ -449,7 +641,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/egress.html",
-          "hash": "GYptNblvzTynv7zAs3bVxQ=="
+          "hash": "SRJqQZfHQU3Q0N3PVzXTWWyyBUTiQuMabgBMOzvjDoA="
         }
       },
       "is_incremental": false,
@@ -461,7 +653,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/error-rate.html",
-          "hash": "6pbxvxTbBZzCtNy+LEC8Xw=="
+          "hash": "cyjlSHSekH+F96ggdV4kyPJhNilYLp5RKlW1EsNFZHM="
         }
       },
       "is_incremental": false,
@@ -473,7 +665,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/io-rate.html",
-          "hash": "e8OTmxLFnYcAEhWtXzc0Mw=="
+          "hash": "8Uwzbw8x71ronPLk1TRtFwYIAN9J5BSwPdi5JU9qDmI="
         }
       },
       "is_incremental": false,
@@ -485,7 +677,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/stream-count.html",
-          "hash": "7+0uujmVJpChTWAYfV6v6A=="
+          "hash": "oDHiXDD7IRsOc0SBGvXmdVGLHrDeDLsRTOE8oQvF+Mw="
         }
       },
       "is_incremental": false,
@@ -497,7 +689,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/system.html",
-          "hash": "aYzfLhO+I1eetCyDydpbSw=="
+          "hash": "EuBQ7PZTDYkWdmI8g0/KdgH37jwkuDo0364vso970qU="
         }
       },
       "is_incremental": false,
@@ -509,7 +701,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/device-status.html",
-          "hash": "YibgZEO1aO6UD1BxTF/4OQ=="
+          "hash": "s9kI0CjlDYbUu6bJU+/KylPKuE6Rm98cIP9S7y3lW80="
         }
       },
       "is_incremental": false,
@@ -521,7 +713,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "shm+RIpKA+x4iZCOfSLSgw=="
+          "hash": "CvWLDBBQt9O+shOklTLhH+XBrIi7xUBMN3GucVgW19U="
         }
       },
       "is_incremental": false,
@@ -533,7 +725,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health.html",
-          "hash": "H6h/KHHCu9yaF+6yd4F8lQ=="
+          "hash": "UfUfhpPYljQNGDuuPPioCeWonFyVeM4AUdL1R6Hh3QY="
         }
       },
       "is_incremental": false,
@@ -545,7 +737,29 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/next-health-message-expected.html",
-          "hash": "QPPUYDdD8DJH9E8fekXjRg=="
+          "hash": "GssztwO9EQbIGEEIWCE7YmikNsPirvFSMDcfS5/WfOk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/Metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/Metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/adapter-data-flow.drawio.svg",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/adapter-data-flow.drawio.svg"
         }
       },
       "is_incremental": false,
@@ -630,17 +844,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "content/main/shared-content/images/metadata.png",
-      "output": {
-        "resource": {
-          "relative_path": "content/main/shared-content/images/metadata.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "content/main/shared-content/images/removed-configurations.png",
       "output": {
         "resource": {
@@ -689,7 +892,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/install-the-adapter.html",
-          "hash": "yF7PmgIhCz96ixivoS+2og=="
+          "hash": "Lbut2NKcQwWVGd9AMyGJPQGAWEzwgEVeed0hKNyS6lY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/installation/install-using-docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/installation/install-using-docker.html",
+          "hash": "bIgsZ7vFrDEu/Ad80AjWksAFU6Xo+ojtXZcuoVKY/9M="
         }
       },
       "is_incremental": false,
@@ -701,7 +916,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/installation.html",
-          "hash": "faxsZ9WwPHka0ASWxrwqAA=="
+          "hash": "MDuJmamPK3pdTiPo6WNgetLDQWOiMoWB2TEzAvFBZcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/installation/system-requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/installation/system-requirements.html",
+          "hash": "g/vETZCAYf6UwhG7N2nxiY8lQVx0t4Tzwgi3ohz+wXE="
         }
       },
       "is_incremental": false,
@@ -713,7 +940,31 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/uninstall-the-adapter.html",
-          "hash": "xeYi/XPLCkXrOQfWQNrGKQ=="
+          "hash": "63fBLG7iwMxmXhOQIYuHzfX1+5Wmg3BY/M0y+yRYcWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/installation/upgrade-the-adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/installation/upgrade-the-adapter.html",
+          "hash": "kPvXK9MQS3Or9u82KaZA6YIzhgOmQRNEUtJrRvd9lrg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/introduction/intro-to-pi-adapters.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/introduction/intro-to-pi-adapters.html",
+          "hash": "r8F/kKW7H+DepZZM3ZV8rWw85VVZXmmMjtgwyvMVDUY="
         }
       },
       "is_incremental": false,
@@ -725,7 +976,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/metadata/metadata.html",
-          "hash": "y//4Pkh2aabL8QPACVrLNQ=="
+          "hash": "tlLnYqUkR8/XLsv1AjViPx3N6N2gh+aSzUCqC0Nsglg="
         }
       },
       "is_incremental": false,
@@ -737,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/technical-support-and-feedback.html",
-          "hash": "G/K/TnXMe6rEkQV9dTM6/w=="
+          "hash": "n93R/awaTqaO7s93XLna+O4fqA0dBh1Y2gt8YM8cmOU="
         }
       },
       "is_incremental": false,
@@ -749,19 +1000,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
-          "hash": "uGDhwYOuGgcqk1n/6PUolg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/main/test.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/test.html",
-          "hash": "tuJZ4ssFIpRpefC9HJGeyg=="
+          "hash": "1shFAR1ggqQaAFq1Pjz9XGRJg5f5ehqJxvgtNsioPgM="
         }
       },
       "is_incremental": false,
@@ -773,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/mqtt-metadata/mqtt-sparkplug-b-specific-metadata.html",
-          "hash": "OzcmWaboQm6Yjh39JAVZNA=="
+          "hash": "LcqFnK8U1xC4paKol9ddMJ6JITUNHwOGnmF77H4PPrs="
         }
       },
       "is_incremental": false,
@@ -785,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/mqtt-metadata/mqtt-specific-metadata.html",
-          "hash": "gFuaJ/X3FKEjufk61Z8GMw=="
+          "hash": "vQ174goICBlWM2Yvc5QxkXcYhZ9/MRqITys0JjDaJYg="
         }
       },
       "is_incremental": false,
@@ -797,7 +1036,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/principles-of-operation.html",
-          "hash": "ZMEUC39CLkBKLxKlKzXFkw=="
+          "hash": "g0coxnad37RWqjQ1vdhL30h8ISsohYKAWWBP9yQ7yzQ="
         }
       },
       "is_incremental": false,
@@ -809,7 +1048,7 @@
       "output": {
         ".html": {
           "relative_path": "content/release-notes/release-notes.html",
-          "hash": "d7i8aw5VAamjLjDE8z6LOQ=="
+          "hash": "j6FSzqu1F4b6e7yBMOUGxAczwWJRaoMjx6PkfgHwRnI="
         }
       },
       "is_incremental": false,
@@ -821,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "jmlUG7IbpHNLbLIZgGsRFA=="
+          "hash": "UkEY9jjX9XLcCfFHriCDtScEnS3ZznPDWccHF/gHWF4="
         }
       },
       "is_incremental": false,
@@ -833,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html",
-          "hash": "9OHpiSxYxLzeU6Pt6SusWw=="
+          "hash": "sZPgH6I66xv0cuVuhw9TQ2ubD17MW/zY9sFYKuUo+HA="
         }
       },
       "is_incremental": false,
@@ -845,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "pi-adapter-for-mqtt-overview.html",
-          "hash": "IVKvV95w13x1aoaTCB/sQA=="
+          "hash": "f+5j8U+9n6TpUprtV0cLYS9HaBTZJPDDcxm9qseNPR8="
         }
       },
       "is_incremental": false,
@@ -857,7 +1096,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "hvMoXzwEpu+p/vMUBNzEgw=="
+          "hash": "zimYdfMtuqFco0bFXbAkX+Zf8BBdURhRqe0d23TBedQ="
         }
       },
       "is_incremental": false,
@@ -878,7 +1117,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 76,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

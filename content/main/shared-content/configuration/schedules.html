@@ -8,7 +8,7 @@
     <title>Schedules </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Schedules ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,30 +78,27 @@
             <article class="content wrap" id="_content" data-uid="SchedulesConfiguration">
 <h1 id="schedules">Schedules</h1>
 
-<p>Complete the following steps to configure schedules. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules</code> REST endpoint to initialize the configuration.</p>
+<p>You can configure the adapter to run scans based on a schedule. Each data item can be assigned to a schedule in the data selection configuration. The adapter samples data for those data items at the scheduled time.</p>
+<p><strong>Note:</strong> You start an ingress component without a schedule configuration, a default schedule configuration is added to use as an example.</p>
+<p><strong>Note:</strong> When the adapter framework scheduler misses or skips a scan for any reason, either one of the following messages is printed: <code>Scan skipped for schedule id &lt;Id&gt;</code> or <code>Scan missed for schedule &lt;id&gt;</code>.</p>
+<h2 id="configure-schedules">Configure schedules</h2>
+<p>Complete the following steps to change the schedules configuration:</p>
 <ol>
-<li><p>Using a text editor, create an empty text file.</p>
-</li>
-<li><p>Copy and paste an example configuration for schedules into the file.</p>
-<p> For sample JSON, see <a href="#example">Example</a>.</p>
-</li>
-<li><p>Update the example JSON parameters for your environment.</p>
-<p> For a table of all available parameters, see <a href="#schedules-parameters">Schedules parameters</a>.</p>
-</li>
-<li><p>Save the file. For example, as <code>ConfigureSchedules.json</code>.</p>
-</li>
-<li><p>Open a command line session. Change directory to the location of <code>ConfigureSchedules.json</code>.</p>
-</li>
-<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the schedules configuration.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureSchedules.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules&quot;
-</code></pre><p> <strong>Notes:</strong></p>
+<li><p>Using any text editor, create a file that contains the schedules configuration in the JSON format.</p>
 <ul>
-<li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
-<li>For a list of other REST operations you can perform, like updating or replacing a schedules configuration, see <a href="#rest-urls">REST URLs</a>.
-<br>
-<br></li>
+<li>For content structure, see the <a href="#example-schedule-configuration">example schedule configuration</a>.</li>
+<li>For all available parameters, see the <a href="#schedules-parameters">schedules parameters</a>.</li>
 </ul>
 </li>
+<li><p>Save the file. For example, <code>ConfigureSchedules.json</code>.</p>
+</li>
+<li><p>Use any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules</code>.</p>
+<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter.</p>
+<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureSchedules.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Schedules&quot;
+</code></pre></li>
 </ol>
 <p>On successful execution, the schedules change takes effect immediately during runtime.</p>
 <h2 id="schedules-schema">Schedules schema</h2>
@@ -130,23 +127,33 @@
 <td><strong>Period</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The data sampling rate of the schedule. The expected format is HH:MM:SS.###. * <br><br>Invalid input: <code>null</code>, negative timespan, zero <br> Default value: <code>null</code> (must be specified)</td>
+<td>The data sampling rate of the schedule. The expected format is HH:MM:SS.###. <br><br>Invalid inputs: <code>null</code>, negative timespan, or zero <br><br>A default value must be specified.</td>
 </tr>
 <tr>
 <td><strong>Offset</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### * <br><br>Invalid input: negative timespan<br>Default value: <code>null</code></td>
+<td>The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### <br><br>Invalid input: negative timespan<br><br>A default value must be specified.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>* Note:</strong> You can also specify timespans as numbers in seconds. For example, <code>&quot;Period&quot;: 25</code> specifies 25 seconds, or <code>&quot;Period&quot;: 125</code> specifies 2 minutes and 5 seconds.</p>
-<h2 id="example">Example</h2>
+<p><strong>Note:</strong> You can also specify timespans as numbers in seconds. For example, <code>&quot;Period&quot;: 25</code> specifies 25 seconds, or <code>&quot;Period&quot;: 125</code> specifies 2 minutes and 5 seconds.</p>
+<h2 id="example-schedule-configuration">Example schedule configuration</h2>
+<p>The following is an example of a complete schedule configuration:</p>
 <pre><code class="lang-code">[
   {
     &quot;Id&quot;: &quot;schedule1&quot;,
     &quot;Period&quot;: &quot;00:00:01.500&quot;,
     &quot;Offset&quot;: &quot;00:02:03&quot;
+  }
+]
+</code></pre><h2 id="default-schedule-configuration">Default schedule configuration</h2>
+<p>If no schedule is configured, the adapter uses the following default schedule configuration:</p>
+<pre><code class="lang-code">[
+  {
+    &quot;Id&quot;: &quot;1&quot;,
+    &quot;Period&quot;: &quot;0:00:05&quot;,
+    &quot;Offset&quot;: &quot;0:00:00&quot;
   }
 ]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
@@ -210,7 +217,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/schedules.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/schedules.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

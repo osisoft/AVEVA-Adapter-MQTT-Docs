@@ -8,7 +8,7 @@
     <title>Install the adapter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Install the adapter ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -82,10 +82,10 @@
 <h2 id="windows">Windows</h2>
 <p>Complete the following steps to install a PI adapter on a Windows computer:</p>
 <ol>
-<li><p>Download the Windows .msi file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal (https://customers.osisoft.com/s/products)</a>.</p>
+<li><p>Download <code>PI-Adapter-for-MQTT_1.0.0.167-x64_.msi</code> from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal</a>.</p>
 <p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
 </li>
-<li><p>Run the .msi file.</p>
+<li><p>Run <code>PI-Adapter-for-MQTT_1.0.0.167-x64_.msi</code> file.</p>
 </li>
 <li><p>Follow the setup wizard.</p>
 <p> You can change the installation folder or port number during setup. The default port number is <code>5590</code>.</p>
@@ -96,15 +96,17 @@
 </li>
 </ol>
 <h2 id="linux">Linux</h2>
-<p>Complete the following steps to install a PI adapter on a Linux computer:</p>
+<p>Complete the following steps to install an adapter on a Linux computer:</p>
 <ol>
-<li><p>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal (https://customers.osisoft.com/s/products)</a>.</p>
+<li><p>Download the appropriate Linux distribution file (<code>PI-Adapter-for-MQTT_1.0.0.167-<var>platform</var>_.deb</code>) from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal</a>.</p>
 <p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
 </li>
 <li><p>Open a terminal.</p>
 </li>
-<li><p>Run the <code>sudo apt install</code> command.</p>
-<p> <strong>Examples</strong>: <br> To install the Linux ARM Debian package, run the command <br><code>sudo apt install ./{AdapterName}_linux-arm.deb</code> <br> To install the Linux x64 package, run the command <br> <code>sudo apt install ./{AdapterName}_linux-x64.deb</code></p>
+<li><p>Run the <code>sudo apt update</code> command to update available packages information.</p>
+</li>
+<li><p>Run the <code>sudo apt install</code> command against the Linux distribution file (<code>PI-Adapter-for-MQTT_1.0.0.167-<var>platform</var>_.deb</code>) selected in step 1 of this procedure.</p>
+<p> For example: <code>sudo apt install ./PI-Adapter-for-MQTT_1.0.0.167-x64_.deb</code></p>
 </li>
 <li><p>Optional: To verify the installation, run the following <code>curl</code> command with the port number that you specified during installation:</p>
 <pre><code class="lang-bash">curl http://localhost:5590/api/v1/configuration
@@ -119,7 +121,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/installation/install-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/installation/install-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

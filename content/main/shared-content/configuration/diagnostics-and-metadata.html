@@ -8,7 +8,7 @@
     <title>Diagnostics and metadata </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Diagnostics and metadata ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -84,10 +84,10 @@ For more information about available metadata and what metadata are sent per met
 <h2 id="configure-general">Configure general</h2>
 <ol>
 <li>Start any of the <a class="xref" href="configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>PUT</code> command to the following endpoint, setting <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
+<li><p>Run a <code>PUT</code> command to the following endpoint, setting <code>EnableDiagnostics</code> to either <code>true</code> or <code>false</code>, <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code> and <code>HealthPrefix</code> to a string or <code>null</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;{ \&quot;enableDiagnostics\&quot;:true, \&quot;enableMetadata\&quot;:false }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/general&quot;
+<pre><code class="lang-bash">curl -d &quot;{ \&quot;EnableDiagnostics\&quot;:true, \&quot;MetadataLevel\&quot;:Medium, \&quot;HealthPrefix\&quot;:\&quot;Machine1\&quot; }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/general&quot;
 </code></pre></li>
 </ol>
 <h2 id="general-schema">General schema</h2>
@@ -118,6 +118,12 @@ For more information about available metadata and what metadata are sent per met
 <td><code>reference</code></td>
 <td>Defines amount of metadata sent to OMF endpoints.<br><br> Allowed value: <code>None</code>, <code>Low</code>, <code>Medium</code>, and <code>High</code><br> Default value: <code>Medium</code></td>
 </tr>
+<tr>
+<td><strong>HealthPrefix</strong></td>
+<td>Optional</td>
+<td><code>reference</code></td>
+<td>Prefix to use for health and diagnostics stream and asset IDs.<br> Default value: <code>null</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="example">Example</h2>
@@ -127,7 +133,8 @@ For more information about available metadata and what metadata are sent per met
 </code></pre><p>Sample output:</p>
 <pre><code class="lang-code">{
   &quot;EnableDiagnostics&quot;: true,
-  &quot;MetadataLevel&quot;: &quot;Medium&quot;
+  &quot;MetadataLevel&quot;: &quot;Medium&quot;,
+  &quot;HealthPrefix&quot;: &quot;Machine1&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
@@ -164,7 +171,7 @@ For more information about available metadata and what metadata are sent per met
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/diagnostics-and-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/diagnostics-and-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

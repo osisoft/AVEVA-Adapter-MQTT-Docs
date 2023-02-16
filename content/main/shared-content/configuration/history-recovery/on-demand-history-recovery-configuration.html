@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>On-demand history recovery configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="On-demand history recovery configuration ">
+    <meta name="generator" content="docfx 2.59.1.0">
+    
+    <link rel="shortcut icon" href="../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OnDemandHistoryRecoveryConfiguration">
+<h1 id="on-demand-history-recovery-configuration">On-demand history recovery configuration</h1>
+
+<p>The PI adapter supports performing history recovery on-demand by specifying start and end time.</p>
+<h2 id="configure-history-recovery">Configure history recovery</h2>
+<ol>
+<li>Start any of the <a class="xref" href="../configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
+<li><p>Run a <code>POST</code> command with the <code>Id</code> of the history recovery, and the <code>startTime</code> and <code>endTime</code> to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/HistoryRecoveries</code>.</p>
+<p> Example using <code>curl</code>:</p>
+<pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestRecovery\&quot;, \&quot;startTime\&quot;:\&quot;2021-03-29T14:00:30Z\&quot;, \&quot;endTime\&quot;:\&quot;2021-03-29T15:00:15Z\&quot;  }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/HistoryRecoveries&quot;
+</code></pre><p> <strong>Note:</strong></p>
+<ul>
+<li><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</li>
+<li>If you do not specify an Id, the endpoint generates a unique Id.</li>
+</ul>
+</li>
+</ol>
+<h2 id="history-recovery-parameters">History recovery parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <strong>Id</strong></td>
+<td><code>string</code></td>
+<td>The Id of the history recovery<br><br> <strong>Note:</strong> You cannot run multiple history recoveries with the same Id.</td>
+</tr>
+<tr>
+<td> <strong>StartTime</strong></td>
+<td><code>datetime</code></td>
+<td>Time when the the first data items are collected.</td>
+</tr>
+<tr>
+<td> <strong>EndTime</strong></td>
+<td><code>datetime</code></td>
+<td>Time when the last data items are collected.</td>
+</tr>
+<tr>
+<td><strong>Checkpoint</strong></td>
+<td><code>datetime</code></td>
+<td>The latest timestamp that the history recovery has completed with the range being between <strong>startTime</strong> and <strong>endTime</strong>.</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td><code>double</code></td>
+<td>The amount of data selection items in the history recovery operation.</td>
+</tr>
+<tr>
+<td><strong>RecoveredEvents</strong></td>
+<td><code>double</code></td>
+<td>Number of events that the history recovery found on the data source.</td>
+</tr>
+<tr>
+<td><strong>Progress</strong></td>
+<td><code>double</code></td>
+<td>Progress of the history recovery (number of data items found through the history recovery).</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td><code>enum</code></td>
+<td>Status of the history recovery.<br><br>The following statuses are available:<br> - <em>Active</em> - The operation is currently in progress<br>- <em>Complete</em> - The operation has been completed<br>- <em>Canceled</em> - The operation has been canceled<br>- <em>Failed</em> - The operation failed</td>
+</tr>
+<tr>
+<td><strong>Errors</strong></td>
+<td><code>string</code></td>
+<td>Errors encountered during the history recovery.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="history-recovery-status-example">History recovery status example</h2>
+<pre><code class="lang-json">[
+ { 
+   &quot;Id&quot;: &quot;HistoryRecovery1&quot;, 
+   &quot;StartTime&quot;: &quot;2021-01-09T05:55:00.0&quot;, 
+   &quot;EndTime&quot;: &quot;2021-01-26T13:20:00.0&quot;, 
+   &quot;CheckPoint&quot;: &quot;2021-01-13T14:55:00.0&quot;, 
+   &quot;Items&quot;: 7000, 
+   &quot;RecoveredEvents&quot;: 800000, 
+   &quot;Progress&quot;: 20, 
+   &quot;Status&quot;: &quot;Active&quot;, 
+   &quot;Errors&quot;: null 
+ }
+] 
+</code></pre><p><strong>Note:</strong> The result of the history recovery operation is added to the <code>&lt;componentId&gt;_historyRecoveries.json</code> file.</p>
+<h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries</td>
+<td>GET</td>
+<td>Returns all history recoveries statuses</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries</td>
+<td>POST</td>
+<td>Initiates a new history recovery, returns the id of the operation</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries</td>
+<td>DELETE</td>
+<td>Cancels all active history recovery operations and removes states</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries/<em>&lt;operationId&gt;</em></td>
+<td>GET</td>
+<td>Gets the status of an individual history recovery</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries/<em>&lt;operationId&gt;</em></td>
+<td>DELETE</td>
+<td>Cancels history recovery and removes the state</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries/<em>&lt;operationId&gt;</em>/cancel</td>
+<td>POST</td>
+<td>Cancels history recovery</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/historyRecoveries/<em>&lt;operationId&gt;</em>/resume</td>
+<td>POST</td>
+<td>Resumes canceled or failed history recovery operation (<code>202</code>) from the checkpoint<br><br><strong>Note:</strong> If the <code>&lt;operationId&gt;</code> is not found, a 404 HTTP error message will be returned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Replace <em>&lt;componentId&gt;</em> with the Id of your adapter component. Replace <em>&lt;operationId&gt;</em> with the Id of the history recovery operation for which you want to perform the action.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

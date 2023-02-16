@@ -8,7 +8,7 @@
     <title>Egress endpoints </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Egress endpoints ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -82,12 +82,10 @@
 <ul>
 <li>OSIsoft Cloud Services (OCS)</li>
 <li>PI servers through PI Web API</li>
-<li>Edge Data Store (EDS)</li>
 </ul>
 <p>For long term storage and analysis, you can configure any adapter to send time series data to one or several of these endpoints in any combination. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
-<p>Data egress to a PI server creates a PI point in the PI adapter configuration. Data egress to OCS or EDS creates a stream in the PI adapter configuration.</p>
-<p><strong>Note:</strong> Egress to EDS requires the adapter to be on the same server as EDS.</p>
-<p>The name of the PI point or OCS or EDS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.</p>
+<p>Data egress to a PI server creates a PI point in the PI adapter configuration. Data egress to OCS creates a stream in the PI adapter configuration.</p>
+<p>The name of the PI point or OCS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.</p>
 <h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
 <p>Complete the following steps to configure egress endpoints. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints</code> REST endpoint to initialize the configuration.</p>
 <ol>
@@ -140,19 +138,19 @@
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Destination that accepts OMF v1.2 messages. Supported destinations include OCS, PI Server, and EDS.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: <code>null</code></td>
+<td>Destination that accepts OMF v1.2 messages. Supported destinations include OCS and PI Server.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
-<td>Required for PI server and EDS endpoint</td>
+<td>Required for PI server endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><strong>Note:</strong> If your username contains a backslash, you must add an escape character, for example, type <code>OilCompany\TestUser</code> as <code>OilCompany\\TestUser</code>.<br><br><em>EDS:</em><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code></td>
+<td>Basic authentication to the PI Web API OMF endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><strong>Note:</strong> If your username contains a backslash, you must add an escape character, for example, type <code>OilCompany\TestUser</code> as <code>OilCompany\\TestUser</code>.</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
-<td>Required for PI server and EDS endpoint</td>
+<td>Required for PI server endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code></td>
+<td>Basic authentication to the PI Web API OMF endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
@@ -180,7 +178,66 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> If the URL schema for the egress endpoint is HTTP, which is typical for EDS, then you do not need to specify credentials. </p>
+<h3 id="special-characters-encoding">Special characters encoding</h3>
+<p>The adapter encodes special characters used in the data selection <strong>StreamId</strong> parameter string before sending it to configured endpoints. The encoded characters look as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Special character</th>
+<th>Encoded character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#42;</td>
+<td><code>%2a</code></td>
+</tr>
+<tr>
+<td>&#39;</td>
+<td><code>%27</code></td>
+</tr>
+<tr>
+<td>&#96;</td>
+<td><code>%60</code></td>
+</tr>
+<tr>
+<td>&#34;</td>
+<td><code>%22</code></td>
+</tr>
+<tr>
+<td>&#63;</td>
+<td><code>%3f</code></td>
+</tr>
+<tr>
+<td>&#59;</td>
+<td><code>%3b</code></td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td><code>%7c</code></td>
+</tr>
+<tr>
+<td>&#92;</td>
+<td><code>%5c</code></td>
+</tr>
+<tr>
+<td>&#123;</td>
+<td><code>%7b</code></td>
+</tr>
+<tr>
+<td>&#125;</td>
+<td><code>%7d</code></td>
+</tr>
+<tr>
+<td>&#91;</td>
+<td><code>%5b</code></td>
+</tr>
+<tr>
+<td>&#93;</td>
+<td><code>%5d</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are valid egress configurations:</p>
 <h3 id="egress-data-to-ocs">Egress data to OCS</h3>
@@ -196,13 +253,6 @@
      &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;:&lt;port&gt;/piwebapi/omf/&quot;,
      &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
      &quot;Password&quot;: &quot;&lt;password&gt;&quot;
-}]
-</code></pre><h3 id="egress-data-to-eds">Egress data to EDS</h3>
-<pre><code class="lang-json">[{
-     &quot;Id&quot;: &quot;EDS&quot;,
-     &quot;Endpoint&quot;: &quot;http://localhost:&lt;port&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,
-     &quot;UserName&quot;: &quot;eds&quot;,
-     &quot;Password&quot;: &quot;eds&quot;
 }]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
@@ -275,7 +325,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/egress-endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/egress-endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

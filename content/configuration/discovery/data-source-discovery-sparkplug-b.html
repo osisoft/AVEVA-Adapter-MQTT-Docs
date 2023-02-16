@@ -8,7 +8,7 @@
     <title>Data source discovery (Sparkplug B) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data source discovery (Sparkplug B) ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -80,7 +80,7 @@
 
 <p>A discovery against the data source of an MQTT Sparkplug B adapter allows you to specify the optional <strong>query</strong> parameter. The query discovers the contents of the data source and narrows down the scope of the discovery. You can add the discovered items to the data selection.</p>
 <h2 id="sparkplug-b-query-string">Sparkplug B query string</h2>
-<p>The string of the <strong>query</strong> parameter must contain string items in the following form: <br><code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/[&lt;Device_Id&gt;]</code><br><br></p>
+<p>The string of the <strong>query</strong> parameter must contain string items in the following form: <br><code>Topics=Topic1,Topic2;WaitTime=&lt;WaitTime&gt;</code> where the Sparkplug B topic structure is of the form <code>spBv1.0/&lt;Group_Id&gt;/&lt;Message_Type&gt;/&lt;Edge_Node_Id&gt;/[&lt;Device_Id&gt;]</code>.</p>
 <table>
 <thead>
 <tr>
@@ -96,27 +96,36 @@
 <td>This element of the Topic namespace logically groups MQTT EoN nodes into the MQTT server and the consuming MQTT clients.</td>
 </tr>
 <tr>
+<td><strong>Message_Type</strong></td>
+<td>Optional</td>
+<td>This element of the Topic namespace indicates how to handle the MQTT payload of the message. The message type is typically <code>NDATA</code> or <code>DDATA</code>. For more information, see <a class="xref" href="../data-selection-sparkplug-b.html">Data selection (Sparkplug B)</a>.</td>
+</tr>
+<tr>
 <td><strong>Edge_Node_Id</strong></td>
 <td>Optional</td>
-<td>This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.<br><strong>Group_Id</strong> combined with <strong>Edge_Node_Id</strong> must be unique from any other <strong>Group_Id</strong>/<strong>Edge_Node_Id</strong> assigned in the MQTT infrastructure.</td>
+<td>This element of the Sparkplug Topic namespace uniquely identifies the MQTT EoN node within the infrastructure.</td>
 </tr>
 <tr>
 <td><strong>Device_Id</strong></td>
 <td>Optional</td>
 <td>This element of the Sparkplug Topic namespace identifies a device attached to the MQTT EoN node (physically or logically).</td>
 </tr>
+<tr>
+<td><strong>WaitTime</strong></td>
+<td>Optional</td>
+<td>The time window in which the adapter will perform the discovery by listening for specified topics. Once the wait time has elapsed, the discovery results will be available.<br><br>Minimum value: <code>0.00:00:30</code> (30 seconds)<br>Maximum value: <code>7.00:00:00</code> (7 days)<br><strong>Note:</strong> If you do not specify a wait time, the default value <code>0.00:01:00</code> (1 minute) will be applied.<br>When you specify <strong>WaitTime</strong> with a numeric value, for example <code>WaitTime=45</code>, the adapter interprets the value as seconds instead of time span.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="query-rules">Query rules</h3>
 <p>The following rules apply for specifying the query string:</p>
 <ul>
-<li>Multiple queries are separated by a semicolon (<code>;</code>).</li>
-<li>Partial queries are terminated by a multi-level wildcard (<code>#</code>).</li>
+<li>Multiple topics are separated by a comma (<code>,</code>).</li>
 <li>A query cannot be terminated by a trailing slash (<code>/</code>).</li>
 <li>A query cannot start with a leading slash (<code>/</code>) or <code>$</code>.</li>
 <li>Topics are case sensitive.</li>
 </ul>
-<p><strong>Note:</strong> The data source might contain tens of thousands of metrics. Use the <code>#</code> judiciously and narrow down the query string to something specific or break down the query into different discoveries.</p>
+<p><strong>Note:</strong> The data source might contain large amounts of metrics. Use the <code>#</code> judiciously and narrow down the query string to something specific or break down the query into different discoveries.</p>
 <h4 id="wildcards">Wildcards</h4>
 <p>Wildcards are allowed in the query with the following specifications:</p>
 <ul>
@@ -128,17 +137,17 @@
 </ul>
 <h2 id="discovery-query-example">Discovery query example</h2>
 <p>The query parameter of the MQTT Sparkplug B component must be specified in the following form:
-<code>&lt;Group_Id&gt;/&lt;Edge_Node_Id&gt;/&lt;[Device_Id]&gt;</code>.</p>
+<code>spBv1.0/&lt;Group_Id&gt;/&lt;Message_Type&gt;/&lt;Edge_Node_Id&gt;/&lt;[Device_Id]&gt;</code>.</p>
 <h3 id="sparkplug-b-data-source-discovery-initiation">Sparkplug B data source discovery initiation</h3>
 <pre><code class="lang-json">{
     &quot;id&quot; : &quot;40&quot;,
-    &quot;query&quot; : &quot;group1/edge2&quot;
+    &quot;query&quot; : &quot;topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30&quot;
 }
 </code></pre><h3 id="sparkplug-b-data-source-discovery-results">Sparkplug B data source discovery results</h3>
 <pre><code class="lang-json">[
     {
         &quot;id&quot;: &quot;40&quot;,
-        &quot;query&quot;: &quot;group1/edge2&quot;,
+        &quot;query&quot;: &quot;topics=group1/edgeNode1,group2/edgeNode2;waitTime=00:00:30&quot;,
         &quot;startTime&quot;: &quot;2020-12-14T14:19:01.4383791-08:00&quot;,
         &quot;endTime&quot;: &quot;2020-12-14T14:19:31.8549164-08:00&quot;,
         &quot;progress&quot;: 30,

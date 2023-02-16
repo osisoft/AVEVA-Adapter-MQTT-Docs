@@ -8,7 +8,7 @@
     <title>Prepare egress destinations </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Prepare egress destinations ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
@@ -86,24 +86,32 @@
 <p>The <em>Client Id</em> and <em>Client Secret</em> will be used for the corresponding properties in the egress configuration.</p>
 </li>
 <li><p>Create an <strong>OMF</strong> type <strong>Connection</strong>.</p>
-<p>The connection should link the created client to an existing <a href="https://ocs-docs.osisoft.com/Content_Portal/Documentation/Management/Account_Namespace_1.html">namespace</a> where the data will be stored.
-The <strong>OMF Endpoint</strong> URL for the connection will be used as the egress configuration <em>Endpoint</em> property.</p>
+<p>The connection should link the created client to an existing <a href="https://docs.osisoft.com/bundle/ocs/page/set-up/namespaces/namespaces-concept.html">namespace</a> where the data will be stored.</p>
+<p>The <strong>OMF Endpoint</strong> URL for the connection will be used as the egress configuration <em>Endpoint</em> property.</p>
 </li>
 </ol>
 <h2 id="pi-server">PI Server</h2>
 <p>To prepare a PI Server to receive OMF messages from the adapter, a PI Web API OMF endpoint must be available. Complete the following steps:</p>
 <ol>
-<li>Install PI Web API and enable the <strong>OSIsoft Message Format (OMF) Services</strong> feature.<ul>
-<li>During configuration, choose an AF database and PI Data Archive where metadata and data will be stored.</li>
-<li>The account used in an egress configuration needs permissions to create AF elements, element templates, and PI points.</li>
+<li><p>Install PI Web API and enable the <strong>OSIsoft Message Format (OMF) Services</strong> feature.</p>
+<ul>
+<li><p>During configuration, choose an AF database and PI Data Archive where metadata and data will be stored.</p>
+</li>
+<li><p>The account used in an egress configuration needs permissions to create AF elements, element templates, and PI points.</p>
+</li>
 </ul>
 </li>
 <li><p>Configure PI Web API to use <em>Basic</em> authentication.</p>
-<p>For complete steps, as well as best practices and recommendations, see the <a href="https://livelibrary.osisoft.com/LiveLibrary/content/en/web-api-v12/GUID-D807EF71-7F37-43DB-A357-EF03CCD001F1">PI Web API User Guide</a> on Live Library.</p>
+<p>For complete steps, as well as best practices and recommendations, see the following topic in the PI Web API User Guide: <a href="https://docs.osisoft.com/bundle/pi-web-api/page/authentication-methods.html">Authentication methods</a>.</p>
 </li>
 </ol>
-<p><strong>Note:</strong>  The certificate used by PI Web API must be trusted by the device running the adapter, otherwise the egress configuration <em>ValidateEndpointCertificate</em> property needs to be set to false (this can be the case with a <strong>self-signed certificate</strong> but should only be used for testing purposes).</p>
-<p><strong>Note:</strong>  To continue to send OMF egress messages to the PI Web API endpoint after upgrading PI Web API, restart the adapter service.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><p>The certificate used by PI Web API must be trusted by the device running the adapter, otherwise the egress configuration <em>ValidateEndpointCertificate</em> property needs to be set to false (this can be the case with a <strong>self-signed certificate</strong> but should only be used for testing purposes).</p>
+</li>
+<li><p>To continue to send OMF egress messages to the PI Web API endpoint after upgrading PI Web API, restart the adapter service.</p>
+</li>
+</ul>
 </article>
           </div>
           
@@ -112,7 +120,7 @@ The <strong>OMF Endpoint</strong> URL for the connection will be used as the egr
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

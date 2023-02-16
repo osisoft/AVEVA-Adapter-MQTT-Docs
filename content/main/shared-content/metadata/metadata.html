@@ -8,7 +8,7 @@
     <title>Metadata </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Metadata ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,10 +78,28 @@
             <article class="content wrap" id="_content" data-uid="AdapterMetadata">
 <h1 id="metadata">Metadata</h1>
 
-<p>If the metadataLevel is set to <code>Low</code> or higher in the <a class="xref" href="../configuration/diagnostics-and-metadata.html">General configuration</a>, adapter streams created by the ingress components include the following metadata:</p>
+<p>The Metadata Level in the System/General facet controls the amount of metadata written to an adapter stream and defines the amount of metadata sent to the OMF endpoints. It can be set to one of the following values:</p>
+<ul>
+<li>None - No metadata</li>
+<li>Low - Includes only framework related information</li>
+<li>Medium - Includes adapter specific information that is considered not sensitive</li>
+<li>High - All metadata (including potentially sensitive information and control addresses)</li>
+</ul>
+<p>If the metadataLevel is set to <code>Low</code>, <code>Medium</code>, or <code>High</code> in the <a class="xref" href="../configuration/diagnostics-and-metadata.html">General configuration</a>, adapter streams created by the ingress components include the following metadata:</p>
 <pre><code class="lang-code">  Datasource: {ComponentId}
   AdapterType: {ComponentType}
 </code></pre><p><code>ComponentId</code> corresponds to the adapter components&#39; data source configured in the <a class="xref" href="../configuration/system-components.html">Components configuration</a>. <code>ComponentType</code> corresponds to the adapter type.</p>
+<p>For MQTT, the metadata level should be defined as:</p>
+<ul>
+<li><p>SparkplugB</p>
+<p>High – topicNamespace, groupId, edgeNodeId, deviceId</p>
+<p>Medium – topicNamespace, groupId, edgeNodeId, deviceId</p>
+</li>
+<li><p>Generic</p>
+<p>High  – topic, valueField</p>
+<p>Medium – topic, valueField</p>
+</li>
+</ul>
 <h2 id="metadata-for-health-and-diagnostics-streams">Metadata for health and diagnostics streams</h2>
 <p>If you configure a health endpoint and enable metadata, they are included in the health streams (<a class="xref" href="../health/device-status.html">Device status</a> and <a class="xref" href="../health/next-health-message-expected.html">Next health message expected</a>) together with <code>ComponentId</code> and <code>ComponentType</code>.</p>
 <p>If you enable diagnostics in <a class="xref" href="../configuration/diagnostics-and-metadata.html">General configuration</a>, metadata are included in the diagnostics streams (<a class="xref" href="../diagnostics/stream-count.html">Stream count</a>, <a class="xref" href="../diagnostics/io-rate.html">IO rate</a>, <a class="xref" href="../diagnostics/error-rate.html">Error rate</a>) together with <code>ComponentId</code> and <code>ComponentType</code>.</p>
@@ -99,7 +117,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/metadata/metadata.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/metadata/metadata.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

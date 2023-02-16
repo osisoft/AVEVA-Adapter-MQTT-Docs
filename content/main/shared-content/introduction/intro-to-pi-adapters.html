@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PI Adapter for MQTT 1.2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PI Adapter for MQTT 1.2 ">
+    <meta name="generator" content="docfx 2.59.1.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="IntroToPiAdapters">
+<h1 id="includeproduct-nameincludesinlineproduct-namemd-includeproduct-versionincludesinlineproduct-versionmd">PI Adapter for MQTT 1.2</h1>
+
+<p>PI Adapter for MQTT is a  data collection technology that collects time-series operations data from a data source over the <protocol></protocol> protocol and then sends it to a supported storage location in the Open Message Format (OMF).</p>
+<!-- Add content about the protocol here -->
+<h2 id="includeproduct-nameincludesinlineproduct-namemd-data-flow">PI Adapter for MQTT data flow</h2>
+<p>The following diagram depicts the collection and processing of data for an operational PI Adapter for MQTT, collecting and processing data. Refer to the list below the diagram for more information on each callout depicted.</p>
+<!-- Mark Bishop 3/3/22: The SVG file referenced below can be opened and edited using https://app.diagrams.net/ -->
+<p><img src="../images/adapter-data-flow.drawio.svg" alt="Adapter Data Flow"></p>
+<ol>
+<li><p>The user installs and configures PI Adapter for MQTT on a host system. You can configure the adapter using either a REST interface or EdgeCmd, a command line utility specifically designed for interfacing with edge systems.</p>
+</li>
+<li><p>The adapter collects data from assets over the <protocol></protocol> protocol, a process known as <em>data ingress</em>.</p>
+</li>
+<li><p>The adapter converts ingress data to the Open Message Format (OMF), a format that supported storage locations understand.</p>
+</li>
+<li><p>The adapter sends OMF data to a supported storage location in a process known as <em>data egress</em>. Supported egress endpoints include:</p>
+<ul>
+<li>PI Server</li>
+<li>OSIsoft Cloud Services</li>
+</ul>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/introduction/intro-to-pi-adapters.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

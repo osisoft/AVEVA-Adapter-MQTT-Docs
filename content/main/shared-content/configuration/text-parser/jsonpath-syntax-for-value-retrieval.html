@@ -8,7 +8,7 @@
     <title>JSONPath syntax for value retrieval </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="JSONPath syntax for value retrieval ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="JSONPathSyntaxForValueRetrieval">
 <h1 id="jsonpath-syntax-for-value-retrieval">JSONPath syntax for value retrieval</h1>
 
-<p>For information on which semantic is used for retrieving values from JSON files, see <a href="https://goessner.net/articles/JsonPath/">JSONPath - XPath for JSON</a>.</p>
+<p>For information on which semantic is used for retrieving values from JSON files, see <a href="https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html">JSONPath Syntax</a>.</p>
 <p>The following syntax is used to extract values from JSON documents.</p>
 <h2 id="json---simple-jsonpath-example">JSON - Simple JSONPath example</h2>
 <pre><code class="lang-json">[
@@ -514,7 +514,7 @@
         &quot;show_monthly_runtime_history&quot;: true
     }
 }
-</code></pre><p>The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from the Adapter local time.</p>
+</code></pre><p>The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from Adapter local time.</p>
 <pre><code class="lang-json">{
     &quot;Id&quot;: &quot;Temperature&quot;,
     &quot;DataType&quot;: &quot;Double&quot;,
@@ -527,11 +527,11 @@
     &quot;IsIndex&quot;: true
 }
 </code></pre><h2 id="error-handling">Error handling</h2>
-<p>If you encounter text parser related errors for the <strong>ValueField</strong> or <strong>TimeField</strong>, check the StreamId associated with the error message.</p>
+<p>If you encounter text parser related errors that is errors for the <strong>ValueField</strong> or <strong>IndexField</strong>, check the StreamId associated with the error message.</p>
 <p>Possible errors include the following:</p>
 <ul>
-<li>The JSONPath expression of <strong>ValueField</strong> or <strong>TimeField</strong> is pointing to a non-existing value</li>
-<li>The JSONPath expression of <strong>ValueField</strong> or <strong>TimeField</strong> is missing a value altogether</li>
+<li>The JSONPath expression of <strong>ValueField</strong> or <strong>IndexField</strong> is pointing to a non-existing value</li>
+<li>The JSONPath expression of <strong>ValueField</strong> or <strong>IndexField</strong> is missing a value altogether</li>
 <li><strong>DataType</strong> does not match the value</li>
 </ul>
 </article>
@@ -542,7 +542,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

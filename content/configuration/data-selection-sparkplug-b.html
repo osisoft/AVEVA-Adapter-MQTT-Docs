@@ -8,7 +8,7 @@
     <title>Data selection (Sparkplug B) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data selection (Sparkplug B) ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -145,7 +145,7 @@
 <td><strong>StreamId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the measurement configuration. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (<code>/</code>)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (<code>__</code>)<br>Cannot use the following characters:<br> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement and follows the format of <code>&lt;Topic&gt;.&lt;MetricName&gt;</code>.</td>
+<td>The custom stream Id that is used to create the streams. If you do not specify the StreamId, the adapter generates a default stream Id based on the measurement configuration. A properly configured custom stream Id follows these rules:<br><br>Is not case-sensitive<br>Can contain spaces<br>Can contain front slashes (<code>/</code>)<br>Can contain a maximum of 100 characters<br>Cannot start with two underscores (<code>__</code>)<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default Id automatically updates when there are changes to the measurement.<br><br>For more information on how the adapter encodes special characters in the <strong>StreamId</strong>, see <a class="xref" href="../main/shared-content/configuration/egress-endpoints.html#special-characters-encoding">Egress endpoints</a>.</td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>

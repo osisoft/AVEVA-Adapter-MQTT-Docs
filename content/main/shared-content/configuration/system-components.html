@@ -8,7 +8,7 @@
     <title>System components </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System components ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -109,8 +109,8 @@
 </ol>
 <h2 id="system-components-schema">System components schema</h2>
 <p>The full schema definition for the system components configuration is in the <code>System_Components_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\&lt;AdapterName&gt;\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/&lt;AdapterName&gt;/Schemas</code></p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="system-components-parameters">System components parameters</h2>
 <p>You can configure the following parameters for system components:</p>
 <table>
@@ -127,7 +127,7 @@
 <td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The ID of the component<sup>1</sup>. It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
+<td>The ID of the component<sup>1</sup> . It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> `</td>
 </tr>
 <tr>
 <td><strong>ComponentType</strong></td>
@@ -150,16 +150,16 @@
 </code></pre><h3 id="system-components-configuration-with-two-adapter-instances">System components configuration with two adapter instances</h3>
 <pre><code class="lang-json">[
   {
-     &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;1&quot;,
-     &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
-  },
-  {
-     &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;2&quot;,
-     &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
-  },
-  {
-     &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
-     &quot;ComponentType&quot;: &quot;OmfEgress&quot;
+                &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;1&quot;,
+                &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
+            },
+            {
+                &quot;ComponentId&quot;: &quot;&lt;AdapterName&gt;2&quot;,
+                &quot;ComponentType&quot;: &quot;&lt;AdapterName&gt;&quot;
+            },
+            {
+                &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
+                &quot;ComponentType&quot;: &quot;OmfEgress&quot;
    }
 ]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
@@ -207,7 +207,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/system-components.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/system-components.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

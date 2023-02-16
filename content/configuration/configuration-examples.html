@@ -8,7 +8,7 @@
     <title>Configuration examples </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Configuration examples ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -83,17 +83,17 @@
 <h2 id="system-components-configuration-with-two-mqtt-adapter-instances">System components configuration with two MQTT adapter instances</h2>
 <pre><code class="lang-json">[
     {
-        &quot;ComponentId&quot;: &quot;Mqtt1&quot;,
-        &quot;ComponentType&quot;: &quot;MQTT&quot;
+        &quot;componentId&quot;: &quot;OmfEgress&quot;,
+        &quot;componentType&quot;: &quot;OmfEgress&quot;
     },
     {
-        &quot;ComponentId&quot;: &quot;Mqtt2&quot;,
-        &quot;ComponentType&quot;: &quot;MQTT&quot;
+        &quot;componentId&quot;: &quot;MQTT1&quot;,
+        &quot;componentType&quot;: &quot;MQTT&quot;
     },
     {
-        &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
-        &quot;ComponentType&quot;: &quot;OmfEgress&quot;
-     }
+        &quot;componentId&quot;: &quot; MQTTSparkplugB1&quot;,
+        &quot;componentType&quot;: &quot;MQTTSparkplugB&quot;
+    }
 ]
 </code></pre><h2 id="mqtt-adapter-configuration">MQTT adapter configuration</h2>
 <pre><code class="lang-json">{
@@ -124,9 +124,9 @@
                 &quot;DataFilterId&quot; : null,
                 &quot;Topic&quot; : &quot;RandomTopic&quot;,
                 &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
-                &quot;TimeField&quot; : &quot;$.TestNode[:1].Time&quot;,
+                &quot;IndexField&quot; : &quot;$.TestNode[:1].Time&quot;,
                 &quot;DataType&quot; : &quot;uint64&quot;,
-                &quot;TimeFormat&quot; : null
+                &quot;IndexFormat&quot; : null
             }
         ]
     },
@@ -175,12 +175,6 @@
                 &quot;endpoint&quot;: &quot;https://OCSEndpoint/omf&quot;,
                 &quot;clientId&quot;: &quot;CLIENTID&quot;,
                 &quot;clientSecret&quot;: &quot;CLIENTSECRET&quot;
-            },
-            {
-                &quot;Id&quot;: &quot;EDS&quot;,
-                &quot;Endpoint&quot;: &quot;http://localhost:/api/v1/tenants/default/namespaces/default/omf&quot;,
-                &quot;UserName&quot;: &quot;eds&quot;,
-                &quot;Password&quot;: &quot;eds&quot;
             }
         ]
     }
@@ -250,9 +244,9 @@
     &quot;DataFilterId&quot; : null,
     &quot;Topic&quot; : &quot;RandomTopic&quot;,
     &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
-    &quot;TimeField&quot; : &quot;$.TestNode[:1].Time&quot;,
+    &quot;IndexField&quot; : &quot;$.TestNode[:1].Time&quot;,
     &quot;DataType&quot; : &quot;uint64&quot;,
-    &quot;TimeFormat&quot; : null
+    &quot;IndexFormat&quot; : null
   }
 ]
 </code></pre><h3 id="mqtt-sparkplug-b---minimal-data-selection-configuration">MQTT Sparkplug B - Minimal data selection configuration</h3>

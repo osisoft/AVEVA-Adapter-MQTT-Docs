@@ -8,7 +8,7 @@
     <title>Uninstall the adapter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Uninstall the adapter ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -84,17 +84,18 @@
 <li><p>To delete the PI adapter program files from a Windows device, use the Windows Control Panel uninstall application process.</p>
 <p> <strong>Note:</strong> The configuration, data, and log files are not deleted by the uninstall process.</p>
 </li>
-<li><p>Optional: To delete data, configuration, and log files, delete the directory <em>%ProgramData%\OSIsoft\Adapters\AdapterName</em>.</p>
-<p> This deletes all data processed by the adapter, in addition to the configuration and log files.</p>
+<li><p>Optional: To delete data, configuration, and log files, delete the directory:</p>
+<p> <em>%ProgramData%\OSIsoft\Adapters\MQTT</em></p>
+<p>This deletes all data processed by the adapter, in addition to the configuration and log files.</p>
 </li>
 </ol>
 <h2 id="linux">Linux</h2>
 <ol>
 <li><p>To delete PI Adapter software from a Linux device, open a terminal window and run the following command:</p>
-<pre><code class="lang-bash">sudo apt remove pi.adapter.&lt;AdapterName&gt;
+<pre><code class="lang-bash">sudo apt remove pi.adapter.MQTT 
 </code></pre></li>
 <li><p>Optional: To delete data, configuration, and log files, run the following command:</p>
-<pre><code class="lang-bash">sudo rm -r /usr/share/OSIsoft/Adapters/&lt;AdapterName&gt;
+<pre><code class="lang-bash">sudo rm -r /usr/share/OSIsoft/Adapters/MQTT
 </code></pre><p> This deletes all data processed by the adapter, in addition to the configuration and log files.</p>
 </li>
 </ol>
@@ -106,7 +107,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/installation/uninstall-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/installation/uninstall-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

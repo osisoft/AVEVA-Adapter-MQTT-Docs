@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Upgrade the adapter </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Upgrade the adapter ">
+    <meta name="generator" content="docfx 2.59.1.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UpgradeTheAdapter">
+<h1 id="upgrade-the-adapter">Upgrade the adapter</h1>
+
+<p>When a new version of the adapter is released, you can upgrade to the latest version by running the new installation package.</p>
+<h2 id="windows-upgrade">Windows upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Windows computer:</p>
+<ol>
+<li><p>Download <code>PI-Adapter-for-MQTT_1.0.0.167-x64_.msi</code> from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Run <code>PI-Adapter-for-MQTT_1.0.0.167-x64_.msi</code>.</p>
+</li>
+<li><p>Complete the setup wizard.</p>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified when completing the wizard:</p>
+<pre><code class="lang-powershell">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.0.0.167&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
+<h2 id="linux-upgrade">Linux upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Linux computer:</p>
+<ol>
+<li><p>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Open a terminal session.</p>
+</li>
+<li><p>Move the Linux distribution file to the target host and run the <code>sudo apt upgrade</code> command.</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <strong>Linux x64</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-MQTT_1.0.0.167-x64_.deb</code></td>
+</tr>
+<tr>
+<td> <strong>Linux ARM32 Debian</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-MQTT_1.0.0.167-arm_.deb</code></td>
+</tr>
+<tr>
+<td> <strong>Linux ARM64 Debian</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-MQTT_1.0.0.167-arm64_.deb</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified:</p>
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.0.0.167&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/installation/upgrade-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

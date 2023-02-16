@@ -8,7 +8,7 @@
     <title>Data source (generic) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data source (generic) ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -106,7 +106,7 @@
 </ul>
 </li>
 <li><p>Configure data selection.</p>
-<p> For more information, see <a class="xref" href="data-selection-generic.html">PI Adapter for MQTT data selection configuration</a></p>
+<p> For more information, see <a class="xref" href="data-selection-generic.html">PI Adapter for MQTT data selection configuration</a>.</p>
 </li>
 </ol>
 <h2 id="mqtt-data-source-schema">MQTT data source schema</h2>
@@ -135,9 +135,9 @@
 </tr>
 <tr>
 <td><strong>Port</strong></td>
-<td>Required</td>
+<td>Optional</td>
 <td><code>integer</code></td>
-<td>Port number of the MQTT  server <br><br>Allowed value: Valid port range <br> Default value: <code>0</code></td>
+<td>Port number of the MQTT  server. Required only if <strong>Protocol</strong> is TCP. <br><br>Allowed value: Valid port range or null <br> Default value if <strong>Protocol</strong> is TCP: <code>8883</code> <br> Default value if <strong>Protocol</strong> is WS: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Protocol</strong></td>
@@ -193,6 +193,12 @@
 <td><code>string</code></td>
 <td>Specifies the default stream Id pattern to use. Possible parameters: <code>{Topic}</code>, <code>{ValueField}</code>, <code>{DataType}</code>. <br><br>Allowed value: Any string<br>Default value: <code>{Topic}.{ValueField}</code></td>
 </tr>
+<tr>
+<td><strong>TimeZone</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Specifies the time zone associated with data received from the configured MQTT broker and its topics.<br><br>Allowed value: A valid entry from the IANA time zone database, for example <code>America/Los_Angeles</code>, <code>Asia/Hong_Kong</code>, <code>Europe/London</code>, etc. For more information, see <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a><br>Default value: <code>null</code><br><br><strong>Note:</strong> Supply this field if you are using source timestamps and the timestamp does not contain time zone information.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="runtime-changes">Runtime changes</h2>
@@ -217,7 +223,10 @@
     &quot;Password&quot;: null,
     &quot;ClientId&quot; : &quot;Test-Client-Id&quot;,
     &quot;MQTTVersion&quot; : &quot;3.1.1&quot;,
-    &quot;ValidateServerCertificate&quot; : true
+    &quot;ValidateServerCertificate&quot; : true,
+    &quot;timeZone&quot;: &quot;UTC&quot;,
+    &quot;streamIdPrefix&quot;: &quot;MyPrefix.&quot;,
+    &quot;defaultStreamIdPattern&quot;: &quot;{Topic}.{ValueField}&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

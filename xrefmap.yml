@@ -13,6 +13,9 @@ references:
 - uid: Administration
   name: Administration
   href: content/main/shared-content/administration/administration.html
+- uid: AutomaticHistoryRecovery
+  name: Automatic history recovery
+  href: content/main/shared-content/configuration/history-recovery/automatic-history-recovery.html
 - uid: BufferingConfiguration
   name: Buffering
   href: content/main/shared-content/configuration/buffering.html
@@ -46,12 +49,18 @@ references:
 - uid: GeneralConfiguration
   name: Diagnostics and metadata
   href: content/main/shared-content/configuration/diagnostics-and-metadata.html
+- uid: GenericDataSourceDiscovery
+  name: Data source discovery (generic)
+  href: content/configuration/discovery/data-source-discovery-generic.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
   href: content/main/shared-content/health/health-and-diagnostics.html
 - uid: HealthEndpointConfiguration
   name: Health endpoints
   href: content/main/shared-content/configuration/health-endpoints.html
+- uid: HistoryRecovery
+  name: History recovery
+  href: content/main/shared-content/configuration/history-recovery.html
 - uid: index
   name: Overview
   href: content/index.html
@@ -64,12 +73,21 @@ references:
 - uid: InstallTheAdapter
   name: Install the adapter
   href: content/main/shared-content/installation/install-the-adapter.html
+- uid: InstallUsingDocker
+  name: Installation using Docker
+  href: content/main/shared-content/installation/install-using-docker.html
+- uid: IntroToPiAdapters
+  name: PI Adapter for MQTT 1.2
+  href: content/main/shared-content/introduction/intro-to-pi-adapters.html
 - uid: IORate
   name: IO rate
   href: content/main/shared-content/diagnostics/io-rate.html
 - uid: JSONPathSyntaxForValueRetrieval
   name: JSONPath syntax for value retrieval
   href: content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
+- uid: JSONPathSyntaxForValueRetrievalMQTT
+  name: JSONPath syntax for value retrieval
+  href: content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
 - uid: LoggingConfiguration
   name: Logging
   href: content/main/shared-content/configuration/logging.html
@@ -85,6 +103,12 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
+- uid: OnDemandHistoryRecoveryConfiguration
+  name: On-demand history recovery configuration
+  href: content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.html
+- uid: PIAdapterForMQTTClientSettingsConfiguration
+  name: Client settings
+  href: content/configuration/client-settings.html
 - uid: PIAdapterForMQTTConfigurationExamples
   name: Configuration examples
   href: content/configuration/configuration-examples.html
@@ -100,18 +124,21 @@ references:
 - uid: PIAdapterForMQTTPrinciplesOfOperation
   name: Principles of operation
   href: content/overview/principles-of-operation.html
+- uid: PIAdapterForMQTTSecurity
+  name: Security
+  href: content/configuration/security-mqtt.html
 - uid: PIAdapterForMQTTSparkplugBDataSelectionConfiguration
   name: Data selection (Sparkplug B)
   href: content/configuration/data-selection-sparkplug-b.html
 - uid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
   name: Data source (Sparkplug B)
   href: content/configuration/data-source-sparkplug-b.html
+- uid: PIAdapterForMQTTSystemComponentsConfiguration
+  name: System components
+  href: content/configuration/system-components.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html
-- uid: releaseNotes
-  name: Release notes
-  href: content/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
   href: content/release-notes/release-notes.html
@@ -144,13 +171,16 @@ references:
   href: content/main/shared-content/configuration/system-components.html
 - uid: SystemRequirements
   name: System requirements
-  href: content/installation/system-requirements.html
+  href: content/main/shared-content/installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: content/main/shared-content/technical-support-and-feedback.html
 - uid: TextParser
   name: Text parser
   href: content/main/shared-content/configuration/text-parser/text-parser.html
+- uid: TextParserMQTT
+  name: Text parser
+  href: content/configuration/text-parser/text-parser.html
 - uid: TroubleshootPIAdapterForMQTT
   name: Troubleshoot PI Adapter for MQTT
   href: content/troubleshooting/troubleshoot-pi-adapter-for-mqtt.html
@@ -160,6 +190,9 @@ references:
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html
+- uid: UpgradeTheAdapter
+  name: Upgrade the adapter
+  href: content/main/shared-content/installation/upgrade-the-adapter.html
 - uid: XPathAndCSVSyntaxForValueRetrieval
   name: XPath and CSV syntax for value retrieval
   href: content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html

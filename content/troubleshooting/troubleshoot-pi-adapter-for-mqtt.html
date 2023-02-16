@@ -8,7 +8,7 @@
     <title>Troubleshoot PI Adapter for MQTT </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Troubleshoot PI Adapter for MQTT ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,14 +100,14 @@
 <p>For the generic MQTT component:</p>
 </li>
 <li><strong>ValueField</strong> - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a data value from the MQTT server payload.</li>
-<li><strong>TimeField</strong> - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a timestamp from the MQTT server payload.</li>
+<li><strong>IndexField</strong> - The JsonPath expression is valid. With an invalid JsonPath expression, the adapter cannot extract a timestamp from the MQTT server payload.</li>
 <li><strong>DataType</strong> - The correct data type is referenced. An incorrect data type causes data conversion to fail.</li>
-<li><strong>TimeFormat</strong> - The correct time format is referenced. A time format that does not match the value from <strong>TimeField</strong> means that the adapter cannot convert timestamp from the MQTT server payload.</li>
+<li><strong>IndexFormat</strong> - The correct time format is referenced. A time format that does not match the value from <strong>IndexField</strong> means that the adapter cannot convert timestamp from the MQTT server payload.</li>
 </ul>
 </li>
 <li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints.html">egress endpoints configuration</a>. For each configured endpoint, verify that the <strong>Endpoint</strong> and authentication properties are correct.</p>
 <ul>
-<li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
+<li>For a PI server endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
 <li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
 </ul>
 </li>

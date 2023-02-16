@@ -8,7 +8,7 @@
     <title>Discovery </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Discovery ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="DiscoveryConfiguration">
 <h1 id="discovery">Discovery</h1>
 
-<p>You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery ID, which you can either specify or let the adapter generate.</p>
+<p>You can perform a data discovery for existing data items on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.</p>
 <p>Data discovery includes different routes. For example, you can choose to do the following:</p>
 <ul>
 <li>Retrieve the discovery results</li>
 <li>Query the discovery status</li>
 <li>Cancel or delete discoveries</li>
-<li>Merge discovery results with the data selection item</li>
-<li>Retrieve results from a current discovery and compare it with results from a previous discovery</li>
+<li>Merge discovery results with the data selection configuration</li>
+<li>Retrieve results from a current discovery and compare it with results from a previous or discovery</li>
 <li>Retrieve results from a current discovery and compare it with results from a current data selection configuration</li>
 </ul>
 <h2 id="configure-discovery">Configure discovery</h2>
@@ -97,7 +97,7 @@
 <li>Including an <code>Id</code> is optional. If you do not include one, the adapter automatically generates one.</li>
 <li><p><code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
+<pre><code class="lang-bash">curl -d &quot;{ \&quot;Id\&quot;:\&quot;TestDiscovery\&quot;, \&quot;autoSelect\&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Discoveries&quot;
 </code></pre></li>
 </ul>
 </li>
@@ -113,68 +113,62 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>id</strong></td>
+<td> <strong>id</strong></td>
 <td><code>string</code></td>
 <td>The Id of the discovery <br><br> <strong>Notes:</strong><br>&bull; You cannot run multiple discoveries with the same Id.<br>&bull; Including an <code>id</code> is optional. If you do not include one, the adapter automatically generates one.</td>
 </tr>
 <tr>
-<td><strong>query</strong></td>
+<td> <strong>query</strong></td>
 <td><code>string</code></td>
-<td>A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.</td>
+<td>A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.</td>
 </tr>
 <tr>
-<td><strong>startTime</strong></td>
+<td> <strong>startTime</strong></td>
 <td><code>datetime</code></td>
-<td>Time when the discovery started.</td>
+<td>Time when the discovery started</td>
 </tr>
 <tr>
-<td><strong>endTime</strong></td>
+<td> <strong>endTime</strong></td>
 <td><code>datetime</code></td>
-<td>Time when the discovery ended.</td>
+<td>Time when the discovery ended</td>
 </tr>
 <tr>
-<td><strong>progress</strong></td>
+<td> <strong>progress</strong></td>
 <td><code>double</code></td>
-<td>Progress of the discovery (number of topics found through the discovery)</td>
+<td>Progress of the discovery</td>
 </tr>
 <tr>
-<td><strong>itemsFound</strong></td>
+<td> <strong>itemsFound</strong></td>
 <td><code>integer</code></td>
-<td>Number of data pieces that the discovery found on the data source.</td>
+<td>Number of data items that the discovery found on the data source</td>
 </tr>
 <tr>
-<td><strong>newItems</strong></td>
+<td> <strong>newItems</strong></td>
 <td><code>integer</code></td>
-<td>Number of new data pieces that the discovery found in comparison to the previous discovery.</td>
+<td>Number of new data items that the discovery found in comparison to the previous discovery</td>
 </tr>
 <tr>
-<td><strong>newAssets</strong></td>
-<td><code>integer</code></td>
-<td>Number of new assets that the discovery found in comparison to the previous discovery.</td>
-</tr>
-<tr>
-<td><strong>resultUri</strong></td>
-<td><code>integer</code></td>
-<td>URL at which you can access the results of the discovery.</td>
-</tr>
-<tr>
-<td><strong>autoSelect</strong></td>
-<td><code>boolean</code></td>
-<td>When set to <code>true</code>, the result of the discovery gets pushed to the data selection.</td>
-</tr>
-<tr>
-<td><strong>status</strong></td>
-<td><code>reference</code></td>
-<td>Status of the discovery, for example <code>Active</code> or <code>Complete</code>.</td>
-</tr>
-<tr>
-<td><strong>errors</strong></td>
+<td> <strong>resultUri</strong></td>
 <td><code>string</code></td>
-<td>Errors encountered during the discovery.</td>
+<td>URL at which you can access the results of the discovery</td>
+</tr>
+<tr>
+<td> <strong>autoSelect</strong></td>
+<td><code>boolean</code></td>
+<td>When set to <code>true</code>, the result of the discovery gets pushed to the data selection configuration.</td>
+</tr>
+<tr>
+<td> <strong>status</strong></td>
+<td><code>reference</code></td>
+<td>Status of the discovery, for example <code>Active</code> or <code>Complete</code></td>
+</tr>
+<tr>
+<td> <strong>errors</strong></td>
+<td><code>string</code></td>
+<td>Errors encountered during the discovery</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> If, during data source discovery, the PI adapter encounters characters that are used in the stream Id but that are not allowed in PI tag names, the adapter replaces the characters with a unicode escape sequence in the auto-generated <code>&lt;componentId&gt;_DataSelection.json</code> file.</p>
 <h2 id="discoveries-status-example">Discoveries status example</h2>
 <p>The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br></p>
 <pre><code class="lang-json">[
@@ -186,7 +180,6 @@
         &quot;progress&quot;: 30,
         &quot;itemsFound&quot;: 4,
         &quot;newItems&quot;: 0,
-        &quot;newAssets&quot;: 0,
         &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/&lt;ComponentId&gt;/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result&quot;,
         &quot;autoSelect&quot;: false,
         &quot;status&quot;: &quot;Complete&quot;,
@@ -204,63 +197,68 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries</td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries</td>
 <td>GET</td>
 <td>Returns status of all discoveries</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries</td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries</td>
 <td>POST</td>
 <td>Initiates a new discovery and returns its Id</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries</td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries</td>
 <td>DELETE</td>
 <td>Cancels and deletes all saved discoveries</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em></td>
 <td>GET</td>
-<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified ID does not exist, you will get an error message</td>
+<td>Gets the status of an individual discovery<br><br><strong>Note:</strong> If a discovery with the specified Id does not exist, you will get an error message</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em></td>
 <td>DELETE</td>
 <td>Cancels and deletes discovery and result</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em>/result</td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em>/result</td>
 <td>GET</td>
 <td>Returns the result of a discovery</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em>/result?diff=<em>previousId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em>/result?diff=<em>previousId</em></td>
 <td>GET</td>
 <td>Returns the difference between the result and the previous result</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/dataselection?diff=<em>discoveryId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/dataselection?diff=<em>&lt;discoveryId&gt;</em></td>
 <td>GET</td>
 <td>Returns the difference between the data selection configuration and the discovery results</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/discoveries/<em>discoveryId</em>/result</td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em>/result</td>
 <td>DELETE</td>
-<td>Cancels and deletes discovery result.<br><br><strong>Note:</strong> The discovery ID is still valid, but the <strong>Status</strong> property of a discovery query will contain a status of <code>canceled</code></td>
+<td>Cancels and deletes discovery result<br><br><strong>Note:</strong> The discovery Id is still valid, but a query will contain a status of <code>canceled</code><br>Only the <strong>Status</strong> property will contain a <code>canceled</code> status, but not the query</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/dataselection/select?discoveryid=<em>discoveryId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/discoveries/<em>&lt;discoveryId&gt;</em>/cancel</td>
+<td>POST</td>
+<td>Cancels the on-demand data source discovery</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/dataselection/select?discoveryid=<em>&lt;discoveryId&gt;</em></td>
 <td>POST</td>
 <td>Adds the discovered items to data selection with selected set to <code>true</code></td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>componentId</em>/dataselection/unselect?discoveryid=<em>discoveryId</em></td>
+<td>api/v1/configuration/<em>&lt;componentId&gt;</em>/dataselection/unselect?discoveryid=<em>&lt;discoveryId&gt;</em></td>
 <td>POST</td>
 <td>Adds the discovered items to data selection with selected set to <code>false</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component.<br>Replace <em>DiscoveryId</em> with the Id of the discovery for which you want to perform the action.</p>
+<p><strong>Note:</strong> Replace <em>&lt;componentId&gt;</em> with the Id of your adapter component.<br>Replace <em>&lt;discoveryId&gt;</em> with the Id of the discovery for which you want to perform the action.</p>
 </article>
           </div>
           
@@ -269,7 +267,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/discovery.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-MQTT-Docs/blob/main/content/main/shared-content/configuration/discovery.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
