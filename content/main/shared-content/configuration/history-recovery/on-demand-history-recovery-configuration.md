@@ -4,7 +4,7 @@ uid: OnDemandHistoryRecoveryConfiguration
 
 # On-demand history recovery configuration
 
-The AVEVA Adapter supports performing history recovery on-demand by specifying start and end time.
+The AVEVA adapter supports performing history recovery on-demand by specifying start and end time.
 
 ## Configure history recovery
 

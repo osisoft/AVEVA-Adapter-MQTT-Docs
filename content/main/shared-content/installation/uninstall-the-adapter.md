@@ -23,7 +23,7 @@ Complete the procedure corresponding to your specific operating system to uninst
 1. To delete AVEVA Adapter software from a Linux device, open a terminal window and run the following command:
 
     ```bash
-    sudo apt remove pi.adapter.MQTT 
+    sudo apt remove aveva.adapter.{adapter-name} 
     ```
 
 2. Optional: To delete data, configuration, and log files, run the following command:
