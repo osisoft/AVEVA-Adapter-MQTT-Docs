@@ -23,6 +23,7 @@
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterForMQTTDataSourceConfiguration
   - topicUid: PIAdapterForMQTTSparkplugBDataSourceConfiguration
+  - topicUid: ClientFailoverConfiguration
   - topicUid: PIAdapterForMQTTClientSettingsConfiguration
   - topicUid: DiscoveryConfiguration
     items:
