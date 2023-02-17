@@ -4,7 +4,7 @@ uid: ConfigurationTools
 
 # Configuration tools
 
-You can configure AVEVA Adapters with the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly-used REST tool.
+You can configure AVEVA adapters with the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly-used REST tool.
 
 ## EdgeCmd utility
 
@@ -20,4 +20,4 @@ curl is a command line tool used to make HTTP calls and is supported on both Win
 
 ### Postman
 
-Postman is a REST tool for systems with GUI components. AVEVA Adapters are supported on platforms without GUIs. Postman is particularly useful for learning more about AVEVA Adapter REST APIs. For more information, see [Postman (https://www.postman.com/)](https://www.postman.com/).
+Postman is a REST tool for systems with GUI components. AVEVA adapters are supported on platforms without GUIs. Postman is particularly useful for learning more about AVEVA Adapter REST APIs. For more information, see [Postman (https://www.postman.com/)](https://www.postman.com/).

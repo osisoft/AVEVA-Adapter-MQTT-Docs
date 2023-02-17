@@ -4,7 +4,7 @@ uid: HealthEndpointConfiguration
 
 # Health endpoints
 
-You can configure AVEVA Adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.
+You can configure AVEVA adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.
 
 For more information about adapter health, see [Adapter health](xref:AdapterHealth).
 
@@ -55,24 +55,24 @@ The following parameters are available for configuring health endpoints:
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
-| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.   Allowed value: any string identifier Default value: new GUID|
-| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data   Allowed value: well-formed http or https endpoint string Default: `null`|
-| **Username**                    | Optional for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint   _PI server:_ Allowed value: any string Default: `null`|
-| **Password**                    | Optional for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint   _PI server:_ Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets)) Default: `null`|
-| **ClientId**                    | Required for AVEVA Data Hub endpoints          | `string`    | The client ID used for authentication with an AVEVA Data Hub OMF endpoint   Allowed value: any string Default: `null` |
-| **ClientSecret**                | Required for AVEVA Data Hub endpoints          | `string`    | The client secret used for authentication with an AVEVA Data Hub OMF endpoint   Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets)) Default: `null`|
-| **DebugExpiration** | Optional | string | Enables logging of detailed information, for each outbound HTTP request pertaining to this egress endpoint, to disk. The value represents the date and time this detailed information should stop being saved. Examples of valid strings representing date and time: UTC: "yyyy-mm-ddThh:mm:ssZ", Local: "yyyy-mm-ddThh:mm:ss". For more information, see [Egress debug logging](xref:TroubleshootTheAdapter#egress-debug-logging).  Default: `null` |
-| **TokenEndpoint** | Optional for AVEVA Data Hub endpoints | `string` | Retrieves an AVEVA Data Hub token from an alternative endpoint   Allowed value: well-formed http or https endpoint string  Default value: `null` |
-| **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments.   Allowed value: `true` or `false` Default value: `true`|
+| **Id**                          | Optional  | `string`    | A unique identifier of the endpoint configuration <br><br>Allowed value: any string identifier<br>Default value: new GUID|
+| **Endpoint**                    | Required  | `string`    | The URL of a destination that accepts OMF v1.2 messages. Supported destinations include ADH and PI Server <br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null`|
+| **Username**                    | Optional   | `string`    | The username used for Basic authentication to the PI Web API OMF endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`|
+| **Password**                    | Optional   | `string`    | The password used for Basic authentication to the PI Web API OMF endpoint <br><br>_PI server:_<br>Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets))<br>Default: `null`|
+| **ClientId**                    | Required for ADH endpoint | `string`    | The clientId used for Bearer authentication to ADH endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **ClientSecret**                | Required for ADH endpoint | `string`    | The clientSecret used for Bearer authentication to ADH endpoint <br><br>Allowed value: any string or `{{<secretId>}}` (see [Reference Secrets](xref:ReferenceSecrets))<br>Default: `null`|
+| **DebugExpiration** | Optional | string | An optional string that enables logging of detailed information to disk for each outbound HTTP request pertaining to the egress endpoint. The value represents the date and time this detailed information should stop being saved. Examples of valid strings representing date and time:  UTC: `yyyy-mm-ddThh:mm:ssZ`, Local: `yyyy-mm-ddThh:mm:ss`. For more information, see [Egress debug logging](xref:TroubleshootTheAdapter#egress-debug-logging).<br><br>Default: `null`|
+| **TokenEndpoint** | Optional | `string` | An optional token endpoint where the adapter retrieves a bearer token. When null or not specified the adapter uses a well-known Open ID URL to retrieve it <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
+| **ValidateEndpointCertificate** | Optional | `boolean`  | An optional Boolean flag where, when set to false, the adapter will disable the verification of the server certificate <br><br>**Note:** AVEVA strongly recommends only disabling server certificate validation for testing purposes <br><br>Allowed value: `true` or `false`<br>Default value: `true` |
 
 ## Examples
 
-### AVEVA Data Hub endpoint
+### ADH endpoint
 
 ```code
 {
-    "Id": "AVEVA Data Hub",
-    "Endpoint": "https://<AVEVA Data Hub OMF endpoint>",
+    "Id": "ADH",
+    "Endpoint": "https://<ADH OMF endpoint>",
     "ClientId": "<clientid>",
     "ClientSecret": "<clientsecret>"
 }

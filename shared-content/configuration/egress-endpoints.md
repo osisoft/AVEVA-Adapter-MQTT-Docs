@@ -58,8 +58,6 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 The following parameters are available for configuring egress endpoints:
 
-| Parameter                       | Required                  | Type      | Description                                        |
-|---------------------------------|---------------------------|-----------|-------------|
 | **Id**                          | Optional                  | `string`    | Unique identifier  Allowed value: any string identifier Default value: new GUID |
 | **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.2 messages. Supported destinations include AVEVA Data Hub and AVEVA Server.  Allowed value: well-formed http or https endpoint string Default: `null` |
 | **Username**                    | Optional for PI server endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint   _PI server:_ Allowed value: any string Default: `null` **Note:** If your username contains a backslash, you must add an escape character, for example, type `OilCompany\TestUser` as `OilCompany\\TestUser`.  **Note:** If neither Username nor ClientID is supplied, it will use Negotiation instead (i.e. Kerberos, NTLM)|
@@ -99,6 +97,7 @@ The following examples are valid egress configurations:
 [{
      "Id": "AVEVA Data Hub",
      "Endpoint": "https://<AVEVA Data Hub OMF endpoint>",
+
      "ClientId": "<clientid>",
      "ClientSecret": "<clientsecret>"
 }]

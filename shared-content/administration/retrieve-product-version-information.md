@@ -6,7 +6,7 @@ uid: RetrieveProductVersionInformation
 
 The product version information includes the adapter framework version, application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.
 
-Complete the following steps to retrieve the product version information of a AVEVA Adapter:
+Complete the following steps to retrieve the product version information of an AVEVA adapter:
 
 1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `GET` command to the following endpoint: `http://localhost:5590/api/v1/Diagnostics/ProductInformation`
