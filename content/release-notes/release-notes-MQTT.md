@@ -24,13 +24,13 @@ This updated release contains enhancements and adapter framework updates.
 
 ### Fixes
 
-The following items were added in release 1.3.0.99:
+The following items were added in release 1.3.0.103:
 
 None
 
 ### Enhancements
 
-The following items were added in release 1.3.0.99:
+The following items were added in release 1.3.0.103:
 
 | Item              | Description               |
 | ----------------- | ------------------------- |
