@@ -4,7 +4,7 @@ uid: MQTTServerLevelFailover
 
 # Server-level failover
 
-To ensure that data continues to flow, you can configure the MQTT adapter to switch to another data source.
+To ensure that data continues to flow in the event of a server disconnection or shutdown, you can configure server-level failover for the MQTT Adapter. This ensures a constant connection between the MQTT adapter and at least one MQTT data source at all times.
 
 In general, MQTT Servers communicate with one another to establish, verify, and coordinate a constant, consistent, and robust connection with the MQTT adapter. MQTT Sparkplug B servers coordinate with one another according to the Sparkplug B protocol. There may be some variation on how generic MQTT servers communicate failover messages between servers and connections to clients.
 
@@ -31,7 +31,7 @@ When configuring a server-level failover, you must list one (or more) data sourc
 6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/DataSource"
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/RedundantServers"
     ```
 
     **Notes:**
@@ -49,20 +49,20 @@ The following parameters are available for configuring a server-level failover d
 
 | Parameter                     | Required | Type      | Description |
 |-------------------------------|----------|-----------|-------------|
-| **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server  <br><br>Allowed value: Any valid WS or TCP/IP endpoint address <br> Default value: `null`       |
+| **HostNameOrIpAddress**       | Required | `string`  |  Host name or IP address of the MQTT server.  <br><br>Allowed value: Any valid WS or TCP/IP endpoint address <br> Default value: `null`       |
 | **Port**                      | Optional | `integer` |  Port number of the MQTT server. Required only if **Protocol** is TCP. <br><br>Allowed value: Valid port range or null <br> Default value if **Protocol** is TCP: `8883` <br> Default value if **Protocol** is WS: `null`    |
-| **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
+| **Protocol**                  | Optional | `enum`    |   The protocol used to communicate to the MQTT broker. <br><br>Allowed value: `WS` or `TCP` <br> Default value: `TCP`         |
 | **TLS**                       | Optional | `enum`    |  Determines if TLS should be used and what version <br><br>Allowed value: `None`, `TLS`, `TLS11`, `TLS12`, `TLS13` <br> Default value: `TLS12`            |
 | **UserName**                  | Optional | `string`  | User name or client Id for accessing the MQTT server <br><br>Allowed value: any string <br> Default value: `null`  |
 | **Password**                  | Optional | `string`  |  Password or token for accessing the MQTT server <br><br>**Note:** We recommend using REST to configure the data source when the password must be specified because the adapter will encrypt the password when using REST. If you do not use REST, the plain text password is stored on-disk. You cannot specify a Password without specifying a UserName. <br><br>Allowed value: Any string <br> Default value: `null`           |
-| **clientCertificateThumbprint** |  Optional |        |           |
-| **clientCertificatePassword** |  Optional |        |           |
-| **ValidateServerCertificate** | Optional | `boolean` | Determines if the server certificate gets validated <br><br>**Note:** A warning is printed in case the server certificate validation is disabled.<br> Default value: `true` |
-| **serverID** |  Optional |        |           |
+| **clientCertificateThumbprint** |  Optional | `string` | The thumbprint of the certificate when the MQTT broker requires a client certificate. <br><br> Default Value: `null` |
+| **clientCertificatePassword** |  Optional | `string` | (Protected) – The password to access the certificate when the MQTT broker requires a client certificate. <br><br> Default value: `null` |
+| **ValidateServerCertificate** | Optional | `boolean` | Determines if the server certificate gets validated <br><br>**Note:** A warning is printed in case the server certificate validation is disabled. <br><br> Default value: `true` |
+| **serverID** |  Optional | `string`  | Unique GUID for the MQTT Server.  |
 
 ## Server level failover data source examples
 
-The following are examples of valid MQTT server-level failover data source configurations:
+The following are examples of valid MQTT server-level failover data source configurations with two redundant servers:
 
 ### Minimal server-level data source configuration
 
@@ -108,8 +108,3 @@ A full server configuration with two additional MQTT servers:
   "serverId": "server2"
 }
 ```
-
-
-
-
-
