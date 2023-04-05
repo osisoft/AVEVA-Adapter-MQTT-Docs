@@ -58,7 +58,7 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 The following parameters are available for configuring egress endpoints:
 
-| **Parameter**     |  **Required**     |  **Type**          | **Encoded character** |
+| **Parameter**     |  **Required**     |  **Type**          | **Description** |
 |-------------------|-------------------|--------------------|-----------------------|
 | **Id**                          | Optional                  | `string`    | Unique identifier  Allowed value: any string identifier Default value: new GUID |
 | **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.2 messages. Supported destinations include AVEVA Data Hub and AVEVA Server.  Allowed value: well-formed http or https endpoint string Default: `null` |
