@@ -18,11 +18,11 @@ When configuring a server-level failover, you must list one (or more) data sourc
 
 2. Copy and paste an example configuration for an MQTT data source into the file.
 
-    For sample JSON, see [Server-level data source examples](#server-level-data-source-examples).
+    For sample JSON, see [Server-level data source examples](#Server-level-failover-data-source-examples).
 
 3. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [Server-level data source parameters](#server-level-data-source-parameters).
+    For a table of all available parameters, see [Server-level data source parameters](#Server-level-data-source-parameters).
 
 4. Save the file. For example, as `ConfigureDataSource.json`.
 
@@ -38,13 +38,12 @@ When configuring a server-level failover, you must list one (or more) data sourc
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `MQTT1`, update the endpoint with your chosen component ID.
-    * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
 
 7. Configure data selection.
 
     For more information, see the [data selection configuration](xref:PIAdapterForMQTTDataSelectionConfiguration).
 
-## MQTT Server Level Data Source parameters
+## Server-level data source parameters
 
 The following parameters are available for configuring a server-level failover data source:
 
@@ -61,11 +60,11 @@ The following parameters are available for configuring a server-level failover d
 | **ValidateServerCertificate** | Optional | `boolean` | Determines if the server certificate gets validated <br><br>**Note:** A warning is printed in case the server certificate validation is disabled.<br> Default value: `true` |
 | **serverID** |  Optional |        |           |
 
-## MQTT server level failover examples
+## Server level failover data source examples
 
-The following are examples of valid MQTT server level failover data source configurations:
+The following are examples of valid MQTT server-level failover data source configurations:
 
-### Minimal data source configuration
+### Minimal server-level data source configuration
 
 ```json
 {
@@ -77,33 +76,36 @@ The following are examples of valid MQTT server level failover data source confi
 }
 ```
 
-### Complete data source configuration
+### Full data source configuration
+
+A full server configuration with two additional MQTT servers:
 
 ```json
 {
   "hostNameOrIpAddress": "RedundantServer1",
-  "port": 1883,
-  "protocol": "Tcp",
-  "tls": "None",
-  "userName": null,
-  "password": null,
-  "clientCertificateThumbprint": null,
-  "clientCertificatePassword": null,
-  "validateServerCertificate": false,
-  "serverId": "server1
+  "port": "1883",
+  "protocol": "Tcp",
+  "tls": "None", 
+  "userName": null, 
+  "password": null, 
+  "clientCertificateThumbprint": null, 
+  "clientCertificatePassword": null, 
+  "validateServerCertificate": false, 
+  "serverId": "server1"
+ 
 }
 
 {
-  "hostNameOrIpAddress": "RedundantServer2",
-  "port": 1883,
-  "protocol": "Tcp",
-  "tls": "None",
-  "userName": null,
-  "password": null,
-  "clientCertificateThumbprint": null,
-  "clientCertificatePassword": null,
-  "validateServerCertificate": false,
-  "serverId": "server2
+  "hostNameOrIpAddress": "RedundantServer2",
+  "port": "1883",
+  "protocol": "Tcp",
+  "tls": "None", 
+  "userName": null, 
+  "password": null, 
+  "clientCertificateThumbprint": null, 
+  "clientCertificatePassword": null, 
+  "validateServerCertificate": false, 
+  "serverId": "server2"
 }
 ```
 
