@@ -10,7 +10,7 @@ In general, MQTT Servers communicate with one another to establish, verify, and 
 
 ## Configure a server-level failover data source
 
-Complete the following steps to configure a server-level failover data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to initialize the configuration.
+Complete the following steps to configure a server-level failover data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/RedundantServers` REST endpoint to initialize the configuration.
 
 When configuring a server-level failover, you must list one (or more) data sources in the 'RedundantServers' configuration option in the MQTT or MQTTSparkplugB component.
 
@@ -24,14 +24,14 @@ When configuring a server-level failover, you must list one (or more) data sourc
 
     For a table of all available parameters, see [Server-level data source parameters](#Server-level-data-source-parameters).
 
-4. Save the file. For example, as `ConfigureDataSource.json`.
+4. Save the file. For example, as `ConfigureRedundantServers.json`.
 
-5. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+5. Open a command line session. Change directory to the location of `ConfigureRedundantServers.json`.
 
 6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/RedundantServers"
+    curl -d "@ConfigureRedundantServers.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/MQTT1/RedundantServers"
     ```
 
     **Notes:**
