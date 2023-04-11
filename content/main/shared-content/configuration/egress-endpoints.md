@@ -8,6 +8,7 @@ AVEVA adapters collect time series data, which  they can send to a permanent dat
 
 - AVEVA Data Hub (ADH)
 - PI servers through PI Web API
+- Edge Data Store (EDS) 2023 Patch 1 and forward
 
 For long term storage and analysis, you can configure any adapter to send time series data to one or several of these endpoints in any combination. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
 

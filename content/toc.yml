@@ -6,7 +6,7 @@
     - topicUid: JSONPathSyntaxForValueRetrievalMQTT
 - topicUid: Installation
   items:
-  - topicUid: SystemRequirements
+  - topicUid: MQTTSystemRequirements
   - topicUid: InstallTheAdapter
   - topicUid: InstallUsingDocker
   - topicUid: UpgradeTheAdapter
