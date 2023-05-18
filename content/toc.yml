@@ -55,6 +55,7 @@
   - topicUid: AdapterHealth
     items:
     - topicUid: DeviceStatus
+    - topicUid: FailoverHealth
     - topicUid: NextHealthMessageExpected
   - topicUid: AdapterDiagnostics
     items:
