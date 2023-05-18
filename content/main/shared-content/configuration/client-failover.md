@@ -25,7 +25,7 @@ Complete the following steps to configure client failover.
 
 2. Save the file. For example, `ConfigureClientFailover.json`.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/System/ClientFailover`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://<hostname>:<port>/api/v1/ClientFailover`.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -34,7 +34,7 @@ Complete the following steps to configure client failover.
     **Note:** Run this command from the same directory where the file is located.
 
     ```bash
-    curl -d "@ConfigureClientFailover.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/System/ClientFailover"
+    curl -d "@ConfigureClientFailover.json" -H "Content-Type: application/json" -X PUT "http://<hostname>:<port>/api/v1/ClientFailover"
     ```
 
 On successful execution, the client failover change takes effect immediately during runtime.
