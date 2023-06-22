@@ -17,6 +17,7 @@
     items:
     - topicUid: Secrets
     - topicUid: ReferenceSecrets
+    - topicUid: PFXClientCertificateMQTT
   - topicUid: ConfigurationTools
   - topicUid: PIAdapterForMQTTSystemComponentsConfiguration
     items: 
