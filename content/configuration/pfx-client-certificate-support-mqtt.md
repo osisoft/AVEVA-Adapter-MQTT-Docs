@@ -4,7 +4,7 @@ uid: PFXClientCertificateMQTT
 
 # PFX client certificate support 
 
-If the MQTT server requires a customer-generated PFX client certificate for connections, place the PFX certificate in the appropriate folder on your C drive. For Windows users, you can find the folder at *C:\ProgramData\OSIsoft\Adapters\MQTT\Certificates*. Linux users can find the folder at */usr/share/OSIsoft/Adapters/MQTT/Certificates.*
+If the MQTT server requires a customer-generated PFX client certificate for connections, place the PFX certificate in the appropriate folder on your designated drive. For Windows users, you can find the folder at *C:\ProgramData\OSIsoft\Adapters\MQTT\Certificates*. Linux users can find the folder at */usr/share/OSIsoft/Adapters/MQTT/Certificates.*
 
 After placing the certificate in the folder, specify the PFX client certificate's thumbprint and password in the Data Source configuration of the adapter. 
 
