@@ -2,11 +2,11 @@
 
 AVEVA Adapter for MQTT is a data-collection component that transfers time-series data from source devices to Open Message Format (OMF) endpoints in AVEVA Data Hub or AVEVA PI Servers.
 
-This repository contains the documentation for AVEVA Adapter for MQTT. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-mqtt/)
+This repository contains the documentation for AVEVA Adapter for MQTT. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/aveva-adapter-mqtt/)
 
 ## Subtree
 
-This documentation repository consumes the [PI-Adapter](https://github.com/osisoft/PI-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
+This documentation repository consumes the [AVEVA-Adapter](https://github.com/osisoft/AVEVA-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
 
 ```bash
 git subtree pull --prefix content/main https://github.com/osisoft/AVEVA-Adapter main --squash
