@@ -36,7 +36,7 @@ Data discovery includes different routes. For example, you can choose to do the 
 Parameter | Required | Type | Description
 ---------|----------|--------- | ---------
  **id** | `Optional` | `string` | The Id of the discovery. <br><br>    **Notes:<br>** &bull; You cannot run multiple discoveries with the same Id.<br> &bull; If an `id` is not included, the adapter automatically generates one.
- **autoSelect** | `Optional` | `boolean` | This parameter defaults to `true`. When set to `true`, the results of the discovery are saved as the data selection configuration. Additionally, streams or tags are created automatically in the designated data endpoint(s).  <br><br> When set to `false`, the data selection configuration must be manually applied to the adapter. | 
+ **autoSelect** | `Optional` | `boolean` | This parameter defaults to `true`. When set to `true`, the results of the discovery are saved as the data selection configuration. Additionally, streams or tags are created automatically in the designated data endpoint(s).  <br><br> When set to `false`, the data selection configuration must be manually applied to the adapter. You can find the discovery results on your C drive (C:\ProgramData\OSIsoft\Adapters\MQTT\Configuration).| 
  **query** | `Required` | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.  For additional information, see the [Data source (generic)](xref:PIAdapterForMQTTDataSourceConfiguration) or [Data source (Sparkplug B)](xref:PIAdapterForMQTTSparkplugBDataSourceConfiguration)  configuration topics.
 
 ## Discoveries status results
